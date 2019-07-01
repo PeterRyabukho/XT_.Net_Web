@@ -1,0 +1,21 @@
+C:\Users\ryabu\source\repos\Task-0\0.1 Sequence\bin\Debug\netcoreapp2.1\0.1 Sequence.deps.json
+C:\Users\ryabu\source\repos\Task-0\0.1 Sequence\bin\Debug\netcoreapp2.1\0.1 Sequence.runtimeconfig.json
+C:\Users\ryabu\source\repos\Task-0\0.1 Sequence\bin\Debug\netcoreapp2.1\0.1 Sequence.runtimeconfig.dev.json
+C:\Users\ryabu\source\repos\Task-0\0.1 Sequence\bin\Debug\netcoreapp2.1\0.1 Sequence.dll
+C:\Users\ryabu\source\repos\Task-0\0.1 Sequence\bin\Debug\netcoreapp2.1\0.1 Sequence.pdb
+C:\Users\ryabu\source\repos\Task-0\0.1 Sequence\obj\Debug\netcoreapp2.1\0.1 Sequence.csproj.CoreCompileInputs.cache
+C:\Users\ryabu\source\repos\Task-0\0.1 Sequence\obj\Debug\netcoreapp2.1\0.1 Sequence.AssemblyInfoInputs.cache
+C:\Users\ryabu\source\repos\Task-0\0.1 Sequence\obj\Debug\netcoreapp2.1\0.1 Sequence.AssemblyInfo.cs
+C:\Users\ryabu\source\repos\Task-0\0.1 Sequence\obj\Debug\netcoreapp2.1\0.1 Sequence.dll
+C:\Users\ryabu\source\repos\Task-0\0.1 Sequence\obj\Debug\netcoreapp2.1\0.1 Sequence.pdb
+D:\Users\cam\desktop\C#\Задачи для EPAM\Task-0\0.1 Sequence\bin\Debug\netcoreapp2.1\0.1 Sequence.deps.json
+D:\Users\cam\desktop\C#\Задачи для EPAM\Task-0\0.1 Sequence\bin\Debug\netcoreapp2.1\0.1 Sequence.runtimeconfig.json
+D:\Users\cam\desktop\C#\Задачи для EPAM\Task-0\0.1 Sequence\bin\Debug\netcoreapp2.1\0.1 Sequence.runtimeconfig.dev.json
+D:\Users\cam\desktop\C#\Задачи для EPAM\Task-0\0.1 Sequence\bin\Debug\netcoreapp2.1\0.1 Sequence.dll
+D:\Users\cam\desktop\C#\Задачи для EPAM\Task-0\0.1 Sequence\bin\Debug\netcoreapp2.1\0.1 Sequence.pdb
+D:\Users\cam\desktop\C#\Задачи для EPAM\Task-0\0.1 Sequence\obj\Debug\netcoreapp2.1\0.1 Sequence.csprojAssemblyReference.cache
+D:\Users\cam\desktop\C#\Задачи для EPAM\Task-0\0.1 Sequence\obj\Debug\netcoreapp2.1\0.1 Sequence.csproj.CoreCompileInputs.cache
+D:\Users\cam\desktop\C#\Задачи для EPAM\Task-0\0.1 Sequence\obj\Debug\netcoreapp2.1\0.1 Sequence.AssemblyInfoInputs.cache
+D:\Users\cam\desktop\C#\Задачи для EPAM\Task-0\0.1 Sequence\obj\Debug\netcoreapp2.1\0.1 Sequence.AssemblyInfo.cs
+D:\Users\cam\desktop\C#\Задачи для EPAM\Task-0\0.1 Sequence\obj\Debug\netcoreapp2.1\0.1 Sequence.dll
+D:\Users\cam\desktop\C#\Задачи для EPAM\Task-0\0.1 Sequence\obj\Debug\netcoreapp2.1\0.1 Sequence.pdb

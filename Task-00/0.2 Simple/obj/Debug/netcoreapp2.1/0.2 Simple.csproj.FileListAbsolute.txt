@@ -1,0 +1,22 @@
+C:\Users\ryabu\source\repos\Task-0\0.2 Simple\obj\Debug\netcoreapp2.1\0.2 Simple.csprojAssemblyReference.cache
+C:\Users\ryabu\source\repos\Task-0\0.2 Simple\obj\Debug\netcoreapp2.1\0.2 Simple.csproj.CoreCompileInputs.cache
+C:\Users\ryabu\source\repos\Task-0\0.2 Simple\obj\Debug\netcoreapp2.1\0.2 Simple.AssemblyInfoInputs.cache
+C:\Users\ryabu\source\repos\Task-0\0.2 Simple\obj\Debug\netcoreapp2.1\0.2 Simple.AssemblyInfo.cs
+C:\Users\ryabu\source\repos\Task-0\0.2 Simple\bin\Debug\netcoreapp2.1\0.2 Simple.deps.json
+C:\Users\ryabu\source\repos\Task-0\0.2 Simple\bin\Debug\netcoreapp2.1\0.2 Simple.runtimeconfig.json
+C:\Users\ryabu\source\repos\Task-0\0.2 Simple\bin\Debug\netcoreapp2.1\0.2 Simple.runtimeconfig.dev.json
+C:\Users\ryabu\source\repos\Task-0\0.2 Simple\bin\Debug\netcoreapp2.1\0.2 Simple.dll
+C:\Users\ryabu\source\repos\Task-0\0.2 Simple\bin\Debug\netcoreapp2.1\0.2 Simple.pdb
+C:\Users\ryabu\source\repos\Task-0\0.2 Simple\obj\Debug\netcoreapp2.1\0.2 Simple.dll
+C:\Users\ryabu\source\repos\Task-0\0.2 Simple\obj\Debug\netcoreapp2.1\0.2 Simple.pdb
+D:\Users\cam\desktop\C#\Задачи для EPAM\Task-0\0.2 Simple\bin\Debug\netcoreapp2.1\0.2 Simple.deps.json
+D:\Users\cam\desktop\C#\Задачи для EPAM\Task-0\0.2 Simple\bin\Debug\netcoreapp2.1\0.2 Simple.runtimeconfig.json
+D:\Users\cam\desktop\C#\Задачи для EPAM\Task-0\0.2 Simple\bin\Debug\netcoreapp2.1\0.2 Simple.runtimeconfig.dev.json
+D:\Users\cam\desktop\C#\Задачи для EPAM\Task-0\0.2 Simple\bin\Debug\netcoreapp2.1\0.2 Simple.dll
+D:\Users\cam\desktop\C#\Задачи для EPAM\Task-0\0.2 Simple\bin\Debug\netcoreapp2.1\0.2 Simple.pdb
+D:\Users\cam\desktop\C#\Задачи для EPAM\Task-0\0.2 Simple\obj\Debug\netcoreapp2.1\0.2 Simple.csprojAssemblyReference.cache
+D:\Users\cam\desktop\C#\Задачи для EPAM\Task-0\0.2 Simple\obj\Debug\netcoreapp2.1\0.2 Simple.csproj.CoreCompileInputs.cache
+D:\Users\cam\desktop\C#\Задачи для EPAM\Task-0\0.2 Simple\obj\Debug\netcoreapp2.1\0.2 Simple.AssemblyInfoInputs.cache
+D:\Users\cam\desktop\C#\Задачи для EPAM\Task-0\0.2 Simple\obj\Debug\netcoreapp2.1\0.2 Simple.AssemblyInfo.cs
+D:\Users\cam\desktop\C#\Задачи для EPAM\Task-0\0.2 Simple\obj\Debug\netcoreapp2.1\0.2 Simple.dll
+D:\Users\cam\desktop\C#\Задачи для EPAM\Task-0\0.2 Simple\obj\Debug\netcoreapp2.1\0.2 Simple.pdb
