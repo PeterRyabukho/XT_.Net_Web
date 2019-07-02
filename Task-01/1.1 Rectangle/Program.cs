@@ -9,25 +9,44 @@ namespace _1._1_Rectangle
             return a * b;
         }
 
-        static void Main(string[] args)
+        private static void getNumbA()
         {
             Console.Write("Введите длинну прямоугольника: ");
             bool resA = double.TryParse(Console.ReadLine(), out double a);
 
             if (resA && a > 0)
             {
-                Console.Write("Введите высоту прямоугольника: ");
-                bool resB = double.TryParse(Console.ReadLine(), out double b);
-
-                if (resB && b > 0)
-                {
-                    Console.WriteLine("Площадь прямоугольника: " + Area(a,b));
-                }
-                else Console.WriteLine("Число должно быть положительное и отличное от нуля!");
+                getNumbB(a);
             }
-            else Console.WriteLine("Число должно быть положительное и отличное от нуля!");
+            else
+            {
+                Console.WriteLine("ОШИБКА! Число должно быть положительное и отличное от нуля!\n");
+                getNumbA();
+            }
+        }
+
+        private static void getNumbB(double a)
+        {
+            Console.Write("Введите высоту прямоугольника: ");
+            bool resB = double.TryParse(Console.ReadLine(), out double b);
+
+            if (resB && b > 0)
+            {
+                Console.WriteLine("Площадь прямоугольника: " + Area(a, b));
+            }
+            else
+            {
+                Console.WriteLine("ОШИБКА! Число должно быть положительное и отличное от нуля!\n");
+                getNumbB(a);
+            }
+        }
+
+        static void Main(string[] args)
+        {
+            getNumbA();
 
             Console.ReadKey();
         }
+
     }
 }

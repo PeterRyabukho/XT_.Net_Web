@@ -20,7 +20,7 @@ namespace _1._3_Another_Triangle
             }
         }
 
-        static void Main(string[] args)
+        static void Main()
         {
             Console.Write("Введите высоту треугольника : ");
             bool res = int.TryParse(Console.ReadLine(), out int N);
@@ -28,7 +28,11 @@ namespace _1._3_Another_Triangle
             {
                 AnotherTriangle(N);
             }
-            else Console.WriteLine("Задайте правильный числовой формат: целое положительное число, отличное от 0!");
+            else
+            {
+                Console.WriteLine("ОШИБКА! Задайте правильный числовой формат: целое положительное число, отличное от 0!\n");
+                Main();
+            }
 
             Console.ReadKey();
         }

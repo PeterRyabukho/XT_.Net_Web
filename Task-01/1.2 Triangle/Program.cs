@@ -15,15 +15,26 @@ namespace _1._2_Triangle
                 Console.WriteLine();
             }
         }
-        static void Main(string[] args)
+        private static bool check()
         {
             Console.Write("Введите высоту треугольника : ");
+
             bool res = int.TryParse(Console.ReadLine(), out int N);
             if (res && N > 0)
             {
                 BuildTriangle(N);
+                return true;
             }
-            else Console.WriteLine("Задайте правильный числовой формат: целое положительное число, отличное от 0!");
+            else
+            {
+                Console.WriteLine("ОШИБКА! Задайте правильный числовой формат: целое положительное число, отличное от 0!\n");
+                return false;
+            }
+        }
+        static void Main()
+        {
+            while (check() == false)
+                check();
 
             Console.ReadKey();
         }

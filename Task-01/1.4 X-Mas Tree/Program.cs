@@ -26,7 +26,7 @@ namespace _1._4_X_Mas_Tree
                 Triangle(i + 1, N);
         }
 
-        static void Main(string[] args)
+        static void Main()
         {
             Console.Write("Введите число N треугольников в ёлочке: ");
             bool res = int.TryParse(Console.ReadLine(), out int N);
@@ -34,7 +34,12 @@ namespace _1._4_X_Mas_Tree
             {
                 XmasTree(N);
             }
-            else Console.WriteLine("Задайте правильный числовой формат: целое положительное число, отличное от 0!");
+            else
+            {
+                Console.WriteLine("ОШИБКА! Задайте правильный числовой формат: целое положительное число, отличное от 0!");
+                Main();
+            }
+
             Console.ReadKey();
         }
     }

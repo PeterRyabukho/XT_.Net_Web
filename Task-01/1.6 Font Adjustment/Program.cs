@@ -39,22 +39,32 @@ namespace _1._6_Font_Adjustment
         }
         [Flags] enum Font { None=0x0, Bold=0x1, Italic=0x2, Underline=0x4}
 
-        static void Main(string[] args)
+        static void Main()
         {
             Font newFont = Font.None;
 
-            for (int i = 0; i < 10; i++)
+            ConsoleKeyInfo btn;
+
+            do
             {
-                Console.WriteLine("Параметры надписи: {0}\nВведите: \n\t 1. Bold \n\t 2. Italic \n\t 3. Underline", newFont);
+                Console.WriteLine("Параметры надписи: {0}\nВарианты ввода: \n\t 1. Bold \n\t 2. Italic \n\t 3. Underline", newFont);
+                Console.Write("\nВведите от 1-3 : ");
                 bool resA = int.TryParse(Console.ReadLine(), out int N);
-                
+
                 if (resA && N > 0 && N < 4)
                 {
                     newFont = getFont(ref newFont, N);
                 }
-                else Console.WriteLine("Используйте цифры от 1-3 для выбора нужного редактирования текста!");
+                else
+                {
+                    Console.WriteLine("ОШИБКА! Используйте цифры от 1-3 для выбора нужного редактирования текста!\n");
+                }
+                Console.Write("Хотите выйти? нажмите 'Esc'! Далее? Нажмите любую клавишу!\n");
+                btn = Console.ReadKey();
                 Console.WriteLine();
             }
+            while (btn.Key != ConsoleKey.Escape);
+
             Console.ReadKey();
         }
 
