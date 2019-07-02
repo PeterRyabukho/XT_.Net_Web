@@ -13,15 +13,19 @@ namespace _0._1_Sequence
             }
             return str;
         }
-        static void Main(string[] args)
+        static void Main()
         {
             Console.Write("Введите число N : ");
             bool res = int.TryParse(Console.ReadLine(), out int N);
-            if (res && N > 0) 
+            if (res && N > 0)
             {
-                Console.WriteLine(GetNumbers(N)); 
+                Console.WriteLine(GetNumbers(N));
             }
-            else Console.WriteLine("Задайте правильный числовой формат: целое положительное число, отличное от 0");
+            else
+            {
+                Console.WriteLine("ОШИБКА! Задайте правильный числовой формат: целое положительное число, отличное от 0\n");
+                Main();
+            }
 
             Console.ReadKey();
         }

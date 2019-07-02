@@ -20,15 +20,19 @@ namespace _0._3._Square
                 Console.WriteLine();
             }
         }
-        static void Main(string[] args)
+        static void Main()
         {
             Console.Write("Укажите размер квадрата, введя длинну стороны N: ");
             bool res = int.TryParse(Console.ReadLine(), out int N);
-            if (res && N > 0 && N%2 !=0)
+            if (res && N > 0 && N % 2 != 0)
             {
                 BuildSquare(N);
             }
-            else Console.WriteLine("Задайте правильный числовой формат: нечетное целое положительное число, больше двух");
+            else
+            {
+                Console.WriteLine("ОШИБКА! Задайте правильный числовой формат: нечетное целое положительное число, больше двух\n");
+                Main();
+            }
 
             Console.ReadKey();
         }

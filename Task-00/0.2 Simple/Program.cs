@@ -14,7 +14,7 @@ namespace _0._2_Simple
             }
             return true;
         }
-        static void Main(string[] args)
+        static void Main()
         {
             Console.Write("Хотите определить простое ли число? Введите число N : ");
             bool res = int.TryParse(Console.ReadLine(), out int N);
@@ -25,7 +25,11 @@ namespace _0._2_Simple
                 else
                     Console.WriteLine(N + " - Это НЕпростое число!");
             }
-            else Console.WriteLine("Задайте правильный числовой формат: целое положительное число, больше 1");
+            else
+            {
+                Console.WriteLine("ОШИБКА! Задайте правильный числовой формат: целое положительное число, больше 1\n");
+                Main();
+            }
 
             Console.ReadKey();
         }
