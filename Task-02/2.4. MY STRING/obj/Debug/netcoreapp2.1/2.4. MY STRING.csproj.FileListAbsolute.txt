@@ -1,0 +1,11 @@
+C:\Users\user\source\repos\Task-02\2.4. MY STRING\bin\Debug\netcoreapp2.1\2.4. MY STRING.deps.json
+C:\Users\user\source\repos\Task-02\2.4. MY STRING\bin\Debug\netcoreapp2.1\2.4. MY STRING.runtimeconfig.json
+C:\Users\user\source\repos\Task-02\2.4. MY STRING\bin\Debug\netcoreapp2.1\2.4. MY STRING.runtimeconfig.dev.json
+C:\Users\user\source\repos\Task-02\2.4. MY STRING\bin\Debug\netcoreapp2.1\2.4. MY STRING.dll
+C:\Users\user\source\repos\Task-02\2.4. MY STRING\bin\Debug\netcoreapp2.1\2.4. MY STRING.pdb
+C:\Users\user\source\repos\Task-02\2.4. MY STRING\obj\Debug\netcoreapp2.1\2.4. MY STRING.csprojAssemblyReference.cache
+C:\Users\user\source\repos\Task-02\2.4. MY STRING\obj\Debug\netcoreapp2.1\2.4. MY STRING.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\Task-02\2.4. MY STRING\obj\Debug\netcoreapp2.1\2.4. MY STRING.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\Task-02\2.4. MY STRING\obj\Debug\netcoreapp2.1\2.4. MY STRING.AssemblyInfo.cs
+C:\Users\user\source\repos\Task-02\2.4. MY STRING\obj\Debug\netcoreapp2.1\2.4. MY STRING.dll
+C:\Users\user\source\repos\Task-02\2.4. MY STRING\obj\Debug\netcoreapp2.1\2.4. MY STRING.pdb

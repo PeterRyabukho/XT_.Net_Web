@@ -1,0 +1,11 @@
+C:\Users\user\source\repos\Task-02\2.2. TRIANGLE\bin\Debug\netcoreapp2.1\2.2. TRIANGLE.deps.json
+C:\Users\user\source\repos\Task-02\2.2. TRIANGLE\bin\Debug\netcoreapp2.1\2.2. TRIANGLE.runtimeconfig.json
+C:\Users\user\source\repos\Task-02\2.2. TRIANGLE\bin\Debug\netcoreapp2.1\2.2. TRIANGLE.runtimeconfig.dev.json
+C:\Users\user\source\repos\Task-02\2.2. TRIANGLE\bin\Debug\netcoreapp2.1\2.2. TRIANGLE.dll
+C:\Users\user\source\repos\Task-02\2.2. TRIANGLE\bin\Debug\netcoreapp2.1\2.2. TRIANGLE.pdb
+C:\Users\user\source\repos\Task-02\2.2. TRIANGLE\obj\Debug\netcoreapp2.1\2.2. TRIANGLE.csprojAssemblyReference.cache
+C:\Users\user\source\repos\Task-02\2.2. TRIANGLE\obj\Debug\netcoreapp2.1\2.2. TRIANGLE.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\Task-02\2.2. TRIANGLE\obj\Debug\netcoreapp2.1\2.2. TRIANGLE.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\Task-02\2.2. TRIANGLE\obj\Debug\netcoreapp2.1\2.2. TRIANGLE.AssemblyInfo.cs
+C:\Users\user\source\repos\Task-02\2.2. TRIANGLE\obj\Debug\netcoreapp2.1\2.2. TRIANGLE.dll
+C:\Users\user\source\repos\Task-02\2.2. TRIANGLE\obj\Debug\netcoreapp2.1\2.2. TRIANGLE.pdb

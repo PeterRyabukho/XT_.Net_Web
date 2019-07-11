@@ -1,0 +1,11 @@
+C:\Users\user\source\repos\Task-02\2.1. ROUND\bin\Debug\netcoreapp2.1\2.1. ROUND.deps.json
+C:\Users\user\source\repos\Task-02\2.1. ROUND\bin\Debug\netcoreapp2.1\2.1. ROUND.runtimeconfig.json
+C:\Users\user\source\repos\Task-02\2.1. ROUND\bin\Debug\netcoreapp2.1\2.1. ROUND.runtimeconfig.dev.json
+C:\Users\user\source\repos\Task-02\2.1. ROUND\bin\Debug\netcoreapp2.1\2.1. ROUND.dll
+C:\Users\user\source\repos\Task-02\2.1. ROUND\bin\Debug\netcoreapp2.1\2.1. ROUND.pdb
+C:\Users\user\source\repos\Task-02\2.1. ROUND\obj\Debug\netcoreapp2.1\2.1. ROUND.csprojAssemblyReference.cache
+C:\Users\user\source\repos\Task-02\2.1. ROUND\obj\Debug\netcoreapp2.1\2.1. ROUND.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\Task-02\2.1. ROUND\obj\Debug\netcoreapp2.1\2.1. ROUND.AssemblyInfoInputs.cache
+C:\Users\user\source\repos\Task-02\2.1. ROUND\obj\Debug\netcoreapp2.1\2.1. ROUND.AssemblyInfo.cs
+C:\Users\user\source\repos\Task-02\2.1. ROUND\obj\Debug\netcoreapp2.1\2.1. ROUND.dll
+C:\Users\user\source\repos\Task-02\2.1. ROUND\obj\Debug\netcoreapp2.1\2.1. ROUND.pdb
