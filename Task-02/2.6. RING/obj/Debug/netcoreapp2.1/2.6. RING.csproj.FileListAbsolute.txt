@@ -1,0 +1,11 @@
+D:\Users\cam\desktop\C#\Задачи для EPAM\Task-02\2.6. RING\bin\Debug\netcoreapp2.1\2.6. RING.deps.json
+D:\Users\cam\desktop\C#\Задачи для EPAM\Task-02\2.6. RING\bin\Debug\netcoreapp2.1\2.6. RING.runtimeconfig.json
+D:\Users\cam\desktop\C#\Задачи для EPAM\Task-02\2.6. RING\bin\Debug\netcoreapp2.1\2.6. RING.runtimeconfig.dev.json
+D:\Users\cam\desktop\C#\Задачи для EPAM\Task-02\2.6. RING\bin\Debug\netcoreapp2.1\2.6. RING.dll
+D:\Users\cam\desktop\C#\Задачи для EPAM\Task-02\2.6. RING\bin\Debug\netcoreapp2.1\2.6. RING.pdb
+D:\Users\cam\desktop\C#\Задачи для EPAM\Task-02\2.6. RING\obj\Debug\netcoreapp2.1\2.6. RING.csprojAssemblyReference.cache
+D:\Users\cam\desktop\C#\Задачи для EPAM\Task-02\2.6. RING\obj\Debug\netcoreapp2.1\2.6. RING.csproj.CoreCompileInputs.cache
+D:\Users\cam\desktop\C#\Задачи для EPAM\Task-02\2.6. RING\obj\Debug\netcoreapp2.1\2.6. RING.AssemblyInfoInputs.cache
+D:\Users\cam\desktop\C#\Задачи для EPAM\Task-02\2.6. RING\obj\Debug\netcoreapp2.1\2.6. RING.AssemblyInfo.cs
+D:\Users\cam\desktop\C#\Задачи для EPAM\Task-02\2.6. RING\obj\Debug\netcoreapp2.1\2.6. RING.dll
+D:\Users\cam\desktop\C#\Задачи для EPAM\Task-02\2.6. RING\obj\Debug\netcoreapp2.1\2.6. RING.pdb

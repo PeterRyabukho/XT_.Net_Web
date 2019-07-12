@@ -9,3 +9,14 @@ C:\Users\user\source\repos\Task-02\2.3. USER\obj\Debug\netcoreapp2.1\2.3. USER.A
 C:\Users\user\source\repos\Task-02\2.3. USER\obj\Debug\netcoreapp2.1\2.3. USER.AssemblyInfo.cs
 C:\Users\user\source\repos\Task-02\2.3. USER\obj\Debug\netcoreapp2.1\2.3. USER.dll
 C:\Users\user\source\repos\Task-02\2.3. USER\obj\Debug\netcoreapp2.1\2.3. USER.pdb
+D:\Users\cam\desktop\C#\Задачи для EPAM\Task-02\2.3. USER\bin\Debug\netcoreapp2.1\2.3. USER.deps.json
+D:\Users\cam\desktop\C#\Задачи для EPAM\Task-02\2.3. USER\bin\Debug\netcoreapp2.1\2.3. USER.runtimeconfig.json
+D:\Users\cam\desktop\C#\Задачи для EPAM\Task-02\2.3. USER\bin\Debug\netcoreapp2.1\2.3. USER.runtimeconfig.dev.json
+D:\Users\cam\desktop\C#\Задачи для EPAM\Task-02\2.3. USER\bin\Debug\netcoreapp2.1\2.3. USER.dll
+D:\Users\cam\desktop\C#\Задачи для EPAM\Task-02\2.3. USER\bin\Debug\netcoreapp2.1\2.3. USER.pdb
+D:\Users\cam\desktop\C#\Задачи для EPAM\Task-02\2.3. USER\obj\Debug\netcoreapp2.1\2.3. USER.csprojAssemblyReference.cache
+D:\Users\cam\desktop\C#\Задачи для EPAM\Task-02\2.3. USER\obj\Debug\netcoreapp2.1\2.3. USER.csproj.CoreCompileInputs.cache
+D:\Users\cam\desktop\C#\Задачи для EPAM\Task-02\2.3. USER\obj\Debug\netcoreapp2.1\2.3. USER.AssemblyInfoInputs.cache
+D:\Users\cam\desktop\C#\Задачи для EPAM\Task-02\2.3. USER\obj\Debug\netcoreapp2.1\2.3. USER.AssemblyInfo.cs
+D:\Users\cam\desktop\C#\Задачи для EPAM\Task-02\2.3. USER\obj\Debug\netcoreapp2.1\2.3. USER.dll
+D:\Users\cam\desktop\C#\Задачи для EPAM\Task-02\2.3. USER\obj\Debug\netcoreapp2.1\2.3. USER.pdb

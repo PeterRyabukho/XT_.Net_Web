@@ -6,21 +6,9 @@ namespace _2._3._USER
 {
     class User
     {
-        private string firstName;
+        public string FirstName { get; set; }
 
-        public string FirstName
-        {
-            get { return firstName; }
-            set { firstName = value; }
-        }
-
-        private string lastName;
-
-        public string LastName
-        {
-            get { return lastName; }
-            set { lastName = value; }
-        }
+        public string LastName { get; set; }
 
         private DateTime dateOfBirth;
 
@@ -43,8 +31,32 @@ namespace _2._3._USER
             DateOfBirth = dateOfBith;
         }
 
-        public string Name => $"{lastName} {firstName}";
+        public string Name => $"{LastName} {FirstName}";
 
+        //public double Age => ((DateTime.Now - DateOfBirth).Days) / 360;
+
+        //public string Age(DateTime Dob)
+        //{
+        //    DateTime Now = DateTime.Now;
+        //    int Years = new DateTime(DateTime.Now.Subtract(Dob).Ticks).Year - 1;
+        //    DateTime PastYearDate = Dob.AddYears(Years);
+        //    int Months = 0;
+        //    for (int i = 1; i <= 12; i++)
+        //    {
+        //        if (PastYearDate.AddMonths(i) == Now)
+        //        {
+        //            Months = i;
+        //            break;
+        //        }
+        //        else if (PastYearDate.AddMonths(i) >= Now)
+        //        {
+        //            Months = i - 1;
+        //            break;
+        //        }
+        //    }
+        //    int Days = Now.Subtract(PastYearDate.AddMonths(Months)).Days;
+        //    return string.Format($"{Years}, {Days}, {Months}");
+        //}
         public double Age => ((DateTime.Now - DateOfBirth).Days) / 360;
 
         public override string ToString()
