@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace _2._6._RING
+namespace _2._7._VECTOR_GRAPHICS_EDITOR
 {
     class Ring: RoundShape
     {
@@ -21,7 +21,7 @@ namespace _2._6._RING
         }
 
 
-        public Ring(int x, int y, int radius, int innerRadius):base(x,y,radius)
+        public Ring(int x, int y, int radius, int innerRadius) : base(x, y, radius)
         {
             this.InnerRadius = innerRadius;
         }

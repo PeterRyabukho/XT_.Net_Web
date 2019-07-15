@@ -9,3 +9,14 @@ D:\Users\cam\desktop\C#\Задачи для EPAM\Task-02\2.6. RING\obj\Debug\net
 D:\Users\cam\desktop\C#\Задачи для EPAM\Task-02\2.6. RING\obj\Debug\netcoreapp2.1\2.6. RING.AssemblyInfo.cs
 D:\Users\cam\desktop\C#\Задачи для EPAM\Task-02\2.6. RING\obj\Debug\netcoreapp2.1\2.6. RING.dll
 D:\Users\cam\desktop\C#\Задачи для EPAM\Task-02\2.6. RING\obj\Debug\netcoreapp2.1\2.6. RING.pdb
+D:\GitApp\XT_.Net_Web\Task-02\2.6. RING\bin\Debug\netcoreapp2.1\2.6. RING.deps.json
+D:\GitApp\XT_.Net_Web\Task-02\2.6. RING\bin\Debug\netcoreapp2.1\2.6. RING.runtimeconfig.json
+D:\GitApp\XT_.Net_Web\Task-02\2.6. RING\bin\Debug\netcoreapp2.1\2.6. RING.runtimeconfig.dev.json
+D:\GitApp\XT_.Net_Web\Task-02\2.6. RING\bin\Debug\netcoreapp2.1\2.6. RING.dll
+D:\GitApp\XT_.Net_Web\Task-02\2.6. RING\bin\Debug\netcoreapp2.1\2.6. RING.pdb
+D:\GitApp\XT_.Net_Web\Task-02\2.6. RING\obj\Debug\netcoreapp2.1\2.6. RING.csprojAssemblyReference.cache
+D:\GitApp\XT_.Net_Web\Task-02\2.6. RING\obj\Debug\netcoreapp2.1\2.6. RING.csproj.CoreCompileInputs.cache
+D:\GitApp\XT_.Net_Web\Task-02\2.6. RING\obj\Debug\netcoreapp2.1\2.6. RING.AssemblyInfoInputs.cache
+D:\GitApp\XT_.Net_Web\Task-02\2.6. RING\obj\Debug\netcoreapp2.1\2.6. RING.AssemblyInfo.cs
+D:\GitApp\XT_.Net_Web\Task-02\2.6. RING\obj\Debug\netcoreapp2.1\2.6. RING.dll
+D:\GitApp\XT_.Net_Web\Task-02\2.6. RING\obj\Debug\netcoreapp2.1\2.6. RING.pdb

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GitApp\\XT_.Net_Web\\Task-02\\2.3. USER\\2.3. USER.csproj": {}
+    "D:\\GitApp\\XT_.Net_Web\\Task-02\\2.7. VECTOR GRAPHICS EDITOR\\2.7. VECTOR GRAPHICS EDITOR.csproj": {}
   },
   "projects": {
-    "D:\\GitApp\\XT_.Net_Web\\Task-02\\2.3. USER\\2.3. USER.csproj": {
+    "D:\\GitApp\\XT_.Net_Web\\Task-02\\2.7. VECTOR GRAPHICS EDITOR\\2.7. VECTOR GRAPHICS EDITOR.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitApp\\XT_.Net_Web\\Task-02\\2.3. USER\\2.3. USER.csproj",
-        "projectName": "2.3. USER",
-        "projectPath": "D:\\GitApp\\XT_.Net_Web\\Task-02\\2.3. USER\\2.3. USER.csproj",
+        "projectUniqueName": "D:\\GitApp\\XT_.Net_Web\\Task-02\\2.7. VECTOR GRAPHICS EDITOR\\2.7. VECTOR GRAPHICS EDITOR.csproj",
+        "projectName": "2.7. VECTOR GRAPHICS EDITOR",
+        "projectPath": "D:\\GitApp\\XT_.Net_Web\\Task-02\\2.7. VECTOR GRAPHICS EDITOR\\2.7. VECTOR GRAPHICS EDITOR.csproj",
         "packagesPath": "C:\\Users\\ryabu\\.nuget\\packages\\",
-        "outputPath": "D:\\GitApp\\XT_.Net_Web\\Task-02\\2.3. USER\\obj\\",
+        "outputPath": "D:\\GitApp\\XT_.Net_Web\\Task-02\\2.7. VECTOR GRAPHICS EDITOR\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",

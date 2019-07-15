@@ -1,24 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Users\\cam\\desktop\\C#\\Задачи для EPAM\\Task-02\\2.5. EMPLOYEE\\2.5. EMPLOYEE.csproj": {}
+    "D:\\GitApp\\XT_.Net_Web\\Task-02\\2.5. EMPLOYEE\\2.5. EMPLOYEE.csproj": {}
   },
   "projects": {
-    "D:\\Users\\cam\\desktop\\C#\\Задачи для EPAM\\Task-02\\2.5. EMPLOYEE\\2.5. EMPLOYEE.csproj": {
+    "D:\\GitApp\\XT_.Net_Web\\Task-02\\2.5. EMPLOYEE\\2.5. EMPLOYEE.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Users\\cam\\desktop\\C#\\Задачи для EPAM\\Task-02\\2.5. EMPLOYEE\\2.5. EMPLOYEE.csproj",
+        "projectUniqueName": "D:\\GitApp\\XT_.Net_Web\\Task-02\\2.5. EMPLOYEE\\2.5. EMPLOYEE.csproj",
         "projectName": "2.5. EMPLOYEE",
-        "projectPath": "D:\\Users\\cam\\desktop\\C#\\Задачи для EPAM\\Task-02\\2.5. EMPLOYEE\\2.5. EMPLOYEE.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "D:\\Users\\cam\\desktop\\C#\\Задачи для EPAM\\Task-02\\2.5. EMPLOYEE\\obj\\",
+        "projectPath": "D:\\GitApp\\XT_.Net_Web\\Task-02\\2.5. EMPLOYEE\\2.5. EMPLOYEE.csproj",
+        "packagesPath": "C:\\Users\\ryabu\\.nuget\\packages\\",
+        "outputPath": "D:\\GitApp\\XT_.Net_Web\\Task-02\\2.5. EMPLOYEE\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\ryabu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.1"
