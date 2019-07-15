@@ -6,10 +6,15 @@ namespace _2._7._VECTOR_GRAPHICS_EDITOR
 {
     abstract class Figure
     {
-        public virtual void Draw()
+        public Point CoordinatPoint { get; set; }
+        public Figure():this(0,0)
         {
 
         }
 
+        public Figure(int x, int y)
+        {
+            CoordinatPoint = new Point(x, y);
+        }
     }
 }

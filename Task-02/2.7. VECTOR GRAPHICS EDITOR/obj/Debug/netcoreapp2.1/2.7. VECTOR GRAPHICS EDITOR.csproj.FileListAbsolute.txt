@@ -1,0 +1,11 @@
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-02\2.7. VECTOR GRAPHICS EDITOR\bin\Debug\netcoreapp2.1\2.7. VECTOR GRAPHICS EDITOR.deps.json
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-02\2.7. VECTOR GRAPHICS EDITOR\bin\Debug\netcoreapp2.1\2.7. VECTOR GRAPHICS EDITOR.runtimeconfig.json
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-02\2.7. VECTOR GRAPHICS EDITOR\bin\Debug\netcoreapp2.1\2.7. VECTOR GRAPHICS EDITOR.runtimeconfig.dev.json
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-02\2.7. VECTOR GRAPHICS EDITOR\bin\Debug\netcoreapp2.1\2.7. VECTOR GRAPHICS EDITOR.dll
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-02\2.7. VECTOR GRAPHICS EDITOR\bin\Debug\netcoreapp2.1\2.7. VECTOR GRAPHICS EDITOR.pdb
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-02\2.7. VECTOR GRAPHICS EDITOR\obj\Debug\netcoreapp2.1\2.7. VECTOR GRAPHICS EDITOR.csproj.CoreCompileInputs.cache
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-02\2.7. VECTOR GRAPHICS EDITOR\obj\Debug\netcoreapp2.1\2.7. VECTOR GRAPHICS EDITOR.AssemblyInfoInputs.cache
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-02\2.7. VECTOR GRAPHICS EDITOR\obj\Debug\netcoreapp2.1\2.7. VECTOR GRAPHICS EDITOR.AssemblyInfo.cs
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-02\2.7. VECTOR GRAPHICS EDITOR\obj\Debug\netcoreapp2.1\2.7. VECTOR GRAPHICS EDITOR.dll
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-02\2.7. VECTOR GRAPHICS EDITOR\obj\Debug\netcoreapp2.1\2.7. VECTOR GRAPHICS EDITOR.pdb
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-02\2.7. VECTOR GRAPHICS EDITOR\obj\Debug\netcoreapp2.1\2.7. VECTOR GRAPHICS EDITOR.csprojAssemblyReference.cache

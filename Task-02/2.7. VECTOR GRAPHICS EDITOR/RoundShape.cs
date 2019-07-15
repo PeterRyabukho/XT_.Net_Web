@@ -4,10 +4,12 @@ using System.Text;
 
 namespace _2._7._VECTOR_GRAPHICS_EDITOR
 {
-    class RoundShape
+    class RoundShape: Figure, IDraw
     {
-        public int X { get; set; }
-        public int Y { get; set; }
+        public string Name { get; } = "Окружность";
+
+        //public int X { get; set; }
+        //public int Y { get; set; }
         private int radius;
 
         public int Radius
@@ -22,24 +24,27 @@ namespace _2._7._VECTOR_GRAPHICS_EDITOR
             }
         }
 
-        public RoundShape(int x, int y, int radius)
+        public RoundShape(int x, int y, int radius):base(x,y)
         {
-            this.X = x;
-            this.Y = y;
+            //this.X = x;
+            //this.Y = y;
             this.Radius = radius;
         }
-        public RoundShape()
+        public RoundShape():this(0,0,1)
         {
-            X = 0;
-            Y = 0;
-            Radius = 1;
+
         }
 
         public double OuterLength => 2 * Math.PI * Radius;
 
+        public virtual string Draw()
+        {
+            return Name + " нарисованна на экране, с заданными параметрами!\n";
+        }
+
         public override string ToString()
         {
-            return $"\nСоздана ОКРУЖНОСТЬ с координатами [X,Y]-[{X},{Y}] и радиусом - {Radius}мм\nДлинна окружности: {OuterLength:.000}мм\n";
+            return $"Фигура: {Name}\nКоординаты центра фигуры [X,Y]: {CoordinatPoint}\nРадиус - {Radius}мм\nДлинна окружности: {OuterLength:.00}мм\n";
         }
     }
 }

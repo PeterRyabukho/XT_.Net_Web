@@ -1,26 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GitApp\\XT_.Net_Web\\Task-02\\2.7. VECTOR GRAPHICS EDITOR\\2.7. VECTOR GRAPHICS EDITOR.csproj": {}
+    "D:\\Users\\cam\\desktop\\C#\\GitApp\\XT_.Net_Web\\Task-02\\2.7. VECTOR GRAPHICS EDITOR\\2.7. VECTOR GRAPHICS EDITOR.csproj": {}
   },
   "projects": {
-    "D:\\GitApp\\XT_.Net_Web\\Task-02\\2.7. VECTOR GRAPHICS EDITOR\\2.7. VECTOR GRAPHICS EDITOR.csproj": {
+    "D:\\Users\\cam\\desktop\\C#\\GitApp\\XT_.Net_Web\\Task-02\\2.7. VECTOR GRAPHICS EDITOR\\2.7. VECTOR GRAPHICS EDITOR.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitApp\\XT_.Net_Web\\Task-02\\2.7. VECTOR GRAPHICS EDITOR\\2.7. VECTOR GRAPHICS EDITOR.csproj",
+        "projectUniqueName": "D:\\Users\\cam\\desktop\\C#\\GitApp\\XT_.Net_Web\\Task-02\\2.7. VECTOR GRAPHICS EDITOR\\2.7. VECTOR GRAPHICS EDITOR.csproj",
         "projectName": "2.7. VECTOR GRAPHICS EDITOR",
-        "projectPath": "D:\\GitApp\\XT_.Net_Web\\Task-02\\2.7. VECTOR GRAPHICS EDITOR\\2.7. VECTOR GRAPHICS EDITOR.csproj",
-        "packagesPath": "C:\\Users\\ryabu\\.nuget\\packages\\",
-        "outputPath": "D:\\GitApp\\XT_.Net_Web\\Task-02\\2.7. VECTOR GRAPHICS EDITOR\\obj\\",
+        "projectPath": "D:\\Users\\cam\\desktop\\C#\\GitApp\\XT_.Net_Web\\Task-02\\2.7. VECTOR GRAPHICS EDITOR\\2.7. VECTOR GRAPHICS EDITOR.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "D:\\Users\\cam\\desktop\\C#\\GitApp\\XT_.Net_Web\\Task-02\\2.7. VECTOR GRAPHICS EDITOR\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\ryabu\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.1"
