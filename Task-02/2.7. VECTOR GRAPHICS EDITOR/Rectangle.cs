@@ -44,9 +44,13 @@ namespace _2._7._VECTOR_GRAPHICS_EDITOR
 
         public int RectPerimeter => 2 * (height + width);
 
+        public override string Draw()
+        {
+            return $"\nНа экране нарисован - {Name}! С заданными параметрами, указанными выше!\n";
+        }
         public override string ToString()
         {
-            return $"Фигура: {Name}\nШирина: {Width}\nВысота{Height}\nПлощадь: {RectPerimeter}\nПериметр: {RectPerimeter}";
+            return $"\nФигура: {Name}\nКоординаты центра фигуры: {CoordinatPoint}\nВысота: {Width}мм\nШирина: {Height}мм\nПлощадь: {RectArea}мм\nПериметр: {RectPerimeter}мм\n{Draw()}";
         }
     }
 }

@@ -24,9 +24,13 @@ namespace _2._7._VECTOR_GRAPHICS_EDITOR
             return Math.Sqrt(Math.Pow(x, 2) + (Math.Pow(y, 2)));
         }
 
+        public override string Draw()
+        {
+            return $"\nНа экране нарисованна - {Name}! С заданными параметрами, указанными выше!\n";
+        }
         public override string ToString()
         {
-            return $"Фигура: {Name}\nКоординаты первой точки: {P1}\tКоординаты второй точки: {P2}\nДлинна полученной линии: {LineLength():.00мм}";
+            return $"/nФигура: {Name}\nКоординаты начальной точки: {P1}\tКоординаты конечной точки: {P2}\nДлинна полученной линии: {LineLength():.00мм}\n{Draw()}";
         }
     }
 }

@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace _2._7._VECTOR_GRAPHICS_EDITOR
+namespace _2._8._GAME
 {
-    interface IDraw
+    interface IMovable
     {
-        string Draw();
+        void Move(Point point);
     }
 }

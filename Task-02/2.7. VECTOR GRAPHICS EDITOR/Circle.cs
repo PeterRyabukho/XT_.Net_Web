@@ -24,12 +24,12 @@ namespace _2._7._VECTOR_GRAPHICS_EDITOR
 
         public override string Draw()
         {
-            return Name + base.Draw();
+            return $"\nНа экране нарисован - {Name}! С заданными параметрами, указанными выше!\n";
         }
 
         public override string ToString()
         {
-            return $"\nФигура: {Name}\nКоординаты центра фигуры: {CoordinatPoint}\nПлощадь: {CircleArea:.00}\nДлинна окружности: {OuterLength:.00}\n";
+            return $"\nФигура: {Name}\nКоординаты центра фигуры: {CoordinatPoint}\nПлощадь: {CircleArea:.00}\nДлинна окружности: {OuterLength:.00}\n{Draw()}";
         }
     }
 }

@@ -9,9 +9,15 @@ namespace _2._4._MY_STRING
         //public string Str1 { get; set; }
         //public char[] CharArr => Str1.ToCharArray();
         public char[] CharArr { get; set; }
+
+        public char this[int index]
+        {
+            get => CharArr[index];
+            set => CharArr[index] = value;
+        }
         public MyString()
         {
-
+            CharArr = new char[0];
         }
 
         public MyString(string str)
@@ -22,6 +28,11 @@ namespace _2._4._MY_STRING
                 CharArr[i] = str[i];
         }
 
+        public MyString(char[] array)
+        {
+            CharArr = array;
+        }
+
         public void Print()
         {
             for (int i = 0; i < CharArr.Length; i++)
@@ -30,10 +41,13 @@ namespace _2._4._MY_STRING
             }
             Console.WriteLine();
         }
+        public int Length => CharArr.Length;
 
-        public string GetString()
+        public char[] ToCharArray() => CharArr;
+
+        public override string ToString()
         {
-            return CharArr.ToString();
+            return new string(CharArr);
         }
 
         public MyString MyConcat(MyString str1, MyString str2)
@@ -47,8 +61,10 @@ namespace _2._4._MY_STRING
         {
             if (str1 > str2)
                 Console.WriteLine("Строка str1 перед строкой str2");
-            else if (str1 < str2)
+            else if(str1 < str2)
                 Console.WriteLine("Строка str2 перед строкой str1");
+            else if (str1==str2)
+                Console.WriteLine("Строки равны");
         }
 
         public int MyIndexOf(MyString str1, char toFound)
@@ -86,30 +102,65 @@ namespace _2._4._MY_STRING
             return newStr;
         }
 
-        public static bool operator > (MyString str1, MyString str2)
+        public static bool operator >(MyString str1, MyString str2) => str1.Length > str2.Length;
+
+        //public static bool operator > (MyString str1, MyString str2)
+        //{
+        //    for (int i = 0; i < str1.Length; i++)
+        //    {
+        //        for (int j = 0; j < str2.Length; j++)
+        //        {
+        //            if (str1.CharArr[i] < str2.CharArr[j])
+        //                return true;
+        //        }
+        //    }
+        //    return false;
+        //}
+
+        public static bool operator <(MyString str1, MyString str2) => str1.Length < str2.Length;
+
+        //public static bool operator < (MyString str1, MyString str2)
+        //{
+        //    for (int i = 0; i < str1.Length; i++)
+        //    {
+        //        for (int j = 0; j < str2.Length; j++)
+        //        {
+        //            if (str1.CharArr[i] > str2.CharArr[j])
+        //                return true;
+        //        }
+        //    }
+        //    return false;
+        //}
+
+        //public static bool operator ==(MyString str1, MyString str2) => str1.Equals(str2);
+
+        public static bool operator ==(MyString str1, MyString str2)
         {
-            for (int i = 0; i < str1.CharArr.Length; i++)
-            {
-                for (int j = 0; j < str2.CharArr.Length; j++)
-                {
-                    if (str1.CharArr[i] < str2.CharArr[j])
-                        return true;
-                }
-            }
-            return false;
-        }
-        public static bool operator < (MyString str1, MyString str2)
-        {
-            for (int i = 0; i < str1.CharArr.Length; i++)
-            {
-                for (int j = 0; j < str2.CharArr.Length; j++)
-                {
-                    if (str1.CharArr[i] > str2.CharArr[j])
-                        return true;
-                }
-            }
+            if (str1.Length == str2.Length)
+                return true;
             return false;
         }
 
+        //public static bool operator !=(MyString str1, MyString str2) => str2.Equals(str1);
+
+        public static bool operator !=(MyString str1, MyString str2)
+        {
+            if (str1.Length != str2.Length)
+                return true;
+            return false;
+        }
+
+        //public static bool operator !=(MyString str1, MyString str2)
+        //{
+        //    for (int i = 0; i < str1.Length; i++)
+        //    {
+        //        for (int j = 0; j < str2.Length; j++)
+        //        {
+        //            if (str1.CharArr[i] != str2.CharArr[j])
+        //                return true;
+        //        }
+        //    }
+        //    return false;
+        //}
     }
 }

@@ -41,12 +41,12 @@ namespace _2._7._VECTOR_GRAPHICS_EDITOR
 
         public override string Draw()
         {
-            return Name + base.Draw();
+            return $"\nНа экране нарисованно - {Name}! С заданными параметрами, указанными выше!\n";
         }
 
         public override string ToString()
         {
-            return $"Фигура: {Name}\nКоординаты центра фигуры: [X,Y]-[{CoordinatPoint}]\nРадиус: {Radius}мм\nВнутренний радиус: {InnerRadius}\nСумма длинн внешней и внутренней окружностей кольца: {SummLength:.000}мм\nПлощадь кольца: {GetArea:.000}мм\n";
+            return $"\nФигура: {Name}\nКоординаты центра фигуры: [X,Y]-[{CoordinatPoint}]\nРадиус: {Radius}мм\nВнутренний радиус: {InnerRadius}мм\nСумма длинн внешней и внутренней окружностей кольца: {SummLength:.000}мм\nПлощадь кольца: {GetArea:.000}мм\n{Draw()}";
         }
     }
 }

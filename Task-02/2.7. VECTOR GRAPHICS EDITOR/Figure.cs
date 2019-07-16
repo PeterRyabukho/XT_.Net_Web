@@ -16,5 +16,10 @@ namespace _2._7._VECTOR_GRAPHICS_EDITOR
         {
             CoordinatPoint = new Point(x, y);
         }
+
+        public virtual string Draw()
+        {
+            return "Рисуем фигуры";
+        }
     }
 }
