@@ -4,8 +4,8 @@ using System.Text;
 
 namespace _2._8._GAME
 {
-    interface IMovable
+    interface IDoNothing
     {
-        void Move(int x, int y);
+        string DoNothing();
     }
 }

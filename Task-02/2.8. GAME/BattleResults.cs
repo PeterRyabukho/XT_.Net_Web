@@ -4,8 +4,8 @@ using System.Text;
 
 namespace _2._8._GAME
 {
-    interface IMovable
+    sealed class BattleResults
     {
-        void Move(int x, int y);
+        public int HealthChange { get; set; }
     }
 }
