@@ -40,7 +40,7 @@ namespace _2._7._VECTOR_GRAPHICS_EDITOR
 
         public override string ToString()
         {
-            return $"Фигура: {Name}\nКоординаты центра фигуры [X,Y]: {CoordinatPoint}\nРадиус - {Radius}мм\nДлинна окружности: {OuterLength:.00}мм\n{Draw()}";
+            return $"\nФигура: {Name}\nКоординаты центра фигуры [X,Y]: {CoordinatPoint}\nРадиус - {Radius}мм\nДлинна окружности: {OuterLength:.00}мм\n{Draw()}";
         }
     }
 }

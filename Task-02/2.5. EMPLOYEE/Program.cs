@@ -20,31 +20,7 @@ namespace _2._5._EMPLOYEE
                 lastName = Console.ReadLine();
 
                 Console.Write("Введите дату рождения: ");
-                bool DoBE = DateTime.TryParse(Console.ReadLine(), out DateTime dateOfBithEmployee);
-                if (DoBE)
-                {
-                    Console.Write("Введите должность: ");
-                    position = Console.ReadLine();
-
-                    Console.Write("Введите дату начала работы в компании: ");
-                    bool SwD = DateTime.TryParse(Console.ReadLine(), out DateTime startWorkDate);
-                    if (SwD)
-                    {
-                        Employee employee = new Employee(firstName, lastName, dateOfBithEmployee, position, startWorkDate);
-                        Console.WriteLine(employee);
-                    }
-                    else
-                    {
-                        Console.WriteLine("Ошибка! Введите правельный формат даты!");
-                        Main();
-                    }
-
-                }
-                else
-                {
-                    Console.WriteLine("Ошибка! Введите правельный формат даты!");
-                    Main();
-                }
+                position = IamEmployee(firstName, lastName);
             }
             else
             {
@@ -70,6 +46,38 @@ namespace _2._5._EMPLOYEE
             }
 
             Console.ReadKey();
+        }
+
+        private static string IamEmployee(string firstName, string lastName)
+        {
+            string position="";
+            bool DoBE = DateTime.TryParse(Console.ReadLine(), out DateTime dateOfBithEmployee);
+            if (DoBE)
+            {
+                Console.Write("Введите должность: ");
+                position = Console.ReadLine();
+
+                Console.Write("Введите дату начала работы в компании: ");
+                bool SwD = DateTime.TryParse(Console.ReadLine(), out DateTime startWorkDate);
+                if (SwD)
+                {
+                    Employee employee = new Employee(firstName, lastName, dateOfBithEmployee, position, startWorkDate);
+                    Console.WriteLine(employee);
+                }
+                else
+                {
+                    Console.WriteLine("Ошибка! Введите правельный формат даты!");
+                    Main();
+                }
+
+            }
+            else
+            {
+                Console.WriteLine("Ошибка! Введите правельный формат даты!");
+                Main();
+            }
+
+            return position;
         }
     }
 }

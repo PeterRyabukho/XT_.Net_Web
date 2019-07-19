@@ -33,8 +33,6 @@ namespace _2._3._USER
 
         public string Name => $"{LastName} {FirstName}";
 
-        //public double Age => ((DateTime.Now - DateOfBirth).Days) / 360;
-
         //public string Age(DateTime Dob)
         //{
         //    DateTime Now = DateTime.Now;
@@ -61,7 +59,7 @@ namespace _2._3._USER
 
         public override string ToString()
         {
-            return $"\nПользователь создан!\n ФИО: {Name}\nРодился: {dateOfBirth:d.M.yyyy}\tВозраст: {Age}";
+            return $"\nПользователь создан!\nФИО: {Name}\nРодился: {dateOfBirth:d.M.yyyy}\tВозраст: {Age} лет(года)";
         }
     }
 }

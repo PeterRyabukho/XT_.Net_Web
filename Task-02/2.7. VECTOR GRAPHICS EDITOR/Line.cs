@@ -30,7 +30,7 @@ namespace _2._7._VECTOR_GRAPHICS_EDITOR
         }
         public override string ToString()
         {
-            return $"/nФигура: {Name}\nКоординаты начальной точки: {P1}\tКоординаты конечной точки: {P2}\nДлинна полученной линии: {LineLength():.00мм}\n{Draw()}";
+            return $"\nФигура: {Name}\nКоординаты начальной точки: {P1}\tКоординаты конечной точки: {P2}\nДлинна полученной линии: {LineLength():.00мм}\n{Draw()}";
         }
     }
 }

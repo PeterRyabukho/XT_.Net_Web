@@ -21,6 +21,11 @@ namespace _2._2._TRIANGLE
             C = c;
         }
 
+        public Triangle()
+        {
+
+        }
+
         public bool DoesTriangleExist => (A <= B + C & B <= A + C & C <= A + B);
 
         public bool EquilateralTriangle => (A == B && B == C && C == A);
@@ -31,7 +36,7 @@ namespace _2._2._TRIANGLE
 
         public override string ToString()
         {
-            return $"Стороны треугольника равны а = {A}, b = {B}, c = {C}\n\nПериметр: {Perimeter}\tПлощадь: {Area:.000}\n";
+            return $"\nСтороны треугольника равны а = {A}, b = {B}, c = {C}\n\nПериметр: {Perimeter}\tПлощадь: {Area:.000}\n";
         }
     }
 }

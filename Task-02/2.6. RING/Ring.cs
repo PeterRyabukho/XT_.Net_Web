@@ -6,9 +6,9 @@ namespace _2._6._RING
 {
     class Ring: RoundShape
     {
-        private int innerRadius;
+        private double innerRadius;
 
-        public int InnerRadius
+        public double InnerRadius
         {
             get { return innerRadius; }
             set
@@ -20,15 +20,14 @@ namespace _2._6._RING
             }
         }
 
-
-        public Ring(int x, int y, int radius, int innerRadius):base(x,y,radius)
+        public Ring(int x, int y, double radius, double innerRadius):base(x,y,radius)
         {
             this.InnerRadius = innerRadius;
         }
 
-        public Ring()
+        public Ring():this(0,0,2,1)
         {
-            InnerRadius = 2;
+
         }
 
         public double GetArea => Math.PI * (Radius * Radius - InnerRadius * InnerRadius);
@@ -39,7 +38,7 @@ namespace _2._6._RING
 
         public override string ToString()
         {
-            return $"\nСоздано КОЛЬЦО с координатами [X,Y]-[{X},{Y}], \nвнешним радиусом - {Radius}мм и внутренним радиусом - {InnerRadius}\nСумма длинн внешней и внутренней окружностей кольца: {SummLength:.000}мм\nПлощадь кольца: {GetArea:.000}мм\n";
+            return $"\nСоздано КОЛЬЦО с координатами [X,Y]-[{X},{Y}], \nВнешним радиусом - {Radius}мм и внутренним радиусом - {InnerRadius}мм\nСумма длинн внешней и внутренней окружностей кольца: {SummLength:.000}мм\nПлощадь кольца: {GetArea:.000}мм\n";
         }
     }
 }

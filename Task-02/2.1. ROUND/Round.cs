@@ -8,7 +8,13 @@ namespace _2._1._ROUND
     {
         public int X { get; set; }
         public int Y { get; set; }
+
         private double r;
+
+        public Round()
+        {
+
+        }
 
         public Round(int x, int y, double r)
         {
@@ -33,7 +39,7 @@ namespace _2._1._ROUND
 
         public override string ToString()
         {
-            return $"Координаты х, y = {X}, {Y}\tРадиус: {Radius}\n\nДлина окружности: {LengthRound:.000}\tПлощадь круга: {GetArea:.000}";
+            return $"\nКоординаты х, y = {X}, {Y}\tРадиус: {Radius}\n\nДлина окружности: {LengthRound:.000}\tПлощадь круга: {GetArea:.000}";
         }
     }
 }

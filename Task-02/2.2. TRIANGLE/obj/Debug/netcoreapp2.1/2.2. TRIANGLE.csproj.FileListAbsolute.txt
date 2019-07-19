@@ -9,3 +9,14 @@ C:\Users\user\source\repos\Task-02\2.2. TRIANGLE\obj\Debug\netcoreapp2.1\2.2. TR
 C:\Users\user\source\repos\Task-02\2.2. TRIANGLE\obj\Debug\netcoreapp2.1\2.2. TRIANGLE.AssemblyInfo.cs
 C:\Users\user\source\repos\Task-02\2.2. TRIANGLE\obj\Debug\netcoreapp2.1\2.2. TRIANGLE.dll
 C:\Users\user\source\repos\Task-02\2.2. TRIANGLE\obj\Debug\netcoreapp2.1\2.2. TRIANGLE.pdb
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-02\2.2. TRIANGLE\bin\Debug\netcoreapp2.1\2.2. TRIANGLE.deps.json
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-02\2.2. TRIANGLE\bin\Debug\netcoreapp2.1\2.2. TRIANGLE.runtimeconfig.json
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-02\2.2. TRIANGLE\bin\Debug\netcoreapp2.1\2.2. TRIANGLE.runtimeconfig.dev.json
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-02\2.2. TRIANGLE\bin\Debug\netcoreapp2.1\2.2. TRIANGLE.dll
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-02\2.2. TRIANGLE\bin\Debug\netcoreapp2.1\2.2. TRIANGLE.pdb
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-02\2.2. TRIANGLE\obj\Debug\netcoreapp2.1\2.2. TRIANGLE.csprojAssemblyReference.cache
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-02\2.2. TRIANGLE\obj\Debug\netcoreapp2.1\2.2. TRIANGLE.csproj.CoreCompileInputs.cache
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-02\2.2. TRIANGLE\obj\Debug\netcoreapp2.1\2.2. TRIANGLE.AssemblyInfoInputs.cache
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-02\2.2. TRIANGLE\obj\Debug\netcoreapp2.1\2.2. TRIANGLE.AssemblyInfo.cs
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-02\2.2. TRIANGLE\obj\Debug\netcoreapp2.1\2.2. TRIANGLE.dll
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-02\2.2. TRIANGLE\obj\Debug\netcoreapp2.1\2.2. TRIANGLE.pdb

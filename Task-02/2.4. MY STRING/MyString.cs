@@ -6,8 +6,6 @@ namespace _2._4._MY_STRING
 {
     class MyString
     {
-        //public string Str1 { get; set; }
-        //public char[] CharArr => Str1.ToCharArray();
         public char[] CharArr { get; set; }
 
         public char this[int index]

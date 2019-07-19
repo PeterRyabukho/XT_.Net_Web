@@ -28,7 +28,8 @@ namespace _2._3._USER
             }
             else
             {
-                Console.WriteLine("Ошибка! Введите правельный формат даты!");
+                Console.WriteLine("\nОшибка! Введите правельный формат даты!\n");
+                Console.Write("Введите дату рождения: ");
                 CheckData(firstName, lastName);
             }
         }

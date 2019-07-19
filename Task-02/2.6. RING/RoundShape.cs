@@ -8,9 +8,9 @@ namespace _2._6._RING
     {
         public int X { get; set; }
         public int Y { get; set; }
-        private int radius;
+        private double radius;
 
-        public int Radius
+        public double Radius
         {
             get { return radius; }
             set
@@ -22,7 +22,7 @@ namespace _2._6._RING
             }
         }
 
-        public RoundShape(int x, int y, int radius)
+        public RoundShape(int x, int y, double radius)
         {
             this.X = x;
             this.Y = y;

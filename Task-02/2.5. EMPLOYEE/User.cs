@@ -20,7 +20,7 @@ namespace _2._5._EMPLOYEE
                 if (dateOfBirth < DateTime.Now)
                     dateOfBirth = value;
                 else
-                    throw new DataMisalignedException("Укажите правильный формат даты! (дд.мм.гггг или дд/мм/гггг");
+                    throw new DataMisalignedException("Укажите правильный формат даты! Дата не может быть больше сегодняшнего дня! (дд.мм.гггг или дд/мм/гггг");
             }
         }
 
@@ -37,7 +37,7 @@ namespace _2._5._EMPLOYEE
 
         public override string ToString()
         {
-            return $"\nПользователь создан!\nФИО: {Name}\nРодился: {DateOfBirth:d.M.yyyy}\tВозраст: {Age}";
+            return $"\nПользователь создан!\nФИО: {Name}\nРодился: {DateOfBirth:d.M.yyyy}\tВозраст: {Age} лет(года)";
         }
     }
 }
