@@ -1,0 +1,11 @@
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task - 03\3.2. WORD FREQUENCY\bin\Debug\netcoreapp2.1\3.2. WORD FREQUENCY.deps.json
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task - 03\3.2. WORD FREQUENCY\bin\Debug\netcoreapp2.1\3.2. WORD FREQUENCY.runtimeconfig.json
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task - 03\3.2. WORD FREQUENCY\bin\Debug\netcoreapp2.1\3.2. WORD FREQUENCY.runtimeconfig.dev.json
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task - 03\3.2. WORD FREQUENCY\bin\Debug\netcoreapp2.1\3.2. WORD FREQUENCY.dll
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task - 03\3.2. WORD FREQUENCY\bin\Debug\netcoreapp2.1\3.2. WORD FREQUENCY.pdb
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task - 03\3.2. WORD FREQUENCY\obj\Debug\netcoreapp2.1\3.2. WORD FREQUENCY.csproj.CoreCompileInputs.cache
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task - 03\3.2. WORD FREQUENCY\obj\Debug\netcoreapp2.1\3.2. WORD FREQUENCY.AssemblyInfoInputs.cache
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task - 03\3.2. WORD FREQUENCY\obj\Debug\netcoreapp2.1\3.2. WORD FREQUENCY.AssemblyInfo.cs
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task - 03\3.2. WORD FREQUENCY\obj\Debug\netcoreapp2.1\3.2. WORD FREQUENCY.dll
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task - 03\3.2. WORD FREQUENCY\obj\Debug\netcoreapp2.1\3.2. WORD FREQUENCY.pdb
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task - 03\3.2. WORD FREQUENCY\obj\Debug\netcoreapp2.1\3.2. WORD FREQUENCY.csprojAssemblyReference.cache
