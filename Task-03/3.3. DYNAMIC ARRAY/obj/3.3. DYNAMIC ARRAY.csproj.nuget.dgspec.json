@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\GitApp\\XT_.Net_Web\\Task-03\\3.2. WORD FREQUENCY\\3.2. WORD FREQUENCY.csproj": {}
+    "D:\\GitApp\\XT_.Net_Web\\Task-03\\3.3. DYNAMIC ARRAY\\3.3. DYNAMIC ARRAY.csproj": {}
   },
   "projects": {
-    "D:\\GitApp\\XT_.Net_Web\\Task-03\\3.2. WORD FREQUENCY\\3.2. WORD FREQUENCY.csproj": {
+    "D:\\GitApp\\XT_.Net_Web\\Task-03\\3.3. DYNAMIC ARRAY\\3.3. DYNAMIC ARRAY.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitApp\\XT_.Net_Web\\Task-03\\3.2. WORD FREQUENCY\\3.2. WORD FREQUENCY.csproj",
-        "projectName": "3.2. WORD FREQUENCY",
-        "projectPath": "D:\\GitApp\\XT_.Net_Web\\Task-03\\3.2. WORD FREQUENCY\\3.2. WORD FREQUENCY.csproj",
+        "projectUniqueName": "D:\\GitApp\\XT_.Net_Web\\Task-03\\3.3. DYNAMIC ARRAY\\3.3. DYNAMIC ARRAY.csproj",
+        "projectName": "3.3. DYNAMIC ARRAY",
+        "projectPath": "D:\\GitApp\\XT_.Net_Web\\Task-03\\3.3. DYNAMIC ARRAY\\3.3. DYNAMIC ARRAY.csproj",
         "packagesPath": "C:\\Users\\ryabu\\.nuget\\packages\\",
-        "outputPath": "D:\\GitApp\\XT_.Net_Web\\Task-03\\3.2. WORD FREQUENCY\\obj\\",
+        "outputPath": "D:\\GitApp\\XT_.Net_Web\\Task-03\\3.3. DYNAMIC ARRAY\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
