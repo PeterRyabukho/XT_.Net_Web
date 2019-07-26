@@ -8,23 +8,17 @@ namespace _3._1._LOST
         static void Main()
         {
             int[] people = CreateCirclOfPeople();
-
-            if (people == null)
-            {
-                throw new NullReferenceException("Введено некотректно значение N массив не был создан!");
-            }
-            
             Queue<int> peopleInCercl = new Queue<int>(people);
 
             LostGame(peopleInCercl);
-            Console.WriteLine($"\n\nПобедитель: человек под номером [{peopleInCercl.Peek()}] !");
+            Console.WriteLine($"\n\nAnd the winneeer isss: person [{peopleInCercl.Peek()}] !");
 
             Console.ReadLine();
         }
 
         private static int[] CreateCirclOfPeople()
         {
-            Console.Write("Введите количество человек в кругу: ");
+            Console.Write("Enter number of people in the circle: ");
             bool check = int.TryParse(Console.ReadLine(), out int N);
 
             if (check && N > 1)
@@ -35,7 +29,7 @@ namespace _3._1._LOST
                     people[i] = i + 1;
                 }
 
-                Console.Write("\nСформирован круг из людей под номерами: ");
+                Console.Write("\nFormed circle of people, under the numbers: ");
                 for (int i = 0; i < people.Length; i++)
                 {
                     Console.Write(people[i] + " ");
@@ -45,9 +39,8 @@ namespace _3._1._LOST
             }
             else
             {
-                Console.WriteLine("\nОшибка! Количество человек должно быть целое число и большее 1 !!!\n");
-                Main();
-                return null;
+                Console.WriteLine("\nExapcion! The number of people must be an integer and greater than 1 !!!\n");
+                return CreateCirclOfPeople();
             }
         }
 
@@ -56,7 +49,7 @@ namespace _3._1._LOST
             int countLoops = 1;
             while (peopleInCercl.Count != 1)
             {
-                Console.Write($"\nОсталось человеков после {countLoops} круга уничтожения под номерами: ");
+                Console.Write($"\nPeople left after: {countLoops} circle of destruction, under numbers: ");
                 peopleInCercl.Enqueue(peopleInCercl.Dequeue());
                 peopleInCercl.Dequeue();
                 int[] arr = peopleInCercl.ToArray();

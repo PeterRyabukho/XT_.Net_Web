@@ -35,7 +35,7 @@ namespace _3._3._DYNAMIC_ARRAY
             bool res = int.TryParse(Console.ReadLine(), out int N);
             if (res)
             {
-                Console.WriteLine($"\n6. 'The Remove method' that removes the specified item from the collection: {arr2.Remove(N)}");
+                Console.WriteLine($"\n6. 'The Remove method' that removes the specified item {N} from the collection: {arr2.Remove(N)}");
                 ShowThisCollection(arr2);
             }
             else

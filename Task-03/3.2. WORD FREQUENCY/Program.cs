@@ -11,23 +11,24 @@ namespace _3._2._WORD_FREQUENCY
                 "This makes it a perfect scenario for default interface members. You can add a method to the ICustomer interface, and provide the most likely implementation. " +
                 "All existing, and any new implementations can use the default implementation, or provide their own";
 
-            string[] arr = str1.ToLower().Split(' ', '.', ',','-') ;
+            string[] arr = str1.ToLower().Split(' ', '.', ',', '-', '!', '?', ':', ';') ;
 
             Dictionary<string, List<int>> myDictionary = new Dictionary<string, List<int>>();
-            int count = 1;
+
+            int count=0;
             foreach (var word in arr)
             {
                 if(!myDictionary.ContainsKey(word))
                 {
-                    myDictionary.Add(word, new List<int>(count));
+                    myDictionary.Add(word, new List<int>());
                 }
                 else
                 {
-                    myDictionary[word].Add(count++);
+                    myDictionary[word].Add(count);
                 }
             }
 
-            Console.WriteLine($"     Слова\t\t\tКол-во повторений в тексте");
+            Console.WriteLine($"     Words:\t\t\tNumber of repetitions in the text:");
             foreach (var word in myDictionary)
             {
 

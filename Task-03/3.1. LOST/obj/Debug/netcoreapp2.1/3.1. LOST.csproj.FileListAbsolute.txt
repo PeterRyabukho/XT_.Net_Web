@@ -9,3 +9,14 @@ D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task - 03\3.1. LOST\obj\Debug\netcore
 D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task - 03\3.1. LOST\obj\Debug\netcoreapp2.1\3.1. LOST.AssemblyInfo.cs
 D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task - 03\3.1. LOST\obj\Debug\netcoreapp2.1\3.1. LOST.dll
 D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task - 03\3.1. LOST\obj\Debug\netcoreapp2.1\3.1. LOST.pdb
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-03\3.1. LOST\bin\Debug\netcoreapp2.1\3.1. LOST.deps.json
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-03\3.1. LOST\bin\Debug\netcoreapp2.1\3.1. LOST.runtimeconfig.json
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-03\3.1. LOST\bin\Debug\netcoreapp2.1\3.1. LOST.runtimeconfig.dev.json
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-03\3.1. LOST\bin\Debug\netcoreapp2.1\3.1. LOST.dll
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-03\3.1. LOST\bin\Debug\netcoreapp2.1\3.1. LOST.pdb
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-03\3.1. LOST\obj\Debug\netcoreapp2.1\3.1. LOST.csprojAssemblyReference.cache
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-03\3.1. LOST\obj\Debug\netcoreapp2.1\3.1. LOST.csproj.CoreCompileInputs.cache
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-03\3.1. LOST\obj\Debug\netcoreapp2.1\3.1. LOST.AssemblyInfoInputs.cache
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-03\3.1. LOST\obj\Debug\netcoreapp2.1\3.1. LOST.AssemblyInfo.cs
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-03\3.1. LOST\obj\Debug\netcoreapp2.1\3.1. LOST.dll
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-03\3.1. LOST\obj\Debug\netcoreapp2.1\3.1. LOST.pdb

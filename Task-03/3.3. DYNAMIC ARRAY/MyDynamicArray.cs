@@ -11,32 +11,35 @@ namespace _3._3._DYNAMIC_ARRAY
 
         public int Length { get; private set; } = 0;
 
-        public int Capacity { get; private set; } = 8;
-        //{
-        //    get => Array.Length;
-            
-        //    set
-        //    {
-        //        if (value < Length)
-        //        {
-        //            throw new ArgumentOutOfRangeException("Exception! Capacity cannot be lower then Length of the array!");
-        //        }
-        //        else
-        //        {
-        //            var newArr = new T[Capacity];
-        //            for (int i = 0; i < Array.Length; i++)
-        //            {
-        //                newArr[i] = Array[i];
-        //            }
-        //            Array = newArr;
-        //        }
-        //    }
-        //}
+        private int capacity = 8;
+        public int Capacity
+        {
+            get => capacity;
+
+            set
+            {
+                if (value < 0)
+                {
+                    throw new ArgumentOutOfRangeException("Exception! Capacity cannot be lower then 0!");
+                }
+                if (capacity > value)
+                {
+                    var newArr = new T[value];
+                    for (int i = 0; i < value; i++)
+                    {
+                        newArr[i] = Array[i];
+                    }
+                    Array = newArr;
+                    Length = value;
+
+                }
+                capacity = value;
+            }
+        }
 
         public MyDynamicArray() : this(capacity: 8)
         {
             Array = new T[Capacity];
-            Length = 0;
         }
 
         public MyDynamicArray(int capacity)

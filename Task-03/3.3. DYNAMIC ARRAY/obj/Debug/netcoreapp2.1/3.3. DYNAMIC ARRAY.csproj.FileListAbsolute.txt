@@ -9,3 +9,14 @@ D:\GitApp\XT_.Net_Web\Task-03\3.3. DYNAMIC ARRAY\obj\Debug\netcoreapp2.1\3.3. DY
 D:\GitApp\XT_.Net_Web\Task-03\3.3. DYNAMIC ARRAY\obj\Debug\netcoreapp2.1\3.3. DYNAMIC ARRAY.dll
 D:\GitApp\XT_.Net_Web\Task-03\3.3. DYNAMIC ARRAY\obj\Debug\netcoreapp2.1\3.3. DYNAMIC ARRAY.pdb
 D:\GitApp\XT_.Net_Web\Task-03\3.3. DYNAMIC ARRAY\obj\Debug\netcoreapp2.1\3.3. DYNAMIC ARRAY.csprojAssemblyReference.cache
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-03\3.3. DYNAMIC ARRAY\bin\Debug\netcoreapp2.1\3.3. DYNAMIC ARRAY.deps.json
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-03\3.3. DYNAMIC ARRAY\bin\Debug\netcoreapp2.1\3.3. DYNAMIC ARRAY.runtimeconfig.json
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-03\3.3. DYNAMIC ARRAY\bin\Debug\netcoreapp2.1\3.3. DYNAMIC ARRAY.runtimeconfig.dev.json
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-03\3.3. DYNAMIC ARRAY\bin\Debug\netcoreapp2.1\3.3. DYNAMIC ARRAY.dll
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-03\3.3. DYNAMIC ARRAY\bin\Debug\netcoreapp2.1\3.3. DYNAMIC ARRAY.pdb
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-03\3.3. DYNAMIC ARRAY\obj\Debug\netcoreapp2.1\3.3. DYNAMIC ARRAY.csprojAssemblyReference.cache
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-03\3.3. DYNAMIC ARRAY\obj\Debug\netcoreapp2.1\3.3. DYNAMIC ARRAY.csproj.CoreCompileInputs.cache
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-03\3.3. DYNAMIC ARRAY\obj\Debug\netcoreapp2.1\3.3. DYNAMIC ARRAY.AssemblyInfoInputs.cache
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-03\3.3. DYNAMIC ARRAY\obj\Debug\netcoreapp2.1\3.3. DYNAMIC ARRAY.AssemblyInfo.cs
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-03\3.3. DYNAMIC ARRAY\obj\Debug\netcoreapp2.1\3.3. DYNAMIC ARRAY.dll
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-03\3.3. DYNAMIC ARRAY\obj\Debug\netcoreapp2.1\3.3. DYNAMIC ARRAY.pdb

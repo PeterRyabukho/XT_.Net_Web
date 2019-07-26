@@ -7,38 +7,39 @@ namespace _3._4.__DYNAMIC_ARRAY__HARDCORE_MODE_
 {
     class MyDynamicArray<T> : IEnumerable<T>, IEnumerable, ICloneable<T>
     {
-        public T[] Array { get; set; }
+        public T[] Array { get; private set; }
 
-        public int Length { get; private set; } 
+        public int Length { get; private set; }
 
-        public int Capacity { get; set; }
-        //{
-        //    get => Array.Length;
+        private int capacity = 8;
+        public int Capacity 
+        {
+            get => capacity;
 
-        //    set
-        //    {
-        //        if (value < Length)
-        //        {
-        //            throw new ArgumentOutOfRangeException("Exception! Capacity cannot be lower then Length of the array!");
-        //        }
-        //        else
-        //        {
-        //            var newArr = new T[Capacity];
-        //            for (int i = 0; i < Array.Length; i++)
-        //            {
-        //                newArr[i] = Array[i];
-        //            }
-        //            Array = newArr;
-        //        }
-        //    }
-        //}
-
-        public int Count { get; set; }
+            set
+            {
+                if (value < 0)
+                {
+                    throw new ArgumentOutOfRangeException("Exception! Capacity cannot be lower then 0!");
+                }
+                if (capacity>value)
+                {
+                    var newArr = new T[value];
+                    for (int i = 0; i < value; i++)
+                    {
+                        newArr[i] = Array[i];
+                    }
+                    Array = newArr;
+                    Length = value;
+                    
+                }
+                capacity = value;
+            }
+        }
 
         public MyDynamicArray() : this(capacity: 8)
         {
             Array = new T[Capacity];
-            Length = 0;
         }
 
         public MyDynamicArray(int capacity)
@@ -88,10 +89,7 @@ namespace _3._4.__DYNAMIC_ARRAY__HARDCORE_MODE_
 
         public T this[int index]
         {
-            get
-            {
-                return index < 0 ? Array[Capacity + index] : Array[index];
-            }
+            get => index < 0 ? Array[Capacity + index] : Array[index];
         }
 
         private bool IsOutOfRange(int index)
@@ -162,7 +160,7 @@ namespace _3._4.__DYNAMIC_ARRAY__HARDCORE_MODE_
             }
             return false;
         }
-        public IEnumerator<T> GetEnumerator()
+        public virtual IEnumerator<T> GetEnumerator()
         {
             foreach (var item in Array)
             {
