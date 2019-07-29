@@ -1,0 +1,11 @@
+D:\GitApp\XT_.Net_Web\Task-04\4.3. SORTING UNIT\bin\Debug\netcoreapp2.1\4.3. SORTING UNIT.deps.json
+D:\GitApp\XT_.Net_Web\Task-04\4.3. SORTING UNIT\bin\Debug\netcoreapp2.1\4.3. SORTING UNIT.runtimeconfig.json
+D:\GitApp\XT_.Net_Web\Task-04\4.3. SORTING UNIT\bin\Debug\netcoreapp2.1\4.3. SORTING UNIT.runtimeconfig.dev.json
+D:\GitApp\XT_.Net_Web\Task-04\4.3. SORTING UNIT\bin\Debug\netcoreapp2.1\4.3. SORTING UNIT.dll
+D:\GitApp\XT_.Net_Web\Task-04\4.3. SORTING UNIT\bin\Debug\netcoreapp2.1\4.3. SORTING UNIT.pdb
+D:\GitApp\XT_.Net_Web\Task-04\4.3. SORTING UNIT\obj\Debug\netcoreapp2.1\4.3. SORTING UNIT.csprojAssemblyReference.cache
+D:\GitApp\XT_.Net_Web\Task-04\4.3. SORTING UNIT\obj\Debug\netcoreapp2.1\4.3. SORTING UNIT.csproj.CoreCompileInputs.cache
+D:\GitApp\XT_.Net_Web\Task-04\4.3. SORTING UNIT\obj\Debug\netcoreapp2.1\4.3. SORTING UNIT.AssemblyInfoInputs.cache
+D:\GitApp\XT_.Net_Web\Task-04\4.3. SORTING UNIT\obj\Debug\netcoreapp2.1\4.3. SORTING UNIT.AssemblyInfo.cs
+D:\GitApp\XT_.Net_Web\Task-04\4.3. SORTING UNIT\obj\Debug\netcoreapp2.1\4.3. SORTING UNIT.dll
+D:\GitApp\XT_.Net_Web\Task-04\4.3. SORTING UNIT\obj\Debug\netcoreapp2.1\4.3. SORTING UNIT.pdb

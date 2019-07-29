@@ -9,3 +9,14 @@ D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-04\4.1. CUSTOM SORT\obj\Debug\ne
 D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-04\4.1. CUSTOM SORT\obj\Debug\netcoreapp2.1\4.1. CUSTOM SORT.AssemblyInfo.cs
 D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-04\4.1. CUSTOM SORT\obj\Debug\netcoreapp2.1\4.1. CUSTOM SORT.dll
 D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-04\4.1. CUSTOM SORT\obj\Debug\netcoreapp2.1\4.1. CUSTOM SORT.pdb
+D:\GitApp\XT_.Net_Web\Task-04\4.1. CUSTOM SORT\bin\Debug\netcoreapp2.1\4.1. CUSTOM SORT.deps.json
+D:\GitApp\XT_.Net_Web\Task-04\4.1. CUSTOM SORT\bin\Debug\netcoreapp2.1\4.1. CUSTOM SORT.runtimeconfig.json
+D:\GitApp\XT_.Net_Web\Task-04\4.1. CUSTOM SORT\bin\Debug\netcoreapp2.1\4.1. CUSTOM SORT.runtimeconfig.dev.json
+D:\GitApp\XT_.Net_Web\Task-04\4.1. CUSTOM SORT\bin\Debug\netcoreapp2.1\4.1. CUSTOM SORT.dll
+D:\GitApp\XT_.Net_Web\Task-04\4.1. CUSTOM SORT\bin\Debug\netcoreapp2.1\4.1. CUSTOM SORT.pdb
+D:\GitApp\XT_.Net_Web\Task-04\4.1. CUSTOM SORT\obj\Debug\netcoreapp2.1\4.1. CUSTOM SORT.csprojAssemblyReference.cache
+D:\GitApp\XT_.Net_Web\Task-04\4.1. CUSTOM SORT\obj\Debug\netcoreapp2.1\4.1. CUSTOM SORT.csproj.CoreCompileInputs.cache
+D:\GitApp\XT_.Net_Web\Task-04\4.1. CUSTOM SORT\obj\Debug\netcoreapp2.1\4.1. CUSTOM SORT.AssemblyInfoInputs.cache
+D:\GitApp\XT_.Net_Web\Task-04\4.1. CUSTOM SORT\obj\Debug\netcoreapp2.1\4.1. CUSTOM SORT.AssemblyInfo.cs
+D:\GitApp\XT_.Net_Web\Task-04\4.1. CUSTOM SORT\obj\Debug\netcoreapp2.1\4.1. CUSTOM SORT.dll
+D:\GitApp\XT_.Net_Web\Task-04\4.1. CUSTOM SORT\obj\Debug\netcoreapp2.1\4.1. CUSTOM SORT.pdb

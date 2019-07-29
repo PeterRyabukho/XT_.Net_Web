@@ -1,0 +1,11 @@
+D:\GitApp\XT_.Net_Web\Task-04\4.2. CUSTOM SORT DEMO\bin\Debug\netcoreapp2.1\4.2. CUSTOM SORT DEMO.deps.json
+D:\GitApp\XT_.Net_Web\Task-04\4.2. CUSTOM SORT DEMO\bin\Debug\netcoreapp2.1\4.2. CUSTOM SORT DEMO.runtimeconfig.json
+D:\GitApp\XT_.Net_Web\Task-04\4.2. CUSTOM SORT DEMO\bin\Debug\netcoreapp2.1\4.2. CUSTOM SORT DEMO.runtimeconfig.dev.json
+D:\GitApp\XT_.Net_Web\Task-04\4.2. CUSTOM SORT DEMO\bin\Debug\netcoreapp2.1\4.2. CUSTOM SORT DEMO.dll
+D:\GitApp\XT_.Net_Web\Task-04\4.2. CUSTOM SORT DEMO\bin\Debug\netcoreapp2.1\4.2. CUSTOM SORT DEMO.pdb
+D:\GitApp\XT_.Net_Web\Task-04\4.2. CUSTOM SORT DEMO\obj\Debug\netcoreapp2.1\4.2. CUSTOM SORT DEMO.csprojAssemblyReference.cache
+D:\GitApp\XT_.Net_Web\Task-04\4.2. CUSTOM SORT DEMO\obj\Debug\netcoreapp2.1\4.2. CUSTOM SORT DEMO.csproj.CoreCompileInputs.cache
+D:\GitApp\XT_.Net_Web\Task-04\4.2. CUSTOM SORT DEMO\obj\Debug\netcoreapp2.1\4.2. CUSTOM SORT DEMO.AssemblyInfoInputs.cache
+D:\GitApp\XT_.Net_Web\Task-04\4.2. CUSTOM SORT DEMO\obj\Debug\netcoreapp2.1\4.2. CUSTOM SORT DEMO.AssemblyInfo.cs
+D:\GitApp\XT_.Net_Web\Task-04\4.2. CUSTOM SORT DEMO\obj\Debug\netcoreapp2.1\4.2. CUSTOM SORT DEMO.dll
+D:\GitApp\XT_.Net_Web\Task-04\4.2. CUSTOM SORT DEMO\obj\Debug\netcoreapp2.1\4.2. CUSTOM SORT DEMO.pdb
