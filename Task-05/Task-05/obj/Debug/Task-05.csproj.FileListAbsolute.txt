@@ -1,0 +1,10 @@
+C:\Users\user\source\repos\Task-05\Task-05\bin\Debug\Task-05.exe.config
+C:\Users\user\source\repos\Task-05\Task-05\bin\Debug\Task-05.exe
+C:\Users\user\source\repos\Task-05\Task-05\bin\Debug\Task-05.pdb
+C:\Users\user\source\repos\Task-05\Task-05\obj\Debug\Task-05.csprojAssemblyReference.cache
+C:\Users\user\source\repos\Task-05\Task-05\obj\Debug\Task_05.Form1.resources
+C:\Users\user\source\repos\Task-05\Task-05\obj\Debug\Task_05.Properties.Resources.resources
+C:\Users\user\source\repos\Task-05\Task-05\obj\Debug\Task-05.csproj.GenerateResource.cache
+C:\Users\user\source\repos\Task-05\Task-05\obj\Debug\Task-05.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\Task-05\Task-05\obj\Debug\Task-05.exe
+C:\Users\user\source\repos\Task-05\Task-05\obj\Debug\Task-05.pdb
