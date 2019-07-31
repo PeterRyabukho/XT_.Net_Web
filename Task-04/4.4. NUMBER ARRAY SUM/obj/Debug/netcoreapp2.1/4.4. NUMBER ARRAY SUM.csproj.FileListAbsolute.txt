@@ -8,3 +8,14 @@ D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-04\4.4. NUMBER ARRAY SUM\obj\Deb
 D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-04\4.4. NUMBER ARRAY SUM\obj\Debug\netcoreapp2.1\4.4. NUMBER ARRAY SUM.AssemblyInfo.cs
 D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-04\4.4. NUMBER ARRAY SUM\obj\Debug\netcoreapp2.1\4.4. NUMBER ARRAY SUM.dll
 D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-04\4.4. NUMBER ARRAY SUM\obj\Debug\netcoreapp2.1\4.4. NUMBER ARRAY SUM.pdb
+D:\GitApp\XT_.Net_Web\Task-04\4.4. NUMBER ARRAY SUM\bin\Debug\netcoreapp2.1\4.4. NUMBER ARRAY SUM.deps.json
+D:\GitApp\XT_.Net_Web\Task-04\4.4. NUMBER ARRAY SUM\bin\Debug\netcoreapp2.1\4.4. NUMBER ARRAY SUM.runtimeconfig.json
+D:\GitApp\XT_.Net_Web\Task-04\4.4. NUMBER ARRAY SUM\bin\Debug\netcoreapp2.1\4.4. NUMBER ARRAY SUM.runtimeconfig.dev.json
+D:\GitApp\XT_.Net_Web\Task-04\4.4. NUMBER ARRAY SUM\bin\Debug\netcoreapp2.1\4.4. NUMBER ARRAY SUM.dll
+D:\GitApp\XT_.Net_Web\Task-04\4.4. NUMBER ARRAY SUM\bin\Debug\netcoreapp2.1\4.4. NUMBER ARRAY SUM.pdb
+D:\GitApp\XT_.Net_Web\Task-04\4.4. NUMBER ARRAY SUM\obj\Debug\netcoreapp2.1\4.4. NUMBER ARRAY SUM.csprojAssemblyReference.cache
+D:\GitApp\XT_.Net_Web\Task-04\4.4. NUMBER ARRAY SUM\obj\Debug\netcoreapp2.1\4.4. NUMBER ARRAY SUM.csproj.CoreCompileInputs.cache
+D:\GitApp\XT_.Net_Web\Task-04\4.4. NUMBER ARRAY SUM\obj\Debug\netcoreapp2.1\4.4. NUMBER ARRAY SUM.AssemblyInfoInputs.cache
+D:\GitApp\XT_.Net_Web\Task-04\4.4. NUMBER ARRAY SUM\obj\Debug\netcoreapp2.1\4.4. NUMBER ARRAY SUM.AssemblyInfo.cs
+D:\GitApp\XT_.Net_Web\Task-04\4.4. NUMBER ARRAY SUM\obj\Debug\netcoreapp2.1\4.4. NUMBER ARRAY SUM.dll
+D:\GitApp\XT_.Net_Web\Task-04\4.4. NUMBER ARRAY SUM\obj\Debug\netcoreapp2.1\4.4. NUMBER ARRAY SUM.pdb

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "4.5. TO INT OR NOT TO INT/1.0.0": {
+        "runtime": {
+          "4.5. TO INT OR NOT TO INT.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "4.5. TO INT OR NOT TO INT/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,12 @@
+D:\GitApp\XT_.Net_Web\Task-04\4.6. I SEEK YOU\bin\Debug\netcoreapp3.0\4.6. I SEEK YOU.exe
+D:\GitApp\XT_.Net_Web\Task-04\4.6. I SEEK YOU\bin\Debug\netcoreapp3.0\4.6. I SEEK YOU.deps.json
+D:\GitApp\XT_.Net_Web\Task-04\4.6. I SEEK YOU\bin\Debug\netcoreapp3.0\4.6. I SEEK YOU.runtimeconfig.json
+D:\GitApp\XT_.Net_Web\Task-04\4.6. I SEEK YOU\bin\Debug\netcoreapp3.0\4.6. I SEEK YOU.runtimeconfig.dev.json
+D:\GitApp\XT_.Net_Web\Task-04\4.6. I SEEK YOU\bin\Debug\netcoreapp3.0\4.6. I SEEK YOU.dll
+D:\GitApp\XT_.Net_Web\Task-04\4.6. I SEEK YOU\bin\Debug\netcoreapp3.0\4.6. I SEEK YOU.pdb
+D:\GitApp\XT_.Net_Web\Task-04\4.6. I SEEK YOU\obj\Debug\netcoreapp3.0\4.6. I SEEK YOU.csprojAssemblyReference.cache
+D:\GitApp\XT_.Net_Web\Task-04\4.6. I SEEK YOU\obj\Debug\netcoreapp3.0\4.6. I SEEK YOU.csproj.CoreCompileInputs.cache
+D:\GitApp\XT_.Net_Web\Task-04\4.6. I SEEK YOU\obj\Debug\netcoreapp3.0\4.6. I SEEK YOU.AssemblyInfoInputs.cache
+D:\GitApp\XT_.Net_Web\Task-04\4.6. I SEEK YOU\obj\Debug\netcoreapp3.0\4.6. I SEEK YOU.AssemblyInfo.cs
+D:\GitApp\XT_.Net_Web\Task-04\4.6. I SEEK YOU\obj\Debug\netcoreapp3.0\4.6. I SEEK YOU.dll
+D:\GitApp\XT_.Net_Web\Task-04\4.6. I SEEK YOU\obj\Debug\netcoreapp3.0\4.6. I SEEK YOU.pdb

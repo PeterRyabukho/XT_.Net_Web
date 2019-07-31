@@ -1,0 +1,12 @@
+D:\GitApp\XT_.Net_Web\Task-04\4.5. TO INT OR NOT TO INT\bin\Debug\netcoreapp3.0\4.5. TO INT OR NOT TO INT.exe
+D:\GitApp\XT_.Net_Web\Task-04\4.5. TO INT OR NOT TO INT\bin\Debug\netcoreapp3.0\4.5. TO INT OR NOT TO INT.deps.json
+D:\GitApp\XT_.Net_Web\Task-04\4.5. TO INT OR NOT TO INT\bin\Debug\netcoreapp3.0\4.5. TO INT OR NOT TO INT.runtimeconfig.json
+D:\GitApp\XT_.Net_Web\Task-04\4.5. TO INT OR NOT TO INT\bin\Debug\netcoreapp3.0\4.5. TO INT OR NOT TO INT.runtimeconfig.dev.json
+D:\GitApp\XT_.Net_Web\Task-04\4.5. TO INT OR NOT TO INT\bin\Debug\netcoreapp3.0\4.5. TO INT OR NOT TO INT.dll
+D:\GitApp\XT_.Net_Web\Task-04\4.5. TO INT OR NOT TO INT\bin\Debug\netcoreapp3.0\4.5. TO INT OR NOT TO INT.pdb
+D:\GitApp\XT_.Net_Web\Task-04\4.5. TO INT OR NOT TO INT\obj\Debug\netcoreapp3.0\4.5. TO INT OR NOT TO INT.csprojAssemblyReference.cache
+D:\GitApp\XT_.Net_Web\Task-04\4.5. TO INT OR NOT TO INT\obj\Debug\netcoreapp3.0\4.5. TO INT OR NOT TO INT.csproj.CoreCompileInputs.cache
+D:\GitApp\XT_.Net_Web\Task-04\4.5. TO INT OR NOT TO INT\obj\Debug\netcoreapp3.0\4.5. TO INT OR NOT TO INT.AssemblyInfoInputs.cache
+D:\GitApp\XT_.Net_Web\Task-04\4.5. TO INT OR NOT TO INT\obj\Debug\netcoreapp3.0\4.5. TO INT OR NOT TO INT.AssemblyInfo.cs
+D:\GitApp\XT_.Net_Web\Task-04\4.5. TO INT OR NOT TO INT\obj\Debug\netcoreapp3.0\4.5. TO INT OR NOT TO INT.dll
+D:\GitApp\XT_.Net_Web\Task-04\4.5. TO INT OR NOT TO INT\obj\Debug\netcoreapp3.0\4.5. TO INT OR NOT TO INT.pdb

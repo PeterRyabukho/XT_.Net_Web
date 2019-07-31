@@ -688,24 +688,27 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\user\\.nuget\\packages\\": {},
+    "C:\\Users\\ryabu\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Users\\cam\\desktop\\C#\\GitApp\\XT_.Net_Web\\Task-03\\3.3. DYNAMIC ARRAY\\3.3. DYNAMIC ARRAY.csproj",
+      "projectUniqueName": "D:\\GitApp\\XT_.Net_Web\\Task-03\\3.3. DYNAMIC ARRAY\\3.3. DYNAMIC ARRAY.csproj",
       "projectName": "3.3. DYNAMIC ARRAY",
-      "projectPath": "D:\\Users\\cam\\desktop\\C#\\GitApp\\XT_.Net_Web\\Task-03\\3.3. DYNAMIC ARRAY\\3.3. DYNAMIC ARRAY.csproj",
-      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "D:\\Users\\cam\\desktop\\C#\\GitApp\\XT_.Net_Web\\Task-03\\3.3. DYNAMIC ARRAY\\obj\\",
+      "projectPath": "D:\\GitApp\\XT_.Net_Web\\Task-03\\3.3. DYNAMIC ARRAY\\3.3. DYNAMIC ARRAY.csproj",
+      "packagesPath": "C:\\Users\\ryabu\\.nuget\\packages\\",
+      "outputPath": "D:\\GitApp\\XT_.Net_Web\\Task-03\\3.3. DYNAMIC ARRAY\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\ryabu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.1"
@@ -729,13 +732,19 @@
       "netcoreapp2.1": {
         "dependencies": {
           "Microsoft.NETCore.App": {
+            "suppressParent": "All",
             "target": "Package",
             "version": "[2.1.0, )",
             "autoReferenced": true
           }
         },
         "imports": [
-          "net461"
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
         ],
         "assetTargetFallback": true,
         "warn": true
