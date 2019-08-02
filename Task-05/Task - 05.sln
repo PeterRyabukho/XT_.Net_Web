@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29123.88
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5.1. BACKUP SYSTEM", "Task-05\5.1. BACKUP SYSTEM.csproj", "{0A5986D9-F1D6-416F-982F-E0014EFD05E0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5.1. BACKUP SYSTEM", "5.1. BACKUP SYSTEM\5.1. BACKUP SYSTEM.csproj", "{D7EA6D06-19CF-48EE-A452-F48BE728E7CC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0A5986D9-F1D6-416F-982F-E0014EFD05E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0A5986D9-F1D6-416F-982F-E0014EFD05E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0A5986D9-F1D6-416F-982F-E0014EFD05E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0A5986D9-F1D6-416F-982F-E0014EFD05E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7EA6D06-19CF-48EE-A452-F48BE728E7CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7EA6D06-19CF-48EE-A452-F48BE728E7CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7EA6D06-19CF-48EE-A452-F48BE728E7CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7EA6D06-19CF-48EE-A452-F48BE728E7CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {E6C66EC0-8EA2-4A3C-898F-6DE16649DEAE}
+		SolutionGuid = {E725D73B-6178-421B-B991-31DBEFD03809}
 	EndGlobalSection
 EndGlobal
