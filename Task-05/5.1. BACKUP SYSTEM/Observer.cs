@@ -9,21 +9,22 @@ namespace _5._1.BACKUP_SYSTEM
 {
     class Observer
     {
-        public string selectedFolder { get; set; }
         public string Description { get; set; }
-        public string saveNewFileName { get ; set; }
         public string newPathBackupFolder { get; set; }
         public string newPathFilesFolder { get; set; }
+        public string PathBackupFoldersWithDate { get; set; }
 
         public Observer()
         {
             newPathBackupFolder = "";
             newPathFilesFolder = "";
+            PathBackupFoldersWithDate = "";
         }
-        public Observer(string newPathBackupFolder, string newPathFilesFolder)
+        public Observer(string newPathBackupFolder, string newPathFilesFolder, string PathBackupFoldersWithDate)
         {
             this.newPathFilesFolder = newPathFilesFolder;
             this.newPathBackupFolder = newPathBackupFolder;
+            this.PathBackupFoldersWithDate = PathBackupFoldersWithDate;
         }
 
 

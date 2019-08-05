@@ -32,6 +32,8 @@
             this.backupText = new System.Windows.Forms.TextBox();
             this.showBackupDates = new System.Windows.Forms.Button();
             this.menuButton = new System.Windows.Forms.Button();
+            this.backupFolders = new System.Windows.Forms.Button();
+            this.filesBackupList = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // dateBackupList
@@ -39,21 +41,21 @@
             this.dateBackupList.FormattingEnabled = true;
             this.dateBackupList.Location = new System.Drawing.Point(12, 12);
             this.dateBackupList.Name = "dateBackupList";
-            this.dateBackupList.Size = new System.Drawing.Size(197, 329);
+            this.dateBackupList.Size = new System.Drawing.Size(132, 329);
             this.dateBackupList.TabIndex = 0;
             this.dateBackupList.SelectedIndexChanged += new System.EventHandler(this.DateList_SelectedIndexChanged);
             // 
             // backupText
             // 
-            this.backupText.Location = new System.Drawing.Point(229, 12);
+            this.backupText.Location = new System.Drawing.Point(346, 12);
             this.backupText.Multiline = true;
             this.backupText.Name = "backupText";
-            this.backupText.Size = new System.Drawing.Size(315, 328);
+            this.backupText.Size = new System.Drawing.Size(198, 328);
             this.backupText.TabIndex = 1;
             // 
             // showBackupDates
             // 
-            this.showBackupDates.Location = new System.Drawing.Point(59, 347);
+            this.showBackupDates.Location = new System.Drawing.Point(24, 347);
             this.showBackupDates.Name = "showBackupDates";
             this.showBackupDates.Size = new System.Drawing.Size(102, 38);
             this.showBackupDates.TabIndex = 2;
@@ -71,11 +73,32 @@
             this.menuButton.UseVisualStyleBackColor = true;
             this.menuButton.Click += new System.EventHandler(this.MenuButton_Click);
             // 
+            // backupFolders
+            // 
+            this.backupFolders.Location = new System.Drawing.Point(299, 351);
+            this.backupFolders.Name = "backupFolders";
+            this.backupFolders.Size = new System.Drawing.Size(103, 34);
+            this.backupFolders.TabIndex = 4;
+            this.backupFolders.Text = "Show Backup Folders";
+            this.backupFolders.UseVisualStyleBackColor = true;
+            this.backupFolders.Click += new System.EventHandler(this.BackupFolders_Click);
+            // 
+            // filesBackupList
+            // 
+            this.filesBackupList.FormattingEnabled = true;
+            this.filesBackupList.Location = new System.Drawing.Point(167, 12);
+            this.filesBackupList.Name = "filesBackupList";
+            this.filesBackupList.Size = new System.Drawing.Size(173, 329);
+            this.filesBackupList.TabIndex = 5;
+            this.filesBackupList.SelectedIndexChanged += new System.EventHandler(this.FilesBackupList_SelectedIndexChanged);
+            // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(556, 450);
+            this.Controls.Add(this.filesBackupList);
+            this.Controls.Add(this.backupFolders);
             this.Controls.Add(this.menuButton);
             this.Controls.Add(this.showBackupDates);
             this.Controls.Add(this.backupText);
@@ -93,5 +116,7 @@
         private System.Windows.Forms.TextBox backupText;
         private System.Windows.Forms.Button showBackupDates;
         private System.Windows.Forms.Button menuButton;
+        private System.Windows.Forms.Button backupFolders;
+        private System.Windows.Forms.ListBox filesBackupList;
     }
 }
