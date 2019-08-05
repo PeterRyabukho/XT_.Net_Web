@@ -89,7 +89,8 @@ namespace _5._1.BACKUP_SYSTEM
 
             if (result == DialogResult.OK)
             {
-                observer.Save(saveFileDialog1.FileName);
+                File.WriteAllText(saveFileDialog1.FileName, newText.Text);
+                //observer.Save(saveFileDialog1.FileName);
 
                 MessageBox.Show("New file written!", "Complite", MessageBoxButtons.OK);
             }

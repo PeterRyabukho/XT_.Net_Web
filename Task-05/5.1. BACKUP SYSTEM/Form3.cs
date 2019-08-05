@@ -26,6 +26,7 @@ namespace _5._1.BACKUP_SYSTEM
 
         private void GetBackupDateList()
         {
+
             string[] directorys = Directory.GetDirectories(observer.PathBackupFoldersWithDate);
             for (int i = 0; i < directorys.Length; i++)
             {
@@ -80,35 +81,35 @@ namespace _5._1.BACKUP_SYSTEM
         }
         private void FilesBackupList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string selectedDate = dateBackupList.SelectedItem.ToString();
-            //string[] directorys = Directory.GetDirectories(observer.PathBackupFoldersWithDate);
-            //foreach (var dir in directorys)
-            //{
-            //    string[] files = Directory.GetFiles(dir);
-            //    foreach (var file in files)
-            //    {
-            //        string serchFile = Path.GetFileNameWithoutExtension(file);
-            //        //FileInfo fileInfo = new FileInfo(file);
-            //        if (serchFile == selectedDate)
-            //        {
-            //            backupText.Text = File.ReadAllText(file);
-            //        }
-            //    }
-            //}
-
-            string serchFolder="";
-            
+            string selectedDate = filesBackupList.SelectedItem.ToString();
             string[] directorys = Directory.GetDirectories(observer.PathBackupFoldersWithDate);
             foreach (var dir in directorys)
             {
-                DirectoryInfo directory = new DirectoryInfo(dir);
-                serchFolder = directory.Name;
-                string showDate = $@"{observer.PathBackupFoldersWithDate}{serchFolder}\{selectedDate}.txt";
-                if (File.Exists(showDate))
+                string[] files = Directory.GetFiles(dir);
+                foreach (var file in files)
                 {
-                    backupText.Text = File.ReadAllText(showDate);
+                    string serchFile = Path.GetFileNameWithoutExtension(file);
+                    //FileInfo fileInfo = new FileInfo(file);
+                    if (serchFile == selectedDate)
+                    {
+                        backupText.Text = File.ReadAllText(file);
+                    }
                 }
             }
+
+            //string serchFolder="";
+
+            //string[] directorys = Directory.GetDirectories(observer.PathBackupFoldersWithDate);
+            //foreach (var dir in directorys)
+            //{
+            //    DirectoryInfo directory = new DirectoryInfo(dir);
+            //    serchFolder = directory.Name;
+            //    string showDate = $@"{observer.PathBackupFoldersWithDate}{serchFolder}\{selectedDate}.txt";
+            //    if (File.Exists(showDate))
+            //    {
+            //        backupText.Text = File.ReadAllText(showDate);
+            //    }
+            //}
         }
 
         private void ShowBackupDates_Click(object sender, EventArgs e)

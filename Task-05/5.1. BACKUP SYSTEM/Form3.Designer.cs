@@ -86,9 +86,9 @@
             // filesBackupList
             // 
             this.filesBackupList.FormattingEnabled = true;
-            this.filesBackupList.Location = new System.Drawing.Point(167, 12);
+            this.filesBackupList.Location = new System.Drawing.Point(150, 11);
             this.filesBackupList.Name = "filesBackupList";
-            this.filesBackupList.Size = new System.Drawing.Size(173, 329);
+            this.filesBackupList.Size = new System.Drawing.Size(190, 329);
             this.filesBackupList.TabIndex = 5;
             this.filesBackupList.SelectedIndexChanged += new System.EventHandler(this.FilesBackupList_SelectedIndexChanged);
             // 

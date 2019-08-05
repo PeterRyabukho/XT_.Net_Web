@@ -34,9 +34,9 @@
             // 
             // observerButton
             // 
-            this.observerButton.Location = new System.Drawing.Point(133, 109);
+            this.observerButton.Location = new System.Drawing.Point(109, 109);
             this.observerButton.Name = "observerButton";
-            this.observerButton.Size = new System.Drawing.Size(177, 44);
+            this.observerButton.Size = new System.Drawing.Size(234, 74);
             this.observerButton.TabIndex = 0;
             this.observerButton.Text = "Enable monitoring mode";
             this.observerButton.UseVisualStyleBackColor = true;
@@ -44,9 +44,9 @@
             // 
             // backupButton
             // 
-            this.backupButton.Location = new System.Drawing.Point(133, 189);
+            this.backupButton.Location = new System.Drawing.Point(109, 243);
             this.backupButton.Name = "backupButton";
-            this.backupButton.Size = new System.Drawing.Size(177, 53);
+            this.backupButton.Size = new System.Drawing.Size(234, 74);
             this.backupButton.TabIndex = 1;
             this.backupButton.Text = "Enable backup mode";
             this.backupButton.UseVisualStyleBackColor = true;
@@ -59,8 +59,10 @@
             this.ClientSize = new System.Drawing.Size(456, 450);
             this.Controls.Add(this.backupButton);
             this.Controls.Add(this.observerButton);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "MainForm";
-            this.Text = "MainForm";
+            this.Text = "BACKUP SYSTEM";
             this.ResumeLayout(false);
 
         }
