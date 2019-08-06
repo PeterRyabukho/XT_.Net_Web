@@ -34,6 +34,7 @@
             // 
             // observerButton
             // 
+            this.observerButton.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.observerButton.Location = new System.Drawing.Point(109, 109);
             this.observerButton.Name = "observerButton";
             this.observerButton.Size = new System.Drawing.Size(234, 74);
@@ -44,6 +45,7 @@
             // 
             // backupButton
             // 
+            this.backupButton.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.backupButton.Location = new System.Drawing.Point(109, 243);
             this.backupButton.Name = "backupButton";
             this.backupButton.Size = new System.Drawing.Size(234, 74);

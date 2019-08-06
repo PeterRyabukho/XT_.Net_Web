@@ -19,7 +19,7 @@ namespace _5._1.BACKUP_SYSTEM
 
         private void ObserverButton_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
+            MonitoringForm form2 = new MonitoringForm();
             MainForm mainForm = new MainForm();
             form2.Show();
             mainForm.Close();
@@ -28,7 +28,7 @@ namespace _5._1.BACKUP_SYSTEM
         private void BackupButton_Click(object sender, EventArgs e)
         {
             MainForm mainForm = new MainForm();
-            Form3 form3 = new Form3();
+            BackupForm form3 = new BackupForm();
             form3.Show();
             mainForm.Close();
         }

@@ -11,13 +11,13 @@ using System.IO;
 
 namespace _5._1.BACKUP_SYSTEM
 {
-    public partial class Form3 : Form
+    public partial class BackupForm : Form
     {
         Observer observer = new Observer(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\Peter Task-05\Backup folder\", 
             Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\Peter Task-05\Files folder",
             Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\Peter Task-05\Backup folder\Date Backup Folders\");
 
-        public Form3()
+        public BackupForm()
         {
             InitializeComponent();
             dateBackupList.SelectedIndexChanged += DateList_SelectedIndexChanged;
@@ -44,16 +44,25 @@ namespace _5._1.BACKUP_SYSTEM
 
         private void DateList_SelectedIndexChanged(object sender, EventArgs e)
         {
+            string selectedDate = dateBackupList?.SelectedItem?.ToString();
             filesBackupList.Items.Clear();
-            string selectedDate = dateBackupList.SelectedItem.ToString();
 
-            string[] files = Directory.GetFiles($@"{observer.PathBackupFoldersWithDate}{selectedDate}");
-            for (int j = 0; j < files.Length; j++)
+            if (Directory.Exists($@"{observer.PathBackupFoldersWithDate}{selectedDate}"))
             {
-                FileInfo fileInfo = new FileInfo(files[j]);
-                filesBackupList.Items.Add(Path.GetFileNameWithoutExtension(files[j]));
+                string[] files = Directory.GetFiles($@"{observer.PathBackupFoldersWithDate}{selectedDate}");
+                for (int j = 0; j < files.Length; j++)
+                {
+                    //FileInfo fileInfo = new FileInfo(files[j]);
+                    filesBackupList.Items.Add(Path.GetFileNameWithoutExtension(files[j]));
+                }
             }
+            else
+            {
+                MessageBox.Show("Directory deleted!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                dateBackupList.Items.Clear();
 
+                return;
+            }
             //string[] directorys = Directory.GetDirectories(observer.PathBackupFoldersWithDate);
             //for (int i = 0; i < directorys.Length; i++)
             //{
@@ -81,18 +90,28 @@ namespace _5._1.BACKUP_SYSTEM
         }
         private void FilesBackupList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string selectedDate = filesBackupList.SelectedItem.ToString();
+            string selectedDate = filesBackupList?.SelectedItem?.ToString();
             string[] directorys = Directory.GetDirectories(observer.PathBackupFoldersWithDate);
             foreach (var dir in directorys)
             {
                 string[] files = Directory.GetFiles(dir);
                 foreach (var file in files)
                 {
-                    string serchFile = Path.GetFileNameWithoutExtension(file);
-                    //FileInfo fileInfo = new FileInfo(file);
-                    if (serchFile == selectedDate)
+                    if (File.Exists(file))
                     {
-                        backupText.Text = File.ReadAllText(file);
+                        string serchFile = Path.GetFileNameWithoutExtension(file);
+                        //FileInfo fileInfo = new FileInfo(file);
+                        if (serchFile == selectedDate)
+                        {
+                            backupText.Text = File.ReadAllText(file);
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("File deleted!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        filesBackupList.Items.Clear();
+
+                        return;
                     }
                 }
             }
