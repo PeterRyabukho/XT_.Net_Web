@@ -107,9 +107,40 @@ namespace _5._1.BACKUP_SYSTEM
             Process.Start(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\Peter Task-05\");
         }
 
+        /// <summary>
+        /// Dont work, Exeption: "This path is not supported!" ..... Dont know why(
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="eventFile"></param>
         //private void FileSystemWatcher1_Renamed(object sender, RenamedEventArgs eventFile)
         //{
-        //    string renameFile = $"{common.newPathBackupFolder}{eventFile.Name}";
+        //    string fileName = Path.GetFileNameWithoutExtension(eventFile.OldName);
+        //    string newFileName = Path.GetFileNameWithoutExtension(eventFile.Name);
+        //    string[] directorys = Directory.GetDirectories(common.newPathBackupFolder);
+        //    foreach (var dir in directorys)
+        //    {
+        //        DirectoryInfo dirInfo = new DirectoryInfo(dir);
+        //        string dirname = dirInfo.Name;
+        //        if (dirname == fileName)
+        //        {
+        //            string newDirName = Path.GetFileNameWithoutExtension(eventFile.Name);
+        //            Directory.Move(dir, $@"{common.newPathBackupFolder}{newDirName}");
+
+        //        }
+        //    }
+
+        //    string[] files = Directory.GetFiles($@"{common.newPathBackupFolder}{newFileName}");
+        //    for (int i = 0; i < files.Length; i++)
+        //    {
+        //        DateTime dateTime = DateTime.Now;
+        //        string serchFile = Path.GetFileNameWithoutExtension(files[i]);
+        //        serchFile = serchFile.Substring(20);
+        //        MessageBox.Show($"dir name - {files[i]}");
+        //        string newDirCreate = $@"{common.newPathBackupFolder}{newFileName}";
+        //        string dest = $@"{newDirCreate}\{dateTime}-{eventFile.Name}";
+        //        MessageBox.Show($"file name - {dest}");
+        //        File.Copy(files[i], dest,true);
+        //    }
         //}
     }
 }
