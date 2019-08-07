@@ -61,6 +61,7 @@
             this.ClientSize = new System.Drawing.Size(456, 450);
             this.Controls.Add(this.backupButton);
             this.Controls.Add(this.observerButton);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MainForm";

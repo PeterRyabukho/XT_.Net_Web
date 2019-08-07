@@ -8,18 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Diagnostics;
 
 namespace _5._1.BACKUP_SYSTEM
 {
     public partial class BackupForm : Form
     {
-        Observer observer = new Observer(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\Peter Task-05\Backup folder\", 
-            Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\Peter Task-05\Files folder",
-            Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\Peter Task-05\Backup folder\Date Backup Folders\");
+        Common common = new Common();
 
         public BackupForm()
         {
             InitializeComponent();
+            label4.Text = "*You can restore any deleted backup file simply by clicking on it," + Environment.NewLine +
+                        " then this file with the same name will be used as the main file";
             dateBackupList.SelectedIndexChanged += DateList_SelectedIndexChanged;
             filesBackupList.SelectedIndexChanged += FilesBackupList_SelectedIndexChanged;
         }
@@ -27,32 +28,26 @@ namespace _5._1.BACKUP_SYSTEM
         private void GetBackupDateList()
         {
 
-            string[] directorys = Directory.GetDirectories(observer.PathBackupFoldersWithDate);
+            string[] directorys = Directory.GetDirectories(common.PathBackupFoldersWithDate);
             for (int i = 0; i < directorys.Length; i++)
             {
                 DirectoryInfo directory = new DirectoryInfo(directorys[i]);
                 Path.GetDirectoryName(directorys[i]);
                 dateBackupList.Items.Add(directory.Name);
             }
-            //string[] files = Directory.GetFiles(observer.newPathBackupFolder);
-            //for (int i = 0; i < files.Length; i++)
-            //{
-            //    DateTime backupDate = File.GetLastWriteTime(files[i]);
-            //    dateBackupList.Items.Add($"{i}. {backupDate:dd.MM.yyyy HH.mm.ss}");
-            //}
+
         }
 
         private void DateList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string selectedDate = dateBackupList?.SelectedItem?.ToString();
+            string selectedDate = dateBackupList?.SelectedItem?.ToString(); //if y click empty list - "NullRef Exep", so thats why "?." here
             filesBackupList.Items.Clear();
 
-            if (Directory.Exists($@"{observer.PathBackupFoldersWithDate}{selectedDate}"))
+            if (Directory.Exists($@"{common.PathBackupFoldersWithDate}{selectedDate}"))
             {
-                string[] files = Directory.GetFiles($@"{observer.PathBackupFoldersWithDate}{selectedDate}");
+                string[] files = Directory.GetFiles($@"{common.PathBackupFoldersWithDate}{selectedDate}");
                 for (int j = 0; j < files.Length; j++)
                 {
-                    //FileInfo fileInfo = new FileInfo(files[j]);
                     filesBackupList.Items.Add(Path.GetFileNameWithoutExtension(files[j]));
                 }
             }
@@ -63,47 +58,84 @@ namespace _5._1.BACKUP_SYSTEM
 
                 return;
             }
-            //string[] directorys = Directory.GetDirectories(observer.PathBackupFoldersWithDate);
-            //for (int i = 0; i < directorys.Length; i++)
-            //{
-            //    DirectoryInfo directory = new DirectoryInfo(directorys[i]);
-            //    string thisDate = Path.GetDirectoryName(directorys[i]);
-            //    if(selectedDate == thisDate)
-            //    {
-            //        string[] files = Directory.GetFiles(observer.PathBackupFoldersWithDate);
-            //        for (int j = 0; j < files.Length; j++)
-            //        {
-            //            FileInfo fileInfo = new FileInfo(files[j]);
-            //            filesBackupList.Items.Add(fileInfo.Name);
-            //        }
-            //    }
-            //}
-
-
-            //string showDate = $@"{observer.newPathBackupFolder}{selectedDate}.txt";
-            //backupText.Text = File.ReadAllText(showDate);
-
-            //catch
-            //{
-            //    MessageBox.Show("Someone specially modified this backup file!");
-            //}
         }
+        private bool toFind = false;
+
         private void FilesBackupList_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string selectedDate = filesBackupList?.SelectedItem?.ToString();
-            string[] directorys = Directory.GetDirectories(observer.PathBackupFoldersWithDate);
+            string selectedItem = filesBackupList?.SelectedItem?.ToString();
+
+
+            if (selectedItem.Contains("DELETED_"))
+            {
+                ShowFunctionToRestoreDELETEDBackup(selectedItem);
+
+            }
+            else
+            {
+                ShowTextBackupsThatNotDELETED(selectedItem);
+            }
+        }
+        private bool toDelete = false;
+        private void ShowFunctionToRestoreDELETEDBackup(string selectedItem)
+        {
+            string[] directorys = Directory.GetDirectories(common.PathBackupFoldersWithDate);
+
             foreach (var dir in directorys)
             {
-                string[] files = Directory.GetFiles(dir);
-                foreach (var file in files)
+                string[] deletedFiles = Directory.GetFiles(dir, "DELETED_*");
+                foreach (var backupfile in deletedFiles)
                 {
-                    if (File.Exists(file))
+                    string serchFile = Path.GetFileNameWithoutExtension(backupfile);
+
+                    if (serchFile == selectedItem && !toFind)
                     {
-                        string serchFile = Path.GetFileNameWithoutExtension(file);
-                        //FileInfo fileInfo = new FileInfo(file);
-                        if (serchFile == selectedDate)
+                        backupText.Text = File.ReadAllText(backupfile);
+                        var result = MessageBox.Show("Restore the original file based on this backup?", "File restore", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                        if (result == DialogResult.Yes)
                         {
-                            backupText.Text = File.ReadAllText(file);
+                            serchFile = serchFile.Substring(28);
+                            File.Copy(backupfile, $@"{common.newPathFilesFolder}\{serchFile}.txt", true);
+                            MessageBox.Show("Recovery is complete!" + Environment.NewLine + $"The file was restored with changes to the specified date" + Environment.NewLine +
+                                $"{File.GetLastWriteTime(backupfile)}", "Complete", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            toDelete = true;
+
+                            //filesBackupList.Items.Clear();
+                            ShowTextBackupsThatNotDELETED(selectedItem);
+                        }
+                        else
+                        {
+                            dateBackupList.Items.Clear();
+                            GetBackupDateList();
+                        }
+                        toFind = true;
+                    }
+                    if (toDelete)
+                    {
+                        File.Delete(backupfile);
+                        
+                    }
+                }
+            }
+        }
+
+        private void ShowTextBackupsThatNotDELETED(string selectedItem)
+        {
+            string[] directorys = Directory.GetDirectories(common.PathBackupFoldersWithDate);
+
+            foreach (var datadir in directorys)
+            {
+                string[] files = Directory.GetFiles(datadir);
+
+                foreach (var backupfile in files)
+                {
+                    if (File.Exists(backupfile))
+                    {
+                        string serchFile = Path.GetFileNameWithoutExtension(backupfile);
+
+                        if (serchFile == selectedItem)
+                        {
+                            backupText.Text = File.ReadAllText(backupfile);
                         }
                     }
                     else
@@ -111,43 +143,36 @@ namespace _5._1.BACKUP_SYSTEM
                         MessageBox.Show("File deleted!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         filesBackupList.Items.Clear();
 
-                        return;
                     }
                 }
             }
-
-            //string serchFolder="";
-
-            //string[] directorys = Directory.GetDirectories(observer.PathBackupFoldersWithDate);
-            //foreach (var dir in directorys)
-            //{
-            //    DirectoryInfo directory = new DirectoryInfo(dir);
-            //    serchFolder = directory.Name;
-            //    string showDate = $@"{observer.PathBackupFoldersWithDate}{serchFolder}\{selectedDate}.txt";
-            //    if (File.Exists(showDate))
-            //    {
-            //        backupText.Text = File.ReadAllText(showDate);
-            //    }
-            //}
         }
 
         private void ShowBackupDates_Click(object sender, EventArgs e)
         {
+            dateBackupList.Items.Clear();
+            
             GetBackupDateList();
         }
 
         private void MenuButton_Click(object sender, EventArgs e)
         {
+            BackupForm form = new BackupForm();
+            form.Close();
             MainForm form1 = new MainForm();
             form1.Show();
-            this.Close();
+           
         }
 
         private void BackupFolders_Click(object sender, EventArgs e)
         {
-            DirectoryInfo directory = new DirectoryInfo(observer.newPathBackupFolder);
+            Process.Start(common.PathBackupFoldersWithDate);
         }
 
-
+        //private void CreateMainFolders_Click(object sender, EventArgs e)
+        //{
+        //    MonitoringForm monitoring = new MonitoringForm();
+        //    monitoring.CreateFolder_Click(sender, e);
+        //}
     }
 }

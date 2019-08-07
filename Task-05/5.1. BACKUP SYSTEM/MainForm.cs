@@ -15,6 +15,8 @@ namespace _5._1.BACKUP_SYSTEM
         public MainForm()
         {
             InitializeComponent();
+            BackupForm backupForm = new BackupForm();
+            backupForm.Close();
         }
 
         private void ObserverButton_Click(object sender, EventArgs e)
