@@ -1,0 +1,237 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Users\\cam\\desktop\\C#\\GitApp\\XT_.Net_Web\\Task-06\\6.1. USERS\\BLL.DesignPatterns\\BLL.DesignPatterns.csproj": {}
+  },
+  "projects": {
+    "D:\\Users\\cam\\desktop\\C#\\GitApp\\XT_.Net_Web\\Task-06\\6.1. USERS\\BLL.DesignPatterns\\BLL.DesignPatterns.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Users\\cam\\desktop\\C#\\GitApp\\XT_.Net_Web\\Task-06\\6.1. USERS\\BLL.DesignPatterns\\BLL.DesignPatterns.csproj",
+        "projectName": "BLL.DesignPatterns",
+        "projectPath": "D:\\Users\\cam\\desktop\\C#\\GitApp\\XT_.Net_Web\\Task-06\\6.1. USERS\\BLL.DesignPatterns\\BLL.DesignPatterns.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "D:\\Users\\cam\\desktop\\C#\\GitApp\\XT_.Net_Web\\Task-06\\6.1. USERS\\BLL.DesignPatterns\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "D:\\Users\\cam\\desktop\\C#\\GitApp\\XT_.Net_Web\\Task-06\\6.1. USERS\\DAL.TextFiles\\DAL.DesignPatterns.csproj": {
+                "projectPath": "D:\\Users\\cam\\desktop\\C#\\GitApp\\XT_.Net_Web\\Task-06\\6.1. USERS\\DAL.TextFiles\\DAL.DesignPatterns.csproj"
+              },
+              "D:\\Users\\cam\\desktop\\C#\\GitApp\\XT_.Net_Web\\Task-06\\6.1. USERS\\Dependencys.DesignPatterns\\Dependencys.DesignPatterns.csproj": {
+                "projectPath": "D:\\Users\\cam\\desktop\\C#\\GitApp\\XT_.Net_Web\\Task-06\\6.1. USERS\\Dependencys.DesignPatterns\\Dependencys.DesignPatterns.csproj"
+              },
+              "D:\\Users\\cam\\desktop\\C#\\GitApp\\XT_.Net_Web\\Task-06\\6.1. USERS\\Entities.DesignPatterns\\Entities.DesignPatterns.csproj": {
+                "projectPath": "D:\\Users\\cam\\desktop\\C#\\GitApp\\XT_.Net_Web\\Task-06\\6.1. USERS\\Entities.DesignPatterns\\Entities.DesignPatterns.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "D:\\Users\\cam\\desktop\\C#\\GitApp\\XT_.Net_Web\\Task-06\\6.1. USERS\\DAL.TextFiles\\DAL.DesignPatterns.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Users\\cam\\desktop\\C#\\GitApp\\XT_.Net_Web\\Task-06\\6.1. USERS\\DAL.TextFiles\\DAL.DesignPatterns.csproj",
+        "projectName": "DAL.DesignPatterns",
+        "projectPath": "D:\\Users\\cam\\desktop\\C#\\GitApp\\XT_.Net_Web\\Task-06\\6.1. USERS\\DAL.TextFiles\\DAL.DesignPatterns.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "D:\\Users\\cam\\desktop\\C#\\GitApp\\XT_.Net_Web\\Task-06\\6.1. USERS\\DAL.TextFiles\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "D:\\Users\\cam\\desktop\\C#\\GitApp\\XT_.Net_Web\\Task-06\\6.1. USERS\\Entities.DesignPatterns\\Entities.DesignPatterns.csproj": {
+                "projectPath": "D:\\Users\\cam\\desktop\\C#\\GitApp\\XT_.Net_Web\\Task-06\\6.1. USERS\\Entities.DesignPatterns\\Entities.DesignPatterns.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "D:\\Users\\cam\\desktop\\C#\\GitApp\\XT_.Net_Web\\Task-06\\6.1. USERS\\Dependencys.DesignPatterns\\Dependencys.DesignPatterns.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Users\\cam\\desktop\\C#\\GitApp\\XT_.Net_Web\\Task-06\\6.1. USERS\\Dependencys.DesignPatterns\\Dependencys.DesignPatterns.csproj",
+        "projectName": "Dependencys.DesignPatterns",
+        "projectPath": "D:\\Users\\cam\\desktop\\C#\\GitApp\\XT_.Net_Web\\Task-06\\6.1. USERS\\Dependencys.DesignPatterns\\Dependencys.DesignPatterns.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "D:\\Users\\cam\\desktop\\C#\\GitApp\\XT_.Net_Web\\Task-06\\6.1. USERS\\Dependencys.DesignPatterns\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {
+              "D:\\Users\\cam\\desktop\\C#\\GitApp\\XT_.Net_Web\\Task-06\\6.1. USERS\\DAL.TextFiles\\DAL.DesignPatterns.csproj": {
+                "projectPath": "D:\\Users\\cam\\desktop\\C#\\GitApp\\XT_.Net_Web\\Task-06\\6.1. USERS\\DAL.TextFiles\\DAL.DesignPatterns.csproj"
+              },
+              "D:\\Users\\cam\\desktop\\C#\\GitApp\\XT_.Net_Web\\Task-06\\6.1. USERS\\Entities.DesignPatterns\\Entities.DesignPatterns.csproj": {
+                "projectPath": "D:\\Users\\cam\\desktop\\C#\\GitApp\\XT_.Net_Web\\Task-06\\6.1. USERS\\Entities.DesignPatterns\\Entities.DesignPatterns.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "D:\\Users\\cam\\desktop\\C#\\GitApp\\XT_.Net_Web\\Task-06\\6.1. USERS\\Entities.DesignPatterns\\Entities.DesignPatterns.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Users\\cam\\desktop\\C#\\GitApp\\XT_.Net_Web\\Task-06\\6.1. USERS\\Entities.DesignPatterns\\Entities.DesignPatterns.csproj",
+        "projectName": "Entities.DesignPatterns",
+        "projectPath": "D:\\Users\\cam\\desktop\\C#\\GitApp\\XT_.Net_Web\\Task-06\\6.1. USERS\\Entities.DesignPatterns\\Entities.DesignPatterns.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "D:\\Users\\cam\\desktop\\C#\\GitApp\\XT_.Net_Web\\Task-06\\6.1. USERS\\Entities.DesignPatterns\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

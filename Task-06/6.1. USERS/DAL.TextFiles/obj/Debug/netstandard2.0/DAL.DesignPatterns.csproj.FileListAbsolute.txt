@@ -1,0 +1,12 @@
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-06\6.1. USERS\DAL.TextFiles\bin\Debug\netstandard2.0\DAL.DesignPatterns.deps.json
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-06\6.1. USERS\DAL.TextFiles\bin\Debug\netstandard2.0\DAL.DesignPatterns.dll
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-06\6.1. USERS\DAL.TextFiles\bin\Debug\netstandard2.0\DAL.DesignPatterns.pdb
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-06\6.1. USERS\DAL.TextFiles\bin\Debug\netstandard2.0\Entities.DesignPatterns.dll
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-06\6.1. USERS\DAL.TextFiles\bin\Debug\netstandard2.0\Entities.DesignPatterns.pdb
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-06\6.1. USERS\DAL.TextFiles\obj\Debug\netstandard2.0\DAL.DesignPatterns.csprojAssemblyReference.cache
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-06\6.1. USERS\DAL.TextFiles\obj\Debug\netstandard2.0\DAL.DesignPatterns.csproj.CoreCompileInputs.cache
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-06\6.1. USERS\DAL.TextFiles\obj\Debug\netstandard2.0\DAL.DesignPatterns.AssemblyInfoInputs.cache
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-06\6.1. USERS\DAL.TextFiles\obj\Debug\netstandard2.0\DAL.DesignPatterns.AssemblyInfo.cs
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-06\6.1. USERS\DAL.TextFiles\obj\Debug\netstandard2.0\DAL.DesignPatterns.csproj.CopyComplete
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-06\6.1. USERS\DAL.TextFiles\obj\Debug\netstandard2.0\DAL.DesignPatterns.dll
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-06\6.1. USERS\DAL.TextFiles\obj\Debug\netstandard2.0\DAL.DesignPatterns.pdb

@@ -1,0 +1,14 @@
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-06\6.1. USERS\Dependencys.DesignPatterns\bin\Debug\netstandard2.0\Dependencys.DesignPatterns.deps.json
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-06\6.1. USERS\Dependencys.DesignPatterns\bin\Debug\netstandard2.0\Dependencys.DesignPatterns.dll
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-06\6.1. USERS\Dependencys.DesignPatterns\bin\Debug\netstandard2.0\Dependencys.DesignPatterns.pdb
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-06\6.1. USERS\Dependencys.DesignPatterns\bin\Debug\netstandard2.0\DAL.DesignPatterns.dll
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-06\6.1. USERS\Dependencys.DesignPatterns\bin\Debug\netstandard2.0\Entities.DesignPatterns.dll
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-06\6.1. USERS\Dependencys.DesignPatterns\bin\Debug\netstandard2.0\DAL.DesignPatterns.pdb
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-06\6.1. USERS\Dependencys.DesignPatterns\bin\Debug\netstandard2.0\Entities.DesignPatterns.pdb
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-06\6.1. USERS\Dependencys.DesignPatterns\obj\Debug\netstandard2.0\Dependencys.DesignPatterns.csprojAssemblyReference.cache
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-06\6.1. USERS\Dependencys.DesignPatterns\obj\Debug\netstandard2.0\Dependencys.DesignPatterns.csproj.CoreCompileInputs.cache
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-06\6.1. USERS\Dependencys.DesignPatterns\obj\Debug\netstandard2.0\Dependencys.DesignPatterns.AssemblyInfoInputs.cache
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-06\6.1. USERS\Dependencys.DesignPatterns\obj\Debug\netstandard2.0\Dependencys.DesignPatterns.AssemblyInfo.cs
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-06\6.1. USERS\Dependencys.DesignPatterns\obj\Debug\netstandard2.0\Dependencys.DesignPatterns.csproj.CopyComplete
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-06\6.1. USERS\Dependencys.DesignPatterns\obj\Debug\netstandard2.0\Dependencys.DesignPatterns.dll
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-06\6.1. USERS\Dependencys.DesignPatterns\obj\Debug\netstandard2.0\Dependencys.DesignPatterns.pdb

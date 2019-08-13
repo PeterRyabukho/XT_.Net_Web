@@ -1,0 +1,16 @@
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-06\6.1. USERS\Pl.DesignPatterns\bin\Debug\Pl.DesignPatterns.exe.config
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-06\6.1. USERS\Pl.DesignPatterns\bin\Debug\Pl.DesignPatterns.exe
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-06\6.1. USERS\Pl.DesignPatterns\bin\Debug\Pl.DesignPatterns.pdb
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-06\6.1. USERS\Pl.DesignPatterns\bin\Debug\BLL.DesignPatterns.dll
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-06\6.1. USERS\Pl.DesignPatterns\bin\Debug\Entities.DesignPatterns.dll
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-06\6.1. USERS\Pl.DesignPatterns\bin\Debug\DAL.DesignPatterns.dll
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-06\6.1. USERS\Pl.DesignPatterns\bin\Debug\BLL.DesignPatterns.pdb
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-06\6.1. USERS\Pl.DesignPatterns\bin\Debug\Entities.DesignPatterns.pdb
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-06\6.1. USERS\Pl.DesignPatterns\bin\Debug\DAL.DesignPatterns.pdb
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-06\6.1. USERS\Pl.DesignPatterns\obj\Debug\Pl.DesignPatterns.csprojAssemblyReference.cache
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-06\6.1. USERS\Pl.DesignPatterns\obj\Debug\Pl.DesignPatterns.csproj.CoreCompileInputs.cache
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-06\6.1. USERS\Pl.DesignPatterns\obj\Debug\Pl.DesignPatterns.csproj.CopyComplete
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-06\6.1. USERS\Pl.DesignPatterns\obj\Debug\Pl.DesignPatterns.exe
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-06\6.1. USERS\Pl.DesignPatterns\obj\Debug\Pl.DesignPatterns.pdb
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-06\6.1. USERS\Pl.DesignPatterns\bin\Debug\Dependencys.DesignPatterns.dll
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-06\6.1. USERS\Pl.DesignPatterns\bin\Debug\Dependencys.DesignPatterns.pdb
