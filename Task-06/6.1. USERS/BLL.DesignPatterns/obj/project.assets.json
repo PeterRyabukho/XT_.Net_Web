@@ -234,27 +234,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ryabu\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Users\\user\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GitApp\\XT_.Net_Web\\Task-06\\6.1. USERS\\BLL.DesignPatterns\\BLL.DesignPatterns.csproj",
+      "projectUniqueName": "D:\\Users\\cam\\desktop\\C#\\GitApp\\XT_.Net_Web\\Task-06\\6.1. USERS\\BLL.DesignPatterns\\BLL.DesignPatterns.csproj",
       "projectName": "BLL.DesignPatterns",
-      "projectPath": "D:\\GitApp\\XT_.Net_Web\\Task-06\\6.1. USERS\\BLL.DesignPatterns\\BLL.DesignPatterns.csproj",
-      "packagesPath": "C:\\Users\\ryabu\\.nuget\\packages\\",
-      "outputPath": "D:\\GitApp\\XT_.Net_Web\\Task-06\\6.1. USERS\\BLL.DesignPatterns\\obj\\",
+      "projectPath": "D:\\Users\\cam\\desktop\\C#\\GitApp\\XT_.Net_Web\\Task-06\\6.1. USERS\\BLL.DesignPatterns\\BLL.DesignPatterns.csproj",
+      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+      "outputPath": "D:\\Users\\cam\\desktop\\C#\\GitApp\\XT_.Net_Web\\Task-06\\6.1. USERS\\BLL.DesignPatterns\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\ryabu\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
@@ -266,14 +263,14 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "D:\\GitApp\\XT_.Net_Web\\Task-06\\6.1. USERS\\DAL.TextFiles\\DAL.DesignPatterns.csproj": {
-              "projectPath": "D:\\GitApp\\XT_.Net_Web\\Task-06\\6.1. USERS\\DAL.TextFiles\\DAL.DesignPatterns.csproj"
+            "D:\\Users\\cam\\desktop\\C#\\GitApp\\XT_.Net_Web\\Task-06\\6.1. USERS\\DAL.TextFiles\\DAL.DesignPatterns.csproj": {
+              "projectPath": "D:\\Users\\cam\\desktop\\C#\\GitApp\\XT_.Net_Web\\Task-06\\6.1. USERS\\DAL.TextFiles\\DAL.DesignPatterns.csproj"
             },
-            "D:\\GitApp\\XT_.Net_Web\\Task-06\\6.1. USERS\\Dependencys.DesignPatterns\\Dependencys.DesignPatterns.csproj": {
-              "projectPath": "D:\\GitApp\\XT_.Net_Web\\Task-06\\6.1. USERS\\Dependencys.DesignPatterns\\Dependencys.DesignPatterns.csproj"
+            "D:\\Users\\cam\\desktop\\C#\\GitApp\\XT_.Net_Web\\Task-06\\6.1. USERS\\Dependencys.DesignPatterns\\Dependencys.DesignPatterns.csproj": {
+              "projectPath": "D:\\Users\\cam\\desktop\\C#\\GitApp\\XT_.Net_Web\\Task-06\\6.1. USERS\\Dependencys.DesignPatterns\\Dependencys.DesignPatterns.csproj"
             },
-            "D:\\GitApp\\XT_.Net_Web\\Task-06\\6.1. USERS\\Entities.DesignPatterns\\Entities.DesignPatterns.csproj": {
-              "projectPath": "D:\\GitApp\\XT_.Net_Web\\Task-06\\6.1. USERS\\Entities.DesignPatterns\\Entities.DesignPatterns.csproj"
+            "D:\\Users\\cam\\desktop\\C#\\GitApp\\XT_.Net_Web\\Task-06\\6.1. USERS\\Entities.DesignPatterns\\Entities.DesignPatterns.csproj": {
+              "projectPath": "D:\\Users\\cam\\desktop\\C#\\GitApp\\XT_.Net_Web\\Task-06\\6.1. USERS\\Entities.DesignPatterns\\Entities.DesignPatterns.csproj"
             }
           }
         }
@@ -295,12 +292,7 @@
           }
         },
         "imports": [
-          "net461",
-          "net462",
-          "net47",
-          "net471",
-          "net472",
-          "net48"
+          "net461"
         ],
         "assetTargetFallback": true,
         "warn": true

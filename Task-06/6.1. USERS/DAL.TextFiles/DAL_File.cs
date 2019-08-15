@@ -4,20 +4,19 @@ using System.Text;
 using Entities.DesignPatterns;
 using System.IO;
 using System.Linq;
+using System.Threading;
 
 namespace DAL.DesignPatterns
 {
     public class DAL_File : IKeepUsers
     {
-        private static FileInfo file { get; set; }
-        private static string createDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\Peter Task-06\";
-        private static string pathToFile = $"{createDirectory}Users.txt";
+        private static string createDirectory { get; } = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\Peter Task-06\";
+        private static string pathToFile { get; } = $"{createDirectory}Users.txt";
         static DAL_File()
         {
             Directory.CreateDirectory(createDirectory);
-            
-            file = new FileInfo(pathToFile);
         }
+
         public bool AddUser(User user)
         {
             //if (file.Any(userName => userName.Name == user.Name))
@@ -34,7 +33,7 @@ namespace DAL.DesignPatterns
                 }
             }
             else
-                File.WriteAllText(pathToFile, user.ToString());
+                File.WriteAllText(pathToFile, user.ToString(), Encoding.Default);
             return true;
         }
 
@@ -59,7 +58,36 @@ namespace DAL.DesignPatterns
 
         public void RemoveUser(string nameToFind)
         {
-            throw new NotImplementedException();
+            //var users = new List<string>();
+            //Stream fileStream = new FileStream(pathToFile, FileMode.Open, FileAccess.Read);
+            //using (StreamReader reader = new StreamReader(fileStream, Encoding.Default))
+            //{
+            //    string newLine = string.Empty;
+            //    while (reader.Peek() != -1)
+            //    {
+            //        newLine = reader.ReadLine();
+            //        users.Add(newLine);
+            //    }
+            //}
+            //fileStream.Close();
+
+            ////users.Contains(nameToFind);
+
+            //users.ToArray();
+            //var selectedUsers = from user in users
+            //                    let name = user.ToArray()
+            //                    let nameFind = name.ToString()
+            //                    where nameFind.Contains(nameToFind)
+            //                    select nameFind;
+            //foreach (var item in selectedUsers)
+            //{
+            //    users.Remove(item);
+            //}
+
+            var removeRowWithNameToFind = File.ReadAllLines(pathToFile, Encoding.Default).
+                                          Where(name => !name.Contains(nameToFind));
+            Thread.Sleep(50);
+            File.WriteAllLines(pathToFile, removeRowWithNameToFind, Encoding.Default);
         }
     }
 }

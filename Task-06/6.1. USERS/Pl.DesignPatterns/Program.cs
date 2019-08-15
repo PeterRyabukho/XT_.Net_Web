@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Entities.DesignPatterns;
 using BLL.DesignPatterns;
 
+
 namespace Pl.DesignPatterns
 {
     class Program
@@ -41,11 +42,17 @@ namespace Pl.DesignPatterns
                         string userName = Console.ReadLine();
                         Console.Write("2. Enter user date of birth: ");
                         bool BDateChecked = DateTime.TryParse(Console.ReadLine(), out DateTime dateOfBith);
-                        if (BDateChecked)
+                        if (BDateChecked && dateOfBith < DateTime.Now)
                         {
                             UserManager.CreateUser(userName, dateOfBith);
                             //User newUserCreated = new User(userName, dateOfBith);
                             //UserManager.AddUser(newUserCreated);
+                        }
+                        else
+                        {
+                            Console.WriteLine("\n User not created! You cannot have a date of birth later than the present time!");
+                            Console.ReadKey();
+                            MainInterface();
                         }
                         Console.WriteLine("\nUser created!\n");
                         MainInterface();

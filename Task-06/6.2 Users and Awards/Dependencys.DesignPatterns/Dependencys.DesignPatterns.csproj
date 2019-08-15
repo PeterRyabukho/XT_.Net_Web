@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DAL.DesignPatterns\DAL.DesignPatterns.csproj" />
+    <ProjectReference Include="..\Entities.DesignPatterns\Entities.DesignPatterns.csproj" />
+  </ItemGroup>
+
+</Project>
