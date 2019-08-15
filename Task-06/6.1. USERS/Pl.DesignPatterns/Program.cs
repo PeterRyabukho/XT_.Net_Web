@@ -79,12 +79,13 @@ namespace Pl.DesignPatterns
             }
         }
 
-        private static void ShowAllUsers(ICollection<User> users)
+        private static void ShowAllUsers(ICollection<string> users)
         {
             int count = 1;
             foreach (var user in users)
             {
-                Console.WriteLine($"\n{count}. ID:[{user.ID}] - {user.Name} - {user.DateOfBirth:dd.MM.yyyy} - {user.Age} years old");
+                Console.WriteLine($"{count}. {user.ToString()}");
+                //Console.WriteLine($"\n{count}. ID:[{user.ID}] - {user.Name} - {user.DateOfBirth:dd.MM.yyyy} - {user.Age} years old");
                 count++;
             }
         }

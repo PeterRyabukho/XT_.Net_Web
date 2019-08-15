@@ -1,24 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Users\\cam\\desktop\\C#\\GitApp\\XT_.Net_Web\\Task-06\\6.1. USERS\\Entities.DesignPatterns\\Entities.DesignPatterns.csproj": {}
+    "D:\\GitApp\\XT_.Net_Web\\Task-06\\6.1. USERS\\Entities.DesignPatterns\\Entities.DesignPatterns.csproj": {}
   },
   "projects": {
-    "D:\\Users\\cam\\desktop\\C#\\GitApp\\XT_.Net_Web\\Task-06\\6.1. USERS\\Entities.DesignPatterns\\Entities.DesignPatterns.csproj": {
+    "D:\\GitApp\\XT_.Net_Web\\Task-06\\6.1. USERS\\Entities.DesignPatterns\\Entities.DesignPatterns.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Users\\cam\\desktop\\C#\\GitApp\\XT_.Net_Web\\Task-06\\6.1. USERS\\Entities.DesignPatterns\\Entities.DesignPatterns.csproj",
+        "projectUniqueName": "D:\\GitApp\\XT_.Net_Web\\Task-06\\6.1. USERS\\Entities.DesignPatterns\\Entities.DesignPatterns.csproj",
         "projectName": "Entities.DesignPatterns",
-        "projectPath": "D:\\Users\\cam\\desktop\\C#\\GitApp\\XT_.Net_Web\\Task-06\\6.1. USERS\\Entities.DesignPatterns\\Entities.DesignPatterns.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "D:\\Users\\cam\\desktop\\C#\\GitApp\\XT_.Net_Web\\Task-06\\6.1. USERS\\Entities.DesignPatterns\\obj\\",
+        "projectPath": "D:\\GitApp\\XT_.Net_Web\\Task-06\\6.1. USERS\\Entities.DesignPatterns\\Entities.DesignPatterns.csproj",
+        "packagesPath": "C:\\Users\\ryabu\\.nuget\\packages\\",
+        "outputPath": "D:\\GitApp\\XT_.Net_Web\\Task-06\\6.1. USERS\\Entities.DesignPatterns\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\ryabu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
@@ -49,7 +51,12 @@
             }
           },
           "imports": [
-            "net461"
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true

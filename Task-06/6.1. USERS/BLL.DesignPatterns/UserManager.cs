@@ -25,7 +25,7 @@ namespace BLL.DesignPatterns
             UserStorage.RemoveUser(nameToFind);
         }
 
-        public static ICollection<User> GetAllUsers()
+        public static ICollection<string> GetAllUsers()
         {
             return UserStorage.GetAllUsers();
         }

@@ -24,5 +24,10 @@ namespace Entities.DesignPatterns
             this.Name = Name;
             this.DateOfBirth = DateOfBirth;
         }
+
+        public override string ToString()
+        {
+            return $"ID:[{ID}] - {Name} - {DateOfBirth:dd.MM.yyyy} - {Age} years old";
+        }
     }
 }

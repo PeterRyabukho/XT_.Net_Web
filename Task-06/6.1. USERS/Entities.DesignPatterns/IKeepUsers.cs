@@ -10,6 +10,6 @@ namespace Entities.DesignPatterns
 
         void RemoveUser(string nameToFind);
 
-        ICollection<User> GetAllUsers();
+        ICollection<string> GetAllUsers();
     }
 }

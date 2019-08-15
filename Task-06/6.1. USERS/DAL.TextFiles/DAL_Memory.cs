@@ -49,11 +49,11 @@ namespace DAL.DesignPatterns
 
         public void RemoveUser(string nameToFind)
         {
-            foreach (var item in users)
+            foreach (var whantToRemoveThisUser in users)
             {
-                if(item.Name == nameToFind)
+                if(whantToRemoveThisUser.Name == nameToFind)
                 {
-                    users.Remove(item);
+                    users.Remove(whantToRemoveThisUser);
                     break;
                 }
             }
@@ -63,9 +63,14 @@ namespace DAL.DesignPatterns
             //}
         }
 
-        public ICollection<User> GetAllUsers()
+        public ICollection<string> GetAllUsers()
         {
-            return users;
+            var stringUsers = new List<string>();
+            foreach (var item in users)
+            {
+                stringUsers.Add(item.ToString());
+            }
+            return stringUsers;
         }
     }
 }
