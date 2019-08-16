@@ -14,7 +14,10 @@ namespace DAL.DesignPatterns
         private static string pathToFile { get; } = $"{createDirectory}Users.txt";
         static DAL_File_User()
         {
-            Directory.CreateDirectory(createDirectory);
+            if (!Directory.Exists(createDirectory))
+            {
+                Directory.CreateDirectory(createDirectory);
+            }
         }
 
         public bool AddUser(User user)

@@ -16,6 +16,7 @@ namespace Entities.DesignPatterns
         IEnumerable<AwardsOfUsers> GetAllUsersAwards();
         void RemoveAward(string nameToFind);
         void DeleteUserAwards(User user);
-
+        bool SerializerJsonAwards();
+        void DeSerializerJsonAwards();
     }
 }

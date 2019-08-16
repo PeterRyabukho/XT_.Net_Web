@@ -14,3 +14,5 @@ D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-06\6.2 Users and Awards\PL\obj\D
 D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-06\6.2 Users and Awards\PL\obj\Debug\PL.DesignPatterns.csproj.CopyComplete
 D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-06\6.2 Users and Awards\PL\obj\Debug\PL.exe
 D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-06\6.2 Users and Awards\PL\obj\Debug\PL.pdb
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-06\6.2 Users and Awards\PL\bin\Debug\Newtonsoft.Json.dll
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-06\6.2 Users and Awards\PL\bin\Debug\Newtonsoft.Json.xml

@@ -34,12 +34,14 @@ namespace Pl.DesignPatterns
             Console.WriteLine("8. Show User Awards");
             Console.WriteLine("9. Show all users and their rewards");
             Console.WriteLine("10. Exit");
+            Console.WriteLine("11. Serialize Awards");
+            Console.WriteLine("12. DE Serialize Awards");
             Console.Write("Enter: ");
             var numberOfAwardForUser = Console.ReadLine();
 
             if (uint.TryParse(numberOfAwardForUser, out uint selectedOption)
                 && selectedOption > 0
-                && selectedOption < 11)
+                && selectedOption < 13)
             {
                 switch (selectedOption)
                 {
@@ -195,7 +197,20 @@ namespace Pl.DesignPatterns
                         break;
                     case 10:
                         return;
-                        
+                    case 11:
+                        //if (!AwardManager.SerializerJsonAwards())
+                        //{
+                        //    Console.WriteLine("\nNo Awards added!\n");
+                        //    Console.ReadKey();
+                        //}
+                        //else
+                            AwardManager.SerializerJsonAwards();
+                        MainInterface();
+                        break;
+                    case 12:
+                        AwardManager.DeSerializerJsonAwards();
+                        MainInterface();
+                        break;
                 }
             }
         }

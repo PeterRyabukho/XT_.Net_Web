@@ -4,6 +4,7 @@ using System.Text;
 using Entities.DesignPatterns;
 using System.Linq;
 using System.Threading;
+using Newtonsoft.Json;
 
 namespace DAL.DesignPatterns
 {
@@ -112,6 +113,16 @@ namespace DAL.DesignPatterns
             {
                 awardsOfUsers.Add(userOne);
             }
+        }
+
+        public bool SerializerJsonAwards()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void DeSerializerJsonAwards()
+        {
+            throw new NotImplementedException();
         }
     }
 }

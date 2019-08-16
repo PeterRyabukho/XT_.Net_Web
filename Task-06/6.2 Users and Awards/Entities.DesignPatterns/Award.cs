@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Newtonsoft.Json;
 
 namespace Entities.DesignPatterns
 {
@@ -8,7 +9,6 @@ namespace Entities.DesignPatterns
     {
         public Guid ID { get; private set; }
         public string Name { get; set; }
-
         public void ChangeAward(string name)
         {
             Name = name;

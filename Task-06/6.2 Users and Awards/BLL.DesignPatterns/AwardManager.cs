@@ -11,6 +11,20 @@ namespace BLL.DesignPatterns
     {
         public static IKeepAwards AwardStorage => Dependency.awardsStorage;
 
+        public static bool SerializerJsonAwards()
+        {
+            if (AwardStorage.SerializerJsonAwards())
+                return true;
+            else
+                return false;
+            //throw new NullReferenceException("Empty list");
+        }
+
+        public static void DeSerializerJsonAwards()
+        {
+            AwardStorage.DeSerializerJsonAwards();
+        }
+
         public static void CreateAward(string name)
         {
             AwardStorage.AddAward(new Award(name));
