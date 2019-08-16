@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Entities.DesignPatterns;
 using System.Linq;
+using System.Threading;
 
 namespace DAL.DesignPatterns
 {
@@ -38,9 +39,11 @@ namespace DAL.DesignPatterns
             return dictionaryOfAwards.Values.ToList();
         }
 
-        public bool AddAwardToUser(Guid awardID, Guid userID)
+        public bool AddAwardToUser(Guid userID, Guid awardID)
         {
-            awardsOfUsers.Add(new AwardsOfUsers(userID, awardID));
+            AwardsOfUsers awardOfUser = new AwardsOfUsers(userID, awardID);
+            awardsOfUsers.Add(awardOfUser);
+            Thread.Sleep(50);
             return true;
         }
 
@@ -60,7 +63,7 @@ namespace DAL.DesignPatterns
             dictionaryOfAwards.Clear();
             foreach (var award in awards)
             {
-                this.dictionaryOfAwards.Add(award.ID, award);
+                dictionaryOfAwards.Add(award.ID, award);
             }
         }
 
@@ -73,7 +76,7 @@ namespace DAL.DesignPatterns
             }
         }
 
-        public IEnumerable<AwardsOfUsers> GetAllUserAwards()
+        public IEnumerable<AwardsOfUsers> GetAllUsersAwards()
         {
             foreach (var award in awardsOfUsers)
             {

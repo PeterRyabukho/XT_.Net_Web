@@ -8,11 +8,11 @@ using System.Threading;
 
 namespace DAL.DesignPatterns
 {
-    public class DAL_File //: IKeepUsers
+    public class DAL_File_User //: IKeepUsers
     {
         private static string createDirectory { get; } = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\Peter Task-06\";
         private static string pathToFile { get; } = $"{createDirectory}Users.txt";
-        static DAL_File()
+        static DAL_File_User()
         {
             Directory.CreateDirectory(createDirectory);
         }

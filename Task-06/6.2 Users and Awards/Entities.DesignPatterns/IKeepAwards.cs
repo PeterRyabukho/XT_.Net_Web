@@ -9,11 +9,11 @@ namespace Entities.DesignPatterns
         bool AddAward(Award award);
         Award GetAward(Guid ID);
         IEnumerable<Award> GetAllAwards();
-        bool AddAwardToUser(Guid awardID, Guid userID);
+        bool AddAwardToUser(Guid userID, Guid awardID);
         IEnumerable<Award> GetUserAwards(User user);
         void SetAllAwards(IEnumerable<Award> awards);
         void SetAllUserAwards(IEnumerable<AwardsOfUsers> awardsOfUsers);
-        IEnumerable<AwardsOfUsers> GetAllUserAwards();
+        IEnumerable<AwardsOfUsers> GetAllUsersAwards();
         void RemoveAward(string nameToFind);
         void DeleteUserAwards(User user);
 

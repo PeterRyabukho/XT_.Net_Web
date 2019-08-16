@@ -40,15 +40,17 @@ namespace BLL.DesignPatterns
             return AwardStorage.GetAllAwards().ToArray();
         }
 
-        public static IEnumerable<Award> GetUserAwards(User user)
+        public static Award[] GetUserAwards(User user)
         {
-            return AwardStorage.GetUserAwards(user);
+            return AwardStorage.GetUserAwards(user).ToArray();
         }
 
         public static void RemoveAward(string nameToFind)
         {
             AwardStorage.RemoveAward(nameToFind);
         }
+
+
         public static bool AddAwardToUser(Guid userID, Guid awardID)
         {
             if (UserManager.UserStorage.GetUserByID(userID) == null)

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using BLL.DesignPatterns;
 using Entities.DesignPatterns;
@@ -30,13 +31,15 @@ namespace Pl.DesignPatterns
             Console.WriteLine("5. Remove Award");
             Console.WriteLine("6. Show all Awards");
             Console.WriteLine("7. Add Award to User");
-            Console.WriteLine("8. Exit");
+            Console.WriteLine("8. Show User Awards");
+            Console.WriteLine("9. Show all users and their rewards");
+            Console.WriteLine("10. Exit");
             Console.Write("Enter: ");
             var numberOfAwardForUser = Console.ReadLine();
 
             if (uint.TryParse(numberOfAwardForUser, out uint selectedOption)
                 && selectedOption > 0
-                && selectedOption < 9)
+                && selectedOption < 11)
             {
                 switch (selectedOption)
                 {
@@ -141,8 +144,6 @@ namespace Pl.DesignPatterns
                         }
 
                         Guid awardID = AwardIDs[int.Parse(numberOfAwardForUser)];
-
-                        
                         
                         if (AwardManager.AddAwardToUser(userID, awardID))
                         {
@@ -154,21 +155,79 @@ namespace Pl.DesignPatterns
                             Console.WriteLine("No additions occurred.");
                             Console.ReadKey();
                         }
-                        
-                        //TO DO:Bll-Add Award to User
+                        MainInterface();
+                        //TO DO:Bll,PL - Add Award to User
                         break;
                     case 8:
+                        ShowUsersAndAddNumbers();
+                        Console.WriteLine("Enter the number of the USER you would like to view awards: ");
+                        string numberOfUserToShowAwards = Console.ReadLine();
+
+                        if (!UserIDs.ContainsKey(int.Parse(numberOfUserToShowAwards)))
+                        {
+                            Console.WriteLine("Invalid User number!");
+                            goto case 8;
+                        }
+
+                        Guid userToFindByID = UserIDs[int.Parse(numberOfUserToShowAwards)];
+                        User newUserForAward = UserManager.GetUserByID(userToFindByID);
+                        Award[] userAwards = AwardManager.GetUserAwards(newUserForAward);
+                        Thread.Sleep(50);
+                        if (userAwards.Length == 0)
+                        {
+                            Console.WriteLine(newUserForAward.ToString());
+                            Console.WriteLine($"Sorry...This user {newUserForAward.Name} has no awards yet...");
+                        }
+                        else
+                        {
+                            Console.WriteLine($"\nUser number {numberOfUserToShowAwards}:\n{newUserForAward.ToString()}\n");
+                            Console.WriteLine($"Has Awards :");
+                            ShowAllItems(userAwards);
+                        }
+                        //ToDo: Get User Awards - BLL,PL
+                        MainInterface();
+                        break;
+                    case 9:
+                        //ToDO: Show All Users Awards-BLL
+                        ShowAllUsersAwards();
+                        Console.ReadKey();
+                        MainInterface();
+                        break;
+                    case 10:
                         return;
+                        
                 }
             }
         }
 
-        private static void ShowAllItems<T>(ICollection<T> users)
+        private static void ShowAllUsersAwards()
         {
             int count = 1;
-            foreach (var user in users)
+            //User[] users = UserManager.GetAllUsers();
+            foreach (var user in UserManager.GetAllUsers())
             {
-                Console.WriteLine($"{count}. {user.ToString()}");
+                Console.WriteLine($"{count}. {user.ToString()}\nHave Awards:");
+                foreach (var award in AwardManager.GetUserAwards(user))
+                {
+                    if (award == null)
+                    {
+                        Console.WriteLine($"Sorry...This user {user.Name} has no awards yet...");
+                    }
+                    else
+                    {
+                        Console.WriteLine($@"            ""{award.Name.ToString()}""");
+                    }
+                }
+                count++;
+            }
+        }
+
+        private static void ShowAllItems<T>(ICollection<T> items)
+        {
+            int count = 1;
+            foreach (var item in items)
+            {
+                Console.WriteLine($"{count}. {item.ToString()}");
                 //Console.WriteLine($"\n{count}. ID:[{user.ID}] - {user.Name} - {user.DateOfBirth:dd.MM.yyyy} - {user.Age} years old");
                 count++;
             }

@@ -9,7 +9,7 @@ namespace DAL.DesignPatterns
     public class DAL_Memory_User: IKeepUsers
     {
         //private static Guid ID { get; set; }
-        private Dictionary<Guid,User> usersDictionary { get; set; }
+        public Dictionary<Guid,User> usersDictionary { get; set; }
 
         //private static List<User> users { get; set; }
 
