@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -12,13 +13,52 @@ namespace Pl.DesignPatterns
 {
     class Program
     {
+        //private static string createDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\Peter Task-06\";
+
         public static Dictionary<int, Guid> UserIDs = new Dictionary<int, Guid>();
 
         public static Dictionary<int, Guid> AwardIDs = new Dictionary<int, Guid>();
 
         static void Main(string[] args)
         {
+
+            if(MyDirectory.CheckOrCreateDirectoryAndFiles())
+                Console.WriteLine($"Directory created, path: {MyDirectory.CreateDirectory}");
+            else
+                Console.WriteLine($"\nYou can find all files in directory, path: {MyDirectory.CreateDirectory}");
+
+            Thread.Sleep(500);
+
+            if (!UserManager.DeSerializerJsonUsers())
+                Console.WriteLine(@"File ""User.txt"" is empty! DEserialization dont complite!");
+            else
+                Console.WriteLine("\nUSER DEserialization complite!");
+            if (!AwardManager.DeSerializerJsonAwards())
+                Console.WriteLine(@"File ""Awards.txt"" is empty! DEserialization dont complite!");
+            else
+                Console.WriteLine("AWARDS DEserialization complite!");
+            if (!AwardManager.DeSerializerJsonAwardsOfUsers())
+                Console.WriteLine(@"File ""Awards of Users.txt"" is empty! DEserialization dont complite!");
+            else
+                Console.WriteLine("AWARDS OF USERS DEserialization complite!\n");
+            Console.WriteLine("Press any button to continue...");
+            Console.ReadKey();
+
             MainInterface();
+
+            if (!UserManager.SerializerJsonUsers())
+                Console.WriteLine(@"File ""User.txt"" is empty! Serialization dont complite!");
+            else
+                Console.WriteLine("\nUSER Serialization complite!");
+            if (!AwardManager.SerializerJsonAwards())
+                Console.WriteLine(@"File ""Awards.txt"" is empty! Serialization dont complite!");
+            else
+                Console.WriteLine("AWARDS Serialization complite!");
+            if (!AwardManager.SerializerJsonAwardsOfUsers())
+                Console.WriteLine(@"File ""Awards of Users.txt"" is empty! Serialization dont complite!");
+            else
+                Console.WriteLine("AWARDS OF USERS Serialization complite!");
+            Console.ReadKey();
         }
 
         private static void MainInterface()
@@ -36,58 +76,87 @@ namespace Pl.DesignPatterns
             Console.WriteLine("10. Exit");
             Console.WriteLine("11. Serialize Awards");
             Console.WriteLine("12. DE Serialize Awards");
+            Console.WriteLine("13. Serialize Awards of Users");
+            Console.WriteLine("14. DE Serialize Awards of Users");
+            Console.WriteLine("15. Serialize Users");
+            Console.WriteLine("16. DE Serialize Users");
+            Console.WriteLine("17. Show Awards of Users");
             Console.Write("Enter: ");
-            var numberOfAwardForUser = Console.ReadLine();
+            var menuSelection = Console.ReadLine();
 
-            if (uint.TryParse(numberOfAwardForUser, out uint selectedOption)
+            if (uint.TryParse(menuSelection, out uint selectedOption)
                 && selectedOption > 0
-                && selectedOption < 13)
+                && selectedOption < 20)
             {
                 switch (selectedOption)
                 {
                     case 1:
-                        //Console.Write("1. Enter user ID: ");
-                        //bool IdChecked = int.TryParse(Console.ReadLine(), out int id);
-
-
                         Console.Write("\n1. Enter user Name: ");
                         string userName = Console.ReadLine();
-                        Console.Write("2. Enter user date of birth: ");
+                        if (string.IsNullOrWhiteSpace(userName))
+                        {
+                            Console.WriteLine("\n Name cannot be empty!\n");
+                            Console.ReadKey();
+                            goto case 1;
+                        }
+                        Console.Write("2. Enter user date of birth by pattern dd.mm.yyyy: ");
                         bool BDateChecked = DateTime.TryParse(Console.ReadLine(), out DateTime dateOfBith);
                         if (BDateChecked && dateOfBith < DateTime.Now)
                         {
                             UserManager.CreateUser(userName, dateOfBith);
-                            //User newUserCreated = new User(userName, dateOfBith);
-                            //UserManager.AddUser(newUserCreated);
+                            Console.WriteLine($"\nUser '{userName}' created!\n");
+                            MainInterface();
                         }
                         else
                         {
                             Console.WriteLine("\n User not created! You cannot have a date of birth later than the present time!");
                             Console.ReadKey();
-                            MainInterface();
+                            goto case 1;
                         }
-                        Console.WriteLine($"\nUser '{userName}' created!\n");
-                        MainInterface();
                         //To DO: BLL - add User
                         break;
                     case 2:
-                        Console.WriteLine("\nChoose which user to delete:");
-                        ShowAllItems(UserManager.GetAllUsers());
-                        Console.Write("\nEnter name of user y whant to remove: ");
-                        string userNameToRemove = Console.ReadLine();
-                        UserManager.RemoveUser(userNameToRemove);
-                        Console.Write($"\nUser {userNameToRemove} removed!\n");
-                        ShowAllItems(UserManager.GetAllUsers());
-                        Console.WriteLine("Press any button to return to the main menu ");
-                        Console.ReadKey();
-                        MainInterface();
+                        Console.WriteLine("\nChoose which User to delete:");
+                        ShowUsersAndAddNumbers();
+                        Console.Write("\nEnter number of User y whant to remove: ");
+                        string numberOfUserToRemove = Console.ReadLine();
+
+                        if (!UserIDs.ContainsKey(int.Parse(numberOfUserToRemove)))
+                        {
+                            Console.WriteLine("Wrong number of User!");
+                            Console.ReadKey();
+                            goto case 2;
+                        }
+
+                        Guid userGuid = UserIDs[int.Parse(numberOfUserToRemove)];
+                        User userToRemove = UserManager.GetUserByID(userGuid);
+
+                        if (UserManager.RemoveUser(userToRemove))
+                        {
+                            Console.WriteLine($"\nUser {userToRemove} removed!\n");
+                            Console.WriteLine("Users: ");
+                            ShowAllItems(UserManager.GetAllUsers());
+                            Console.ReadKey();
+                            MainInterface();
+                        }
+                        else
+                        {
+                            Console.WriteLine("\nUser deletion failed!\n");
+                            Console.WriteLine("\nPress any button to return to the main menu...\n");
+                            Console.ReadKey();
+                            MainInterface();
+                        }
                         //To DO: BLL - remove User
                         break;
                     case 3:
                         Console.WriteLine("--------------------------------------------------------------------------------");
                         Console.WriteLine("List all users: ");
-                        ShowUsersAndAddNumbers();
-                        //ShowAllItems(UserManager.GetAllUsers());
+                        //if (!ShowUsersAndAddNumbers())
+                        //{
+                        //    Console.WriteLine("No Users! Add some new User in main menu!");
+                        //}
+                        //else ShowUsersAndAddNumbers();
+                        ShowAllItems(UserManager.GetAllUsers());
                         Console.WriteLine("--------------------------------------------------------------------------------");
                         MainInterface();
                         //To DO: BLL - get all Users
@@ -96,6 +165,12 @@ namespace Pl.DesignPatterns
                     case 4:
                         Console.Write("\n1. Enter award Name: ");
                         string awardName = Console.ReadLine();
+                        if (string.IsNullOrWhiteSpace(awardName))
+                        {
+                            Console.WriteLine("\n Name cannot be empty!\n");
+                            Console.ReadKey();
+                            goto case 4;
+                        }
                         AwardManager.CreateAward(awardName);
                         Console.WriteLine($"\nAward '{awardName}' created!\n");
                         MainInterface();
@@ -103,21 +178,42 @@ namespace Pl.DesignPatterns
                         break;
                     case 5:
                         Console.WriteLine("\nChoose which Award to delete:");
-                        ShowAllItems(AwardManager.GetAllAwards());
-                        Console.Write("\nEnter name of Award y whant to remove: ");
-                        string awardNameToRemove = Console.ReadLine();
-                        AwardManager.RemoveAward(awardNameToRemove);
-                        Console.Write($"\nAward {awardNameToRemove} removed!\n");
-                        ShowAllItems(AwardManager.GetAllAwards());
-                        Console.WriteLine("Press any button to return to the main menu ");
-                        Console.ReadKey();
-                        MainInterface();
+                        ShowAwardsAndAddNumbers();
+                        Console.Write("\nEnter number of Award y whant to remove: ");
+                        string numberOfAwardToRemove = Console.ReadLine();
+
+                        if (!AwardIDs.ContainsKey(int.Parse(numberOfAwardToRemove)))
+                        {
+                            Console.WriteLine("Wrong number of User!");
+                            Console.ReadKey();
+                            goto case 5;
+                        }
+
+                        Guid awardGuid = AwardIDs[int.Parse(numberOfAwardToRemove)];
+                        Award awardToRemove = AwardManager.GetAwardByID(awardGuid);
+
+                        if (AwardManager.RemoveAward(awardToRemove))
+                        {
+                            Console.WriteLine($"\nAward {awardToRemove} removed!\n");
+                            Console.WriteLine("Awards: ");
+                            ShowAllItems(AwardManager.GetAllAwards());
+                            Console.ReadKey();
+                            MainInterface();
+                        }
+                        else
+                        {
+                            Console.WriteLine("\nAward deletion failed!\n");
+                            Console.WriteLine("\nPress any button to return to the main menu...\n");
+                            Console.ReadKey();
+                            MainInterface();
+                        }
                         //TO DO:BLL - Remove Award
                         break;
                     case 6:
                         Console.WriteLine("---------------------------------------------------------------------------------");
                         Console.WriteLine("List all awards: ");
-                        ShowAwardsAndAddNumbers();
+                        if (!ShowAwardsAndAddNumbers())
+                            Console.WriteLine("No Awards! Add some new Award in main menu!");
                         Console.WriteLine("---------------------------------------------------------------------------------");
                         MainInterface();
                         //TO DO:BLL - Get All Awards
@@ -138,15 +234,15 @@ namespace Pl.DesignPatterns
 
                         ShowAwardsAndAddNumbers();
                         Console.Write("\nEnter the AWARD number: ");
-                        numberOfAwardForUser = Console.ReadLine();
-                        if (!AwardIDs.ContainsKey(int.Parse(numberOfAwardForUser)))
+                        menuSelection = Console.ReadLine();
+                        if (!AwardIDs.ContainsKey(int.Parse(menuSelection)))
                         {
                             Console.WriteLine("Invalid Award number!");
                             return;
                         }
 
-                        Guid awardID = AwardIDs[int.Parse(numberOfAwardForUser)];
-                        
+                        Guid awardID = AwardIDs[int.Parse(menuSelection)];
+
                         if (AwardManager.AddAwardToUser(userID, awardID))
                         {
                             Console.WriteLine($@"Award - ""{AwardManager.GetAwardByID(awardID).Name}"" successfully added to User {UserManager.GetUserByID(userID).Name}!");
@@ -191,7 +287,8 @@ namespace Pl.DesignPatterns
                         break;
                     case 9:
                         //ToDO: Show All Users Awards-BLL
-                        ShowAllUsersAwards();
+                        if (!ShowAllUsersAwards())
+                            Console.WriteLine("No Users! Add some new User in main menu!");
                         Console.ReadKey();
                         MainInterface();
                         break;
@@ -204,23 +301,48 @@ namespace Pl.DesignPatterns
                         //    Console.ReadKey();
                         //}
                         //else
-                            AwardManager.SerializerJsonAwards();
+                        AwardManager.SerializerJsonAwards();
                         MainInterface();
                         break;
                     case 12:
                         AwardManager.DeSerializerJsonAwards();
                         MainInterface();
                         break;
+                    case 13:
+                        AwardManager.SerializerJsonAwardsOfUsers();
+                        MainInterface();
+                        break;
+                    case 14:
+                        AwardManager.DeSerializerJsonAwardsOfUsers();
+                        MainInterface();
+                        break;
+                    case 15:
+                        UserManager.SerializerJsonUsers();
+                        MainInterface();
+                        break;
+                    case 16:
+                        UserManager.DeSerializerJsonUsers();
+                        MainInterface();
+                        break;
+                    case 17:
+                        AwardManager.ShowCollectionAwardsOfUsers();
+                        Console.ReadKey();
+                        MainInterface();
+                        break;
                 }
             }
         }
 
-        private static void ShowAllUsersAwards()
+        private static bool ShowAllUsersAwards()
         {
             int count = 1;
             //User[] users = UserManager.GetAllUsers();
             foreach (var user in UserManager.GetAllUsers())
             {
+                if (UserManager.GetAllUsers().Length == 0)
+                {
+                    return false;
+                }
                 Console.WriteLine($"{count}. {user.ToString()}\nHave Awards:");
                 foreach (var award in AwardManager.GetUserAwards(user))
                 {
@@ -235,6 +357,7 @@ namespace Pl.DesignPatterns
                 }
                 count++;
             }
+            return true;
         }
 
         private static void ShowAllItems<T>(ICollection<T> items)
@@ -248,10 +371,12 @@ namespace Pl.DesignPatterns
             }
         }
 
-        public static void ShowUsersAndAddNumbers()
+        public static bool ShowUsersAndAddNumbers()
         {
             UserIDs.Clear();
             List<User> allUsers = UserManager.GetAllUsers().ToList();
+            if (allUsers.Count == 0)
+                return false;
             int numberOfUser = 1;
             foreach (var item in allUsers)
             {
@@ -259,11 +384,14 @@ namespace Pl.DesignPatterns
                 Console.WriteLine($"\n{numberOfUser}. {item.ToString()}\n");
                 numberOfUser++;
             }
+            return true;
         }
-        public static void ShowAwardsAndAddNumbers()
+        public static bool ShowAwardsAndAddNumbers()
         {
             AwardIDs.Clear();
             List<Award> allAwards = AwardManager.GetAllAwards().ToList();
+            if (allAwards.Count == 0)
+                return false;
             int numberOfAwards = 1;
             foreach (var item in allAwards)
             {
@@ -271,6 +399,31 @@ namespace Pl.DesignPatterns
                 Console.WriteLine($"\n{numberOfAwards}. {item.ToString()}\n");
                 numberOfAwards++;
             }
+            return true;
         }
+        //private static bool CheckOrCreateDirectoryAndFiles()
+        //{ 
+        //    string pathToUsersFile  = $"{createDirectory}Users.txt";
+        //    string pathToAwardsFile = $"{createDirectory}Awards.txt";
+        //    if (!Directory.Exists(createDirectory))
+        //    {
+        //        Directory.CreateDirectory(createDirectory);
+        //        return true;
+        //    }
+        //    if (!File.Exists(pathToUsersFile))
+        //    {
+        //        File.Create(pathToUsersFile);
+        //        return true;
+        //    }
+        //    if (!File.Exists(pathToAwardsFile))
+        //    {
+        //        File.Create(pathToAwardsFile);
+        //        return true;
+        //    }
+        //    else
+        //    {
+        //        return false;
+        //    }
+        //}
     }
 }

@@ -6,7 +6,7 @@ namespace Entities.DesignPatterns
 {
     public class User
     {
-        public Guid ID { get; private set; }
+        public Guid ID { get; set; }
         public string Name { get; set; }
         private DateTime dateOfBirth;
         public DateTime DateOfBirth
@@ -28,7 +28,7 @@ namespace Entities.DesignPatterns
             Name = name;
             DateOfBirth = dateOfBirth;
         }
-
+        
         public User(string Name, DateTime DateOfBirth)
         {
             ID = Guid.NewGuid();

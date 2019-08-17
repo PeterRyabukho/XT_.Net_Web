@@ -8,11 +8,11 @@ namespace Entities.DesignPatterns
     {
         User GetUserByID(Guid ID);
         bool AddUser(User user);
-
-        void RemoveUser(string nameToFind);
-
+        bool RemoveUser(Guid ID);
         //ICollection<string> GetAllUsers();
         ICollection<User> GetAllUsers();
         bool SetAllUsers(IEnumerable<User> users);
+        bool SerializerJsonUsers();
+        bool DeSerializerJsonUsers();
     }
 }

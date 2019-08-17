@@ -7,3 +7,11 @@ D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-06\6.2 Users and Awards\Entities
 D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-06\6.2 Users and Awards\Entities.DesignPatterns\obj\Debug\netstandard2.0\Entities.DesignPatterns.AssemblyInfo.cs
 D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-06\6.2 Users and Awards\Entities.DesignPatterns\obj\Debug\netstandard2.0\Entities.DesignPatterns.dll
 D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-06\6.2 Users and Awards\Entities.DesignPatterns\obj\Debug\netstandard2.0\Entities.DesignPatterns.pdb
+D:\GitApp\XT_.Net_Web\Task-06\6.2 Users and Awards\Entities.DesignPatterns\bin\Debug\netstandard2.0\Entities.DesignPatterns.deps.json
+D:\GitApp\XT_.Net_Web\Task-06\6.2 Users and Awards\Entities.DesignPatterns\bin\Debug\netstandard2.0\Entities.DesignPatterns.dll
+D:\GitApp\XT_.Net_Web\Task-06\6.2 Users and Awards\Entities.DesignPatterns\bin\Debug\netstandard2.0\Entities.DesignPatterns.pdb
+D:\GitApp\XT_.Net_Web\Task-06\6.2 Users and Awards\Entities.DesignPatterns\obj\Debug\netstandard2.0\Entities.DesignPatterns.csprojAssemblyReference.cache
+D:\GitApp\XT_.Net_Web\Task-06\6.2 Users and Awards\Entities.DesignPatterns\obj\Debug\netstandard2.0\Entities.DesignPatterns.AssemblyInfoInputs.cache
+D:\GitApp\XT_.Net_Web\Task-06\6.2 Users and Awards\Entities.DesignPatterns\obj\Debug\netstandard2.0\Entities.DesignPatterns.AssemblyInfo.cs
+D:\GitApp\XT_.Net_Web\Task-06\6.2 Users and Awards\Entities.DesignPatterns\obj\Debug\netstandard2.0\Entities.DesignPatterns.dll
+D:\GitApp\XT_.Net_Web\Task-06\6.2 Users and Awards\Entities.DesignPatterns\obj\Debug\netstandard2.0\Entities.DesignPatterns.pdb

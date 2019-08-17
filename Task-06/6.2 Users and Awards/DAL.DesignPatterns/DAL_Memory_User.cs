@@ -36,26 +36,6 @@ namespace DAL.DesignPatterns
             return true;
         }
 
-        public void RemoveUser(string nameToFind)
-        {
-            //foreach (var whantToRemoveThisUser in users)
-            //{
-            //    if(whantToRemoveThisUser.Name == nameToFind)
-            //    {
-            //        users.Remove(whantToRemoveThisUser);
-            //        break;
-            //    }
-            //}
-            foreach (var whantToRemoveThisUser in usersDictionary.Values)
-            {
-                if (whantToRemoveThisUser.Name == nameToFind)
-                {
-                    usersDictionary.Remove(whantToRemoveThisUser.ID);
-                    break;
-                }
-            }
-        }
-
         public ICollection<User> GetAllUsers()
         {
             return usersDictionary.Values.ToList();
@@ -83,6 +63,29 @@ namespace DAL.DesignPatterns
             {
                 return false;
             }
+        }
+
+        public bool RemoveUser(Guid ID)
+        {
+            if (usersDictionary.ContainsKey(ID))
+            {
+                usersDictionary.Remove(ID);
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public bool SerializerJsonUsers()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool DeSerializerJsonUsers()
+        {
+            throw new NotImplementedException();
         }
     }
 }

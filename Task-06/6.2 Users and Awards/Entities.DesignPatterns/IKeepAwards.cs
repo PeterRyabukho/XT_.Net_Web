@@ -14,9 +14,12 @@ namespace Entities.DesignPatterns
         void SetAllAwards(IEnumerable<Award> awards);
         void SetAllUserAwards(IEnumerable<AwardsOfUsers> awardsOfUsers);
         IEnumerable<AwardsOfUsers> GetAllUsersAwards();
-        void RemoveAward(string nameToFind);
+        bool RemoveAward(Guid ID);
         void DeleteUserAwards(User user);
         bool SerializerJsonAwards();
-        void DeSerializerJsonAwards();
+        bool DeSerializerJsonAwards();
+        bool SerializerJsonAwardsOfUsers();
+        bool DeSerializerJsonAwardsOfUsers();
+        void ShowCollectionAwardsOfUsers();
     }
 }

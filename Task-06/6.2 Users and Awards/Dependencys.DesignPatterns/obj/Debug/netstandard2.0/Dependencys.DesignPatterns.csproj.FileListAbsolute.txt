@@ -12,3 +12,16 @@ D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-06\6.2 Users and Awards\Dependen
 D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-06\6.2 Users and Awards\Dependencys.DesignPatterns\obj\Debug\netstandard2.0\Dependencys.DesignPatterns.csproj.CopyComplete
 D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-06\6.2 Users and Awards\Dependencys.DesignPatterns\obj\Debug\netstandard2.0\Dependencys.DesignPatterns.dll
 D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-06\6.2 Users and Awards\Dependencys.DesignPatterns\obj\Debug\netstandard2.0\Dependencys.DesignPatterns.pdb
+D:\GitApp\XT_.Net_Web\Task-06\6.2 Users and Awards\Dependencys.DesignPatterns\bin\Debug\netstandard2.0\Dependencys.DesignPatterns.deps.json
+D:\GitApp\XT_.Net_Web\Task-06\6.2 Users and Awards\Dependencys.DesignPatterns\bin\Debug\netstandard2.0\Dependencys.DesignPatterns.dll
+D:\GitApp\XT_.Net_Web\Task-06\6.2 Users and Awards\Dependencys.DesignPatterns\bin\Debug\netstandard2.0\Dependencys.DesignPatterns.pdb
+D:\GitApp\XT_.Net_Web\Task-06\6.2 Users and Awards\Dependencys.DesignPatterns\bin\Debug\netstandard2.0\DAL.DesignPatterns.dll
+D:\GitApp\XT_.Net_Web\Task-06\6.2 Users and Awards\Dependencys.DesignPatterns\bin\Debug\netstandard2.0\Entities.DesignPatterns.dll
+D:\GitApp\XT_.Net_Web\Task-06\6.2 Users and Awards\Dependencys.DesignPatterns\bin\Debug\netstandard2.0\DAL.DesignPatterns.pdb
+D:\GitApp\XT_.Net_Web\Task-06\6.2 Users and Awards\Dependencys.DesignPatterns\bin\Debug\netstandard2.0\Entities.DesignPatterns.pdb
+D:\GitApp\XT_.Net_Web\Task-06\6.2 Users and Awards\Dependencys.DesignPatterns\obj\Debug\netstandard2.0\Dependencys.DesignPatterns.csprojAssemblyReference.cache
+D:\GitApp\XT_.Net_Web\Task-06\6.2 Users and Awards\Dependencys.DesignPatterns\obj\Debug\netstandard2.0\Dependencys.DesignPatterns.AssemblyInfoInputs.cache
+D:\GitApp\XT_.Net_Web\Task-06\6.2 Users and Awards\Dependencys.DesignPatterns\obj\Debug\netstandard2.0\Dependencys.DesignPatterns.AssemblyInfo.cs
+D:\GitApp\XT_.Net_Web\Task-06\6.2 Users and Awards\Dependencys.DesignPatterns\obj\Debug\netstandard2.0\Dependencys.DesignPatterns.csproj.CopyComplete
+D:\GitApp\XT_.Net_Web\Task-06\6.2 Users and Awards\Dependencys.DesignPatterns\obj\Debug\netstandard2.0\Dependencys.DesignPatterns.dll
+D:\GitApp\XT_.Net_Web\Task-06\6.2 Users and Awards\Dependencys.DesignPatterns\obj\Debug\netstandard2.0\Dependencys.DesignPatterns.pdb

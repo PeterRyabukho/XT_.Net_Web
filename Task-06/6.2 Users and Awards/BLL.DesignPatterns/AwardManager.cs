@@ -20,11 +20,29 @@ namespace BLL.DesignPatterns
             //throw new NullReferenceException("Empty list");
         }
 
-        public static void DeSerializerJsonAwards()
+        public static bool DeSerializerJsonAwards()
         {
-            AwardStorage.DeSerializerJsonAwards();
+            if(AwardStorage.DeSerializerJsonAwards())
+                return true;
+            else
+                return false;
         }
 
+        public static bool SerializerJsonAwardsOfUsers()
+        {
+            if (AwardStorage.SerializerJsonAwardsOfUsers())
+                return true;
+            else
+                return false;
+        }
+
+        public static bool DeSerializerJsonAwardsOfUsers()
+        {
+            if (AwardStorage.DeSerializerJsonAwardsOfUsers())
+                return true;
+            else
+                return false;
+        }
         public static void CreateAward(string name)
         {
             AwardStorage.AddAward(new Award(name));
@@ -59,11 +77,17 @@ namespace BLL.DesignPatterns
             return AwardStorage.GetUserAwards(user).ToArray();
         }
 
-        public static void RemoveAward(string nameToFind)
+        public static bool RemoveAward(Award award)
         {
-            AwardStorage.RemoveAward(nameToFind);
+            if (AwardStorage.RemoveAward(award.ID))
+                return true;
+            else return false;
         }
 
+        public static void ShowCollectionAwardsOfUsers()
+        {
+            AwardStorage.ShowCollectionAwardsOfUsers();
+        }
 
         public static bool AddAwardToUser(Guid userID, Guid awardID)
         {

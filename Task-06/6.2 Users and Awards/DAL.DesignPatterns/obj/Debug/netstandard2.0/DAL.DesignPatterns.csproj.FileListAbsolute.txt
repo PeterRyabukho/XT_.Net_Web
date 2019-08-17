@@ -10,3 +10,14 @@ D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-06\6.2 Users and Awards\DAL.Desi
 D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-06\6.2 Users and Awards\DAL.DesignPatterns\obj\Debug\netstandard2.0\DAL.DesignPatterns.csproj.CopyComplete
 D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-06\6.2 Users and Awards\DAL.DesignPatterns\obj\Debug\netstandard2.0\DAL.DesignPatterns.dll
 D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-06\6.2 Users and Awards\DAL.DesignPatterns\obj\Debug\netstandard2.0\DAL.DesignPatterns.pdb
+D:\GitApp\XT_.Net_Web\Task-06\6.2 Users and Awards\DAL.DesignPatterns\bin\Debug\netstandard2.0\DAL.DesignPatterns.deps.json
+D:\GitApp\XT_.Net_Web\Task-06\6.2 Users and Awards\DAL.DesignPatterns\bin\Debug\netstandard2.0\DAL.DesignPatterns.dll
+D:\GitApp\XT_.Net_Web\Task-06\6.2 Users and Awards\DAL.DesignPatterns\bin\Debug\netstandard2.0\DAL.DesignPatterns.pdb
+D:\GitApp\XT_.Net_Web\Task-06\6.2 Users and Awards\DAL.DesignPatterns\bin\Debug\netstandard2.0\Entities.DesignPatterns.dll
+D:\GitApp\XT_.Net_Web\Task-06\6.2 Users and Awards\DAL.DesignPatterns\bin\Debug\netstandard2.0\Entities.DesignPatterns.pdb
+D:\GitApp\XT_.Net_Web\Task-06\6.2 Users and Awards\DAL.DesignPatterns\obj\Debug\netstandard2.0\DAL.DesignPatterns.csprojAssemblyReference.cache
+D:\GitApp\XT_.Net_Web\Task-06\6.2 Users and Awards\DAL.DesignPatterns\obj\Debug\netstandard2.0\DAL.DesignPatterns.AssemblyInfoInputs.cache
+D:\GitApp\XT_.Net_Web\Task-06\6.2 Users and Awards\DAL.DesignPatterns\obj\Debug\netstandard2.0\DAL.DesignPatterns.AssemblyInfo.cs
+D:\GitApp\XT_.Net_Web\Task-06\6.2 Users and Awards\DAL.DesignPatterns\obj\Debug\netstandard2.0\DAL.DesignPatterns.csproj.CopyComplete
+D:\GitApp\XT_.Net_Web\Task-06\6.2 Users and Awards\DAL.DesignPatterns\obj\Debug\netstandard2.0\DAL.DesignPatterns.dll
+D:\GitApp\XT_.Net_Web\Task-06\6.2 Users and Awards\DAL.DesignPatterns\obj\Debug\netstandard2.0\DAL.DesignPatterns.pdb

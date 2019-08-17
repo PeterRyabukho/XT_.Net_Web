@@ -11,6 +11,21 @@ namespace BLL.DesignPatterns
     {
         public static IKeepUsers UserStorage => Dependency.usersStorage;
 
+        public static bool SerializerJsonUsers()
+        {
+            if (UserStorage.SerializerJsonUsers())
+                return true;
+            else
+                return false;
+        }
+
+        public static bool DeSerializerJsonUsers()
+        {
+            if (UserStorage.DeSerializerJsonUsers())
+                return true;
+            else
+                return false;
+        }
         public static void CreateUser(string name, DateTime dateOfBith)
         {
             UserStorage.AddUser(new User (name, dateOfBith) { DateOfBirth = dateOfBith, Name = name });
@@ -25,9 +40,12 @@ namespace BLL.DesignPatterns
             UserStorage.AddUser(user);
         }
 
-        public static void RemoveUser(string nameToFind)
+        public static bool RemoveUser(User user)
         {
-            UserStorage.RemoveUser(nameToFind);
+            if (UserStorage.RemoveUser(user.ID))
+                return true;
+            else
+                return false;
         }
 
         public static User[] GetAllUsers()

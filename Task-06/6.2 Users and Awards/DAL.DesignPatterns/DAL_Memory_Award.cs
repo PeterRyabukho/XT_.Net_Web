@@ -85,15 +85,28 @@ namespace DAL.DesignPatterns
             }
         }
 
-        public void RemoveAward(string nameToFind)
+        //public void RemoveAward(string nameToFind)
+        //{
+        //    foreach (var whantToRemoveThisUser in dictionaryOfAwards.Values)
+        //    {
+        //        if (whantToRemoveThisUser.Name == nameToFind)
+        //        {
+        //            dictionaryOfAwards.Remove(whantToRemoveThisUser.ID);
+        //            break;
+        //        }
+        //    }
+        //}
+
+        public bool RemoveAward(Guid ID)
         {
-            foreach (var whantToRemoveThisUser in dictionaryOfAwards.Values)
+            if (dictionaryOfAwards.ContainsKey(ID))
             {
-                if (whantToRemoveThisUser.Name == nameToFind)
-                {
-                    dictionaryOfAwards.Remove(whantToRemoveThisUser.ID);
-                    break;
-                }
+                dictionaryOfAwards.Remove(ID);
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
 
@@ -120,7 +133,22 @@ namespace DAL.DesignPatterns
             throw new NotImplementedException();
         }
 
-        public void DeSerializerJsonAwards()
+        public bool SerializerJsonAwardsOfUsers()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool DeSerializerJsonAwardsOfUsers()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool DeSerializerJsonAwards()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void ShowCollectionAwardsOfUsers()
         {
             throw new NotImplementedException();
         }
