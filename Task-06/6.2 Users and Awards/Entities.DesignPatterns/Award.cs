@@ -15,12 +15,13 @@ namespace Entities.DesignPatterns
             Name = name;
         }
 
-        //[JsonConstructor]
-        //public Award(string Name, Guid guid)
-        //{
-        //    ID = guid;
-        //    this.Name = Name;
-        //}
+        [JsonConstructor]
+        public Award(string Name, Guid ID)
+        {
+            this.ID = ID;
+            this.Name = Name;
+        }
+
         public Award(string Name)
         {
             ID = Guid.NewGuid();

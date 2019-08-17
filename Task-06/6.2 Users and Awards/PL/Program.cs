@@ -121,9 +121,15 @@ namespace Pl.DesignPatterns
                         Console.Write("\nEnter number of User y whant to remove: ");
                         string numberOfUserToRemove = Console.ReadLine();
 
+                        if(string.IsNullOrWhiteSpace(numberOfUserToRemove))
+                        {
+                            Console.WriteLine("\nThis field cannot be empty!");
+                            Console.ReadKey();
+                            goto case 2;
+                        }
                         if (!UserIDs.ContainsKey(int.Parse(numberOfUserToRemove)))
                         {
-                            Console.WriteLine("Wrong number of User!");
+                            Console.WriteLine("\nWrong number of User!");
                             Console.ReadKey();
                             goto case 2;
                         }
@@ -151,19 +157,19 @@ namespace Pl.DesignPatterns
                     case 3:
                         Console.WriteLine("--------------------------------------------------------------------------------");
                         Console.WriteLine("List all users: ");
-                        //if (!ShowUsersAndAddNumbers())
-                        //{
-                        //    Console.WriteLine("No Users! Add some new User in main menu!");
-                        //}
-                        //else ShowUsersAndAddNumbers();
-                        ShowAllItems(UserManager.GetAllUsers());
+                        if (!ShowUsersAndAddNumbers())
+                        {
+                            Console.WriteLine("No Users! Add some new User in main menu!");
+                        }
+                        else ShowUsersAndAddNumbers();
+                        //ShowAllItems(UserManager.GetAllUsers());
                         Console.WriteLine("--------------------------------------------------------------------------------");
                         MainInterface();
                         //To DO: BLL - get all Users
                         //       PL - show all Users
                         break;
                     case 4:
-                        Console.Write("\n1. Enter award Name: ");
+                        Console.Write("\nEnter award Name: ");
                         string awardName = Console.ReadLine();
                         if (string.IsNullOrWhiteSpace(awardName))
                         {
@@ -171,8 +177,13 @@ namespace Pl.DesignPatterns
                             Console.ReadKey();
                             goto case 4;
                         }
-                        AwardManager.CreateAward(awardName);
-                        Console.WriteLine($"\nAward '{awardName}' created!\n");
+                        if (!AwardManager.AddAward(awardName))
+                        {
+                            Console.WriteLine("\nYou cannot create another award with the same name!\n");
+                            Console.ReadKey();
+                        }
+                        else
+                            Console.WriteLine($"\nAward '{awardName}' created!\n");
                         MainInterface();
                         //TO DO:BLL - Add Award
                         break;
@@ -182,6 +193,12 @@ namespace Pl.DesignPatterns
                         Console.Write("\nEnter number of Award y whant to remove: ");
                         string numberOfAwardToRemove = Console.ReadLine();
 
+                        if (string.IsNullOrWhiteSpace(numberOfAwardToRemove))
+                        {
+                            Console.WriteLine("\nThis field cannot be empty!");
+                            Console.ReadKey();
+                            goto case 5;
+                        }
                         if (!AwardIDs.ContainsKey(int.Parse(numberOfAwardToRemove)))
                         {
                             Console.WriteLine("Wrong number of User!");
@@ -224,6 +241,12 @@ namespace Pl.DesignPatterns
                         Console.Write("\nEnter the USER number to whom you would like to give an award: ");
                         string numberOfUserForAward = Console.ReadLine();
 
+                        if (string.IsNullOrWhiteSpace(numberOfUserForAward))
+                        {
+                            Console.WriteLine("\nThis field cannot be empty!");
+                            Console.ReadKey();
+                            goto case 7;
+                        }
                         if (!UserIDs.ContainsKey(int.Parse(numberOfUserForAward)))
                         {
                             Console.WriteLine("Invalid User number!");
@@ -234,14 +257,21 @@ namespace Pl.DesignPatterns
 
                         ShowAwardsAndAddNumbers();
                         Console.Write("\nEnter the AWARD number: ");
-                        menuSelection = Console.ReadLine();
-                        if (!AwardIDs.ContainsKey(int.Parse(menuSelection)))
+                        string numberOfAwardForUser = Console.ReadLine();
+
+                        if (string.IsNullOrWhiteSpace(numberOfAwardForUser))
+                        {
+                            Console.WriteLine("\nThis field cannot be empty!");
+                            Console.ReadKey();
+                            goto case 7;
+                        }
+                        if (!AwardIDs.ContainsKey(int.Parse(numberOfAwardForUser)))
                         {
                             Console.WriteLine("Invalid Award number!");
                             return;
                         }
 
-                        Guid awardID = AwardIDs[int.Parse(menuSelection)];
+                        Guid awardID = AwardIDs[int.Parse(numberOfAwardForUser)];
 
                         if (AwardManager.AddAwardToUser(userID, awardID))
                         {
@@ -250,8 +280,13 @@ namespace Pl.DesignPatterns
                         }
                         else
                         {
-                            Console.WriteLine("No additions occurred.");
+                            Console.WriteLine("\nYou cannot revard USER the same AWARD multiple times!");
                             Console.ReadKey();
+                            Console.Write("\nWant to return to the main menu? y/n ");
+                            ConsoleKeyInfo btn = Console.ReadKey();
+                            if(btn.Key == ConsoleKey.Y)
+                                MainInterface();
+                            goto case 7;
                         }
                         MainInterface();
                         //TO DO:Bll,PL - Add Award to User
@@ -261,6 +296,12 @@ namespace Pl.DesignPatterns
                         Console.WriteLine("Enter the number of the USER you would like to view awards: ");
                         string numberOfUserToShowAwards = Console.ReadLine();
 
+                        if (string.IsNullOrWhiteSpace(numberOfUserToShowAwards))
+                        {
+                            Console.WriteLine("\nThis field cannot be empty!");
+                            Console.ReadKey();
+                            goto case 8;
+                        }
                         if (!UserIDs.ContainsKey(int.Parse(numberOfUserToShowAwards)))
                         {
                             Console.WriteLine("Invalid User number!");
@@ -381,7 +422,7 @@ namespace Pl.DesignPatterns
             foreach (var item in allUsers)
             {
                 UserIDs.Add(numberOfUser, item.ID);
-                Console.WriteLine($"\n{numberOfUser}. {item.ToString()}\n");
+                Console.WriteLine($"\n{numberOfUser}. {item.ToString()}");
                 numberOfUser++;
             }
             return true;
@@ -396,7 +437,7 @@ namespace Pl.DesignPatterns
             foreach (var item in allAwards)
             {
                 AwardIDs.Add(numberOfAwards, item.ID);
-                Console.WriteLine($"\n{numberOfAwards}. {item.ToString()}\n");
+                Console.WriteLine($"\n{numberOfAwards}. {item.ToString()}");
                 numberOfAwards++;
             }
             return true;

@@ -43,15 +43,20 @@ namespace BLL.DesignPatterns
             else
                 return false;
         }
-        public static void CreateAward(string name)
+        public static bool AddAward(string name)
         {
-            AwardStorage.AddAward(new Award(name));
+            //AwardStorage.AddAward(new Award(name));
             //var award = new Award(name);
-
-            //if (AwardStorage.AddAward(award))
-            //    return true;
-            //else
-            //    return false;
+            //var arr = GetAllAwards();
+            //for (int i = 0; i < arr.Length; i++)
+            //{
+            //    if (arr[i].Name == name)
+            //        return false;
+            //}
+            if (AwardStorage.AddAward(new Award(name)))
+                return true;
+            else
+                return false;
         }
 
         public static bool AddAward(Award award)
@@ -91,15 +96,15 @@ namespace BLL.DesignPatterns
 
         public static bool AddAwardToUser(Guid userID, Guid awardID)
         {
-            if (UserManager.UserStorage.GetUserByID(userID) == null)
-            {
-                throw new ArgumentException("Пользователя с данным ID не существует");
-            }
+            //if (UserManager.UserStorage.GetUserByID(userID) == null)
+            //{
+            //    throw new ArgumentException("User with this ID does not exist!");
+            //}
 
-            if (AwardStorage.GetAward(awardID) == null)
-            {
-                throw new ArgumentException("Награды с данным ID не существует");
-            }
+            //if (AwardStorage.GetAward(awardID) == null)
+            //{
+            //    throw new ArgumentException("Rewards with this ID does not exist!");
+            //}
 
             if (AwardStorage.AddAwardToUser(userID, awardID))
             {

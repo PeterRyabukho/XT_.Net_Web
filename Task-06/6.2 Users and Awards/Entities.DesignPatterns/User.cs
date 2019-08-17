@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Newtonsoft.Json;
 
 namespace Entities.DesignPatterns
 {
@@ -28,7 +29,15 @@ namespace Entities.DesignPatterns
             Name = name;
             DateOfBirth = dateOfBirth;
         }
-        
+
+        [JsonConstructor]
+        public User(string Name, DateTime DateOfBirth, Guid ID)
+        {
+            this.ID = ID;
+            this.Name = Name;
+            this.DateOfBirth = DateOfBirth;
+        }
+
         public User(string Name, DateTime DateOfBirth)
         {
             ID = Guid.NewGuid();

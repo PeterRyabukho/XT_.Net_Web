@@ -21,10 +21,10 @@ namespace DAL.DesignPatterns
 
         public bool AddAward(Award award)
         {
-            //if (GetAward(award.ID) == null)
-            //{
-            //    return false;
-            //}
+            if (dictionaryOfAwards.Values.Any((name)=> name.Name == award.Name))
+            {
+                return false;
+            }
 
             dictionaryOfAwards.Add(award.ID, award);
             return true;
@@ -43,6 +43,8 @@ namespace DAL.DesignPatterns
         public bool AddAwardToUser(Guid userID, Guid awardID)
         {
             AwardsOfUsers awardOfUser = new AwardsOfUsers(userID, awardID);
+            if (awardsOfUsers.Any((user) => user.AwardID == awardID && user.UserID == userID))
+                return false;
             awardsOfUsers.Add(awardOfUser);
             Thread.Sleep(50);
             return true;
