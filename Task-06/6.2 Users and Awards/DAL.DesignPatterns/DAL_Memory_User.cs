@@ -8,14 +8,10 @@ namespace DAL.DesignPatterns
 {
     public class DAL_Memory_User: IKeepUsers
     {
-        //private static Guid ID { get; set; }
         public Dictionary<Guid,User> usersDictionary { get; set; }
-
-        //private static List<User> users { get; set; }
 
         public DAL_Memory_User()
         {
-            //users = new List<User>();
             usersDictionary = new Dictionary<Guid, User>();
         }
 
@@ -31,7 +27,6 @@ namespace DAL.DesignPatterns
                 return false;
             }
 
-            //users.Add(user);
             usersDictionary.Add(user.ID, user);
             return true;
         }
@@ -39,30 +34,6 @@ namespace DAL.DesignPatterns
         public ICollection<User> GetAllUsers()
         {
             return usersDictionary.Values.ToList();
-            //var stringUsers = new List<string>();
-            //foreach (var item in users)
-            //{
-            //    stringUsers.Add(item.ToString());
-            //}
-            //return stringUsers;
-        }
-
-        public bool SetAllUsers(IEnumerable<User> users)
-        {
-            try
-            {
-                usersDictionary.Clear();
-                foreach (var user in users)
-                {
-                    usersDictionary.Add(user.ID, user);
-                }
-
-                return true;
-            }
-            catch
-            {
-                return false;
-            }
         }
 
         public bool RemoveUser(Guid ID)

@@ -25,7 +25,6 @@ namespace Entities.DesignPatterns
 
         public void ChangeUser(string name, DateTime dateOfBirth)
         {
-            //ID = Guid.NewGuid();
             Name = name;
             DateOfBirth = dateOfBirth;
         }

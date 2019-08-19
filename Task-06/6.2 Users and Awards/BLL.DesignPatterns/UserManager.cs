@@ -9,7 +9,8 @@ namespace BLL.DesignPatterns
 {
     public static class UserManager
     {
-        public static IKeepUsers UserStorage => Dependency.usersStorage;
+        //public static IKeepUsers UserStorage => Dependency.usersMemoryStorage;
+        public static IKeepUsers UserStorage { get; set; }
 
         public static bool SerializerJsonUsers()
         {

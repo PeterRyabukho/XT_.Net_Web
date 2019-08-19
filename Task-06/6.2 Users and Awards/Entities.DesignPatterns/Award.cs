@@ -7,9 +7,9 @@ namespace Entities.DesignPatterns
 {
     public class Award
     {
-        
         public Guid ID { get; set; }
         public string Name { get; set; }
+
         public void ChangeAward(string name)
         {
             Name = name;

@@ -16,26 +16,37 @@ namespace Entities.DesignPatterns
 
         static MyDirectory()
         {
-            //CreateDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\Peter Task-06\";
             if (!Directory.Exists(CreateDirectory))
             {
                 Directory.CreateDirectory(CreateDirectory);
             }
             if (!File.Exists(UsersFile))
             {
-                File.Create(UsersFile);
+                using (StreamWriter writer = new StreamWriter(UsersFile, true))
+                {
+                    writer.WriteLine("");
+                }
             }
             if (!File.Exists(AwardsFile))
             {
-                File.Create(AwardsFile);
+                using (StreamWriter writer = new StreamWriter(AwardsFile, true))
+                {
+                    writer.WriteLine("");
+                }
             }
             if (!File.Exists(AwardsOfUsersFile))
             {
-                File.Create(AwardsOfUsersFile);
+                using (StreamWriter writer = new StreamWriter(AwardsOfUsersFile, true))
+                {
+                    writer.WriteLine("");
+                }
             }
             if (!File.Exists(ConfigFile))
             {
-                File.Create(ConfigFile);
+                using (StreamWriter writer = new StreamWriter(ConfigFile, true))
+                {
+                    writer.WriteLine("");
+                }
             }
         }
         public static void Check()
@@ -46,27 +57,22 @@ namespace Entities.DesignPatterns
         {
             if (!Directory.Exists(CreateDirectory))
             {
-                Directory.CreateDirectory(CreateDirectory);
                 return true;
             }
             if (!File.Exists(UsersFile))
             {
-                File.Create(UsersFile);
                 return true;
             }
             if (!File.Exists(AwardsFile))
             {
-                File.Create(AwardsFile);
                 return true;
             }
             if (!File.Exists(AwardsOfUsersFile))
             {
-                File.Create(AwardsOfUsersFile);
                 return true;
             }
             if (!File.Exists(ConfigFile))
             {
-                File.Create(ConfigFile);
                 return true;
             }
             else

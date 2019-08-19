@@ -9,7 +9,8 @@ namespace BLL.DesignPatterns
 {
     public static class AwardManager
     {
-        public static IKeepAwards AwardStorage => Dependency.awardsStorage;
+        //public static IKeepAwards AwardStorage => Dependency.awardsMemoryStorage;
+        public static IKeepAwards AwardStorage { get; set; }
 
         public static bool SerializerJsonAwards()
         {
@@ -17,7 +18,6 @@ namespace BLL.DesignPatterns
                 return true;
             else
                 return false;
-            //throw new NullReferenceException("Empty list");
         }
 
         public static bool DeSerializerJsonAwards()
@@ -43,25 +43,10 @@ namespace BLL.DesignPatterns
             else
                 return false;
         }
+
         public static bool AddAward(string name)
         {
-            //AwardStorage.AddAward(new Award(name));
-            //var award = new Award(name);
-            //var arr = GetAllAwards();
-            //for (int i = 0; i < arr.Length; i++)
-            //{
-            //    if (arr[i].Name == name)
-            //        return false;
-            //}
             if (AwardStorage.AddAward(new Award(name)))
-                return true;
-            else
-                return false;
-        }
-
-        public static bool AddAward(Award award)
-        {
-            if (AwardStorage.AddAward(award))
                 return true;
             else
                 return false;
@@ -89,9 +74,12 @@ namespace BLL.DesignPatterns
             else return false;
         }
 
-        public static void ShowCollectionAwardsOfUsers()
+        public static bool DeleteUserAwards(User user)
         {
-            AwardStorage.ShowCollectionAwardsOfUsers();
+            if (AwardStorage.DeleteUserAwards(user))
+                return true;
+            else
+                return false;
         }
 
         public static bool AddAwardToUser(Guid userID, Guid awardID)
@@ -107,15 +95,9 @@ namespace BLL.DesignPatterns
             //}
 
             if (AwardStorage.AddAwardToUser(userID, awardID))
-            {
-                //Thread cashThread = new Thread(this.UsersAndAwardsCashing);
-                //cashThread.Start();
                 return true;
-            }
             else
-            {
                 return false;
-            }
         }
     }
 }

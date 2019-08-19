@@ -7,45 +7,31 @@ using System.Threading;
 using System.Threading.Tasks;
 using BLL.DesignPatterns;
 using Entities.DesignPatterns;
+using Dependencys.DesignPatterns;
 
 
 namespace Pl.DesignPatterns
 {
     class Program
     {
-        //private static string createDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + @"\Peter Task-06\";
-
         public static Dictionary<int, Guid> UserIDs = new Dictionary<int, Guid>();
 
         public static Dictionary<int, Guid> AwardIDs = new Dictionary<int, Guid>();
 
         static void Main(string[] args)
         {
-
-            if(MyDirectory.CheckOrCreateDirectoryAndFiles())
+            if (MyDirectory.CheckOrCreateDirectoryAndFiles())
                 Console.WriteLine($"Directory created, path: {MyDirectory.CreateDirectory}");
             else
-                Console.WriteLine($"\nYou can find all files in directory, path: {MyDirectory.CreateDirectory}");
+                Console.WriteLine($"\nYou can find all files in directory, path: {MyDirectory.CreateDirectory}\n");
 
             Thread.Sleep(500);
 
-            if (!UserManager.DeSerializerJsonUsers())
-                Console.WriteLine(@"File ""User.txt"" is empty! DEserialization dont complite!");
-            else
-                Console.WriteLine("\nUSER DEserialization complite!");
-            if (!AwardManager.DeSerializerJsonAwards())
-                Console.WriteLine(@"File ""Awards.txt"" is empty! DEserialization dont complite!");
-            else
-                Console.WriteLine("AWARDS DEserialization complite!");
-            if (!AwardManager.DeSerializerJsonAwardsOfUsers())
-                Console.WriteLine(@"File ""Awards of Users.txt"" is empty! DEserialization dont complite!");
-            else
-                Console.WriteLine("AWARDS OF USERS DEserialization complite!\n");
-            Console.WriteLine("Press any button to continue...");
-            Console.ReadKey();
+            ChangeDALType();
+        }
 
-            MainInterface();
-
+        private static void SerializationFilesWhenCloseProgram()
+        {
             if (!UserManager.SerializerJsonUsers())
                 Console.WriteLine(@"File ""User.txt"" is empty! Serialization dont complite!");
             else
@@ -61,32 +47,80 @@ namespace Pl.DesignPatterns
             Console.ReadKey();
         }
 
-        private static void MainInterface()
+        private static void DeSerializationFiles()
         {
-            Console.WriteLine("\nPlase select some action:");
-            Console.WriteLine("1. Add new User");
-            Console.WriteLine("2. Remove User");
-            Console.WriteLine("3. Show all Users");
-            Console.WriteLine("4. Add new Award");
-            Console.WriteLine("5. Remove Award");
-            Console.WriteLine("6. Show all Awards");
-            Console.WriteLine("7. Add Award to User");
-            Console.WriteLine("8. Show User Awards");
-            Console.WriteLine("9. Show all users and their rewards");
-            Console.WriteLine("10. Exit");
-            Console.WriteLine("11. Serialize Awards");
-            Console.WriteLine("12. DE Serialize Awards");
-            Console.WriteLine("13. Serialize Awards of Users");
-            Console.WriteLine("14. DE Serialize Awards of Users");
-            Console.WriteLine("15. Serialize Users");
-            Console.WriteLine("16. DE Serialize Users");
-            Console.WriteLine("17. Show Awards of Users");
+
+            if (!UserManager.DeSerializerJsonUsers())
+                Console.WriteLine(@"File ""User.txt"" is empty! DEserialization dont complite!");
+            else
+                Console.WriteLine("\nUSER DEserialization complite!");
+            if (!AwardManager.DeSerializerJsonAwards())
+                Console.WriteLine(@"File ""Awards.txt"" is empty! DEserialization dont complite!");
+            else
+                Console.WriteLine("AWARDS DEserialization complite!");
+            if (!AwardManager.DeSerializerJsonAwardsOfUsers())
+                Console.WriteLine(@"File ""Awards of Users.txt"" is empty! DEserialization dont complite!");
+            else
+                Console.WriteLine("AWARDS OF USERS DEserialization complite!\n");
+            Console.WriteLine("Press any button to continue...");
+            Console.ReadKey();
+        }
+
+        private static void ChangeDALType()
+        {
+            Console.WriteLine("\nChoose how to store data: \n1. In memory; \n2. In a file in json format;");
             Console.Write("Enter: ");
             var menuSelection = Console.ReadLine();
 
             if (uint.TryParse(menuSelection, out uint selectedOption)
                 && selectedOption > 0
-                && selectedOption < 20)
+                && selectedOption < 3)
+            {
+                switch (selectedOption)
+                {
+                    case 1:
+                        UserManager.UserStorage = Dependency.usersMemoryStorage;
+                        AwardManager.AwardStorage = Dependency.awardsMemoryStorage;
+                        MainInterface();
+                        break;
+                    case 2:
+                        UserManager.UserStorage = Dependency.usersFileStorage;
+                        AwardManager.AwardStorage = Dependency.awardsFileStorage;
+                        DeSerializationFiles();
+                        MainInterface();
+                        SerializationFilesWhenCloseProgram();
+                        break;
+                }
+            }
+            else
+            {
+                Console.WriteLine("Wrong number!");
+                ChangeDALType();
+            }
+        }
+
+        private static void MainInterface()
+        {
+            Console.WriteLine("\nPlase select some action:");
+            Console.WriteLine("1. Add new User");
+            Console.WriteLine("2. Remove User!");
+            Console.WriteLine("3. Show all Users");
+            Console.WriteLine("4. Add new Award");
+            Console.WriteLine("5. Remove Award!");
+            Console.WriteLine("6. Show all Awards");
+            Console.WriteLine("7. Add Award to User");
+            Console.WriteLine("8. Show User Awards");
+            Console.WriteLine("9. Delete all User Awards!");
+            Console.WriteLine("10. Show all users and their rewards");
+            Console.WriteLine("11. Change the way data is stored");
+            Console.WriteLine("12. Exit and Serialize all data in file!");
+
+            Console.Write("Enter: ");
+            var menuSelection = Console.ReadLine();
+
+            if (uint.TryParse(menuSelection, out uint selectedOption)
+                && selectedOption > 0
+                && selectedOption < 13)
             {
                 switch (selectedOption)
                 {
@@ -161,8 +195,6 @@ namespace Pl.DesignPatterns
                         {
                             Console.WriteLine("No Users! Add some new User in main menu!");
                         }
-                        else ShowUsersAndAddNumbers();
-                        //ShowAllItems(UserManager.GetAllUsers());
                         Console.WriteLine("--------------------------------------------------------------------------------");
                         MainInterface();
                         //To DO: BLL - get all Users
@@ -315,7 +347,7 @@ namespace Pl.DesignPatterns
                         if (userAwards.Length == 0)
                         {
                             Console.WriteLine(newUserForAward.ToString());
-                            Console.WriteLine($"Sorry...This user {newUserForAward.Name} has no awards yet...");
+                            Console.WriteLine($"Sorry...This User {newUserForAward.Name} has no Awards yet, or this Award was deleted...");
                         }
                         else
                         {
@@ -327,57 +359,79 @@ namespace Pl.DesignPatterns
                         MainInterface();
                         break;
                     case 9:
+                        Console.WriteLine("\nChoose which User Awards to delete:");
+                        ShowUsersAndAddNumbers();
+                        Console.Write("\nEnter number of User: ");
+                        string userNameToDeleteAllAwards = Console.ReadLine();
+
+                        if (string.IsNullOrWhiteSpace(userNameToDeleteAllAwards))
+                        {
+                            Console.WriteLine("\nThis field cannot be empty!");
+                            Console.ReadKey();
+                            goto case 9;
+                        }
+                        if (!UserIDs.ContainsKey(int.Parse(userNameToDeleteAllAwards)))
+                        {
+                            Console.WriteLine("Wrong number of User!");
+                            Console.ReadKey();
+                            goto case 9;
+                        }
+
+                        Guid IDToDeleteAwards = UserIDs[int.Parse(userNameToDeleteAllAwards)];
+                        User userIDToDeleteAwards = UserManager.GetUserByID(IDToDeleteAwards);
+                        
+                        if(AwardManager.DeleteUserAwards(userIDToDeleteAwards))
+                        {
+                            Console.WriteLine($"\nAll Users {userIDToDeleteAwards.Name} Awards successfully removed!");
+                            Award[] userAwardsToDelete = AwardManager.GetUserAwards(userIDToDeleteAwards);
+                            if (userAwardsToDelete.Length == 0)
+                            {
+                                Console.WriteLine(userIDToDeleteAwards.ToString());
+                                Console.WriteLine("\nAll Award of this User deleted!");
+                                Console.ReadKey();
+                                MainInterface();
+                            }
+                            else
+                            {
+                                Console.WriteLine("Cant delete this Awards...");
+                                Console.ReadKey();
+                                MainInterface();
+                            }
+                            Console.ReadKey();
+                            MainInterface();
+                        }
+                        else
+                        {
+                            Console.WriteLine("User dont have Awards!");
+                            Console.ReadKey();
+                            MainInterface();
+                        }
+                        break;
+                    case 10:
                         //ToDO: Show All Users Awards-BLL
                         if (!ShowAllUsersAwards())
                             Console.WriteLine("No Users! Add some new User in main menu!");
                         Console.ReadKey();
                         MainInterface();
                         break;
-                    case 10:
-                        return;
                     case 11:
-                        //if (!AwardManager.SerializerJsonAwards())
-                        //{
-                        //    Console.WriteLine("\nNo Awards added!\n");
-                        //    Console.ReadKey();
-                        //}
-                        //else
-                        AwardManager.SerializerJsonAwards();
-                        MainInterface();
+                        ChangeDALType();
                         break;
                     case 12:
-                        AwardManager.DeSerializerJsonAwards();
-                        MainInterface();
-                        break;
-                    case 13:
-                        AwardManager.SerializerJsonAwardsOfUsers();
-                        MainInterface();
-                        break;
-                    case 14:
-                        AwardManager.DeSerializerJsonAwardsOfUsers();
-                        MainInterface();
-                        break;
-                    case 15:
-                        UserManager.SerializerJsonUsers();
-                        MainInterface();
-                        break;
-                    case 16:
-                        UserManager.DeSerializerJsonUsers();
-                        MainInterface();
-                        break;
-                    case 17:
-                        AwardManager.ShowCollectionAwardsOfUsers();
-                        Console.ReadKey();
-                        MainInterface();
-                        break;
+                        return;
+
                 }
+            }
+            else
+            {
+                Console.WriteLine("Wrong number!");
+                MainInterface();
             }
         }
 
         private static bool ShowAllUsersAwards()
         {
             int count = 1;
-            //User[] users = UserManager.GetAllUsers();
             foreach (var user in UserManager.GetAllUsers())
             {
                 if (UserManager.GetAllUsers().Length == 0)
@@ -407,7 +461,6 @@ namespace Pl.DesignPatterns
             foreach (var item in items)
             {
                 Console.WriteLine($"{count}. {item.ToString()}");
-                //Console.WriteLine($"\n{count}. ID:[{user.ID}] - {user.Name} - {user.DateOfBirth:dd.MM.yyyy} - {user.Age} years old");
                 count++;
             }
         }
@@ -427,6 +480,7 @@ namespace Pl.DesignPatterns
             }
             return true;
         }
+
         public static bool ShowAwardsAndAddNumbers()
         {
             AwardIDs.Clear();
@@ -442,29 +496,5 @@ namespace Pl.DesignPatterns
             }
             return true;
         }
-        //private static bool CheckOrCreateDirectoryAndFiles()
-        //{ 
-        //    string pathToUsersFile  = $"{createDirectory}Users.txt";
-        //    string pathToAwardsFile = $"{createDirectory}Awards.txt";
-        //    if (!Directory.Exists(createDirectory))
-        //    {
-        //        Directory.CreateDirectory(createDirectory);
-        //        return true;
-        //    }
-        //    if (!File.Exists(pathToUsersFile))
-        //    {
-        //        File.Create(pathToUsersFile);
-        //        return true;
-        //    }
-        //    if (!File.Exists(pathToAwardsFile))
-        //    {
-        //        File.Create(pathToAwardsFile);
-        //        return true;
-        //    }
-        //    else
-        //    {
-        //        return false;
-        //    }
-        //}
     }
 }

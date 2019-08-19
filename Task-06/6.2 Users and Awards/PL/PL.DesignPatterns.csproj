@@ -58,6 +58,10 @@
       <Project>{1bbc142f-02e9-46bd-acf7-5fdff6e4e759}</Project>
       <Name>BLL.DesignPatterns</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Dependencys.DesignPatterns\Dependencys.DesignPatterns.csproj">
+      <Project>{33d6a34a-75d2-4a24-a0ac-e5415bdbc33e}</Project>
+      <Name>Dependencys.DesignPatterns</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Entities.DesignPatterns\Entities.DesignPatterns.csproj">
       <Project>{5f175ca8-d144-4cb1-bffa-0fc4de5cb53c}</Project>
       <Name>Entities.DesignPatterns</Name>

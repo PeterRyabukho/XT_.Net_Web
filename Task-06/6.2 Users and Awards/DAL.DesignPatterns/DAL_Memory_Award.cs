@@ -87,18 +87,6 @@ namespace DAL.DesignPatterns
             }
         }
 
-        //public void RemoveAward(string nameToFind)
-        //{
-        //    foreach (var whantToRemoveThisUser in dictionaryOfAwards.Values)
-        //    {
-        //        if (whantToRemoveThisUser.Name == nameToFind)
-        //        {
-        //            dictionaryOfAwards.Remove(whantToRemoveThisUser.ID);
-        //            break;
-        //        }
-        //    }
-        //}
-
         public bool RemoveAward(Guid ID)
         {
             if (dictionaryOfAwards.ContainsKey(ID))
@@ -112,9 +100,11 @@ namespace DAL.DesignPatterns
             }
         }
 
-        public void DeleteUserAwards(User user)
+        public bool DeleteUserAwards(User user)
         {
             var newAwardsOfUsers = new List<AwardsOfUsers>();
+            if (awardsOfUsers == null)
+                return false;
             foreach (var newUserOne in awardsOfUsers)
             {
                 if (newUserOne.UserID != user.ID)
@@ -122,12 +112,14 @@ namespace DAL.DesignPatterns
                     newAwardsOfUsers.Add(newUserOne);
                 }
             }
+            
 
             awardsOfUsers.Clear();
             foreach (var userOne in newAwardsOfUsers)
             {
                 awardsOfUsers.Add(userOne);
             }
+            return true;
         }
 
         public bool SerializerJsonAwards()

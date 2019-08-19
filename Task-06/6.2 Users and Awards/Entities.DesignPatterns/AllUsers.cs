@@ -5,7 +5,6 @@ using Newtonsoft.Json;
 
 namespace Entities.DesignPatterns
 {
-    
     public class AllUsers
     {
         public List<User> Users { get; set; }
