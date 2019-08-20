@@ -1,0 +1,30 @@
+body{
+    background-image: url(forMenu.jpg);
+    background-size: cover;
+}
+
+ul{
+    list-style: none;
+    padding: 5px;
+    margin: initial;
+    text-align: initial;
+}
+
+div{
+    width: 200px;
+    height: 210px;
+}
+div#center{
+    margin: 10px auto;
+    border: 5px outset #96A537;
+    background-color: #C0CF67;
+}
+li{
+    font: 20.5px Georgia, sans-serif;;
+    font-style: normal;
+    line-height: 1.7;
+}
+.li-pading{
+    line-height: 1;
+    font: 20.5px
+}
