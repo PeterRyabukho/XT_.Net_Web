@@ -1,0 +1,49 @@
+body{
+    border-style: solid;
+    border-color: #107495;
+    height: 310px;
+    width: 450px;
+    margin-left: 750px;
+    margin-top: 250px;
+    color: white;
+}
+form{
+    font-size: 20px;
+}
+.allForm{
+    padding-top: 10px;
+    height: 300px;
+    background-color: #03A4D9;
+}
+.registration{
+    margin: 10px;
+    width: 150px;
+    margin-left: 25px;
+    margin-top: 25px;
+}
+.e-mail{
+    width: 357px;
+    margin: 20px 28px 20px;
+}
+input{
+    height: 20px;
+    font-size: 16px;
+}
+.passwordStyle{
+    display: inline-block;
+    width: 164px;
+    margin: 10px 0px 10px 28px;
+}
+.passInput{
+    width: 160px;
+}
+#button{
+    margin: 20px 28px 10px 28px;
+    padding: 4px;
+    height: 29px;
+}
+#button:active{
+    border-style: inset;
+    border-color: rgb(208, 211, 26);
+    background-color: #FCFF00;
+}

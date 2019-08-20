@@ -1,13 +1,10 @@
-body{
-    background-image: url(forMenu.jpg);
-    background-size: cover;
-}
-
 ul{
     list-style: none;
-    padding: 5px;
+    padding: 10px;
     margin: initial;
     text-align: initial;
+    font-size: 120%;
+    font-weight: bold;
 }
 
 div{
@@ -15,16 +12,26 @@ div{
     height: 210px;
 }
 div#center{
+    width: 200px;
     margin: 10px auto;
     border: 5px outset #96A537;
     background-color: #C0CF67;
 }
 li{
-    font: 20.5px Georgia, sans-serif;;
-    font-style: normal;
+    font-family: 'Bangers', cursive, 'Times New Roman';
+    font: 20.5px;
+    font-style: italic;
     line-height: 1.7;
 }
 .li-pading{
     line-height: 1;
     font: 20.5px
+}
+element.style {
+    height: 190px;
+}
+
+body{
+    background-image: url(forMenu.jpg);
+    background-size: cover;
 }
