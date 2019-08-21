@@ -4,28 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Register</title>
+    <link rel="stylesheet" type="text/css" href="8.3 styles.css">
+    <title>Dropdown menu</title>
 </head>
 <body>
     <div class="dropMenu">
         <button class="dropFile">Файл</button>
         <div class="fileSettings">
-            <a href="#">Новый</a>
-            <a href="#">Открыть</a>
-            <a href="#">Сохранить</a>
-            <a href="#">Закрыть</a>
+            <a href="#" class="refer">Новый</a>
+            <a href="#" class="refer">Открыть</a>
+            <a href="#" class="refer">Сохранить</a>
+            <a href="#" class="refer">Закрыть</a>
         </div>
     </div>
-    <div>
+    <div class="dropMenu">
+            <button class="dropFile">Правка</button>
+            <div class="fileSettings">
+                <a href="#" class="refer">Вырезать</a>
+                <a href="#" class="refer">Копировать</a>
+                <a href="#" class="refer">Вставить</a>
+                <a href="#" class="refer">Удалить</a>
+            </div>
+        </div>
+   <!-- <div>
         <form action="" method="POST">
-            <a href="#file">ФАЙЛ</a>
+            
             Файл: <select value = "Файл" name = "File" >
+                    <a href="#file">ФАЙЛ</a>
                     <option value="Новый" name = "New" >Новый</option>
                     <option value="Открыть" name = "Open">Открыть</option>
                     <option value="Сохранить" name = "Save" id="file">Сохранить</option>
                     <option value="Закрыть" name = "Close">Закрыть</option>
                 </select><br>
         </form>
-    </div>
+    </div> -->
 </body>
 </html>

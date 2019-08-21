@@ -1,0 +1,26 @@
+body{
+    background-image: url(8.4\ pic.jpg);
+    background-size: cover;
+}
+.arrow{
+    width: 0; 
+    height: 0; 
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 50px solid #D94948;
+    margin: auto;
+}
+.myBlock{
+    padding: 1rem;
+    color: rgb(8, 8, 8);
+    background: #D94948;
+    border-radius: 20px;
+    margin: auto;
+    padding: 5px;
+    /*transition: 0.8s 0.2s;*/
+}
+p{
+    text-align: center;
+    font-size: 35px;
+    margin: 10px;
+}

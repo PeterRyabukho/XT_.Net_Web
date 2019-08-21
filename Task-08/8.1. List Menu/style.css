@@ -1,6 +1,6 @@
 ul{
     list-style: none;
-    padding: 10px;
+    padding: 8px;
     margin: initial;
     text-align: initial;
     font-size: 120%;
@@ -16,16 +16,17 @@ div#center{
     margin: 10px auto;
     border: 5px outset #96A537;
     background-color: #C0CF67;
+    border-radius: 10px;
 }
 li{
-    font-family: 'Bangers', cursive, 'Times New Roman';
-    font: 20.5px;
+    font-family: 'Times New Roman';
+    font: 19px;
     font-style: italic;
     line-height: 1.7;
 }
 .li-pading{
     line-height: 1;
-    font: 20.5px
+    font: 19px
 }
 element.style {
     height: 190px;

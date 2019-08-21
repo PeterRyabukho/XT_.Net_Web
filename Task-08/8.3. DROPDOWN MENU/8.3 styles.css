@@ -1,0 +1,63 @@
+body{
+    display: block;
+    margin: auto;
+    text-align: center;
+    margin-top: 250px;
+    background-image: url(8.3\ pic.jpg);
+    background-size: cover;
+}
+.dropMenu{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    display: inline-block;
+    margin-right: 100px;
+    
+}
+.dropFile{
+    color: blue;
+    padding: 20px;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    background: rgba(243, 190, 77, 0.836);
+    text-decoration: underline;
+}
+.fileSettings{
+    display: none;
+    position: absolute;
+    background-color: #a8a7a769;
+    min-width: 160px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius:  10px;
+    border-bottom-right-radius:  10px;
+}
+.fileSettings a{
+    
+    color: black;
+    padding: 20px 20px;
+    text-decoration: none;
+    display: block;
+}
+.fileSettings a:hover{
+    background-color: rgb(119, 200, 233);
+    color: white;
+}
+.dropMenu:hover .fileSettings{
+    display: block;
+}
+.dropMenu:hover .dropFile{
+    background-color: #a8a7a769;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.refer:first-child{
+    border-top-right-radius: 10px;
+}
+.refer:last-child{
+    border-bottom-left-radius:  10px;
+    border-bottom-right-radius:  10px;
+}
+/*.refer:first-child{
+    border-radius: 10px;
+    border-style: initial; 
+    color: black;
+}*/
