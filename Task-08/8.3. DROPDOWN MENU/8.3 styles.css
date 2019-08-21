@@ -36,6 +36,7 @@ body{
     padding: 20px 20px;
     text-decoration: none;
     display: block;
+    
 }
 .fileSettings a:hover{
     background-color: rgb(119, 200, 233);
@@ -43,11 +44,14 @@ body{
 }
 .dropMenu:hover .fileSettings{
     display: block;
+    box-shadow: 7px 4px 14px rgb(88, 58, 3);
 }
 .dropMenu:hover .dropFile{
     background-color: #a8a7a769;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    box-shadow: 7px 2px 14px rgb(88, 58, 3);
+
 }
 .refer:first-child{
     border-top-right-radius: 10px;
@@ -56,8 +60,3 @@ body{
     border-bottom-left-radius:  10px;
     border-bottom-right-radius:  10px;
 }
-/*.refer:first-child{
-    border-radius: 10px;
-    border-style: initial; 
-    color: black;
-}*/

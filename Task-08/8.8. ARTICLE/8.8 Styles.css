@@ -1,0 +1,40 @@
+#container{
+    background: #000;
+    width: 430px;
+    padding: 30px;
+    position: absolute;
+}
+#blank {
+    background: #fefefe;
+    width: 100%;
+    height: 22px;
+}
+#text {
+    background: linear-gradient(#fefefe, #ccc);
+    padding: 40px 30px 20px 20px;
+    border-radius: 0 0 10px 10px;
+    border-bottom: 2px solid #fff;
+    border-left: 2px solid #fff;
+    border-right: 2px solid #fff;
+}
+
+#head {
+    background: #000;
+    width: 25%;
+    transform: skew(-20deg);
+    color: #f8b45f;
+    font-family: Arial;
+    font-size: 169%;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 37px;
+    padding-right: 0px;
+    float: left;
+    clear: both;
+    position: relative;
+    left: -9px;
+}
+#norm {
+    transform: skew(20deg);
+}

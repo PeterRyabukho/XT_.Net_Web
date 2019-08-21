@@ -1,0 +1,27 @@
+.blocks{
+    margin: 5px;
+    width: 170px;
+    height: 90px;
+    background-image: linear-gradient(to top, #d55607, #fed502 50%, #f2ff1b 100%);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed
+}
+.firstBlock{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-right: 18px;
+}
+.blocks:first-child{
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+#mainBlock{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+body{
+    background-color: #233336;
+}
