@@ -1,40 +1,34 @@
+body{
+    background-color: black;
+}
 #container{
-    background: #000;
     width: 430px;
     padding: 30px;
     position: absolute;
-}
-#blank {
-    background: #fefefe;
-    width: 100%;
-    height: 22px;
+    display: inline-block;
+    left: 700px;
+    top: 300px;
 }
 #text {
-    background: linear-gradient(#fefefe, #ccc);
-    padding: 40px 30px 20px 20px;
+    background: linear-gradient(to top, #c3c1c0, #e0e0de 50%, white 100%);
+    padding: 70px 30px 20px 20px;
     border-radius: 0 0 10px 10px;
-    border-bottom: 2px solid #fff;
-    border-left: 2px solid #fff;
-    border-right: 2px solid #fff;
+    border: 1px solid white;
+    border-top: hidden;
 }
 
 #head {
-    background: #000;
-    width: 25%;
-    transform: skew(-20deg);
-    color: #f8b45f;
-    font-family: Arial;
-    font-size: 169%;
-    font-weight: bold;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 37px;
-    padding-right: 0px;
+    background: black;
+    width: 100px;
+    transform: skew(-30deg);
+    color: #FC9109;
+    font-size: 30px;
+    font-weight: bolder;
     float: left;
-    clear: both;
     position: relative;
-    left: -9px;
+    left: -16px;
+    padding: 10px 10px 10px 30px;
 }
-#norm {
-    transform: skew(20deg);
+#title {
+    transform: skew(30deg);
 }

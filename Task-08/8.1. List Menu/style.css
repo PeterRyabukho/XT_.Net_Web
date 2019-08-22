@@ -1,38 +1,41 @@
 ul{
     list-style: none;
+    display: inline-block;
     padding: 8px;
     margin: initial;
     text-align: initial;
     font-size: 120%;
     font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic;
+    font: 19px;
 }
 
-div{
+div#center{
+    position: absolute;
+    top: 25%;
+    right: 25%;
     width: 200px;
     height: 210px;
-}
-div#center{
-    width: 200px;
     margin: 10px auto;
-    border: 5px outset #96A537;
+    border: 3px solid #96A537;
     background-color: #C0CF67;
     border-radius: 10px;
+    box-shadow: 5px 5px 14px black;
 }
-li{
-    font-family: 'Times New Roman';
-    font: 19px;
-    font-style: italic;
+.small-li{
     line-height: 1.7;
 }
-.li-pading{
+.big-li{
     line-height: 1;
-    font: 19px
 }
-element.style {
-    height: 190px;
+.big-li::after{
+    line-height: 1.7;
 }
-
 body{
     background-image: url(forMenu.jpg);
     background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
