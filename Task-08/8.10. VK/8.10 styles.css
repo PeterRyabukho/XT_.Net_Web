@@ -1,0 +1,484 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    font-size: 13px;
+    font-family: -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.2;
+    font-weight: 400;
+    background-color: #edeef0;
+}
+.headContent{
+    position: fixed;
+    height: 42px;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 120;
+}
+.backHeader{
+    position: absolute;
+    width: 100%;
+    background: #4a76a8;
+    height: 42px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #4872a3;
+}
+header{
+    position: relative;
+    height: 42px;
+    margin: 0 auto;
+    font-size: 12.5px;
+    padding: 0 15px;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+.headLogo{
+    float: left;
+    width: 165px;
+    height: 42px;
+}
+.logoPicture{
+    height: 40px;
+    width: 40px;
+    margin: 0px 10px 0 0;
+    background: url(VK\ logo.jpg);
+    background-size: cover;
+}
+.containerSerch{
+    float: left;
+}
+.inputBack{
+    position: relative;
+    z-index: 90;
+    cursor: text;
+    pointer-events: none;
+}
+.inputBackStyle{
+    margin: 7px 0px 7px 8px;
+    padding: 6px 6px 6px 19px;
+    position: absolute;
+    color: #8c8e91;
+    z-index: 90;
+}
+.inputBackContent{
+    width: 210px;
+    padding: 0 1px;
+    white-space: nowrap;
+    line-height: normal;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.inputBackContent .fa-search{
+    color: #8fadc8;
+    font-size: 14px;
+}
+.containerSerch .inputBackContent{
+    font-size: 13px;
+    color: #8fadc8;
+    line-height: 16px;
+}
+/*.serch{
+    float: left;
+    width: 230px;
+    height: 42px;
+}
+.inputBack{
+    margin: 7px 0px 7px 8px;
+    padding: 6px 6px 6px 19px;
+    position: absolute;
+    color: #8c8e91;
+}
+.inputBackContent{
+    width: 210px;
+    font-size: 13px;
+    color: #8fadc8;
+    line-height: 16px;
+}*/
+.textInput{
+    border: 0;
+    box-sizing: border-box;
+    padding: 6px 6px 6px 19px;
+    margin: 7px 0;
+    height: 28px;
+    line-height: 16px;
+    width: 230px;
+    border-radius: 14px;
+    transition: background-color 0.05s, color 0.05s;
+    background: #224b7a 
+    url(VK\ lens.png)
+    no-repeat;
+    padding-left: 19px;
+    border-left: 8px solid transparent;
+    background-position: left 8px;
+    color: #d9e2ec;
+}
+.iconsHead{
+    padding-left: 15px;
+    float: left;
+}
+.myIcon{
+    float: left;
+    margin: 11px 5px;
+    background: 50% / contain no-repeat;
+    height: 20px;
+    width: 20px;
+}
+.myIcon .fa-bell{
+    font-size: 21px;
+    color: white;
+}
+.far, .fas, .fab{
+    font-size: 16px;
+    color: #224b7a;
+}
+.righHead{
+    float: right;
+}
+.profileLink{
+    display: inline-block;
+    white-space: nowrap;
+    line-height: 42px;
+    height: 42px;
+    overflow: hidden;
+    padding: 0 10px;
+    color: #fff;
+    font-weight: 700;
+}
+.profileName{
+    padding-right: 10px;
+    display: inline-block;
+    vertical-align: top;
+}
+.profileImg{
+    display: inline-block;
+    vertical-align: top;
+    width: 28px;
+    height: 28px;
+    border-radius: 14px;
+    margin: 7px 0;
+}
+.main{
+    padding: 0 15px;
+    margin: 0 auto;
+    position: relative;
+    width: 960px;
+    height: 1216px;
+}
+a{
+    text-decoration: none !important;
+}
+#leftMenu{
+    width: 149px;
+    float: left;
+    /* position: fixed; */
+    /* position: sticky; */
+    top: 30px!important;
+}
+#leftMenuInner{
+    z-index: 10;
+    width: 149px;
+    padding: 15px 0 10px !important;
+    margin-top: 42px !important;
+    text-align: left;
+}
+#leftMenuInner{
+    list-style: none;
+    margin: 0 0 10px;
+    padding: 0!important;
+}
+ol{
+    padding: 0!important;
+
+}
+#leftMenuInner ol li{
+    color: #285473 !important;
+    border: 0;
+    display: block;
+    white-space: nowrap;
+}
+#leftMenu .fas{
+    width: 30px;
+    height: 25px;
+    opacity: 0.75;
+    color: #285473;
+}
+#leftMenu .li-name{
+    height: 28px;
+    line-height: 27px;
+    font-size: 12.5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #285473 !important;
+}
+.leftMenuCount{
+    margin: 2px 0 2px 2px;
+    zoom: 1;
+    padding: 4px 6px;
+    /* vertical-align: top; */
+    color: #5b6e85;
+    background: #d1d9e0;
+    font-weight: 700;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* font-size: 12px; */
+    /* line-height: 20px; */
+    /* height: 16px; */
+    border-radius: 4px;
+    float: right;
+}
+.leftMenuFixer{
+    display: block;
+    color: #285473;
+    white-space: nowrap;
+}
+#leftMenu .sepLine{
+    margin-top: 9px;
+    margin-left: 27px;
+    margin-right: 6px;
+    padding-top: 9px;
+    border-top: 1px solid #dfe2e8;
+}
+li:hover{
+    text-decoration: none;
+    background-color: #e1e5eb;
+}
+.containerRightMenu{
+    float: right;
+    position: relative;
+    width: 230px;
+}
+.rightMenu{
+    width: 230px;
+    /* float: right; */
+    position: fixed;
+}
+.rightMenuInner{
+    padding: 6px 0;
+    position: relative;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 1px 0 0 #d7d8db, 0 0 0 1px #e3e4e8;
+    margin: 50px 0 0;
+}
+.rightMenuItem{
+    -moz-osx-font-smoothing: auto;
+    padding-left: 18px;
+    border-left: 2px solid #5181b8;
+    text-decoration: none;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: 32px;
+    line-height: 31px;
+    padding: 0 5px 0 20px;
+    color: #2a5885;
+    outline: none;
+    cursor: pointer;
+}
+.rightMenuItem:hover{
+    text-decoration: none;
+    background-color: #f0f2f5;
+}
+.contentBox{
+    padding-top: 50px;
+    margin-left: 160px;
+    margin-right: 250px;
+    margin-top: 20px;
+    position: relative;
+    width: 560px;
+}
+.contentBoxInner{
+    position: relative;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 1px 0 0 #d7d8db, 0 0 0 1px #e3e4e8;
+    /* margin: 20px 250px 0 160px;*/
+}
+.contentHeader{
+    display: block;
+    background: #fafbfc;
+    padding: 0 20px;
+    height: 54px;
+    font-size: 15px;
+    line-height: 54px;
+    border-bottom: 1px solid #e7e8ec;
+    border-radius: 4px 4px 0 0;
+}
+.contentHeaderInner{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #656565;
+}
+.settingsPanel{
+    margin: 0 20px;
+}
+.settingsMenu{
+    margin: 0;
+    padding: 15px 0 14px;
+    border-bottom: 1px solid #e7e8ec;
+    line-height: 16px;
+    display: block;
+}
+.menuLabel{
+    color: #656565;
+    width: 145px;
+    padding: 6px 10px 6px 0;
+    float: left;
+    line-height: 16px;
+}
+.menuRef{
+    padding-top: 6px;
+    margin: 0 0 8px 155px;
+}
+a{
+    outline: none;
+    color: #2a5885;
+    text-decoration: none;
+    cursor: pointer;
+}
+.settingsRow{
+    margin-bottom: 10px;
+}
+.settingsCheckBox{
+    position: absolute;
+    overflow: hidden;
+    height: 1px;
+    width: 1px;
+    clip: rect(1px, 1px, 1px, 1px);
+    opacity: 0;
+    outline: none;
+}
+
+/* Customize the label (the container) */
+.containerLabel::before {
+  display: block;
+  content: '';
+  position: absolute;
+  margin: 0 7px 0 0;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.containerLabel input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    float: left;
+    margin: 0 7px 0 0;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* On mouse-over, add a grey background color */
+.containerLabel:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.containerLabel input:checked ~ .checkmark {
+  background-color: #4a76a8;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  float: left;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.containerLabel input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.containerLabel .checkmark:after {
+    position:relative;
+    left: 4px;
+    top: 0px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(30deg);
+}
+.hintIcon{
+    margin: 0 20px 0 10px;
+    position: relative;
+}
+.hintIcon .fa-question-circle{
+    content: "";
+    width: 17px;
+    height: 17px;
+    position: absolute;
+    font-size: 17px;
+    top: 0;
+    left: 0;
+    opacity: 0.9;
+    cursor: pointer;
+    color: rgb(92, 88, 88);
+}
+.refBlock{
+    cursor: pointer;
+    display: inline-block;
+    line-height: 1em;
+}
+.refBlock .selectedRef{
+    margin: 0;
+    padding: 0;
+    line-height: 1em;
+    display: inline-block;
+    outline: none;
+    color: #2a5885;
+}
+.linkRow{
+    padding-top: 4px;
+}
+.settingsRightRef{
+    float: right;
+}
+.statusBarr{
+    margin: 0;
+    padding: 20px 0 19px;
+    border-bottom: 1px solid #e7e8ec;
+    line-height: 16px;
+    display: block;
+}
+.statusMenu{
+    color: #656565;
+    width: 145px;
+    float: left;
+    line-height: 16px;
+}
+footer{
+    margin-left: 160px;
+    margin-right: 240px;
+    border-bottom: 1px solid #e7e8ec;
+    display: block;
+    border-top: 1px solid #e7e8ec;
+    background: #fafbfc;
+    line-height: 140%;
+    padding: 15px 0 17px;
+    text-align: center;
+    border-radius: 5px;
+}
+
