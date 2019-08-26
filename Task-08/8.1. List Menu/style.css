@@ -12,12 +12,11 @@ ul{
 }
 
 div#center{
-    position: absolute;
+    position: relative;
     top: 25%;
-    right: 25%;
     width: 200px;
     height: 210px;
-    margin: 10px auto;
+    margin: auto;
     border: 3px solid #96A537;
     background-color: #C0CF67;
     border-radius: 10px;

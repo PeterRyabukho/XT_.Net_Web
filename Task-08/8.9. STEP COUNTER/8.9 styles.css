@@ -25,6 +25,7 @@ body{
     position: relative;
     text-align: center;
     left: 170px;
+    cursor: pointer;
 }
 .steps::after {
     height: 40px;

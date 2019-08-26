@@ -1,62 +1,76 @@
 body{
-    display: block;
-    margin: auto;
-    text-align: center;
-    margin-top: 250px;
     background-image: url(8.3\ pic.jpg);
     background-size: cover;
+    height: 950px;
 }
-.dropMenu{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    display: inline-block;
-    margin-right: 100px;
-    
+*{
+    box-sizing: border-box;
+    font-size: 19px;
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
-.dropFile{
-    color: blue;
-    padding: 20px;
-    font-size: 20px;
-    border: none;
+.menuBox{
+    display: grid;
+    grid-auto-flow: column;
+    line-height: 1;
+    padding-left: 15px;
+    width: 215px;
+    margin: auto;
+    position: relative;
+    top: 25%;
+    border: 1px solid #8E610E;
+    border-radius: 5px;
+}
+.menuItem{
+    position: relative;
+}
+.menuLabel{
+    border: 1px solid transparent;
+    border-radius: 5px;
     cursor: pointer;
-    background: rgba(243, 190, 77, 0.836);
-    text-decoration: underline;
+    padding: 7px 15px;
+    position: relative;
+    z-index: 1;
 }
-.fileSettings{
-    display: none;
+.menuLabel:hover{
+    background: goldenrod;
+    border: 1px solid hsla(0, 0%, 50.2%, .2);
+    border-bottom: 1px solid goldenrod;
+    border-radius: 5px 5px 0 0;
+    
+}
+.menuSub{
+    background: goldenrod;
+    border: 0px 1px 1px 1px solid hsla(0, 0%, 50.2%, .2);
+    border-radius: 0 5px 5px 5px;
+    box-shadow: 0 11px 20px 0 rgba(0, 0, 0, .2);
+    left: 0;
+    padding: 1px 0;
     position: absolute;
-    background-color: #a8a7a769;
-    min-width: 160px;
-    border-top-right-radius: 10px;
-    border-bottom-left-radius:  10px;
-    border-bottom-right-radius:  10px;
+    top: 5px;
+    transition: top .8s ease;
+    visibility: hidden;
+    list-style-type: none;
 }
-.fileSettings a{
-    
-    color: black;
-    padding: 20px 20px;
-    text-decoration: none;
-    display: block;
-    
+.menuItem:hover>.menuSub{
+    top: 16px;
+    visibility: visible;
 }
-.fileSettings a:hover{
-    background-color: rgb(119, 200, 233);
-    color: white;
+.menuItem:hover>.menuLabel{
+    border: 1px 1px 0 1px solid hsla(0, 0%, 50.2%, .2);
+    /*border-bottom: 1px solid;*/
+    border-radius: 5px 5px 0 0;
 }
-.dropMenu:hover .fileSettings{
-    display: block;
-    box-shadow: 7px 4px 14px rgb(88, 58, 3);
+.menuSubItem{
+    cursor: pointer;
+    padding: 7px 15px;
+    white-space: nowrap;
 }
-.dropMenu:hover .dropFile{
-    background-color: #a8a7a769;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    box-shadow: 7px 2px 14px rgb(88, 58, 3);
-
+.menuSubItem:first-of-type{
+    border-radius: 0 5px 0 0;
 }
-.refer:first-child{
-    border-top-right-radius: 10px;
+.menuSubItem:last-of-type{
+    border-radius: 0 0 5px 5px;
 }
-.refer:last-child{
-    border-bottom-left-radius:  10px;
-    border-bottom-right-radius:  10px;
+li:hover{
+    background-color: #FFC966;
 }

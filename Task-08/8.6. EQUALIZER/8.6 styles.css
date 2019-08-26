@@ -1,11 +1,11 @@
 .blocks{
     margin: 5px;
     width: 170px;
-    height: 90px;
+    height: 80px;
     background-image: linear-gradient(to top, #d55607, #fed502 50%, #f2ff1b 100%);
     background-size: cover;
     background-position: center;
-    background-attachment: fixed
+    background-attachment: fixed;
 }
 .firstBlock{
     display: flex;
