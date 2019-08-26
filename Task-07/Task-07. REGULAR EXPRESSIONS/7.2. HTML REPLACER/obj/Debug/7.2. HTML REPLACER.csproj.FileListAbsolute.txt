@@ -4,3 +4,10 @@ D:\GitApp\XT_.Net_Web\Task-07\Task-07. REGULAR EXPRESSIONS\7.2. HTML REPLACER\bi
 D:\GitApp\XT_.Net_Web\Task-07\Task-07. REGULAR EXPRESSIONS\7.2. HTML REPLACER\obj\Debug\_7._2.HTML_REPLACER.exe
 D:\GitApp\XT_.Net_Web\Task-07\Task-07. REGULAR EXPRESSIONS\7.2. HTML REPLACER\obj\Debug\_7._2.HTML_REPLACER.pdb
 D:\GitApp\XT_.Net_Web\Task-07\Task-07. REGULAR EXPRESSIONS\7.2. HTML REPLACER\obj\Debug\7.2. HTML REPLACER.csprojAssemblyReference.cache
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-07\Task-07. REGULAR EXPRESSIONS\7.2. HTML REPLACER\bin\Debug\_7._2.HTML_REPLACER.exe.config
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-07\Task-07. REGULAR EXPRESSIONS\7.2. HTML REPLACER\bin\Debug\_7._2.HTML_REPLACER.exe
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-07\Task-07. REGULAR EXPRESSIONS\7.2. HTML REPLACER\bin\Debug\_7._2.HTML_REPLACER.pdb
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-07\Task-07. REGULAR EXPRESSIONS\7.2. HTML REPLACER\obj\Debug\7.2. HTML REPLACER.csprojAssemblyReference.cache
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-07\Task-07. REGULAR EXPRESSIONS\7.2. HTML REPLACER\obj\Debug\7.2. HTML REPLACER.csproj.CoreCompileInputs.cache
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-07\Task-07. REGULAR EXPRESSIONS\7.2. HTML REPLACER\obj\Debug\_7._2.HTML_REPLACER.exe
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-07\Task-07. REGULAR EXPRESSIONS\7.2. HTML REPLACER\obj\Debug\_7._2.HTML_REPLACER.pdb

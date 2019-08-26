@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7.1. DATE EXISTANCE", "7.1.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7.2. HTML REPLACER", "7.2. HTML REPLACER\7.2. HTML REPLACER.csproj", "{D1936EE0-F77B-4253-9E59-5DEB15376DA9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7.3. EMAIL FINDER", "7.3. EMAIL FINDER\7.3. EMAIL FINDER.csproj", "{1B431410-D51D-4E04-B36E-80858BC8C16D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{D1936EE0-F77B-4253-9E59-5DEB15376DA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D1936EE0-F77B-4253-9E59-5DEB15376DA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D1936EE0-F77B-4253-9E59-5DEB15376DA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B431410-D51D-4E04-B36E-80858BC8C16D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B431410-D51D-4E04-B36E-80858BC8C16D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B431410-D51D-4E04-B36E-80858BC8C16D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B431410-D51D-4E04-B36E-80858BC8C16D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

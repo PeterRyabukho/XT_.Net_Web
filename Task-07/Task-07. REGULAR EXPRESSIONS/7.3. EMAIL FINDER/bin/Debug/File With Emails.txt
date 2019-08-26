@@ -1,0 +1,14 @@
+Hi, this e-mail: petr5ryab@yandex.ru, some not valid e-mail: _petr56ryab@yandex.ru
+And this dont valid too petr.ryab_@yandex.ru
+With numbers: 3petr9@yandex.ru and petr@9ande7.ru and this is good: petr@9ande7.home8.ru
+
+Some more exp: ryabukho.peter999@yandex.ku-ku.opics, 
+With dot, hyphen and underscore: 
+variant 1: pe.tr-ryab9_d9@yan-dex.ru, dont valid: pe.tr_ryab9-d9@yan-dex.-ru
+variant 2: p.iv_an-ov@ma7il.ro-l.ru some text..
+
+variant 3: p_iva.no-v@mail.rol.ru dont valid !p_iva.no-v@mail.rol.ru
+variant 4: 9_iv-a.n@mail.ru some text
+
+variant 5: i-van.iva_n@mail.ru and some more valid: ivan_45ivan9@mail.hrum-b.ru
+variant 6: iv-an_va.nya@ma-il.ru

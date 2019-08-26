@@ -94,7 +94,7 @@ namespace _7._2.HTML_REPLACER
         private static string ReadMyFaile()
         {
             string inputHtmlFile;
-            using (StreamReader streamReader = new StreamReader(@"D:\GitApp\XT_.Net_Web\Task-07\Task-07. REGULAR EXPRESSIONS\7.2. HTML REPLACER\HTML file with tags.html"))
+            using (StreamReader streamReader = new StreamReader(@"HTML file with tags.html"))
             {
                 inputHtmlFile = streamReader.ReadToEnd();
             }
