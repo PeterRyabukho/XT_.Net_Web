@@ -5,34 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="9.3 styles.css">
-    <script src="9.3 script.js"></script>
     <title>Document</title>
 </head>
 <body>
-    <select id="AvailableColumn" class="column" multiple>
-        <option value="oneOption" selected>
-            Option-1
-        </option>
-        <option value="twoOption">
-            Option-2
-        </option>
-        <option value="threeOption">
-            Option-3
-        </option>
-        <option value="fourOption">
-            Option-4
-        </option>
-    </select>
-    <div id="buttonsContainer">
-        <button id = "fromAvToSelAll">>></button>
-        <button id = "fromAvToSel" onclick="onClick_fromSelToAv()">></button>
-        <button id="fromSelToAv" onclick="onClick_fromAvToSel()"> < </button>
-        <button id="fromSelToAvALL"> << </button>
+    <div class="labelContainer">
+        <div class="label">Available</div>
+        <div class="label">Selected</div>
     </div>
-    <select id="SelectedColumn" class="column" multiple>
-        <option value="fiveOption" selected>
-            Option-5
-        </option>
-    </select>
+    <div class="container">
+        <select id="AvailableColumn" class="column" multiple> 
+            <option value="oneOption" class="myOptionsForClick">
+                Option-1
+            </option>
+            <option value="twoOption">
+                Option-2
+            </option>
+            <option value="threeOption">
+                Option-3
+            </option>
+            <option value="fourOption">
+                Option-4
+            </option>
+        </select>
+        <div id="buttonsContainer">
+            <button id = "fromAvToSelAllButton"> >> </button>
+            <button id = "fromAvToSelButton"> > </button>
+            <button id = "fromSelToAvButton"> < </button>
+            <button id = "fromSelToAvALLButton"> << </button>
+        </div>
+        <select id="SelectedColumn" class="column" multiple>
+            <option value="fiveOption">
+                Option-5
+            </option>
+            <option value="sixOption">
+                Option-6
+            </option>
+        </select>
+    </div>
+    <script src="9.3 script.js"></script>
 </body>
 </html>
