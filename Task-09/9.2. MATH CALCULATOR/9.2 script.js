@@ -1,4 +1,4 @@
-var inputString = prompt('Enter the expression you want to count, patern:', '3.5 +4*10-5.3 /5 =')
+var inputString = prompt('Enter the expression you want to count, patern:', '3.5 +4*10-5.3 /5 =');
 
 function Calculater(){
     var result = 0,
@@ -7,22 +7,25 @@ function Calculater(){
 
     arr = inputString.match(patern);
 
-    if(+arr[0]!=="NaN")
+    if(+arr[0] !== "NaN" && arr[0] !== " " && inputString !==" ")
     {
-    result+=+arr[0];
+    result += +arr[0];
+    } else {
+        alert("Empty string or wrong patern!");
     }
+    
 
-    for (var i=0; i< arr.length; i++){
+    for (var i = 0; i < arr.length; i++){
 
         switch(arr[i])
         {
-            case "+": result+=+arr[i+1];
+            case "+": result += +arr[i+1];
                 break;
-            case "*": result*=+arr[i+1];
+            case "*": result *= +arr[i+1];
                 break;
-            case "-": result-=+arr[i+1];
+            case "-": result -= +arr[i+1];
                 break;
-            case "/": result/=+arr[i+1];
+            case "/": result /= +arr[i+1];
                 break;
             case "=":
                 continue;
@@ -32,4 +35,6 @@ function Calculater(){
 
     return str_result;
 }
+
 alert(Calculater());
+

@@ -15,24 +15,20 @@ var myPageAdress = {
 
 var value ="0";
 var id;
-var active = true;
 
 function listToNextPage(adress, seconds){
     //var seconds = 4;
-    if(active == true)
-    {
-        function countDown(){
-            document.getElementById("mySeconds").innerText = seconds;
-            seconds--;
+    function countDown(){
+        document.getElementById("mySeconds").innerText = seconds;
+        seconds--;
 
-            if (seconds < 0){
-                window.location = adress;
-            }
+        if (seconds < 0){
+            window.location = adress;
         }
-
-        countDown();
-        id = setInterval(countDown, 1000);
     }
+
+    countDown();
+    id = setInterval(countDown, 1000);
 }
 
 choosePage();
