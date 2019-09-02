@@ -1,5 +1,3 @@
-//setTimeout(()=>(window.location = "page-2.2 second.html"), 3000);
-
 var patern = /(page-\d\.\d\.html)/g;
 var thisLocation = document.location.href;
 
@@ -13,13 +11,18 @@ var myPageAdress = {
     pageFive: "page-5.5.html",
 };
 
+var arrOfLinks =[];
+for (var value of Object.values(myPageAdress)){
+    arrOfLinks.push(value);
+}
+
 var value ="0";
 var id;
+var seconds = 5;
 
-function listToNextPage(adress, seconds){
-    //var seconds = 4;
+function listToNextPage(adress){
     function countDown(){
-        document.getElementById("mySeconds").innerText = seconds;
+        document.getElementById("mySeconds").innerText = seconds +" sec";
         seconds--;
 
         if (seconds < 0){
@@ -31,49 +34,47 @@ function listToNextPage(adress, seconds){
     id = setInterval(countDown, 1000);
 }
 
-choosePage();
+choosePage(seconds);
 
 function startMyTimer(){
-    listToNextPage(myLink[0], 4);
+    window.location = myLink[0];
 }
 
 function pauseMyTimer(){
+    fromPauseResume();
+    resume.disabled = false;
     value = mySeconds.textContent;
     clearInterval(id);
 }
 
 function resumeMyTimer(){
-    var newTime = value;
-    listToNextPage(myLink[0], +newTime);
+    fromPauseResume();
+    resume.disabled = true;
+    choosePage(value);
 }
 
-// function pressButton(){
-//     if (active == true){
-//         active = false;
-//     } else if (active == false){
-//         active == true;
-//     }
-// }
+function moveBackPage(){
+    var linkToFind = arrOfLinks.indexOf(myLink[0]);
+    window.location = arrOfLinks[linkToFind - 1];
+}
 
-function choosePage(){
+function choosePage(time){
      switch (myLink[0]){
 
         case 'page-1.1.html':
-            listToNextPage(myPageAdress.pageTwo, 4);
-            //document.addEventListener('DOMContentLoaded', timerForSwitchPages());
+            listToNextPage(myPageAdress.pageTwo, time);
             break;
         case 'page-2.2.html':
-            listToNextPage(myPageAdress.pageThree, 4);
-            //setTimeout(()=>(window.location = "page-3.3.html"), 3000);
+            listToNextPage(myPageAdress.pageThree, time);
             break;
         case 'page-3.3.html':
-            listToNextPage(myPageAdress.pageFour, 4);
+            listToNextPage(myPageAdress.pageFour, time);
             break;
         case 'page-4.4.html':
-            listToNextPage(myPageAdress.pageFive, 4);
+            listToNextPage(myPageAdress.pageFive, time);
             break;
         case 'page-5.5.html':
-                setTimeout(()=>(startAgainProgramOrClose()), 3000);
+                setTimeout(()=>(startAgainProgramOrClose()), 1000);
             break;
      }
  }
@@ -82,13 +83,10 @@ function choosePage(){
 function startAgainProgramOrClose(){
     var valid = confirm("Do you want to repeat scrolling pages again (ok), or to exit this mode (cancel)?");
     if (valid == true){
-        //setTimeout(()=>(window.location = "page-1.5.html"), 3000);
-        //goto 'page-1.1';
         window.location = "page-1.1.html";
+
     } else if (valid == false){
-        //window.open('', '_self', '');
         window.open('','_self').close();
-        //close();
     }
 }
 var pause = document.getElementById("pause");
@@ -99,7 +97,21 @@ start.addEventListener("click", startMyTimer, false);
 
 var resume = document.getElementById("resume");
 resume.addEventListener("click", resumeMyTimer, false);
-//var pauseButton = document.getElementById("pauseButton");
-//pauseButton.addEventListener("click", pressButton());
 
-//window.onload = choosePage;
+var moveBack = document.getElementById("moveBack");
+moveBack.addEventListener("click", moveBackPage, false);
+
+function fromPauseResume(){
+    if (pause.disabled == false){
+        resume.disabled = true;
+    } else if (pause.disabled == true){
+        resume.disabled = false;
+    }
+}
+
+function blockResumeOnStart(){
+    pause.disabled == false;
+    resume.disabled = true;
+}
+
+window.onload = blockResumeOnStart;

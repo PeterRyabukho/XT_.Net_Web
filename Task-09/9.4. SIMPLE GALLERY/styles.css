@@ -1,0 +1,39 @@
+body{
+    background-color: #233336;
+}
+.container{
+    text-align: center;
+    width: 360px;
+    height: 260px;
+    position: absolute;
+    left: 45%;
+    top: 25%;
+    margin-top: 50px;
+    margin-left: -50px;
+    font-family: cursive;
+    border: 1px solid;
+    border-radius: 10px;
+    box-shadow: 5px 10px 18px;
+    background-color: #639889;
+}
+.timer{
+    font-size: 35px;
+    margin: 20px;
+}
+button{
+    font-family: cursive;
+    font-size: 18px;
+    margin: 4px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #C9D0CE;
+}
+button:active{
+    border: inset;
+    background-color: #FFC42C;
+}
+
+
