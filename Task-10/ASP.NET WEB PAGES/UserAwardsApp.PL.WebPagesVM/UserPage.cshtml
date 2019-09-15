@@ -1,0 +1,28 @@
+﻿@*@using UserAwardsApp.DI.Provaiders;
+    @using UserAwardsApp.BLL.Abstract;
+    @using UserAwardsApp.Entities;
+
+    @{
+        Layout = "_Layout.cshtml";
+        IUserLogic UserManager = MyProvaider.userLogic;
+        IAwardsLogic AwardManager = MyProvaider.awardsLogic;
+    }*@
+
+@{
+    Layout = "_Layout.cshtml";
+}
+
+<ul class="nav nav-pills nav-fill">
+    <li class="nav-item">
+        <a class="nav-link active" href="~/MyPages/CreateUser.cshtml">Add new User</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link active" href="#">Show all Users</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link active" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link active" href="#">Disabled</a>
+    </li>
+</ul>
