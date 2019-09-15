@@ -1,0 +1,9 @@
+D:\GitApp\XT_.Net_Web\Task - 10\ASP.NET WEB PAGES\UserAwardsApp.Entities\bin\Debug\UserAwardsApp.Entities.dll
+D:\GitApp\XT_.Net_Web\Task - 10\ASP.NET WEB PAGES\UserAwardsApp.Entities\bin\Debug\UserAwardsApp.Entities.pdb
+D:\GitApp\XT_.Net_Web\Task - 10\ASP.NET WEB PAGES\UserAwardsApp.Entities\bin\Debug\Newtonsoft.Json.dll
+D:\GitApp\XT_.Net_Web\Task - 10\ASP.NET WEB PAGES\UserAwardsApp.Entities\bin\Debug\Newtonsoft.Json.xml
+D:\GitApp\XT_.Net_Web\Task - 10\ASP.NET WEB PAGES\UserAwardsApp.Entities\obj\Debug\UserAwardsApp.Entities.csprojAssemblyReference.cache
+D:\GitApp\XT_.Net_Web\Task - 10\ASP.NET WEB PAGES\UserAwardsApp.Entities\obj\Debug\UserAwardsApp.Entities.csproj.CoreCompileInputs.cache
+D:\GitApp\XT_.Net_Web\Task - 10\ASP.NET WEB PAGES\UserAwardsApp.Entities\obj\Debug\UserAwardsApp.Entities.csproj.CopyComplete
+D:\GitApp\XT_.Net_Web\Task - 10\ASP.NET WEB PAGES\UserAwardsApp.Entities\obj\Debug\UserAwardsApp.Entities.dll
+D:\GitApp\XT_.Net_Web\Task - 10\ASP.NET WEB PAGES\UserAwardsApp.Entities\obj\Debug\UserAwardsApp.Entities.pdb
