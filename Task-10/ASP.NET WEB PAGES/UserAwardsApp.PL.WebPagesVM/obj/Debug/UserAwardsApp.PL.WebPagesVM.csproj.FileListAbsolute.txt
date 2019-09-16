@@ -89,3 +89,5 @@ D:\GitApp\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.PL.WebPagesVM\obj\
 D:\GitApp\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.PL.WebPagesVM\obj\Debug\UserAwardsApp.PL.WebPagesVM.csproj.CopyComplete
 D:\GitApp\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.PL.WebPagesVM\obj\Debug\UserAwardsApp.PL.WebPagesVM.dll
 D:\GitApp\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.PL.WebPagesVM\obj\Debug\UserAwardsApp.PL.WebPagesVM.pdb
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.PL.WebPagesVM\obj\Debug\UserAwardsApp.PL.WebPagesVM.csprojAssemblyReference.cache
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.PL.WebPagesVM\obj\Debug\UserAwardsApp.PL.WebPagesVM.csproj.CoreCompileInputs.cache

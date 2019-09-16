@@ -1,0 +1,46 @@
+﻿@using UserAwardsApp.PL.UIWebPages.HelpersBLL;
+@using UserAwardsApp.Entities;
+
+@{
+    Layout = "_PagesLayout.cshtml";
+
+    //Provaiders.userLogic.DeSerializerJsonUsers();
+
+    //var arrayOfUsers = Provaiders.userLogic.GetAllUsers();
+
+    Dictionary<int, Guid> UserIDs = new Dictionary<int, Guid>();
+}
+
+    <table class="table table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Age</th>
+                <th scope="col">Info</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                UserIDs.Clear();
+                List<User> allUsers = Provaiders.userLogic.GetAllUsers().ToList();
+                int numberOfUser = 1;
+                foreach (var item in allUsers)
+                {
+                    UserIDs.Add(numberOfUser, item.ID);
+
+                    <tr>
+                        <th scope="row">@numberOfUser</th>
+                        <td>@item.Name</td>
+                        <td>@item.Age</td>
+                        <td>
+                            <button 
+                        </td>
+                    </tr>
+                    numberOfUser++;
+                }
+            }
+        </tbody>
+    </table>
+    <a class="nav-link active" href="~/MyPages/AddNewUser.cshtml">Add new User</a>
+

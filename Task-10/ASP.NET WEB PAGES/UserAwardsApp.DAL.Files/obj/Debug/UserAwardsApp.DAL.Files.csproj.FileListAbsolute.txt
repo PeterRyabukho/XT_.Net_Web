@@ -11,3 +11,16 @@ D:\GitApp\XT_.Net_Web\Task - 10\ASP.NET WEB PAGES\UserAwardsApp.DAL.Files\obj\De
 D:\GitApp\XT_.Net_Web\Task - 10\ASP.NET WEB PAGES\UserAwardsApp.DAL.Files\obj\Debug\UserAwardsApp.DAL.Files.csproj.CopyComplete
 D:\GitApp\XT_.Net_Web\Task - 10\ASP.NET WEB PAGES\UserAwardsApp.DAL.Files\obj\Debug\UserAwardsApp.DAL.Files.dll
 D:\GitApp\XT_.Net_Web\Task - 10\ASP.NET WEB PAGES\UserAwardsApp.DAL.Files\obj\Debug\UserAwardsApp.DAL.Files.pdb
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.DAL.Files\obj\Debug\UserAwardsApp.DAL.Files.csproj.CoreCompileInputs.cache
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.DAL.Files\bin\Debug\UserAwardsApp.DAL.Files.dll
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.DAL.Files\bin\Debug\UserAwardsApp.DAL.Files.pdb
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.DAL.Files\bin\Debug\Newtonsoft.Json.dll
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.DAL.Files\bin\Debug\UserAwardsApp.DAL.Abstract.dll
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.DAL.Files\bin\Debug\UserAwardsApp.Entities.dll
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.DAL.Files\bin\Debug\UserAwardsApp.DAL.Abstract.pdb
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.DAL.Files\bin\Debug\UserAwardsApp.Entities.pdb
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.DAL.Files\bin\Debug\Newtonsoft.Json.xml
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.DAL.Files\obj\Debug\UserAwardsApp.DAL.Files.csprojAssemblyReference.cache
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.DAL.Files\obj\Debug\UserAwardsApp.DAL.Files.csproj.CopyComplete
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.DAL.Files\obj\Debug\UserAwardsApp.DAL.Files.dll
+D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.DAL.Files\obj\Debug\UserAwardsApp.DAL.Files.pdb
