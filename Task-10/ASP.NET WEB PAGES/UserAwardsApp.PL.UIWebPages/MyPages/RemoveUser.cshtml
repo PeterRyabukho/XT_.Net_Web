@@ -1,4 +1,17 @@
-﻿@{
-   
+﻿@using UserAwardsApp.PL.UIWebPages.HelpersBLL
+@using UserAwardsApp.Entities
+
+@{
+    var thisUser = Request["deleteUser"];
+
+    if(!string.IsNullOrWhiteSpace(thisUser))
+        {
+        Guid userGuid = Provaiders.UserIDs[int.Parse(thisUser)];
+        User userToRemove = Provaiders.userLogic.GetUserByID(userGuid);
+
+        Provaiders.userLogic.RemoveUser(userToRemove);
+
+        Response.Redirect("~/MyPages/ShowAllUsers.cshtml");
+    }
 }
 

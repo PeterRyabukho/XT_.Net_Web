@@ -8,7 +8,7 @@
 
     //var arrayOfUsers = Provaiders.userLogic.GetAllUsers();
 
-    Dictionary<int, Guid> UserIDs = new Dictionary<int, Guid>();
+    //Dictionary<int, Guid> UserIDs = new Dictionary<int, Guid>();
 }
 
     <table class="table table-bordered">
@@ -22,19 +22,25 @@
         </thead>
         <tbody>
             @{
-                UserIDs.Clear();
+                Provaiders.UserIDs.Clear();
                 List<User> allUsers = Provaiders.userLogic.GetAllUsers().ToList();
                 int numberOfUser = 1;
                 foreach (var item in allUsers)
                 {
-                    UserIDs.Add(numberOfUser, item.ID);
+                    Provaiders.UserIDs.Add(numberOfUser, item.ID);
 
                     <tr>
                         <th scope="row">@numberOfUser</th>
                         <td>@item.Name</td>
                         <td>@item.Age</td>
                         <td>
-                            <button 
+                            <form action="~/MyPages/RemoveUser.cshtml" method="post">
+                                <input type="hidden" class="" name="deleteUser" value="@numberOfUser">
+                                <button type="submit" class="btn btn-primary">Delete User</button>
+                            </form>
+                            @*<button onclick="@Provaiders.DeleteSelectedUser(item)">
+        Delete
+        </button>*@
                         </td>
                     </tr>
                     numberOfUser++;
@@ -42,5 +48,9 @@
             }
         </tbody>
     </table>
-    <a class="nav-link active" href="~/MyPages/AddNewUser.cshtml">Add new User</a>
-
+    <div>
+        <nav>
+            <a class="nav-link active" href="~/MyPages/AddNewUser.cshtml">Add new User</a>
+            <a class="nav-link active" href="~/Index.cshtml">Main Menu</a>
+        </nav>
+    </div>

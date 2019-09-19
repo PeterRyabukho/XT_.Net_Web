@@ -1,0 +1,16 @@
+﻿@using UserAwardsApp.PL.UIWebPages.HelpersBLL
+@using UserAwardsApp.Entities
+
+@{
+    var removeAward = Request["deleteAward"];
+
+    if (!string.IsNullOrWhiteSpace(removeAward))
+    {
+        Guid awardGuid = Provaiders.AwardIDs[int.Parse(removeAward)];
+        Award awardToRemove = Provaiders.awardsLogic.GetAwardByID(awardGuid);
+
+        Provaiders.awardsLogic.RemoveAward(awardToRemove);
+
+        Response.Redirect("~/MyPages/ShowAllAwards.cshtml");
+    }
+}

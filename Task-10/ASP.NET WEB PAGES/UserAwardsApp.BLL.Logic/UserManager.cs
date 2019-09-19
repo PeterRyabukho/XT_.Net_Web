@@ -23,6 +23,23 @@ namespace UserAwardsApp.BLL.Logic
                 throw new ArgumentNullException("DAL is null!");
         }
 
+        //public Dictionary<int, Guid> UserIDs = new Dictionary<int, Guid>();
+
+        //public bool ShowUsersAndAddNumbers()
+        //{
+        //    UserIDs.Clear();
+        //    List<User> allUsers = userStorage.GetAllUsers().ToList();
+        //    if (allUsers.Count == 0)
+        //        return false;
+        //    int numberOfUser = 1;
+        //    foreach (var item in allUsers)
+        //    {
+        //        UserIDs.Add(numberOfUser, item.ID);
+        //        numberOfUser++;
+        //    }
+        //    return true;
+        //}
+
         public bool SerializerJsonUsers()
         {
             if (userStorage.SerializerJsonUsers())

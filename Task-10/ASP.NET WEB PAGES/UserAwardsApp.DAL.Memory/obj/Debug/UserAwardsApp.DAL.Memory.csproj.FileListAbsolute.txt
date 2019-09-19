@@ -24,3 +24,16 @@ D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsA
 D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.DAL.Memory\obj\Debug\UserAwardsApp.DAL.Memory.csproj.CopyComplete
 D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.DAL.Memory\obj\Debug\UserAwardsApp.DAL.Memory.dll
 D:\Users\cam\desktop\C#\GitApp\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.DAL.Memory\obj\Debug\UserAwardsApp.DAL.Memory.pdb
+D:\GitApp\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.DAL.Memory\bin\Debug\UserAwardsApp.DAL.Memory.dll
+D:\GitApp\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.DAL.Memory\bin\Debug\UserAwardsApp.DAL.Memory.pdb
+D:\GitApp\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.DAL.Memory\bin\Debug\UserAwardsApp.DAL.Abstract.dll
+D:\GitApp\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.DAL.Memory\bin\Debug\UserAwardsApp.Entities.dll
+D:\GitApp\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.DAL.Memory\bin\Debug\Newtonsoft.Json.dll
+D:\GitApp\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.DAL.Memory\bin\Debug\UserAwardsApp.DAL.Abstract.pdb
+D:\GitApp\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.DAL.Memory\bin\Debug\UserAwardsApp.Entities.pdb
+D:\GitApp\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.DAL.Memory\bin\Debug\Newtonsoft.Json.xml
+D:\GitApp\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.DAL.Memory\obj\Debug\UserAwardsApp.DAL.Memory.csprojAssemblyReference.cache
+D:\GitApp\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.DAL.Memory\obj\Debug\UserAwardsApp.DAL.Memory.csproj.CoreCompileInputs.cache
+D:\GitApp\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.DAL.Memory\obj\Debug\UserAwardsApp.DAL.Memory.csproj.CopyComplete
+D:\GitApp\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.DAL.Memory\obj\Debug\UserAwardsApp.DAL.Memory.dll
+D:\GitApp\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.DAL.Memory\obj\Debug\UserAwardsApp.DAL.Memory.pdb

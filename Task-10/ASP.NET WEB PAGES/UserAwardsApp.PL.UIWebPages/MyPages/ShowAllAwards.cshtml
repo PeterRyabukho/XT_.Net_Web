@@ -1,0 +1,46 @@
+﻿@using UserAwardsApp.PL.UIWebPages.HelpersBLL;
+@using UserAwardsApp.Entities;
+
+@{
+    Layout = "_PagesLayout.cshtml";
+
+}
+
+<table class="table table-bordered">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Info</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            Provaiders.AwardIDs.Clear();
+            List<Award> allAwards = Provaiders.awardsLogic.GetAllAwards().ToList();
+            int numberOfAward = 1;
+            foreach (var award in allAwards)
+            {
+                Provaiders.AwardIDs.Add(numberOfAward, award.ID);
+
+                <tr>
+                    <th scope="row">@numberOfAward</th>
+                    <td>@award.Name</td>
+                    <td>
+                        <form action="~/MyPages/RemoveAward.cshtml" method="post">
+                            <input type="hidden" class="" name="deleteAward" value="@numberOfAward">
+                            <button type="submit" class="btn btn-primary">Delete Award</button>
+                        </form>
+                    </td>
+                </tr>
+                numberOfAward++;
+            }
+        }
+    </tbody>
+</table>
+<div>
+    <nav>
+        <a class="nav-link active" href="~/MyPages/AddNewAward.cshtml">Add new Award</a>
+        <a class="nav-link active" href="~/Index.cshtml">Main Menu</a>
+    </nav>
+</div>
