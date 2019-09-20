@@ -123,6 +123,17 @@ namespace UserAwardsApp.DAL.Memory
             return true;
         }
 
+        public bool EditAward(Guid ID, string Name)
+        {
+            if (dictionaryOfAwards.TryGetValue(ID, out Award awardToEdit))
+            { 
+                awardToEdit.Name = Name;
+                return true;
+            }
+            else
+                return false;
+        }
+
         public bool SerializerJsonAwards()
         {
             throw new NotImplementedException();

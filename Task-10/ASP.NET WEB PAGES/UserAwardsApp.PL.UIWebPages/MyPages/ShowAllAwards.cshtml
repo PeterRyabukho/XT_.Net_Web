@@ -2,7 +2,33 @@
 @using UserAwardsApp.Entities;
 
 @{
+
     Layout = "_PagesLayout.cshtml";
+
+    var flag = false;
+
+    if (IsPost)
+    {
+        var awardToEdit = Request["editAward"];
+
+        if (!string.IsNullOrWhiteSpace(awardToEdit))
+        {
+            flag = true;
+        }
+
+        var awardID = Request["editAwardID"];
+        var awardName = Request["EditNameAward"];
+
+
+        if (!string.IsNullOrWhiteSpace(awardID) && !string.IsNullOrWhiteSpace(awardName))
+        {
+
+            Guid awardGuid = Provaiders.AwardIDs[int.Parse(awardID)];
+            Provaiders.awardsLogic.EditAward(awardGuid, awardName);
+
+            Response.Redirect("~/MyPages/ShowAllAwards.cshtml");
+        }
+    }
 
 }
 
@@ -10,7 +36,9 @@
     <thead class="thead-dark">
         <tr>
             <th scope="col">#</th>
+            <th scope="col">Guid ID</th>
             <th scope="col">Name</th>
+            <th scope="col">Image</th>
             <th scope="col">Info</th>
         </tr>
     </thead>
@@ -25,12 +53,47 @@
 
                 <tr>
                     <th scope="row">@numberOfAward</th>
+                    <td>@award.ID</td>
                     <td>@award.Name</td>
+                    <td>
+                        @if (award.Image != null)
+                        {
+                            var src = Convert.ToBase64String(award.Image);
+
+                            <img style="width:100px;height:100px" class="rounded mx-auto d-block"
+                                 src="data:image/png;base64,@src" alt="image" />
+                        }
+                        else
+                        {
+                            <img style="width:100px;height:100px" class="rounded mx-auto d-block"
+                                 src="~/MyImages/no_image.png" alt="image" />
+                        }
+                    </td>
                     <td>
                         <form action="~/MyPages/RemoveAward.cshtml" method="post">
                             <input type="hidden" class="" name="deleteAward" value="@numberOfAward">
                             <button type="submit" class="btn btn-primary">Delete Award</button>
                         </form>
+                        <form action="~/MyPages/ShowAllAwards.cshtml" method="post">
+                            <input type="hidden" class="" name="editAward" value="@numberOfAward">
+                            <button type="submit" class="btn btn-primary">Edit Award</button>
+                        </form>
+                        @{
+                            if (flag)
+                            {
+                                <div>
+                                    <form action="~/MyPages/ShowAllAwards.cshtml" method="post" name="editForm">
+                                        <div class="row">
+                                            <input type="hidden" class="" name="editAwardID" value="@numberOfAward">
+                                            <div class="col">
+                                                <input type="text" class="form-control" placeholder="Edit Name of Award" name="EditNameAward">
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                    </form>
+                                </div>
+                            }
+                        }
                     </td>
                 </tr>
                 numberOfAward++;

@@ -22,15 +22,15 @@ namespace UserAwardsApp.DAL.Memory
             return usersDictionary.ContainsKey(ID) ? usersDictionary[ID] : null;
         }
 
-        public bool AddUser(User user)
+        public User AddUser(User user)
         {
-            if (usersDictionary.Values.Any(userName => userName.Name == user.Name) && GetUserByID(user.ID) != null)
-            {
-                return false;
-            }
+            //if (usersDictionary.Values.Any(userName => userName.Name == user.Name) && GetUserByID(user.ID) != null)
+            //{
+                //return false;
+            //}
 
             usersDictionary.Add(user.ID, user);
-            return true;
+            return user;
         }
 
         public ICollection<User> GetAllUsers()
@@ -59,6 +59,20 @@ namespace UserAwardsApp.DAL.Memory
         public bool DeSerializerJsonUsers()
         {
             throw new NotImplementedException();
+        }
+
+        public bool EditUser(Guid ID, string Name, DateTime dOB)
+        {
+            if (usersDictionary.ContainsKey(ID))
+            {
+                var myCol = usersDictionary.TryGetValue(ID, out User userToEdit);
+
+                userToEdit.Name = Name;
+                userToEdit.DateOfBirth = dOB;
+                return true;
+            }
+            else
+                return false;
         }
     }
 

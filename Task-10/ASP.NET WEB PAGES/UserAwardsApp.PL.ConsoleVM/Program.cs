@@ -212,13 +212,20 @@ namespace UserAwardsApp.PL.ConsoleVM
                             Console.ReadKey();
                             goto case 4;
                         }
-                        if (!AwardManager.AddAward(awardName))
+                        foreach (var item in AwardManager.GetAllAwards())
                         {
-                            Console.WriteLine("\nYou cannot create another award with the same name!\n");
-                            Console.ReadKey();
+                            if (item.Name == awardName)
+                            {
+                                Console.WriteLine("\nYou cannot create another award with the same name!\n");
+                                Console.ReadKey();
+                            }
+                            else
+                            {
+                                AwardManager.AddAward(awardName);
+                                Console.WriteLine($"\nAward '{awardName}' created!\n");
+                            }
                         }
-                        else
-                            Console.WriteLine($"\nAward '{awardName}' created!\n");
+                        
                         MainInterface();
                         //TO DO:BLL - Add Award
                         break;

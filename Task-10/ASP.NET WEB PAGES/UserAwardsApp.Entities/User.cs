@@ -26,6 +26,8 @@ namespace UserAwardsApp.Entities
         }
         public int Age => DateTime.Now.Year - DateOfBirth.Year;
 
+        public byte[] Image { get; set; }
+
         [JsonConstructor]
         public User(string Name, DateTime DateOfBirth, Guid ID)
         {

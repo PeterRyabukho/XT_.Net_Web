@@ -13,12 +13,15 @@
 
         if (!string.IsNullOrWhiteSpace(awardName))
         {
-            Provaiders.awardsLogic.AddAward(awardName);
-            //UserManager.CreateUser(userName, dateOfBith);
-            //Provaiders.userLogic.SerializerJsonUsers();
-            <p>
-                Award @awardName created!
-            </p>
+            var createAward = Provaiders.awardsLogic.AddAward(awardName);
+
+            WebImage photo = WebImage.GetImageFromRequest();
+
+                if (photo != null)
+                {
+                    createAward.Image = photo.GetBytes();
+                }
+
             Response.Redirect("~/MyPages/ShowAllAwards.cshtml");
         }
         else
@@ -40,10 +43,22 @@
 </head>
 <body>
     <div>
-        <form action="~/MyPages/AddNewAward.cshtml" method="post">
+        <form action="~/MyPages/AddNewAward.cshtml" method="post" enctype="multipart/form-data" class="md-form">
             <div class="row">
                 <div class="col">
                     <input type="text" class="form-control" placeholder="New Award Name" name="AwardName">
+                </div>
+                <div class="col">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroupFileAddon01">Image</span>
+                        </div>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="inputGroupFile01"
+                                   aria-describedby="inputGroupFileAddon01" name="LoadingImage">
+                            <label class="custom-file-label" for="inputGroupFile01">Choose image for new Award</label>
+                        </div>
+                    </div>
                 </div>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>

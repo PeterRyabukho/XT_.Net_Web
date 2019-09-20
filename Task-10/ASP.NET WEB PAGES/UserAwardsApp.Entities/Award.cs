@@ -12,10 +12,7 @@ namespace UserAwardsApp.Entities
         public Guid ID { get; set; }
         public string Name { get; set; }
 
-        public void ChangeAward(string name)
-        {
-            Name = name;
-        }
+        public byte[] Image { get; set; }
 
         [JsonConstructor]
         public Award(string Name, Guid ID)

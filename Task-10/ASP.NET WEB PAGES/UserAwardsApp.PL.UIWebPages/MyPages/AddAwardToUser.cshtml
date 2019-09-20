@@ -92,6 +92,7 @@
         <tr>
             <th scope="col">#</th>
             <th scope="col">Name</th>
+            <th scope="col">Image</th>
             <th scope="col">Age</th>
             <th scope="col">Info</th>
         </tr>
@@ -108,22 +109,58 @@
                 <tr>
                     <th scope="row">@countofUsers</th>
                     <td>@user.Name</td>
+                    <td>
+                        @if (user.Image != null)
+                        {
+                            var src = Convert.ToBase64String(user.Image);
+
+                            <img style="width:100px;height:100px" class="rounded mx-auto d-block"
+                                 src="data:image/png;base64,@src" alt="image" />
+                        }
+                        else
+                        {
+                            <img style="width:100px;height:100px" class="rounded mx-auto d-block"
+                                 src="~/MyImages/no_image.png" alt="image" />
+                        }
+                    </td>
                     <td>@user.Age</td>
                     <td>
                         <form action="~/MyPages/AddAwardToUser.cshtml" method="post">
-                            @{
-                                foreach (var award in Provaiders.awardsLogic.GetUserAwards(user))
-                                {
-                                    if (award == null)
-                                    {
-                                        <label for="exampleFormControlSelect1">"This award was deleted!"</label>
-                                    }
-                                    else
-                                    {
-                                        <label for="exampleFormControlSelect1">@award.Name</label>
-                                    }
-                                }
-                            }
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        @{
+                                            foreach (var award in Provaiders.awardsLogic.GetUserAwards(user))
+                                            {
+                                                if (award == null)
+                                                {
+                                                    <th scope="row">"This award was deleted!"</th>
+                                                    @*<label for="exampleFormControlSelect1">"This award was deleted!"</label>*@
+                                                }
+                                                else
+                                                {
+                                                    <th scope="row">@award.Name</th>
+                                                    <td>
+                                                        @if (award.Image != null)
+                                                        {
+                                                            var src = Convert.ToBase64String(award.Image);
+
+                                                            <img style="width:50px;height:50px" class="rounded mx-auto d-block"
+                                                                 src="data:image/png;base64,@src" alt="image" />
+                                                        }
+                                                        else
+                                                        {
+                                                            <img style="width:50px;height:50px" class="rounded mx-auto d-block"
+                                                                 src="~/MyImages/no_image.png" alt="image" />
+                                                        }
+                                                    </td>
+                                                    @*<label for="exampleFormControlSelect1">@award.Name</label>*@
+                                                }
+                                            }
+                                        }
+                                    </tr>
+                                </tbody>
+                            </table>
                             <input type="hidden" class="" name="removeAllAwards" value="@countofUsers">
                             <button type="submit" class="btn btn-primary" name="removeAwards">Remove all User Awards</button>
                         </form>

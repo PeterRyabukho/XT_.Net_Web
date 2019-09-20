@@ -9,9 +9,6 @@
 
     if (IsPost)
     {
-        
-        //IUserLogic UserManager = MyProvaider.userLogic;
-
         var userName = Request["UserName"];
         var userDoB = Request["DateOB"];
 
@@ -19,14 +16,17 @@
 
         if (!string.IsNullOrWhiteSpace(userName) && !string.IsNullOrWhiteSpace(userDoB) && BDateChecked)
         {
-            Provaiders.userLogic.CreateUser(userName, dateOfBith);
-            //UserManager.CreateUser(userName, dateOfBith);
-            //Provaiders.userLogic.SerializerJsonUsers();
-            <p>
-                User @userName created!
-            </p>
-            Thread.Sleep(1000);
+            var createdUser = Provaiders.userLogic.CreateUser(userName, dateOfBith);
+
+            WebImage photo = WebImage.GetImageFromRequest();
+
+                if (photo != null)
+                {
+                    createdUser.Image = photo.GetBytes();
+                }
+
             Response.Redirect("~/MyPages/ShowAllUsers.cshtml");
+
         }
         else
         {
@@ -34,6 +34,7 @@
                 User not created!
             </p>
         }
+
     }
 }
 
@@ -47,17 +48,29 @@
 </head>
 <body>
     <div>
-        <form action="~/MyPages/AddNewUser.cshtml" method="post">
+        <form action="~/MyPages/AddNewUser.cshtml" method="post" enctype="multipart/form-data" class="md-form">
             <div class="row">
                 <div class="col">
-                    <input type="text" class="form-control" placeholder="First name" name="UserName">
+                    <input type="text" class="form-control" placeholder="First name" name="UserName" required>
                 </div>
                 <div class="col">
-                    <input type="text" class="form-control" placeholder="Date of Birth" name="DateOB">
+                    <input type="text" class="form-control" placeholder="Date of Birth" name="DateOB" required>
+                </div>
+                <div class="col">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroupFileAddon01">Image</span>
+                        </div>
+                        <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="inputGroupFile01"
+                                   aria-describedby="inputGroupFileAddon01" name="LoadingImage">
+                            <label class="custom-file-label" for="inputGroupFile01">Choose image for new User</label>
+                        </div>
+                    </div>
                 </div>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+</form>
     </div>
     <a class="nav-link active" href="~/Index.cshtml">Main Menu</a>
 </body>

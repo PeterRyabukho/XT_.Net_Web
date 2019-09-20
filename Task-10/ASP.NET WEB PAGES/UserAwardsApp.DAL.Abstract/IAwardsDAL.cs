@@ -20,5 +20,6 @@ namespace UserAwardsApp.DAL.Abstract
         bool DeSerializerJsonAwards();
         bool SerializerJsonAwardsOfUsers();
         bool DeSerializerJsonAwardsOfUsers();
+        bool EditAward(Guid ID, string Name);
     }
 }

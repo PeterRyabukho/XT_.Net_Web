@@ -55,9 +55,11 @@ namespace UserAwardsApp.BLL.Logic
             else
                 return false;
         }
-        public void CreateUser(string name, DateTime dateOfBith)
+        public User CreateUser(string name, DateTime dateOfBith)
         {
-            userStorage.AddUser(new User(name, dateOfBith) { DateOfBirth = dateOfBith, Name = name });
+            var newUser = new User(name, dateOfBith) { DateOfBirth = dateOfBith, Name = name };
+            userStorage.AddUser(newUser);
+            return newUser;
         }
 
         public User GetUserByID(Guid ID)
@@ -83,6 +85,13 @@ namespace UserAwardsApp.BLL.Logic
             return userStorage.GetAllUsers().ToArray();
         }
 
+        public bool EditUser(Guid ID, string Name, DateTime dOB)
+        {
+            if (userStorage.EditUser(ID, Name, dOB))
+                return true;
+            else
+                return false;
+        }
     }
 
 }

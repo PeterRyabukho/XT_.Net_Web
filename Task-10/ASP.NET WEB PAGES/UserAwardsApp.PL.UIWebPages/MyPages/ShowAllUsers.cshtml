@@ -2,20 +2,45 @@
 @using UserAwardsApp.Entities;
 
 @{
+
     Layout = "_PagesLayout.cshtml";
 
-    //Provaiders.userLogic.DeSerializerJsonUsers();
+    var flag = false;
 
-    //var arrayOfUsers = Provaiders.userLogic.GetAllUsers();
+    if (IsPost)
+    {
+        var userToEdit = Request["editUser"];
 
-    //Dictionary<int, Guid> UserIDs = new Dictionary<int, Guid>();
+        if (!string.IsNullOrWhiteSpace(userToEdit))
+        {
+            flag = true;
+        }
+
+        var userID = Request["editUserID"];
+        var userName = Request["EditName"];
+        var userDoB = Request["EditDateOB"];
+
+
+
+        if (!string.IsNullOrWhiteSpace(userID) && !string.IsNullOrWhiteSpace(userName) && !string.IsNullOrWhiteSpace(userDoB))
+        {
+            bool BDateChecked = DateTime.TryParse(userDoB, out DateTime dateOfBith);
+
+            Guid userGuid = Provaiders.UserIDs[int.Parse(userID)];
+            Provaiders.userLogic.EditUser(userGuid, userName, dateOfBith);
+
+            Response.Redirect("~/MyPages/ShowAllUsers.cshtml");
+        }
+    }
 }
 
     <table class="table table-bordered">
         <thead class="thead-dark">
             <tr>
                 <th scope="col">#</th>
+                <th scope="col">Guid ID</th>
                 <th scope="col">Name</th>
+                <th scope="col">Image</th>
                 <th scope="col">Age</th>
                 <th scope="col">Info</th>
             </tr>
@@ -29,20 +54,55 @@
                 {
                     Provaiders.UserIDs.Add(numberOfUser, item.ID);
 
-                    <tr>
-                        <th scope="row">@numberOfUser</th>
-                        <td>@item.Name</td>
-                        <td>@item.Age</td>
-                        <td>
-                            <form action="~/MyPages/RemoveUser.cshtml" method="post">
-                                <input type="hidden" class="" name="deleteUser" value="@numberOfUser">
-                                <button type="submit" class="btn btn-primary">Delete User</button>
-                            </form>
-                            @*<button onclick="@Provaiders.DeleteSelectedUser(item)">
-        Delete
-        </button>*@
-                        </td>
-                    </tr>
+                        <tr>
+                            <th scope="row">@numberOfUser</th>
+                            <td>@item.ID</td>
+                            <td>@item.Name</td>
+                            <td>
+                                @if (item.Image != null)
+                                {
+                                    var src = Convert.ToBase64String(item.Image);
+
+                                    <img style="width:100px;height:100px" class="rounded mx-auto d-block"
+                                         src="data:image/png;base64,@src" alt="image" />
+                                }
+                                else
+                                {
+                                    <img style="width:100px;height:100px" class="rounded mx-auto d-block"
+                                         src="~/MyImages/no_image.png" alt="image" />
+                                }
+                            </td>
+                            <td>@item.Age</td>
+                            <td>
+                                <form action="~/MyPages/RemoveUser.cshtml" method="post">
+                                    <input type="hidden" class="" name="deleteUser" value="@numberOfUser">
+                                    <button type="submit" class="btn btn-primary">Delete User</button>
+                                </form>
+                                <form action="~/MyPages/ShowAllUsers.cshtml" method="post">
+                                    <input type="hidden" class="" name="editUser" value="@numberOfUser">
+                                    <button type="submit" class="btn btn-primary">Edit User</button>
+                                </form>
+                                @{
+                                    if (flag)
+                                    {
+                                        <div>
+                                            <form action="~/MyPages/ShowAllUsers.cshtml" method="post" name="editForm">
+                                                <div class="row">
+                                                    <input type="hidden" class="" name="editUserID" value="@numberOfUser">
+                                                    <div class="col">
+                                                        <input type="text" class="form-control" placeholder="Edit Name" name="EditName">
+                                                    </div>
+                                                    <div class="col">
+                                                        <input type="text" class="form-control" placeholder="Edit Date: dd/mm/yyyy" name="EditDateOB">
+                                                    </div>
+                                                </div>
+                                                <button type="submit" class="btn btn-primary">Submit</button>
+                                            </form>
+                                        </div>
+                                    }
+                                }
+                            </td>
+                        </tr>
                     numberOfUser++;
                 }
             }

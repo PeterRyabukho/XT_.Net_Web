@@ -9,7 +9,8 @@ namespace UserAwardsApp.BLL.Abstract
 {
     public interface IAwardsLogic
     {
-        bool AddAward(string name);
+        //bool AddAward(string name);
+        Award AddAward(string name);
         Award GetAwardByID(Guid ID);
         Award[] GetAllAwards();
         bool AddAwardToUser(Guid userID, Guid awardID);
@@ -20,5 +21,6 @@ namespace UserAwardsApp.BLL.Abstract
         bool DeSerializerJsonAwards();
         bool SerializerJsonAwardsOfUsers();
         bool DeSerializerJsonAwardsOfUsers();
+        bool EditAward(Guid ID, string Name);
     }
 }

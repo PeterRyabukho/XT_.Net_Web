@@ -56,12 +56,17 @@ namespace UserAwardsApp.BLL.Logic
                 return false;
         }
 
-        public bool AddAward(string name)
+        public Award AddAward(string name)
         {
-            if (awardStorage.AddAward(new Award(name)))
-                return true;
-            else
-                return false;
+            //if (awardStorage.AddAward(new Award(name)))
+            //    return true;
+            //else
+            //    return false;
+
+            var newAward = new Award(name);
+
+            awardStorage.AddAward(newAward);
+            return newAward;
         }
 
         public Award GetAwardByID(Guid ID)
@@ -111,6 +116,13 @@ namespace UserAwardsApp.BLL.Logic
             else
                 return false;
         }
-    }
 
+        public bool EditAward(Guid ID, string Name)
+        {
+            if (awardStorage.EditAward(ID, Name))
+                return true;
+            else
+                return false;
+        }
+    }
 }
