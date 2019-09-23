@@ -16,8 +16,10 @@ namespace UserAwardsApp.DI.Provaiders
     {
         public static IUserDAL userDAL { get; private set; }
         public static IUserLogic userLogic { get; private set; }
+        public static IAccountDAL accountDAL { get; private set; }
         public static IAwardsDAL awardsDAL { get; private set; }
         public static IAwardsLogic awardsLogic { get; private set; }
+        public static IAccountLogic accountLogic { get; private set; }
 
         static MyProvaider()
         {
@@ -30,12 +32,14 @@ namespace UserAwardsApp.DI.Provaiders
                     {
                         userDAL = new MemoryUserDAL();
                         awardsDAL = new MemoryAwardDAL();
+                        accountDAL = new MemoryAccountDAL();
                     }
                     break;
                 case "Files":
                     {
                         userDAL = new FilesUserDAL();
                         awardsDAL = new FilesAwardsDAL();
+                        accountDAL = new FileAccountDAL();
                     }
                     break;
                 case "DB":
@@ -51,6 +55,7 @@ namespace UserAwardsApp.DI.Provaiders
                     {
                         userLogic = new UserManager(userDAL);
                         awardsLogic = new AwardManager(awardsDAL);
+                        accountLogic = new AccountManager(accountDAL);
                     }
                     break;
             }

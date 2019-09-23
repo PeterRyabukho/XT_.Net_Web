@@ -7,6 +7,8 @@
 
     var flag = false;
 
+    List<User> allUsers = Provaiders.userLogic.GetAllUsers().ToList();
+
     if (IsPost)
     {
         var userToEdit = Request["editUser"];
@@ -34,83 +36,126 @@
     }
 }
 
-    <table class="table table-bordered">
-        <thead class="thead-dark">
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Guid ID</th>
-                <th scope="col">Name</th>
-                <th scope="col">Image</th>
-                <th scope="col">Age</th>
-                <th scope="col">Info</th>
-            </tr>
-        </thead>
-        <tbody>
-            @{
-                Provaiders.UserIDs.Clear();
-                List<User> allUsers = Provaiders.userLogic.GetAllUsers().ToList();
-                int numberOfUser = 1;
-                foreach (var item in allUsers)
-                {
-                    Provaiders.UserIDs.Add(numberOfUser, item.ID);
-
-                        <tr>
-                            <th scope="row">@numberOfUser</th>
-                            <td>@item.ID</td>
-                            <td>@item.Name</td>
-                            <td>
-                                @if (item.Image != null)
-                                {
-                                    var src = Convert.ToBase64String(item.Image);
-
-                                    <img style="width:100px;height:100px" class="rounded mx-auto d-block"
-                                         src="data:image/png;base64,@src" alt="image" />
-                                }
-                                else
-                                {
-                                    <img style="width:100px;height:100px" class="rounded mx-auto d-block"
-                                         src="~/MyImages/no_image.png" alt="image" />
-                                }
-                            </td>
-                            <td>@item.Age</td>
-                            <td>
-                                <form action="~/MyPages/RemoveUser.cshtml" method="post">
-                                    <input type="hidden" class="" name="deleteUser" value="@numberOfUser">
-                                    <button type="submit" class="btn btn-primary">Delete User</button>
-                                </form>
-                                <form action="~/MyPages/ShowAllUsers.cshtml" method="post">
-                                    <input type="hidden" class="" name="editUser" value="@numberOfUser">
-                                    <button type="submit" class="btn btn-primary">Edit User</button>
-                                </form>
+    <main>
+        <div class="container" style="height:1300px;">
+            <div class="row mt-2 pt-2">
+                <div class="col text-center">
+                    <h1 class="display-3">Users Page</h1>
+                    <table class="table table-bordered">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Guid ID</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Image</th>
+                                <th scope="col">Age</th>
                                 @{
-                                    if (flag)
+                                    if (!User.IsInRole("Guest") && !User.IsInRole("User"))
                                     {
-                                        <div>
-                                            <form action="~/MyPages/ShowAllUsers.cshtml" method="post" name="editForm">
-                                                <div class="row">
-                                                    <input type="hidden" class="" name="editUserID" value="@numberOfUser">
-                                                    <div class="col">
-                                                        <input type="text" class="form-control" placeholder="Edit Name" name="EditName">
-                                                    </div>
-                                                    <div class="col">
-                                                        <input type="text" class="form-control" placeholder="Edit Date: dd/mm/yyyy" name="EditDateOB">
-                                                    </div>
-                                                </div>
-                                                <button type="submit" class="btn btn-primary">Submit</button>
-                                            </form>
-                                        </div>
+                                        <th scope="col">Info</th>
                                     }
                                 }
-                            </td>
-                        </tr>
-                    numberOfUser++;
-                }
-            }
-        </tbody>
-    </table>
-    <div>
-        <nav>
-            <a class="nav-link active" href="~/MyPages/AddNewUser.cshtml">Add new User</a>
-            <a class="nav-link active" href="~/Index.cshtml">Main Menu</a>
-        </nav>
-    </div>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @{
+                                Provaiders.UserIDs.Clear();
+
+                                int numberOfUser = 1;
+
+                                if (allUsers.Count == 0)
+                                {
+                                    <tr>
+                                        <th scope="row">Empty</th>
+                                        <td>Empty</td>
+                                        <td>Empty</td>
+                                        <td>Empty</td>
+                                        <td>Empty</td>
+                                    </tr>
+
+                                }
+
+                                foreach (var item in allUsers)
+                                {
+                                    Provaiders.UserIDs.Add(numberOfUser, item.ID);
+
+                                    <tr>
+                                        <th scope="row">@numberOfUser</th>
+                                        <td>@item.ID</td>
+                                        <td>@item.Name</td>
+                                        <td>
+                                            @if (item.Image != null)
+                                            {
+                                                var src = Convert.ToBase64String(item.Image);
+
+                                                <img style="width:100px;height:100px" class="rounded mx-auto d-block"
+                                                     src="data:image/png;base64,@src" alt="image" />
+                                            }
+                                            else
+                                            {
+                                                <img style="width:100px;height:100px" class="rounded mx-auto d-block"
+                                                     src="~/MyImages/no_image.png" alt="image" />
+                                            }
+                                        </td>
+                                        <td>@item.Age</td>
+                                        @{
+                                            if (!User.IsInRole("Guest") && !User.IsInRole("User"))
+                                            {
+                                                <td>
+                                                    <form action="~/MyPages/RemoveUser.cshtml" method="post">
+                                                        <input type="hidden" class="" name="deleteUser" value="@numberOfUser">
+                                                        <button type="submit" class="btn btn-primary">Delete User</button>
+                                                    </form>
+                                                    <form action="~/MyPages/ShowAllUsers.cshtml" method="post">
+                                                        <input type="hidden" class="" name="editUser" value="@numberOfUser">
+                                                        <button type="submit" class="btn btn-primary">Edit User</button>
+                                                    </form>
+                                                    @{
+                                                        if (flag)
+                                                        {
+                                                            <div>
+                                                                <form action="~/MyPages/ShowAllUsers.cshtml" method="post" name="editForm">
+                                                                    <div class="row">
+                                                                        <input type="hidden" class="" name="editUserID" value="@numberOfUser">
+                                                                        <div class="col">
+                                                                            <input type="text" class="form-control" placeholder="Edit Name" name="EditName">
+                                                                        </div>
+                                                                        <div class="col">
+                                                                            <input type="text" class="form-control" placeholder="Edit Date: dd/mm/yyyy" name="EditDateOB">
+                                                                        </div>
+                                                                    </div>
+                                                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                                                </form>
+                                                            </div>
+                                                        }
+                                                    }
+                                                </td>
+                                            }
+                                        }
+                                    </tr>
+                                    numberOfUser++;
+                                }
+                            }
+                        </tbody>
+                    </table>
+                    @{
+                        if (allUsers.Count == 0)
+                        {
+                            <div class="alert alert-danger">Sorry, there are no users in the database now!</div>
+                        }
+                    }
+                    <div>
+                        <nav>
+                            @{
+                                if (!User.IsInRole("Guest") && !User.IsInRole("User"))
+                                {
+                                    <a type="button" class="btn btn-success" href="~/MyPages/AddNewUser.cshtml">Add new User</a>
+                                }
+                            }
+                            <a type="button" class="btn btn-primary" href="~/Index.cshtml">Main Menu</a>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>

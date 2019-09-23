@@ -4,6 +4,12 @@
 @{
 
     Layout = "_PagesLayout.cshtml";
+    if (User.IsInRole("Guest"))
+    {
+        Response.Redirect("~/Index.cshtml");
+    }
+
+    List<Award> allAwards = Provaiders.awardsLogic.GetAllAwards().ToList();
 
     var flag = false;
 
@@ -32,78 +38,126 @@
 
 }
 
-<table class="table table-bordered">
-    <thead class="thead-dark">
-        <tr>
-            <th scope="col">#</th>
-            <th scope="col">Guid ID</th>
-            <th scope="col">Name</th>
-            <th scope="col">Image</th>
-            <th scope="col">Info</th>
-        </tr>
-    </thead>
-    <tbody>
-        @{
-            Provaiders.AwardIDs.Clear();
-            List<Award> allAwards = Provaiders.awardsLogic.GetAllAwards().ToList();
-            int numberOfAward = 1;
-            foreach (var award in allAwards)
-            {
-                Provaiders.AwardIDs.Add(numberOfAward, award.ID);
-
-                <tr>
-                    <th scope="row">@numberOfAward</th>
-                    <td>@award.ID</td>
-                    <td>@award.Name</td>
-                    <td>
-                        @if (award.Image != null)
-                        {
-                            var src = Convert.ToBase64String(award.Image);
-
-                            <img style="width:100px;height:100px" class="rounded mx-auto d-block"
-                                 src="data:image/png;base64,@src" alt="image" />
-                        }
-                        else
-                        {
-                            <img style="width:100px;height:100px" class="rounded mx-auto d-block"
-                                 src="~/MyImages/no_image.png" alt="image" />
-                        }
-                    </td>
-                    <td>
-                        <form action="~/MyPages/RemoveAward.cshtml" method="post">
-                            <input type="hidden" class="" name="deleteAward" value="@numberOfAward">
-                            <button type="submit" class="btn btn-primary">Delete Award</button>
-                        </form>
-                        <form action="~/MyPages/ShowAllAwards.cshtml" method="post">
-                            <input type="hidden" class="" name="editAward" value="@numberOfAward">
-                            <button type="submit" class="btn btn-primary">Edit Award</button>
-                        </form>
+<main>
+    <div class="container" style="height:1300px;">
+        <div class="row mt-2 pt-2">
+            <div class="col text-center">
+                <table class="table table-bordered">
+                    <thead class="thead-light">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Guid ID</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Image</th>
+                            @{
+                                if (!User.IsInRole("Guest") && !User.IsInRole("User"))
+                                {
+                                    <th scope="col">Info</th>
+                                }
+                            }
+                        </tr>
+                    </thead>
+                    <tbody>
                         @{
-                            if (flag)
+                            Provaiders.AwardIDs.Clear();
+
+                            int numberOfAward = 1;
+
+                            if (allAwards.Count == 0)
                             {
-                                <div>
-                                    <form action="~/MyPages/ShowAllAwards.cshtml" method="post" name="editForm">
-                                        <div class="row">
-                                            <input type="hidden" class="" name="editAwardID" value="@numberOfAward">
-                                            <div class="col">
-                                                <input type="text" class="form-control" placeholder="Edit Name of Award" name="EditNameAward">
-                                            </div>
-                                        </div>
-                                        <button type="submit" class="btn btn-primary">Submit</button>
-                                    </form>
-                                </div>
+                                                <tr>
+                                                    <th scope="row">Empty</th>
+                                                    <td>Empty</td>
+                                                    <td>Empty</td>
+                                                    <td>Empty</td>
+                                                    @{
+                                                        if (!User.IsInRole("Guest") && !User.IsInRole("User"))
+                                                        {
+                                                            <td>Empty</td>
+                                                        }
+                                                    }
+
+                                                </tr>
+
+                            }
+
+                            foreach (var award in allAwards)
+                            {
+                                Provaiders.AwardIDs.Add(numberOfAward, award.ID);
+
+                                <tr>
+                                    <th scope="row">@numberOfAward</th>
+                                    <td>@award.ID</td>
+                                    <td>@award.Name</td>
+                                    <td>
+                                        @if (award.Image != null)
+                                        {
+                                            var src = Convert.ToBase64String(award.Image);
+
+                                            <img style="width:100px;height:100px" class="rounded mx-auto d-block"
+                                                 src="data:image/png;base64,@src" alt="image" />
+                                        }
+                                        else
+                                        {
+                                            <img style="width:100px;height:100px" class="rounded mx-auto d-block"
+                                                 src="~/MyImages/no_image.png" alt="image" />
+                                        }
+                                    </td>
+                                    @{
+                                        if (!User.IsInRole("Guest") && !User.IsInRole("User"))
+                                        {
+                                            <td>
+                                                <form action="~/MyPages/RemoveAward.cshtml" method="post">
+                                                    <input type="hidden" class="" name="deleteAward" value="@numberOfAward">
+                                                    <button type="submit" class="btn btn-primary">Delete Award</button>
+                                                </form>
+                                                <form action="~/MyPages/ShowAllAwards.cshtml" method="post">
+                                                    <input type="hidden" class="" name="editAward" value="@numberOfAward">
+                                                    <button type="submit" class="btn btn-primary">Edit Award</button>
+                                                </form>
+                                                @{
+                                                    if (flag)
+                                                    {
+                                                        <div>
+                                                            <form action="~/MyPages/ShowAllAwards.cshtml" method="post" name="editForm">
+                                                                <div class="row">
+                                                                    <input type="hidden" class="" name="editAwardID" value="@numberOfAward">
+                                                                    <div class="col">
+                                                                        <input type="text" class="form-control" placeholder="Edit Name of Award" name="EditNameAward">
+                                                                    </div>
+                                                                </div>
+                                                                <button type="submit" class="btn btn-primary">Submit</button>
+                                                            </form>
+                                                        </div>
+                                                    }
+                                                }
+                                            </td>
+                                        }
+                                    }
+                                </tr>
+                                numberOfAward++;
                             }
                         }
-                    </td>
-                </tr>
-                numberOfAward++;
-            }
-        }
-    </tbody>
-</table>
-<div>
-    <nav>
-        <a class="nav-link active" href="~/MyPages/AddNewAward.cshtml">Add new Award</a>
-        <a class="nav-link active" href="~/Index.cshtml">Main Menu</a>
-    </nav>
-</div>
+                    </tbody>
+                </table>
+                @{
+                    if (allAwards.Count == 0)
+                    {
+                        <div class="alert alert-danger">Sorry, there are no Awards in the database now!</div>
+                    }
+                }
+                <div>
+                    <nav>
+                        @{
+                            if (!User.IsInRole("Guest") && !User.IsInRole("User"))
+                            {
+                                  <a type="button" class="btn btn-success" href="~/MyPages/AddNewAward.cshtml">Add new Award</a>
+                            }
+                        }
+                        <a type="button" class="btn btn-primary" href="~/Index.cshtml">Main Menu</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

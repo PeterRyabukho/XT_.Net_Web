@@ -32,149 +32,157 @@
     }
 }
 
-<table class="table table-bordered">
-    <thead class="thead-dark">
-        <tr>
-            <th scope="col">#</th>
-            <th scope="col">Name</th>
-            <th scope="col">Age</th>
-            <th scope="col">Info</th>
-        </tr>
-    </thead>
-    <tbody>
-        @{
-            Provaiders.UserIDs.Clear();
-            List<User> allUsers = Provaiders.userLogic.GetAllUsers().ToList();
-            int numberOfUser = 1;
-            foreach (var item in allUsers)
-            {
-                Provaiders.UserIDs.Add(numberOfUser, item.ID);
+<main>
+    <div class="container" style="height:1300px;">
+        <div class="row mt-2 pt-2">
+            <div class="col text-center">
+                <table class="table table-bordered">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Age</th>
+                            <th scope="col">Info</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @{
+                            Provaiders.UserIDs.Clear();
+                            List<User> allUsers = Provaiders.userLogic.GetAllUsers().ToList();
+                            int numberOfUser = 1;
+                            foreach (var item in allUsers)
+                            {
+                                Provaiders.UserIDs.Add(numberOfUser, item.ID);
 
-                <tr>
-                    <th scope="row">@numberOfUser</th>
-                    <td>@item.Name</td>
-                    <td>@item.Age</td>
-                    <td>
-                        <form action="~/MyPages/AddAwardToUser.cshtml" method="post">
-                            <div class="form-group">
-                                <label for="exampleFormControlSelect1">Select Award</label>
-                                <select class="form-control" id="exampleFormControlSelect1" name="AwardNumber">
-                                    @{
-                                        Provaiders.AwardIDs.Clear();
-                                        List<Award> allAwards = Provaiders.awardsLogic.GetAllAwards().ToList();
-                                        int numberOfAward = 1;
-                                        foreach (var award in allAwards)
+                                <tr>
+                                    <th scope="row">@numberOfUser</th>
+                                    <td>@item.Name</td>
+                                    <td>@item.Age</td>
+                                    <td>
+                                        <form action="~/MyPages/AddAwardToUser.cshtml" method="post">
+                                            <div class="form-group">
+                                                <label for="exampleFormControlSelect1">Select Award</label>
+                                                <select class="form-control" id="exampleFormControlSelect1" name="AwardNumber">
+                                                    @{
+                                                        Provaiders.AwardIDs.Clear();
+                                                        List<Award> allAwards = Provaiders.awardsLogic.GetAllAwards().ToList();
+                                                        int numberOfAward = 1;
+                                                        foreach (var award in allAwards)
+                                                        {
+                                                            Provaiders.AwardIDs.Add(numberOfAward, award.ID);
+                                                            <option value="@numberOfAward">
+                                                                @award.Name
+                                                            </option>
+                                                            numberOfAward++;
+                                                        }
+                                                    }
+                                                </select>
+                                            </div>
+                                            <input type="hidden" class="" name="addAwardToUserNumber" value="@numberOfUser">
+                                            <button type="submit" class="btn btn-primary" name="addThisAward">Add selected Award to User</button>
+
+
+                                        </form>
+                                    </td>
+                                </tr>
+                                numberOfUser++;
+                            }
+                        }
+                    </tbody>
+                </table>
+
+                <table class="table table-bordered">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Image</th>
+                            <th scope="col">Age</th>
+                            <th scope="col">Info</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @{
+                            Provaiders.UserIDs.Clear();
+                            List<User> allUsersWithAwards = Provaiders.userLogic.GetAllUsers().ToList();
+                            int countofUsers = 1;
+                            foreach (var user in allUsersWithAwards)
+                            {
+                                Provaiders.UserIDs.Add(countofUsers, user.ID);
+
+                                <tr>
+                                    <th scope="row">@countofUsers</th>
+                                    <td>@user.Name</td>
+                                    <td>
+                                        @if (user.Image != null)
                                         {
-                                            Provaiders.AwardIDs.Add(numberOfAward, award.ID);
-                                            <option value="@numberOfAward">
-                                                @award.Name
-                                            </option>
-                                            numberOfAward++;
+                                            var src = Convert.ToBase64String(user.Image);
+
+                                            <img style="width:100px;height:100px" class="rounded mx-auto d-block"
+                                                 src="data:image/png;base64,@src" alt="image" />
                                         }
-                                    }
-                                </select>
-                            </div>
-                            <input type="hidden" class="" name="addAwardToUserNumber" value="@numberOfUser">
-                            <button type="submit" class="btn btn-primary" name="addThisAward">Add selected Award to User</button>
-
-
-                        </form>
-                    </td>
-                </tr>
-                numberOfUser++;
-            }
-        }
-    </tbody>
-</table>
-
-<table class="table table-bordered">
-    <thead class="thead-dark">
-        <tr>
-            <th scope="col">#</th>
-            <th scope="col">Name</th>
-            <th scope="col">Image</th>
-            <th scope="col">Age</th>
-            <th scope="col">Info</th>
-        </tr>
-    </thead>
-    <tbody>
-        @{
-            Provaiders.UserIDs.Clear();
-            List<User> allUsersWithAwards = Provaiders.userLogic.GetAllUsers().ToList();
-            int countofUsers = 1;
-            foreach (var user in allUsersWithAwards)
-            {
-                Provaiders.UserIDs.Add(countofUsers, user.ID);
-
-                <tr>
-                    <th scope="row">@countofUsers</th>
-                    <td>@user.Name</td>
-                    <td>
-                        @if (user.Image != null)
-                        {
-                            var src = Convert.ToBase64String(user.Image);
-
-                            <img style="width:100px;height:100px" class="rounded mx-auto d-block"
-                                 src="data:image/png;base64,@src" alt="image" />
-                        }
-                        else
-                        {
-                            <img style="width:100px;height:100px" class="rounded mx-auto d-block"
-                                 src="~/MyImages/no_image.png" alt="image" />
-                        }
-                    </td>
-                    <td>@user.Age</td>
-                    <td>
-                        <form action="~/MyPages/AddAwardToUser.cshtml" method="post">
-                            <table>
-                                <tbody>
-                                    <tr>
-                                        @{
-                                            foreach (var award in Provaiders.awardsLogic.GetUserAwards(user))
-                                            {
-                                                if (award == null)
-                                                {
-                                                    <th scope="row">"This award was deleted!"</th>
-                                                    @*<label for="exampleFormControlSelect1">"This award was deleted!"</label>*@
-                                                }
-                                                else
-                                                {
-                                                    <th scope="row">@award.Name</th>
-                                                    <td>
-                                                        @if (award.Image != null)
-                                                        {
-                                                            var src = Convert.ToBase64String(award.Image);
-
-                                                            <img style="width:50px;height:50px" class="rounded mx-auto d-block"
-                                                                 src="data:image/png;base64,@src" alt="image" />
-                                                        }
-                                                        else
-                                                        {
-                                                            <img style="width:50px;height:50px" class="rounded mx-auto d-block"
-                                                                 src="~/MyImages/no_image.png" alt="image" />
-                                                        }
-                                                    </td>
-                                                    @*<label for="exampleFormControlSelect1">@award.Name</label>*@
-                                                }
-                                            }
+                                        else
+                                        {
+                                            <img style="width:100px;height:100px" class="rounded mx-auto d-block"
+                                                 src="~/MyImages/no_image.png" alt="image" />
                                         }
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <input type="hidden" class="" name="removeAllAwards" value="@countofUsers">
-                            <button type="submit" class="btn btn-primary" name="removeAwards">Remove all User Awards</button>
-                        </form>
-                    </td>
-                </tr>
-                countofUsers++;
-            }
-        }
-    </tbody>
-</table>
-<div>
-    <nav>
-        <a class="nav-link active" href="~/MyPages/AddNewUser.cshtml">Add new User</a>
-        <a class="nav-link active" href="~/MyPages/AddNewAward.cshtml">Add new Award</a>
-        <a class="nav-link active" href="~/Index.cshtml">Main Menu</a>
-    </nav>
-</div>
+                                    </td>
+                                    <td>@user.Age</td>
+                                    <td>
+                                        <form action="~/MyPages/AddAwardToUser.cshtml" method="post">
+                                            <table>
+                                                <tbody>
+                                                    <tr>
+                                                        @{
+                                                            foreach (var award in Provaiders.awardsLogic.GetUserAwards(user))
+                                                            {
+                                                                if (award == null)
+                                                                {
+                                                                    <th scope="row">"This award was deleted!"</th>
+                                                                    @*<label for="exampleFormControlSelect1">"This award was deleted!"</label>*@
+                                                                }
+                                                                else
+                                                                {
+                                                                    <th scope="row">@award.Name</th>
+                                                                    <td>
+                                                                        @if (award.Image != null)
+                                                                        {
+                                                                            var src = Convert.ToBase64String(award.Image);
+
+                                                                            <img style="width:50px;height:50px" class="rounded mx-auto d-block"
+                                                                                 src="data:image/png;base64,@src" alt="image" />
+                                                                        }
+                                                                        else
+                                                                        {
+                                                                            <img style="width:50px;height:50px" class="rounded mx-auto d-block"
+                                                                                 src="~/MyImages/no_image.png" alt="image" />
+                                                                        }
+                                                                    </td>
+                                                                    @*<label for="exampleFormControlSelect1">@award.Name</label>*@
+                                                                }
+                                                            }
+                                                        }
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <input type="hidden" class="" name="removeAllAwards" value="@countofUsers">
+                                            <button type="submit" class="btn btn-primary" name="removeAwards">Remove all User Awards</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                                countofUsers++;
+                            }
+                        }
+                    </tbody>
+                </table>
+                <div>
+                    <nav>
+                        <a class="nav-link active" href="~/MyPages/AddNewUser.cshtml">Add new User</a>
+                        <a class="nav-link active" href="~/MyPages/AddNewAward.cshtml">Add new Award</a>
+                        <a class="nav-link active" href="~/Index.cshtml">Main Menu</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

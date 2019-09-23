@@ -14,6 +14,7 @@ namespace UserAwardsApp.Entities
         public static string AwardsFile => $"{CreateDirectory}Awards.txt";
         public static string AwardsOfUsersFile => $"{CreateDirectory}Awards of Users.txt";
         public static string ConfigFile => $"{CreateDirectory}Config.txt";
+        public static string AccountsFile => $"{CreateDirectory}Account.txt";
 
         static MyDirectory()
         {
@@ -49,6 +50,13 @@ namespace UserAwardsApp.Entities
                     writer.WriteLine("");
                 }
             }
+            if (!File.Exists(AccountsFile))
+            {
+                using (StreamWriter writer = new StreamWriter(AccountsFile, true))
+                {
+                    writer.WriteLine("");
+                }
+            }
         }
         public static void Check()
         {
@@ -73,6 +81,10 @@ namespace UserAwardsApp.Entities
                 return true;
             }
             if (!File.Exists(ConfigFile))
+            {
+                return true;
+            }
+            if (!File.Exists(AccountsFile))
             {
                 return true;
             }

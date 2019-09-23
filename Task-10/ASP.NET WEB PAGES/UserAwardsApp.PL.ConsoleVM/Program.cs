@@ -15,6 +15,7 @@ namespace UserAwardsApp.PL.ConsoleVM
     {
         static IUserLogic UserManager = MyProvaider.userLogic;
         static IAwardsLogic AwardManager = MyProvaider.awardsLogic;
+        //static IAccountLogic AccountManager = MyProvaider.accountLogic;
 
         public static Dictionary<int, Guid> UserIDs = new Dictionary<int, Guid>();
 
@@ -26,6 +27,8 @@ namespace UserAwardsApp.PL.ConsoleVM
                 Console.WriteLine($"Directory created, path: {MyDirectory.CreateDirectory}");
             else
                 Console.WriteLine($"\nYou can find all files in directory, path: {MyDirectory.CreateDirectory}\n");
+
+            //AccountManager.CreateAccount("Petya", "123", "Admin");
 
             Thread.Sleep(500);
 

@@ -1,0 +1,72 @@
+﻿@using UserAwardsApp.PL.UIWebPages.HelpersBLL;
+@using UserAwardsApp.Entities;
+
+@{
+    Layout = null;
+
+    if (IsPost)
+    {
+        if (Request["login"] != null && Request["password"] != null)
+        {
+            var login = Request["login"];
+            var password = Request["password"];
+
+            var account = Provaiders.accountLogic.GetAllAccounts().FirstOrDefault(myAcc => myAcc.Login == login);
+
+            if (account == null)
+            {
+                Provaiders.accountLogic.CreateAccount(login, password, "User");
+
+                Response.Redirect("~/MyPages/Login");
+            }
+        }
+    }
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/MyPages/MyStyles/loginStyle.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery-3.0.0.min.js"></script>
+</head>
+<body>
+    <div class="container login-container">
+        <div class="row">
+            <div class="col-md-6 login-form-1">
+                <h3>Registration new Account</h3>
+                <form method="post">
+                    <div class="form-group">
+                        <label for="login">
+                            Сhoose login
+                        </label>
+                        <input type="text" class="form-control" placeholder="" value="" name="login" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="login">
+                            Сhoose password
+                        </label>
+                        <input type="password" class="form-control" placeholder="" value="" name="password" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="login">
+                            Repeat password
+                        </label>
+                        <input type="password" class="form-control" placeholder="" value="" name="passwordRepeat" required />
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btnSubmit" value="Register" />
+                    </div>
+                    <div class="form-group">
+                        <a href="~/MyPages/Login.cshtml" class="ForgetPwd">Go back to login page?</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

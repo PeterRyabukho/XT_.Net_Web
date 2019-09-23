@@ -1,0 +1,100 @@
+﻿@using UserAwardsApp.Entities;
+@using UserAwardsApp.PL.UIWebPages.HelpersBLL;
+@{
+    Layout = null;
+
+    Provaiders.accountLogic.CreateAccount("Admin", "Admin", "Admin");
+
+    if (User.Identity.IsAuthenticated && !User.IsInRole("Guest"))
+    {
+        Response.Redirect("~/Index.cshtml");
+    }
+
+    if (IsPost)
+    {
+        if (Request["login"] != null && Request["password"] != null)
+        {
+            var login = Request["login"];
+            var password = Request["password"];
+            var remember = Request["remember"];
+
+            bool rememberFlag = false;
+
+            if (remember == "on")
+            {
+                rememberFlag = true;
+            }
+
+            var account = Provaiders.accountLogic.GetAllAccounts().FirstOrDefault(myAcc => myAcc.Login == login);
+
+
+            if ((account != null) && (password == account.Password))
+            {
+                FormsAuthentication.SetAuthCookie(login, rememberFlag);
+
+                Response.Redirect("~/Index.cshtml");
+            }
+        }
+        if (Request["AsGuest"] != null)
+        {
+            FormsAuthentication.SetAuthCookie("Guest", true);
+
+            Response.Redirect("~/MyPages/ShowAllUsers");
+        }
+    }
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    @*<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>*@
+    <link href="~/MyPages/MyStyles/loginStyle.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/jquery-3.0.0.min.js"></script>
+</head>
+<body>
+    <div class="container login-container">
+        <div class="row">
+            <div class="col-md-6 login-form-1">
+                <h3>Login in "User Awards" App</h3>
+                <form method="post">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Your Login *" value="" name="login" required />
+                    </div>
+                    <div class="form-group">
+                        <input type="password" class="form-control" placeholder="Your Password *" value="" name="password" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="remember">Remember Me</label>
+                        <input type="checkbox" id="remember" name="remember" />
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" class="btnSubmit" value="Login" />
+                    </div>
+                    <div class="form-group">
+                        <a href="~/MyPages/Registration.cshtml" class="ForgetPwd">Whant to Registrate?</a>
+                    </div>
+                </form>
+                <form method="post">
+                    <div class="form-group">
+                        <input type="hidden" class="" name="AsGuest">
+                        <input type="submit" class="btnSubmit" value="Continue as Guest" />
+                    </div>
+                </form>
+                <div class="alert alert-info"> 
+                    
+                    <label>
+                        If you want to log in as an administrator, enter Login: "Admin", Password: "Admin" !
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

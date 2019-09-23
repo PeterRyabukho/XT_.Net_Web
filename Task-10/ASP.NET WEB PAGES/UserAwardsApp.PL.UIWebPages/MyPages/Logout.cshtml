@@ -1,0 +1,17 @@
+﻿@{
+    Layout = null;
+
+    if (!User.Identity.IsAuthenticated)
+    {
+        Response.Redirect("~/Index.cshtml");
+    }
+
+    if (IsPost)
+    {
+
+        FormsAuthentication.SignOut();
+        Response.Redirect("~/Index.cshtml");
+    }
+
+    }
+

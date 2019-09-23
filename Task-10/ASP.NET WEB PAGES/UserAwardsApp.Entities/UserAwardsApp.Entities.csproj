@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Account.cs" />
     <Compile Include="AllAwards.cs" />
     <Compile Include="AllAwardsOfUsers.cs" />
     <Compile Include="AllUsers.cs" />

@@ -43,18 +43,3 @@ D:\GitApp\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.BLL.Logic\obj\Debu
 D:\GitApp\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.BLL.Logic\obj\Debug\UserAwardsApp.BLL.Logic.csproj.CopyComplete
 D:\GitApp\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.BLL.Logic\obj\Debug\UserAwardsApp.BLL.Logic.dll
 D:\GitApp\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.BLL.Logic\obj\Debug\UserAwardsApp.BLL.Logic.pdb
-D:\GitApp\Start Tasks\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.BLL.Logic\bin\Debug\UserAwardsApp.BLL.Logic.dll
-D:\GitApp\Start Tasks\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.BLL.Logic\bin\Debug\UserAwardsApp.BLL.Logic.pdb
-D:\GitApp\Start Tasks\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.BLL.Logic\bin\Debug\UserAwardsApp.BLL.Abstract.dll
-D:\GitApp\Start Tasks\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.BLL.Logic\bin\Debug\UserAwardsApp.DAL.Abstract.dll
-D:\GitApp\Start Tasks\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.BLL.Logic\bin\Debug\UserAwardsApp.Entities.dll
-D:\GitApp\Start Tasks\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.BLL.Logic\bin\Debug\Newtonsoft.Json.dll
-D:\GitApp\Start Tasks\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.BLL.Logic\bin\Debug\UserAwardsApp.BLL.Abstract.pdb
-D:\GitApp\Start Tasks\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.BLL.Logic\bin\Debug\UserAwardsApp.DAL.Abstract.pdb
-D:\GitApp\Start Tasks\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.BLL.Logic\bin\Debug\UserAwardsApp.Entities.pdb
-D:\GitApp\Start Tasks\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.BLL.Logic\bin\Debug\Newtonsoft.Json.xml
-D:\GitApp\Start Tasks\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.BLL.Logic\obj\Debug\UserAwardsApp.BLL.Logic.csprojAssemblyReference.cache
-D:\GitApp\Start Tasks\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.BLL.Logic\obj\Debug\UserAwardsApp.BLL.Logic.csproj.CoreCompileInputs.cache
-D:\GitApp\Start Tasks\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.BLL.Logic\obj\Debug\UserAwardsApp.BLL.Logic.csproj.CopyComplete
-D:\GitApp\Start Tasks\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.BLL.Logic\obj\Debug\UserAwardsApp.BLL.Logic.dll
-D:\GitApp\Start Tasks\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.BLL.Logic\obj\Debug\UserAwardsApp.BLL.Logic.pdb

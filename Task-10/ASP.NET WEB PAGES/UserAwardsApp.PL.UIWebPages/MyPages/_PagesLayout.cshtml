@@ -5,14 +5,94 @@
 <!DOCTYPE html>
 
 <html>
-<head>
+<head lang="en" class="full-height">
     <meta name="viewport" content="width=device-width" />
     <title></title>
     <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-3.0.0.slim.min.js"></script>
+    <script src="~/Scripts/popper.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
 </head>
 <body>
-    <div>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="~/Index.cshtml">Home</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="~/MyPages/ShowAllUsers.cshtml">Users Page<span class="sr-only">(current)</span></a>
+                    </li>
+                    @{
+                        if (!User.IsInRole("Guest"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" href="~/MyPages/ShowAllAwards.cshtml">Awards Page</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="~/MyPages/AddAwardToUser.cshtml">Show Users Awards</a>
+                            </li>
+                        }
+                    }
+
+                </ul>
+                <span class="navbar-text">
+                    @{
+                        if (User.Identity.IsAuthenticated)
+                        {
+                            if (User.Identity.Name == "Guest")
+                            {
+                                <span>Logged in as <b>@User.Identity.Name</b></span>
+                                <a href="~/MyPages/Login.cshtml" class="btn btn-primary">Login?</a>
+                            }
+                            else
+                            {
+                                <span>Logged in as</span>
+                                <span><b>@User.Identity.Name</b></span>
+
+                                <!-- Modal Button-->
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                                    Logout
+                                </button>
+                            }
+                        }
+                        else
+                        {
+                            <span>Guest</span>
+                            <a href="~/MyPages/Login.cshtml" class="btn btn-primary">Login?</a>
+                        }
+                    }
+
+                </span>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">@User.Identity.Name, You Whana Logout?</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                Select "Yes" if y whana logout!
+                            </div>
+                            <form action="~/MyPages/Logout.cshtml" method="post">
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary">Yes</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
         @RenderBody()
-    </div>
 </body>
 </html>

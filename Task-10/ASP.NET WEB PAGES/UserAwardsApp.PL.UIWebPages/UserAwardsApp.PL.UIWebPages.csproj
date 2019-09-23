@@ -96,6 +96,9 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="MyPages\MyStyles\loginStyle.css" />
+    <Content Include="MyPages\MyStyles\NavBarStyles.css" />
+    <Content Include="MyPages\MyStyles\RegistrationStyle.css" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -127,6 +130,9 @@
     <Content Include="MyPages\RemoveAward.cshtml" />
     <Content Include="MyPages\AddNewAward.cshtml" />
     <Content Include="MyPages\AddAwardToUser.cshtml" />
+    <Content Include="MyPages\Login.cshtml" />
+    <Content Include="MyPages\Logout.cshtml" />
+    <Content Include="MyPages\Registration.cshtml" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />
     <Content Include="Scripts\jquery-3.0.0.min.js" />
@@ -153,6 +159,7 @@
     <Content Include="_indexLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HelpersBLL\MyRoleProvaider.cs" />
     <Compile Include="HelpersBLL\Provaiders.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

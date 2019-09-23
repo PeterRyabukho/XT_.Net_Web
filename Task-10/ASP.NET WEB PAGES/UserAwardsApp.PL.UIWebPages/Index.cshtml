@@ -9,10 +9,47 @@
     }*@
 
 @{
-    Layout = "_indexLayout.cshtml";
+    Layout = "~/MyPages/_PagesLayout.cshtml";
 }
 
-    <ul class="nav nav-pills nav-fill">
+    <div class="row">
+        <div class="col-md-6 login-form-1">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" style="height: 150px; width: 150px;" src="~/MyImages/UsersIcon.png" alt="Users Icon">
+                <div class="card-body">
+                    @*<h5 class="card-title">Card title</h5>*@
+                    <p class="card-text">View all users. If you have administrator rights, you can add new ones!</p>
+                    <a href="~/MyPages/ShowAllUsers.cshtml" class="btn btn-primary">Show all Users</a>
+                </div>
+            </div>
+            @{
+                if (!User.IsInRole("Guest"))
+                {
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" style="height: 150px; width: 150px;" src="~/MyImages/AwardIcon1.png" alt="Award Icon">
+                        <div class="card-body">
+                            @*<h5 class="card-title">Card title</h5>*@
+                            <p class="card-text">View all rewards. If you have administrator rights you can add new ones!</p>
+                            <a href="~/MyPages/ShowAllAwards.cshtml" class="btn btn-primary">Show all Awards</a>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" style="height: 150px; width: 150px;" src="~/MyImages/AwardIcon.jpg" alt="Users Awards Icon">
+                        <div class="card-body">
+                            @*<h5 class="card-title">Card title</h5>*@
+                            <p class="card-text">View all award winning users. If you are an administrator, you can award users new rewards!</p>
+                            <a href="~/MyPages/AddAwardToUser.cshtml" class="btn btn-primary">Show Users Awards</a>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+
+
+
+
+@*<ul class="nav nav-pills nav-fill">
         <li class="nav-item">
             <a class="nav-link active" href="~/MyPages/ShowAllUsers.cshtml">Show all Users</a>
         </li>
@@ -25,4 +62,4 @@
         <li class="nav-item">
             <a class="nav-link active" href="#">Disabled</a>
         </li>
-    </ul>
+    </ul>*@
