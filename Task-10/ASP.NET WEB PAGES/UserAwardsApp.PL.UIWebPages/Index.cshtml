@@ -42,6 +42,19 @@
                         </div>
                     </div>
                 }
+                if (User.IsInRole("Admin"))
+                {
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" style="height: 150px; width: 150px;" src="~/MyImages/Admin.png" alt="Admin Icon">
+                        <div class="card-body">
+                            @*<h5 class="card-title">Card title</h5>*@
+                            <p class="card-text">
+                                Here you can assign administrator rights to other users
+                            </p>
+                            <a href="~/MyPages/ChangeRoleUser.cshtml" class="btn btn-primary">Change User Rights</a>
+                        </div>
+                    </div>
+                }
             }
         </div>
     </div>

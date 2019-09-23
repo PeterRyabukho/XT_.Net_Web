@@ -1,0 +1,16 @@
+﻿@using UserAwardsApp.PL.UIWebPages.HelpersBLL
+@using UserAwardsApp.Entities
+
+@{
+    var thisAccount = Request["deleteAccount"];
+
+    if (!string.IsNullOrWhiteSpace(thisAccount))
+    {
+        Guid accountGuid = Provaiders.AccountIDs[int.Parse(thisAccount)];
+        Account accountToRemove = Provaiders.accountLogic.GetAccountByID(accountGuid);
+
+        Provaiders.accountLogic.RemoveAccount(accountToRemove);
+
+        Response.Redirect("~/MyPages/ChangeRoleUser.cshtml");
+    }
+}

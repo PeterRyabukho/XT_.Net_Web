@@ -42,6 +42,7 @@
     <div class="container" style="height:1300px;">
         <div class="row mt-2 pt-2">
             <div class="col text-center">
+                <h1 class="display-3">Awards Page</h1>
                 <table class="table table-bordered">
                     <thead class="thead-light">
                         <tr>
@@ -65,19 +66,19 @@
 
                             if (allAwards.Count == 0)
                             {
-                                                <tr>
-                                                    <th scope="row">Empty</th>
-                                                    <td>Empty</td>
-                                                    <td>Empty</td>
-                                                    <td>Empty</td>
-                                                    @{
-                                                        if (!User.IsInRole("Guest") && !User.IsInRole("User"))
-                                                        {
-                                                            <td>Empty</td>
-                                                        }
-                                                    }
+                                <tr>
+                                    <th scope="row">Empty</th>
+                                    <td>Empty</td>
+                                    <td>Empty</td>
+                                    <td>Empty</td>
+                                    @{
+                                        if (!User.IsInRole("Guest") && !User.IsInRole("User"))
+                                        {
+                                            <td>Empty</td>
+                                        }
+                                    }
 
-                                                </tr>
+                                </tr>
 
                             }
 
@@ -151,7 +152,7 @@
                         @{
                             if (!User.IsInRole("Guest") && !User.IsInRole("User"))
                             {
-                                  <a type="button" class="btn btn-success" href="~/MyPages/AddNewAward.cshtml">Add new Award</a>
+                                <a type="button" class="btn btn-success" href="~/MyPages/AddNewAward.cshtml">Add new Award</a>
                             }
                         }
                         <a type="button" class="btn btn-primary" href="~/Index.cshtml">Main Menu</a>

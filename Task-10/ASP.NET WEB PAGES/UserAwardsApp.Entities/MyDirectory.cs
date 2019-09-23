@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -26,6 +27,7 @@ namespace UserAwardsApp.Entities
             {
                 using (StreamWriter writer = new StreamWriter(UsersFile, true))
                 {
+                    
                     writer.WriteLine("");
                 }
             }
@@ -52,10 +54,29 @@ namespace UserAwardsApp.Entities
             }
             if (!File.Exists(AccountsFile))
             {
-                using (StreamWriter writer = new StreamWriter(AccountsFile, true))
-                {
-                    writer.WriteLine("");
-                }
+                //File.Create(AccountsFile);
+                //using (StreamWriter writer = new StreamWriter(AccountsFile, true))
+                //{
+                List<Account> accounts = new List<Account>();
+                    Account firsAccount = new Account("Admin", "Admin", "Admin");
+                accounts.Add(firsAccount);
+
+                    var allAccounts = from account in accounts
+                                      select new
+                                      {
+                                          account.ID,
+                                          account.Login,
+                                          account.Password,
+                                          account.Role
+                                      };
+
+                    var accountToJson = new { Accounts = allAccounts };
+
+                    string accountJson = JsonConvert.SerializeObject(accountToJson, Formatting.Indented);
+
+                    File.WriteAllText(MyDirectory.AccountsFile, accountJson);
+                    //writer.WriteLine(" ");
+                //}
             }
         }
         public static void Check()

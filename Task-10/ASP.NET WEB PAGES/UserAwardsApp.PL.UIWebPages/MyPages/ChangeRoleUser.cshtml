@@ -1,0 +1,146 @@
+﻿@using UserAwardsApp.PL.UIWebPages.HelpersBLL;
+@using UserAwardsApp.Entities;;
+@{
+    Layout = "_PagesLayout.cshtml";
+
+    List<Account> allAccounts = Provaiders.accountLogic.GetAllAccounts().ToList();
+
+    bool flag = false;
+
+    if (IsPost)
+    {
+        var accountToEdit = Request["editAccount"];
+
+        if (!string.IsNullOrWhiteSpace(accountToEdit))
+        {
+            flag = true;
+        }
+
+        var roleName = Request["RoleName"];
+        var accountNumber = Request["addRoleToAccount"];
+
+
+        if (!string.IsNullOrWhiteSpace(roleName) && !string.IsNullOrWhiteSpace(accountNumber))
+        {
+            Guid accountGuid = Provaiders.AccountIDs[int.Parse(accountNumber)];
+            Account account = Provaiders.accountLogic.GetAccountByID(accountGuid);
+
+            Provaiders.accountLogic.EditAccount(accountGuid, account.Login, account.Password, roleName);
+
+            Response.Redirect("~/MyPages/ChangeRoleUser.cshtml");
+        }
+    }
+}
+
+<main>
+    <div class="container" style="height:1300px;">
+        <div class="row mt-2 pt-2">
+            <div class="col text-center">
+                <h1 class="display-3">Accounts Page</h1>
+                <table class="table table-bordered">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Guid ID</th>
+                            <th scope="col">Login</th>
+                            <th scope="col">Role</th>
+                            <th scope="col">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @{
+                            Provaiders.AccountIDs.Clear();
+
+                            int numberOfAccount = 1;
+
+                            if (allAccounts.Count == 0)
+                            {
+                                <tr>
+                                    <th scope="row">Empty</th>
+                                    <td>Empty</td>
+                                    <td>Empty</td>
+                                    <td>Empty</td>
+                                    <td>Empty</td>
+                                </tr>
+
+                            }
+
+                            foreach (var account in allAccounts)
+                            {
+                                Provaiders.AccountIDs.Add(numberOfAccount, account.ID);
+
+                                <tr>
+                                    <th scope="row">@numberOfAccount</th>
+                                    <td>@account.ID</td>
+                                    <td>@account.Login</td>
+                                    <td>@account.Role</td>
+                                    <td>
+                                        <form action="~/MyPages/RemoveAccount.cshtml" method="post">
+                                            <input type="hidden" class="" name="deleteAccount" value="@numberOfAccount">
+                                            <button type="submit" class="btn btn-primary">Delete this Account</button>
+                                        </form>
+                                        <form action="~/MyPages/ChangeRoleUser.cshtml" method="post">
+                                            <input type="hidden" class="" name="editAccount" value="@numberOfAccount">
+                                            <button type="submit" class="btn btn-primary">Edit Account</button>
+                                        </form>
+                                        @{
+                                            if (flag)
+                                            {
+                                                <div>
+                                                    <form action="~/MyPages/ChangeRoleUser.cshtml" method="post" name="editForm">
+                                                        <div class="row">
+                                                            <input type="hidden" class="" name="editAccountID" value="@numberOfAccount">
+                                                            <div class="col">
+                                                                <input type="text" class="form-control" placeholder="Edit Account Login if y whant*" name="EditLogin">
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="exampleFormControlSelect1">Select Role</label>
+                                                                <select class="form-control" id="exampleFormControlSelect1" name="RoleName">
+                                                                    @{
+                                                                        MyRoleProvaider.MySetAllRoles();
+                                                                        string[] myAllRoles = MyRoleProvaider.MyGiveAllRoles();
+                                                                        for (int i = 0; i < myAllRoles.Length; i++)
+                                                                        {
+                                                                            <option value="@myAllRoles[i]">
+                                                                                @myAllRoles[i]
+                                                                            </option>
+                                                                        }
+                                                                    }
+                                                                </select>
+                                                            </div>
+                                                            <input type="hidden" class="" name="addRoleToAccount" value="@numberOfAccount">
+                                                        </div>
+                                                        <button type="submit" class="btn btn-primary" name="editThisAccount">Give Role To This Account</button>
+                                                    </form>
+                                                </div>
+                                            }
+                                        }
+                                    </td>
+                                </tr>
+                                numberOfAccount++;
+                            }
+                        }
+                    </tbody>
+                </table>
+                @{
+                    if (allAccounts.Count == 0)
+                    {
+                        <div class="alert alert-danger">Sorry, there are no users in the database now!</div>
+                    }
+                }
+                <div>
+                    <nav>
+                        @{
+                            if (!User.IsInRole("Guest") && !User.IsInRole("User"))
+                            {
+                                <a type="button" class="btn btn-success" href="~/MyPages/AddNewUser.cshtml">Add new User</a>
+                            }
+                        }
+                        <a type="button" class="btn btn-primary" href="~/Index.cshtml">Main Menu</a>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+

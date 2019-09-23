@@ -54,8 +54,14 @@ namespace UserAwardsApp.DAL.Files
 
                 accountsList = JsonConvert.DeserializeAnonymousType(data, accountsList);
 
+                if(accountsList.Accounts == null)
+                {
+                    return false;
+                }
+
                 foreach (Account account in accountsList.Accounts)
                 {
+
                     accountDictionary.Add(account.ID, account);
                 }
                 return true;

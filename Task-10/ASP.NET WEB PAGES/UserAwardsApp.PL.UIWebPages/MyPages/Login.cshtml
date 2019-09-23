@@ -3,7 +3,11 @@
 @{
     Layout = null;
 
-    Provaiders.accountLogic.CreateAccount("Admin", "Admin", "Admin");
+    //Provaiders.accountLogic.CreateAccount("Admin", "Admin", "Admin");
+    //if (!MyDirectory.CheckOrCreateDirectoryAndFiles())
+    //{
+    //    Provaiders.accountLogic.CreateAccount("Admin", "Admin", "Admin");
+    //}
 
     if (User.Identity.IsAuthenticated && !User.IsInRole("Guest"))
     {

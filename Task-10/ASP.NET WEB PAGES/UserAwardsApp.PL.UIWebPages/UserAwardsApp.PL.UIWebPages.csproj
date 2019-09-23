@@ -133,6 +133,8 @@
     <Content Include="MyPages\Login.cshtml" />
     <Content Include="MyPages\Logout.cshtml" />
     <Content Include="MyPages\Registration.cshtml" />
+    <Content Include="MyPages\ChangeRoleUser.cshtml" />
+    <Content Include="MyPages\RemoveAccount.cshtml" />
     <None Include="Scripts\jquery-3.0.0-vsdoc.js" />
     <Content Include="Scripts\jquery-3.0.0.js" />
     <Content Include="Scripts\jquery-3.0.0.min.js" />

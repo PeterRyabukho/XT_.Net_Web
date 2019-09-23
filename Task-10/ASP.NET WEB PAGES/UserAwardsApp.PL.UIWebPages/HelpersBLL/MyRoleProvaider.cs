@@ -9,12 +9,39 @@ namespace UserAwardsApp.PL.UIWebPages.HelpersBLL
 {
     public enum Roles
     {
-        Guest,
-        User,
-        Admin,
+        Guest = 0,
+        User = 1,
+        Admin = 2,
     }
+
+    
     public class MyRoleProvaider : RoleProvider
     {
+        public static Dictionary<int, string> rolesDictionary = new Dictionary<int, string>();
+
+        public static void MySetAllRoles()
+        {
+            rolesDictionary.Clear();
+            string[] newRoles = new string[] { "Guest", "User", "Admin" };
+
+            for (int i = 0; i < newRoles.Length; i++)
+            {
+                rolesDictionary.Add(i, newRoles[i]);
+            }
+        }
+
+        public static string[] MyGiveAllRoles()
+        {
+            string[] myRoles = new string[rolesDictionary.Count];
+
+            foreach (var role in rolesDictionary)
+            {
+                myRoles[role.Key] = role.Value;
+            }
+
+            return myRoles;
+        }
+
         public override bool IsUserInRole(string username, string roleName)
         {
             foreach (var account in Provaiders.accountLogic.GetAllAccounts())

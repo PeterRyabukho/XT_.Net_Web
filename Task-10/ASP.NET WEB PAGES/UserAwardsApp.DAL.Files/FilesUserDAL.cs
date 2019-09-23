@@ -62,7 +62,9 @@ namespace UserAwardsApp.DAL.Files
                 //return false;
                 //}
 
+
                 usersDictionary.Add(user.ID, user);
+
                 return user;
         }
 
@@ -71,6 +73,7 @@ namespace UserAwardsApp.DAL.Files
             if (usersDictionary.ContainsKey(ID))
             {
                 usersDictionary.Remove(ID);
+
                 return true;
             }
             else
@@ -92,6 +95,8 @@ namespace UserAwardsApp.DAL.Files
 
                 userToEdit.Name = Name;
                 userToEdit.DateOfBirth = dOB;
+
+
                 return true;
             }
             else

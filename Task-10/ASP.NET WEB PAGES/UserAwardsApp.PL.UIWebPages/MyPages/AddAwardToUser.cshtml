@@ -4,6 +4,10 @@
 @{
     Layout = "_PagesLayout.cshtml";
 
+    List<User> allUsers = Provaiders.userLogic.GetAllUsers().ToList();
+
+    List<User> allUsersWithAwards = Provaiders.userLogic.GetAllUsers().ToList();
+
     if (IsPost)
     {
         var userNumber = Request["addAwardToUserNumber"];
@@ -36,63 +40,83 @@
     <div class="container" style="height:1300px;">
         <div class="row mt-2 pt-2">
             <div class="col text-center">
-                <table class="table table-bordered">
-                    <thead class="thead-dark">
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Age</th>
-                            <th scope="col">Info</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @{
-                            Provaiders.UserIDs.Clear();
-                            List<User> allUsers = Provaiders.userLogic.GetAllUsers().ToList();
-                            int numberOfUser = 1;
-                            foreach (var item in allUsers)
-                            {
-                                Provaiders.UserIDs.Add(numberOfUser, item.ID);
-
+                @{
+                    if (!User.IsInRole("Guest") && !User.IsInRole("User"))
+                    {
+                        <h3 class="display-4">Add Awards To Users Table</h3>
+                        <table class="table table-bordered">
+                            <thead class="thead-dark">
                                 <tr>
-                                    <th scope="row">@numberOfUser</th>
-                                    <td>@item.Name</td>
-                                    <td>@item.Age</td>
-                                    <td>
-                                        <form action="~/MyPages/AddAwardToUser.cshtml" method="post">
-                                            <div class="form-group">
-                                                <label for="exampleFormControlSelect1">Select Award</label>
-                                                <select class="form-control" id="exampleFormControlSelect1" name="AwardNumber">
-                                                    @{
-                                                        Provaiders.AwardIDs.Clear();
-                                                        List<Award> allAwards = Provaiders.awardsLogic.GetAllAwards().ToList();
-                                                        int numberOfAward = 1;
-                                                        foreach (var award in allAwards)
-                                                        {
-                                                            Provaiders.AwardIDs.Add(numberOfAward, award.ID);
-                                                            <option value="@numberOfAward">
-                                                                @award.Name
-                                                            </option>
-                                                            numberOfAward++;
-                                                        }
-                                                    }
-                                                </select>
-                                            </div>
-                                            <input type="hidden" class="" name="addAwardToUserNumber" value="@numberOfUser">
-                                            <button type="submit" class="btn btn-primary" name="addThisAward">Add selected Award to User</button>
-
-
-                                        </form>
-                                    </td>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Age</th>
+                                    <th scope="col">Info</th>
                                 </tr>
-                                numberOfUser++;
-                            }
-                        }
-                    </tbody>
-                </table>
+                            </thead>
+                            <tbody>
+                                @{
+                                    Provaiders.UserIDs.Clear();
 
+                                    if (allUsers.Count == 0)
+                                    {
+                                        <tr>
+                                            <th scope="row">Empty</th>
+                                            <td>Empty</td>
+                                            <td>Empty</td>
+                                            <td>Empty</td>
+                                            <td>Empty</td>
+                                        </tr>
+
+                                    }
+
+                                    int numberOfUser = 1;
+                                    foreach (var item in allUsers)
+                                    {
+                                        Provaiders.UserIDs.Add(numberOfUser, item.ID);
+
+                                        <tr>
+                                            <th scope="row">@numberOfUser</th>
+                                            <td>@item.Name</td>
+                                            <td>@item.Age</td>
+                                            <td>
+                                                <form action="~/MyPages/AddAwardToUser.cshtml" method="post">
+                                                    <div class="form-group">
+                                                        <label for="exampleFormControlSelect1">Select Award</label>
+                                                        <select class="form-control" id="exampleFormControlSelect1" name="AwardNumber">
+                                                            @{
+                                                                Provaiders.AwardIDs.Clear();
+                                                                List<Award> allAwards = Provaiders.awardsLogic.GetAllAwards().ToList();
+                                                                int numberOfAward = 1;
+                                                                foreach (var award in allAwards)
+                                                                {
+                                                                    Provaiders.AwardIDs.Add(numberOfAward, award.ID);
+                                                                    <option value="@numberOfAward">
+                                                                        @award.Name
+                                                                    </option>
+                                                                    numberOfAward++;
+                                                                }
+                                                            }
+                                                        </select>
+                                                    </div>
+                                                    <input type="hidden" class="" name="addAwardToUserNumber" value="@numberOfUser">
+                                                    <button type="submit" class="btn btn-primary" name="addThisAward">Add selected Award to User</button>
+
+
+                                                </form>
+                                            </td>
+                                        </tr>
+                                        numberOfUser++;
+                                    }
+                                }
+                            </tbody>
+                        </table>
+
+                    }
+                }
+
+            <h3 class="display-4">Users And Their Awards</h3>
                 <table class="table table-bordered">
-                    <thead class="thead-dark">
+                    <thead class="thead-light">
                         <tr>
                             <th scope="col">#</th>
                             <th scope="col">Name</th>
@@ -104,7 +128,19 @@
                     <tbody>
                         @{
                             Provaiders.UserIDs.Clear();
-                            List<User> allUsersWithAwards = Provaiders.userLogic.GetAllUsers().ToList();
+
+                            if (allUsersWithAwards.Count == 0)
+                            {
+                                <tr>
+                                    <th scope="row">Empty</th>
+                                    <td>Empty</td>
+                                    <td>Empty</td>
+                                    <td>Empty</td>
+                                    <td>Empty</td>
+                                </tr>
+
+                            }
+
                             int countofUsers = 1;
                             foreach (var user in allUsersWithAwards)
                             {
@@ -165,8 +201,13 @@
                                                     </tr>
                                                 </tbody>
                                             </table>
-                                            <input type="hidden" class="" name="removeAllAwards" value="@countofUsers">
-                                            <button type="submit" class="btn btn-primary" name="removeAwards">Remove all User Awards</button>
+                                            @{
+                                                if (!User.IsInRole("Guest") && !User.IsInRole("User"))
+                                                {
+                                                    <input type="hidden" class="" name="removeAllAwards" value="@countofUsers">
+                                                    <button type="submit" class="btn btn-primary" name="removeAwards">Remove all User Awards</button>
+                                                }
+                                            }
                                         </form>
                                     </td>
                                 </tr>
@@ -177,9 +218,14 @@
                 </table>
                 <div>
                     <nav>
-                        <a class="nav-link active" href="~/MyPages/AddNewUser.cshtml">Add new User</a>
-                        <a class="nav-link active" href="~/MyPages/AddNewAward.cshtml">Add new Award</a>
-                        <a class="nav-link active" href="~/Index.cshtml">Main Menu</a>
+                        @{
+                            if (!User.IsInRole("Guest") && !User.IsInRole("User"))
+                            {
+                                <a type="button" class="btn btn-success" href="~/MyPages/AddNewUser.cshtml">Add new User</a>
+                                <a type="button" class="btn btn-info" href="~/MyPages/AddNewAward.cshtml">Add new Award</a>
+                            }
+                        }
+                        <a type="button" class="btn btn-primary" href="~/Index.cshtml">Main Menu</a>
                     </nav>
                 </div>
             </div>

@@ -5,7 +5,14 @@
 
     Layout = "_PagesLayout.cshtml";
 
+    // if (MyDirectory.CheckOrCreateDirectoryAndFiles())
+    //{
+    //    Provaiders.accountLogic.CreateAccount("Admin", "Admin", "Admin");
+    //}
+
     var flag = false;
+
+    Provaiders.userLogic.DeSerializerJsonUsers();
 
     List<User> allUsers = Provaiders.userLogic.GetAllUsers().ToList();
 

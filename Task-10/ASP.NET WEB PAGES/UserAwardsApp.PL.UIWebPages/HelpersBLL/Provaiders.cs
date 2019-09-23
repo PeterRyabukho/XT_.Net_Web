@@ -18,5 +18,7 @@ namespace UserAwardsApp.PL.UIWebPages.HelpersBLL
 
         public static Dictionary<int, Guid> AwardIDs = new Dictionary<int, Guid>();
 
+        public static Dictionary<int, Guid> AccountIDs = new Dictionary<int, Guid>();
+
     }
 }
