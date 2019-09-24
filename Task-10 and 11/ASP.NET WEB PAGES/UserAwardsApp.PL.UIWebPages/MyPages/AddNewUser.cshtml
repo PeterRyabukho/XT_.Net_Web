@@ -48,11 +48,14 @@
             flag = true;
             ErrorMessege = "Wrong type of DATA. PLZ write like in this patern: dd.mm.yyyy";
         }
-
+        Response.Redirect("~/MyPages/ShowAllUsers.cshtml");
     }
 }
 
-<!DOCTYPE html>
+<p>
+    @ErrorMessege
+</p>
+@*<!DOCTYPE html>
 
 <html>
 <head>
@@ -84,7 +87,7 @@
                 </div>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+        </form>
     </div>
     @{
         if(flag == true)
@@ -94,4 +97,4 @@
      }
     <a class="nav-link active" href="~/Index.cshtml">Main Menu</a>
 </body>
-</html>
+</html>*@

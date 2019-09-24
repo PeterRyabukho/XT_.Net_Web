@@ -108,35 +108,37 @@
                                         @{
                                             if (!User.IsInRole("Guest") && !User.IsInRole("User"))
                                             {
-                                                <td>
-                                                    <form action="~/MyPages/RemoveUser.cshtml" method="post">
-                                                        <input type="hidden" class="" name="deleteUser" value="@numberOfUser">
-                                                        <button type="submit" class="btn btn-primary">Delete User</button>
-                                                    </form>
-                                                    <form action="~/MyPages/ShowAllUsers.cshtml" method="post">
-                                                        <input type="hidden" class="" name="editUser" value="@numberOfUser">
-                                                        <button type="submit" class="btn btn-primary">Edit User</button>
-                                                    </form>
-                                                    @{
-                                                        if (flag)
-                                                        {
-                                                            <div>
-                                                                <form action="~/MyPages/ShowAllUsers.cshtml" method="post" name="editForm">
-                                                                    <div class="row">
-                                                                        <input type="hidden" class="" name="editUserID" value="@numberOfUser">
-                                                                        <div class="col">
-                                                                            <input type="text" class="form-control" placeholder="Edit Name" name="EditName">
-                                                                        </div>
-                                                                        <div class="col">
-                                                                            <input type="text" class="form-control" placeholder="Edit Date: dd/mm/yyyy" name="EditDateOB">
-                                                                        </div>
-                                                                    </div>
-                                                                    <button type="submit" class="btn btn-primary">Submit</button>
-                                                                </form>
-                                                            </div>
-                                                        }
-                                                    }
-                                                </td>
+                                                  <td>
+                                                      <form action="~/MyPages/RemoveUser.cshtml" method="post">
+                                                          <input type="hidden" class="" name="deleteUser" value="@numberOfUser">
+                                                          <button type="submit" class="btn btn-danger">Delete User</button>
+                                                      </form>
+                                                      <form action="~/MyPages/ShowAllUsers.cshtml" method="post">
+                                                          <input type="hidden" class="" name="editUser" value="@numberOfUser">
+                                                          <button type="submit" class="btn btn-warning">Edit User</button>
+                                                      </form>
+
+
+                                                      @{
+                                                          if (flag)
+                                                          {
+                                                              <div>
+                                                                  <form action="~/MyPages/ShowAllUsers.cshtml" method="post" name="editForm">
+                                                                      <div class="row">
+                                                                          <input type="hidden" class="" name="editUserID" value="@numberOfUser">
+                                                                          <div class="col">
+                                                                              <input type="text" class="form-control" placeholder="Edit Name" name="EditName">
+                                                                          </div>
+                                                                          <div class="col">
+                                                                              <input type="text" class="form-control" placeholder="Edit Date: dd/mm/yyyy" name="EditDateOB">
+                                                                          </div>
+                                                                      </div>
+                                                                      <button type="submit" class="btn btn-primary">Submit</button>
+                                                                  </form>
+                                                              </div>
+                                                          }
+                                                      }
+                                                  </td>
                                             }
                                         }
                                     </tr>
@@ -149,6 +151,7 @@
                         if (allUsers.Count == 0)
                         {
                             <div class="alert alert-danger">Sorry, there are no users in the database now!</div>
+
                         }
                     }
                     <div>
@@ -156,13 +159,66 @@
                             @{
                                 if (!User.IsInRole("Guest") && !User.IsInRole("User"))
                                 {
-                                    <a type="button" class="btn btn-success" href="~/MyPages/AddNewUser.cshtml">Add new User</a>
+                                    @*<a type="button" class="btn btn-success" href="~/MyPages/AddNewUser.cshtml">Add new User</a>*@
+                                    <!--Modal Button-->
+                                    <button type="button" class="btn btn-success" data-toggle="modal" data-target="#NewUserCreating">
+                                        Add new User
+                                    </button>
                                 }
                             }
                             <a type="button" class="btn btn-primary" href="~/Index.cshtml">Main Menu</a>
                         </nav>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="NewUserCreating">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle"><b>Create new User!</b></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <form action="~/MyPages/AddNewUser.cshtml" method="post" enctype="multipart/form-data" class="md-form">
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="First name" name="UserName" required>
+                                </div>
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="Date of Birth" name="DateOB" required>
+                                </div>
+                                <div class="col">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="inputGroupFileAddon01">Image</span>
+                                        </div>
+                                        @*<div class="custom-file">
+                                            <input type="file" class="custom-file-input" id="inputGroupFile01"
+                                                   aria-describedby="inputGroupFileAddon01" name="LoadingImage">
+                                            <label class="custom-file-label" for="inputGroupFile01">Choose image for new User</label>
+                                        </div>*@
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input" id="validatedCustomFile" name="LoadingImage">
+                                            <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+                                            <div class="invalid-feedback">Invalid cast</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+                </div>
+
             </div>
         </div>
     </main>

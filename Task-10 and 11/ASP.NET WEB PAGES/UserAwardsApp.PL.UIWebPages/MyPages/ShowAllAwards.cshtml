@@ -110,11 +110,11 @@
                                             <td>
                                                 <form action="~/MyPages/RemoveAward.cshtml" method="post">
                                                     <input type="hidden" class="" name="deleteAward" value="@numberOfAward">
-                                                    <button type="submit" class="btn btn-primary">Delete Award</button>
+                                                    <button type="submit" class="btn btn-danger">Delete Award</button>
                                                 </form>
                                                 <form action="~/MyPages/ShowAllAwards.cshtml" method="post">
                                                     <input type="hidden" class="" name="editAward" value="@numberOfAward">
-                                                    <button type="submit" class="btn btn-primary">Edit Award</button>
+                                                    <button type="submit" class="btn btn-warning">Edit Award</button>
                                                 </form>
                                                 @{
                                                     if (flag)
@@ -152,13 +152,59 @@
                         @{
                             if (!User.IsInRole("Guest") && !User.IsInRole("User"))
                             {
-                                <a type="button" class="btn btn-success" href="~/MyPages/AddNewAward.cshtml">Add new Award</a>
+                                @*<a type="button" class="btn btn-success" href="~/MyPages/AddNewAward.cshtml">Add new Award</a>*@
+
+                                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#NewAwardCreating">
+                                    Add new Award
+                                </button>
                             }
                         }
                         <a type="button" class="btn btn-primary" href="~/Index.cshtml">Main Menu</a>
                     </nav>
                 </div>
             </div>
+        </div>
+        <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="NewAwardCreating">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle"><b>Create new Award!</b></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <form action="~/MyPages/AddNewAward.cshtml" method="post" enctype="multipart/form-data" class="md-form">
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col">
+                                    <input type="text" class="form-control" placeholder="New Award Name" name="AwardName">
+                                </div>
+
+                                <div class="col">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text" id="inputGroupFileAddon01">Image</span>
+                                        </div>
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input" id="validatedCustomFile" name="LoadingImage">
+                                            <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+                                            <div class="invalid-feedback">Invalid cast</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+            
         </div>
     </div>
 </main>
