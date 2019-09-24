@@ -33,7 +33,7 @@ namespace UserAwardsApp.DAL.Memory
             return account;
         }
 
-        public ICollection<Account> GetAllAccounts()
+        public IEnumerable<Account> GetAllAccounts()
         {
             return accountDictionary.Values.ToList();
         }

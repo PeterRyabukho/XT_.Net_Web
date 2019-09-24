@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using UserAwardsApp.BLL.Abstract;
 using UserAwardsApp.BLL.Logic;
 using UserAwardsApp.DAL.Abstract;
+using UserAwardsApp.DAL.DB;
 using UserAwardsApp.DAL.Files;
 using UserAwardsApp.DAL.Memory;
 
@@ -44,7 +45,9 @@ namespace UserAwardsApp.DI.Provaiders
                     break;
                 case "DB":
                     {
-
+                        userDAL = new DBUserDAL();
+                        awardsDAL = new DBAwardsDAL();
+                        accountDAL = new DBAccountDAL();
                     }
                     break;
             }

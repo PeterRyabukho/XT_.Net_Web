@@ -7,32 +7,46 @@
 @{
     Layout = null;
 
+     bool flag = false;
+     string ErrorMessege = null;
+
     if (IsPost)
     {
+       
+
         var userName = Request["UserName"];
         var userDoB = Request["DateOB"];
 
         bool BDateChecked = DateTime.TryParse(userDoB, out DateTime dateOfBith);
 
-        if (!string.IsNullOrWhiteSpace(userName) && !string.IsNullOrWhiteSpace(userDoB) && BDateChecked)
+        if (!string.IsNullOrWhiteSpace(userName) && !string.IsNullOrWhiteSpace(userDoB) && BDateChecked && dateOfBith < DateTime.Now)
         {
-            var createdUser = Provaiders.userLogic.CreateUser(userName, dateOfBith);
 
             WebImage photo = WebImage.GetImageFromRequest();
 
-                if (photo != null)
-                {
-                    createdUser.Image = photo.GetBytes();
-                }
+            if (photo != null)
+            {
+                var createdUser = Provaiders.userLogic.CreateUserWithImg(userName, dateOfBith, photo.GetBytes());
+                //createdUser.Image = photo.GetBytes();
+            }
+            else
+            {
+                var createdUser = Provaiders.userLogic.CreateUser(userName, dateOfBith);
+
+            }
 
             Response.Redirect("~/MyPages/ShowAllUsers.cshtml");
 
         }
+        else if(dateOfBith > DateTime.Now)
+        {
+            flag = true;
+            ErrorMessege = "You could not come from the future";
+        }
         else
         {
-            <p>
-                User not created!
-            </p>
+            flag = true;
+            ErrorMessege = "Wrong type of DATA. PLZ write like in this patern: dd.mm.yyyy";
         }
 
     }
@@ -72,6 +86,12 @@
             <button type="submit" class="btn btn-primary">Submit</button>
 </form>
     </div>
+    @{
+        if(flag == true)
+        {
+            <div class="alert alert-danger">@ErrorMessege</div>
+        }
+     }
     <a class="nav-link active" href="~/Index.cshtml">Main Menu</a>
 </body>
 </html>

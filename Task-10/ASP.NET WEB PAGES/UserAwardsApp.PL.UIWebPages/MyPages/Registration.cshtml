@@ -13,9 +13,11 @@
 
             var account = Provaiders.accountLogic.GetAllAccounts().FirstOrDefault(myAcc => myAcc.Login == login);
 
+            var passwordInHash = Crypto.HashPassword(password);
+
             if (account == null)
             {
-                Provaiders.accountLogic.CreateAccount(login, password, "User");
+                Provaiders.accountLogic.CreateAccount(login, passwordInHash, "User");
 
                 Response.Redirect("~/MyPages/Login");
             }

@@ -22,6 +22,10 @@ namespace UserAwardsApp.Entities
             this.Role = Role;
         }
 
+        public Account()
+        {
+
+        }
         //public Account(Guid ID, string Login, string Password, string Role)
         //{
         //    ID = Guid.Parse("c0681ad8-2561-4f33-831c-789a0ee2736d");

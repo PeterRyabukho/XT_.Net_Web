@@ -62,6 +62,13 @@ namespace UserAwardsApp.BLL.Logic
             return newUser;
         }
 
+        public User CreateUserWithImg(string name, DateTime dateOfBith, byte[] image)
+        {
+            var newUser = new User(name, dateOfBith, image) { DateOfBirth = dateOfBith, Name = name, Image = image };
+            userStorage.AddUser(newUser);
+            return newUser;
+        }
+
         public User GetUserByID(Guid ID)
         {
             return userStorage.GetUserByID(ID);

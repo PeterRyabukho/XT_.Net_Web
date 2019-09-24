@@ -21,8 +21,32 @@
 
             Guid awardID = Provaiders.AwardIDs[int.Parse(awardNumber)];
 
-            Provaiders.awardsLogic.AddAwardToUser(userID, awardID);
-            Response.Redirect("~/MyPages/AddAwardToUser.cshtml");
+            var userFind = Provaiders.userLogic.GetUserByID(userID);
+            var awardFind = Provaiders.awardsLogic.GetAwardByID(awardID);
+
+            var allUserAwards = Provaiders.awardsLogic.GetUserAwards(userFind);
+
+            if(allUserAwards.Contains(awardFind))
+            {
+                Response.Redirect("~/MyPages/AddAwardToUser.cshtml");
+                //foreach (var userAwards in Provaiders.awardsLogic.GetUserAwards(userFind))
+                //{
+                //if(awardFind.Name == userAwards.Name)
+                //{
+                //    Response.Redirect("~/MyPages/AddAwardToUser.cshtml");
+
+                //}
+                //Provaiders.awardsLogic.AddAwardToUser(userID, awardID);
+                //Response.Redirect("~/MyPages/AddAwardToUser.cshtml");
+                //}
+            }
+            else
+            {
+                Provaiders.awardsLogic.AddAwardToUser(userID, awardID);
+
+                Response.Redirect("~/MyPages/AddAwardToUser.cshtml");
+            }
+
         }
 
         if (!string.IsNullOrWhiteSpace(deleteAllAwards))

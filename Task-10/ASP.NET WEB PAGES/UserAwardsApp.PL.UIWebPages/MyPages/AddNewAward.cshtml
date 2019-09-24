@@ -13,14 +13,18 @@
 
         if (!string.IsNullOrWhiteSpace(awardName))
         {
-            var createAward = Provaiders.awardsLogic.AddAward(awardName);
 
             WebImage photo = WebImage.GetImageFromRequest();
 
-                if (photo != null)
-                {
-                    createAward.Image = photo.GetBytes();
-                }
+            if (photo != null)
+            {
+                var createAward = Provaiders.awardsLogic.AddAwardWithImg(awardName, photo.GetBytes());
+            }
+            else
+            {
+                var createAward = Provaiders.awardsLogic.AddAward(awardName);
+
+            }
 
             Response.Redirect("~/MyPages/ShowAllAwards.cshtml");
         }

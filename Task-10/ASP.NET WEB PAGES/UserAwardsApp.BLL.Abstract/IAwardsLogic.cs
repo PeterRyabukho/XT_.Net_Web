@@ -11,6 +11,7 @@ namespace UserAwardsApp.BLL.Abstract
     {
         //bool AddAward(string name);
         Award AddAward(string name);
+        Award AddAwardWithImg(string name, byte[] image);
         Award GetAwardByID(Guid ID);
         Award[] GetAllAwards();
         bool AddAwardToUser(Guid userID, Guid awardID);

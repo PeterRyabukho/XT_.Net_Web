@@ -31,3 +31,14 @@ D:\GitApp\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.BLL.Abstract\obj\D
 D:\GitApp\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.BLL.Abstract\obj\Debug\UserAwardsApp.BLL.Abstract.csproj.CopyComplete
 D:\GitApp\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.BLL.Abstract\obj\Debug\UserAwardsApp.BLL.Abstract.dll
 D:\GitApp\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.BLL.Abstract\obj\Debug\UserAwardsApp.BLL.Abstract.pdb
+D:\GitHubNew\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.BLL.Abstract\bin\Debug\UserAwardsApp.BLL.Abstract.dll
+D:\GitHubNew\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.BLL.Abstract\bin\Debug\UserAwardsApp.BLL.Abstract.pdb
+D:\GitHubNew\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.BLL.Abstract\bin\Debug\UserAwardsApp.Entities.dll
+D:\GitHubNew\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.BLL.Abstract\bin\Debug\Newtonsoft.Json.dll
+D:\GitHubNew\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.BLL.Abstract\bin\Debug\UserAwardsApp.Entities.pdb
+D:\GitHubNew\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.BLL.Abstract\bin\Debug\Newtonsoft.Json.xml
+D:\GitHubNew\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.BLL.Abstract\obj\Debug\UserAwardsApp.BLL.Abstract.csprojAssemblyReference.cache
+D:\GitHubNew\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.BLL.Abstract\obj\Debug\UserAwardsApp.BLL.Abstract.csproj.CoreCompileInputs.cache
+D:\GitHubNew\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.BLL.Abstract\obj\Debug\UserAwardsApp.BLL.Abstract.csproj.CopyComplete
+D:\GitHubNew\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.BLL.Abstract\obj\Debug\UserAwardsApp.BLL.Abstract.dll
+D:\GitHubNew\XT_.Net_Web\Task-10\ASP.NET WEB PAGES\UserAwardsApp.BLL.Abstract\obj\Debug\UserAwardsApp.BLL.Abstract.pdb

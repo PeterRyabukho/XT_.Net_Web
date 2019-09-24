@@ -13,7 +13,7 @@ namespace UserAwardsApp.DAL.Abstract
         //bool AddUser(User user);
         User AddUser(User user);
         bool RemoveUser(Guid ID);
-        ICollection<User> GetAllUsers();
+        IEnumerable<User> GetAllUsers();
         bool SerializerJsonUsers();
         bool DeSerializerJsonUsers();
         bool EditUser(Guid ID, string Name, DateTime dOB);

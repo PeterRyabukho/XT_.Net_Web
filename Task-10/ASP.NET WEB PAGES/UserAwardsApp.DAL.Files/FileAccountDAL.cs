@@ -87,7 +87,7 @@ namespace UserAwardsApp.DAL.Files
             return account;
         }
 
-        public ICollection<Account> GetAllAccounts()
+        public IEnumerable<Account> GetAllAccounts()
         {
             return accountDictionary.Values.ToList();
         }

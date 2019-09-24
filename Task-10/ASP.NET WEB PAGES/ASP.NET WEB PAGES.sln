@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserAwardsApp.PL.ConsoleVM"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserAwardsApp.PL.UIWebPages", "UserAwardsApp.PL.UIWebPages\UserAwardsApp.PL.UIWebPages.csproj", "{C49E9D2C-7D46-4C6D-8F4A-BAC7382115AA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserAwardsApp.DAL.DB", "UserAwardsApp.DAL.DB\UserAwardsApp.DAL.DB.csproj", "{B1CDB247-FBC9-4AB9-8B6B-D9E6AA061F90}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -73,6 +75,10 @@ Global
 		{C49E9D2C-7D46-4C6D-8F4A-BAC7382115AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C49E9D2C-7D46-4C6D-8F4A-BAC7382115AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C49E9D2C-7D46-4C6D-8F4A-BAC7382115AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1CDB247-FBC9-4AB9-8B6B-D9E6AA061F90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1CDB247-FBC9-4AB9-8B6B-D9E6AA061F90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1CDB247-FBC9-4AB9-8B6B-D9E6AA061F90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1CDB247-FBC9-4AB9-8B6B-D9E6AA061F90}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -87,6 +93,7 @@ Global
 		{BD92E547-4E67-40FD-961E-B5DB6C71AF5E} = {47538E97-703A-44D5-81E2-63274FDC3ACA}
 		{5434A2FF-BBB9-4D3B-94D4-F726C0ECFEB4} = {83EBF60C-06CB-46C0-ADB5-F7E2CC2DE8E0}
 		{C49E9D2C-7D46-4C6D-8F4A-BAC7382115AA} = {83EBF60C-06CB-46C0-ADB5-F7E2CC2DE8E0}
+		{B1CDB247-FBC9-4AB9-8B6B-D9E6AA061F90} = {009D3506-83E4-4F18-9025-9B997ED03CBD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2F023FC9-3440-44FF-A06E-3DC9964D1010}

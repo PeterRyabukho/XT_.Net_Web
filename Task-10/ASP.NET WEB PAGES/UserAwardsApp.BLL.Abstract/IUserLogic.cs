@@ -13,6 +13,7 @@ namespace UserAwardsApp.BLL.Abstract
         User GetUserByID(Guid ID);
         void AddUser(User user);
         User CreateUser(string name, DateTime dateOfBith);
+        User CreateUserWithImg(string name, DateTime dateOfBith, byte[] image);
         bool RemoveUser(User user);
         User[] GetAllUsers();
         bool SerializerJsonUsers();

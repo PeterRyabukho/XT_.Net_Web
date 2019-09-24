@@ -11,7 +11,7 @@ namespace UserAwardsApp.DAL.Abstract
     {
         Account GetAccountByID(Guid ID);
         Account AddAccount(Account account);
-        ICollection<Account> GetAllAccounts();
+        IEnumerable<Account> GetAllAccounts();
         bool RemoveAccount(Guid ID);
         bool SerializerJsonAccounts();
         bool DeSerializerJsonAccounts();

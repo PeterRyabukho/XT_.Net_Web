@@ -27,6 +27,18 @@ namespace UserAwardsApp.Entities
             this.Name = Name;
         }
 
+        public Award()
+        {
+
+        }
+
+        public Award(string Name, byte[] Image)
+        {
+            ID = Guid.NewGuid();
+            this.Name = Name;
+            this.Image = Image;
+        }
+
         public override string ToString()
         {
             return $"ID:[{ID}] - Award: {Name}";

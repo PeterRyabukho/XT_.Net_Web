@@ -58,6 +58,10 @@
       <Project>{e62b6324-adb6-431c-8208-1d34071924de}</Project>
       <Name>UserAwardsApp.DAL.Abstract</Name>
     </ProjectReference>
+    <ProjectReference Include="..\UserAwardsApp.DAL.DB\UserAwardsApp.DAL.DB.csproj">
+      <Project>{b1cdb247-fbc9-4ab9-8b6b-d9e6aa061f90}</Project>
+      <Name>UserAwardsApp.DAL.DB</Name>
+    </ProjectReference>
     <ProjectReference Include="..\UserAwardsApp.DAL.Files\UserAwardsApp.DAL.Files.csproj">
       <Project>{0874892d-6696-4ee7-a978-bd515781c441}</Project>
       <Name>UserAwardsApp.DAL.Files</Name>

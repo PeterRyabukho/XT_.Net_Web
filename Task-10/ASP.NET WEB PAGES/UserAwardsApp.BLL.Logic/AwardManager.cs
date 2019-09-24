@@ -69,6 +69,14 @@ namespace UserAwardsApp.BLL.Logic
             return newAward;
         }
 
+        public Award AddAwardWithImg(string name, byte[] image)
+        {
+            var newAward = new Award(name, image);
+
+            awardStorage.AddAward(newAward);
+            return newAward;
+        }
+
         public Award GetAwardByID(Guid ID)
         {
             return awardStorage.GetAward(ID);

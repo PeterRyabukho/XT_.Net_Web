@@ -82,7 +82,7 @@ namespace UserAwardsApp.DAL.Files
             }
         }
 
-        public ICollection<User> GetAllUsers()
+        public IEnumerable<User> GetAllUsers()
         {
             return usersDictionary.Values.ToList();
         }

@@ -43,6 +43,19 @@ namespace UserAwardsApp.Entities
             this.DateOfBirth = DateOfBirth;
         }
 
+        public User(string Name, DateTime DateOfBirth, byte[] Image)
+        {
+            ID = Guid.NewGuid();
+            this.Name = Name;
+            this.DateOfBirth = DateOfBirth;
+            this.Image = Image;
+        }
+
+        public User()
+        {
+
+        }
+
         public override string ToString()
         {
             return $"ID:[{ID}] - {Name} - {DateOfBirth:dd.MM.yyyy} - {Age} years old";
