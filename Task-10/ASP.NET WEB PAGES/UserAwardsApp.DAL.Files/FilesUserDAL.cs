@@ -18,37 +18,59 @@ namespace UserAwardsApp.DAL.Files
         static FilesUserDAL()
         {
             usersDictionary = new Dictionary<Guid, User>();
+            DeSerializerJsonUsers();
         }
 
         public bool SerializerJsonUsers()
         {
-            AllUsers user = new AllUsers();
-            foreach (var item in usersDictionary.Values)
+            if (!string.IsNullOrEmpty(MyDirectory.UsersFile) && !string.IsNullOrWhiteSpace(MyDirectory.UsersFile))
             {
-                user.Users.Add(item);
-            }
-            if (user.Users.Count == 0)
-                return false;
-            else
-            {
-                string usersJson = JsonConvert.SerializeObject(user.Users, Formatting.Indented);
-                Thread.Sleep(50);
-                File.WriteAllText(MyDirectory.UsersFile, usersJson, Encoding.Default);
+                var allUsers = from user in usersDictionary.Values
+                               select new
+                               {
+                                   user.ID,
+                                   user.Name,
+                                   user.DateOfBirth,
+                                   user.Age,
+                                   user.Image
+                                   
+                               };
+
+                var userToJson = new { Users = allUsers };
+
+                string userJson = JsonConvert.SerializeObject(userToJson, Formatting.Indented);
+
+                File.WriteAllText(MyDirectory.UsersFile, userJson);
                 return true;
             }
+            return false;
         }
 
-        public bool DeSerializerJsonUsers()
+        public static bool DeSerializerJsonUsers()
         {
-            List<User> users = JsonConvert.DeserializeObject<List<User>>(File.ReadAllText(MyDirectory.UsersFile));
-            if (users == null)
-                return false;
-            foreach (var user in users)
+            if (!string.IsNullOrEmpty(MyDirectory.UsersFile) && File.Exists(MyDirectory.UsersFile))
             {
-                usersDictionary.Add(user.ID, user);
+                string data = File.ReadAllText(MyDirectory.UsersFile);
+
+                var usersList = new { Users = new List<User>() };
+
+                usersList = JsonConvert.DeserializeAnonymousType(data, usersList);
+
+                if (usersList.Users == null)
+                {
+                    return false;
+                }
+
+                foreach (User user in usersList.Users)
+                {
+
+                    usersDictionary.Add(user.ID, user);
+                }
+                return true;
             }
-            return true;
+            return false;
         }
+
 
         public User GetUserByID(Guid ID)
         {
@@ -62,8 +84,8 @@ namespace UserAwardsApp.DAL.Files
                 //return false;
                 //}
 
-
                 usersDictionary.Add(user.ID, user);
+                SerializerJsonUsers();
 
                 return user;
         }
@@ -73,6 +95,7 @@ namespace UserAwardsApp.DAL.Files
             if (usersDictionary.ContainsKey(ID))
             {
                 usersDictionary.Remove(ID);
+                SerializerJsonUsers();
 
                 return true;
             }
@@ -95,7 +118,7 @@ namespace UserAwardsApp.DAL.Files
 
                 userToEdit.Name = Name;
                 userToEdit.DateOfBirth = dOB;
-
+                SerializerJsonUsers();
 
                 return true;
             }

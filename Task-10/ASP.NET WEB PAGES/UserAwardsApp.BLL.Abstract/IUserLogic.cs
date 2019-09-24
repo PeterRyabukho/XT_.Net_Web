@@ -17,7 +17,7 @@ namespace UserAwardsApp.BLL.Abstract
         bool RemoveUser(User user);
         User[] GetAllUsers();
         bool SerializerJsonUsers();
-        bool DeSerializerJsonUsers();
+        //bool DeSerializerJsonUsers();
         bool EditUser(Guid ID, string Name, DateTime dOB);
     }
 }

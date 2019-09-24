@@ -1,78 +1,104 @@
-﻿@*@using UserAwardsApp.DI.Provaiders;
-    @using UserAwardsApp.BLL.Abstract;
-    @using UserAwardsApp.Entities;
-
-    @{
-        Layout = "_Layout.cshtml";
-        IUserLogic UserManager = MyProvaider.userLogic;
-        IAwardsLogic AwardManager = MyProvaider.awardsLogic;
-    }*@
+﻿@using System.Configuration;
 
 @{
-    Layout = "~/MyPages/_PagesLayout.cshtml";
-}
+        Layout = "~/MyPages/_PagesLayout.cshtml";
 
-    <div class="row">
-        <div class="col-md-6 login-form-1">
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" style="height: 150px; width: 150px;" src="~/MyImages/UsersIcon.png" alt="Users Icon">
-                <div class="card-body">
-                    @*<h5 class="card-title">Card title</h5>*@
-                    <p class="card-text">View all users. If you have administrator rights, you can add new ones!</p>
-                    <a href="~/MyPages/ShowAllUsers.cshtml" class="btn btn-primary">Show all Users</a>
-                </div>
-            </div>
-            @{
-                if (!User.IsInRole("Guest"))
+        if (IsPost)
+        {
+            var memoryStorage = Request["memoryStorage"];
+            var filesStorage = Request["filesStorage"];
+            var DBStorage = Request["DBStorage"];
+
+            var storageType = Request["StorageType"];
+
+            if (!string.IsNullOrEmpty(storageType))
+            {
+                switch (storageType)
                 {
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" style="height: 150px; width: 150px;" src="~/MyImages/AwardIcon1.png" alt="Award Icon">
-                        <div class="card-body">
-                            @*<h5 class="card-title">Card title</h5>*@
-                            <p class="card-text">View all rewards. If you have administrator rights you can add new ones!</p>
-                            <a href="~/MyPages/ShowAllAwards.cshtml" class="btn btn-primary">Show all Awards</a>
-                        </div>
-                    </div>
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" style="height: 150px; width: 150px;" src="~/MyImages/AwardIcon.jpg" alt="Users Awards Icon">
-                        <div class="card-body">
-                            @*<h5 class="card-title">Card title</h5>*@
-                            <p class="card-text">View all award winning users. If you are an administrator, you can award users new rewards!</p>
-                            <a href="~/MyPages/AddAwardToUser.cshtml" class="btn btn-primary">Show Users Awards</a>
-                        </div>
-                    </div>
-                }
-                if (User.IsInRole("Admin"))
-                {
-                    <div class="card" style="width: 18rem;">
-                        <img class="card-img-top" style="height: 150px; width: 150px;" src="~/MyImages/Admin.png" alt="Admin Icon">
-                        <div class="card-body">
-                            @*<h5 class="card-title">Card title</h5>*@
-                            <p class="card-text">
-                                Here you can assign administrator rights to other users
-                            </p>
-                            <a href="~/MyPages/ChangeRoleUser.cshtml" class="btn btn-primary">Change User Rights</a>
-                        </div>
-                    </div>
+                    case "memoryStorage":
+                            ConfigurationManager.AppSettings["typeDAL"] = "Memory";
+                            Response.Redirect("~/Index.cshtml");
+                            break;
+                    case "filesStorage":
+                            ConfigurationManager.AppSettings["typeDAL"] = "Files";
+                            Response.Redirect("~/Index.cshtml");
+                            break;
+                    case "DBStorage":
+                            ConfigurationManager.AppSettings["typeDAL"] = "DB";
+                            Response.Redirect("~/Index.cshtml");
+                            break;
                 }
             }
+        }
+
+    }
+
+<h3 class="display-4">Type of Storage using now: <b>@ConfigurationManager.AppSettings["typeDAL"]</b></h3>
+
+<div class="formContainer">
+    <form action="~/Index.cshtml" method="post">
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Select Storage</label>
+            <select class="form-control" id="exampleFormControlSelect1" name="StorageType">
+                <option value="memoryStorage">
+                    Memory Storage
+                </option>
+                <option value="filesStorage">
+                    Files Storage
+                </option>
+                <option value="DBStorage">
+                    DB Storage
+                </option>
+            </select>
         </div>
+        <button type="submit" class="btn btn-info" name="changeStorage">Submit</button>
+    </form>
+</div>
+
+
+<div class="">
+    <div class="containerCards">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" style="height: 150px; width: 150px;" src="~/MyImages/UsersIcon.png" alt="Users Icon">
+            <div class="card-body">
+                @*<h5 class="card-title">Card title</h5>*@
+                <p class="card-text">View all users. If you have administrator rights, you can add new ones!</p>
+                <a href="~/MyPages/ShowAllUsers.cshtml" class="btn btn-primary">Show all Users</a>
+            </div>
+        </div>
+        @{
+            if (!User.IsInRole("Guest"))
+            {
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" style="height: 150px; width: 150px;" src="~/MyImages/AwardIcon1.png" alt="Award Icon">
+                    <div class="card-body">
+                        @*<h5 class="card-title">Card title</h5>*@
+                        <p class="card-text">View all rewards. If you have administrator rights you can add new ones!</p>
+                        <a href="~/MyPages/ShowAllAwards.cshtml" class="btn btn-primary">Show all Awards</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" style="height: 150px; width: 150px;" src="~/MyImages/AwardIcon.jpg" alt="Users Awards Icon">
+                    <div class="card-body">
+                        @*<h5 class="card-title">Card title</h5>*@
+                        <p class="card-text">View all award winning users. If you are an administrator, you can award users new rewards!</p>
+                        <a href="~/MyPages/AddAwardToUser.cshtml" class="btn btn-primary">Show Users Awards</a>
+                    </div>
+                </div>
+            }
+            if (User.IsInRole("Admin"))
+            {
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" style="height: 150px; width: 150px;" src="~/MyImages/Admin.png" alt="Admin Icon">
+                    <div class="card-body">
+                        @*<h5 class="card-title">Card title</h5>*@
+                        <p class="card-text">
+                            Here you can assign administrator rights to other users
+                        </p>
+                        <a href="~/MyPages/ChangeRoleUser.cshtml" class="btn btn-primary">Change User Rights</a>
+                    </div>
+                </div>
+            }
+        }
     </div>
-
-
-
-
-@*<ul class="nav nav-pills nav-fill">
-        <li class="nav-item">
-            <a class="nav-link active" href="~/MyPages/ShowAllUsers.cshtml">Show all Users</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link active" href="~/MyPages/ShowAllAwards.cshtml">Show all Awards</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link active" href="~/MyPages/AddAwardToUser.cshtml">Add Award to User</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link active" href="#">Disabled</a>
-        </li>
-    </ul>*@
+</div>

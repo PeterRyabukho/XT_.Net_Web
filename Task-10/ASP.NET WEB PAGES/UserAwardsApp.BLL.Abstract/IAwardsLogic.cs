@@ -19,9 +19,9 @@ namespace UserAwardsApp.BLL.Abstract
         bool RemoveAward(Award award);
         bool DeleteUserAwards(User user);
         bool SerializerJsonAwards();
-        bool DeSerializerJsonAwards();
+        //bool DeSerializerJsonAwards();
         bool SerializerJsonAwardsOfUsers();
-        bool DeSerializerJsonAwardsOfUsers();
+        //bool DeSerializerJsonAwardsOfUsers();
         bool EditAward(Guid ID, string Name);
     }
 }

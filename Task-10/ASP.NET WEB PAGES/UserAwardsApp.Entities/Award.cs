@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace UserAwardsApp.Entities
 {
-    public class Award
+    public class Award: IEquatable<Award>
     {
         public Guid ID { get; set; }
         public string Name { get; set; }
@@ -42,6 +42,13 @@ namespace UserAwardsApp.Entities
         public override string ToString()
         {
             return $"ID:[{ID}] - Award: {Name}";
+        }
+
+        public bool Equals(Award other)
+        {
+            return this.ID == other.ID &&
+                this.Name == other.Name &&
+                this.Image == other.Image;
         }
     }
 

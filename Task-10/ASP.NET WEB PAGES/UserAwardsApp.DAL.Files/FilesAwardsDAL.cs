@@ -13,74 +13,110 @@ namespace UserAwardsApp.DAL.Files
 {
     public class FilesAwardsDAL : IAwardsDAL
     {
-        private Dictionary<Guid, Award> dictionaryOfAwards;
-        private List<AwardsOfUsers> awardsOfUsers;
+        private static Dictionary<Guid, Award> dictionaryOfAwards;
+        private static List<AwardsOfUsers> awardsOfUsers;
 
-        public FilesAwardsDAL()
+        static FilesAwardsDAL()
         {
             dictionaryOfAwards = new Dictionary<Guid, Award>();
             awardsOfUsers = new List<AwardsOfUsers>();
+            DeSerializerJsonAwards();
+            DeSerializerJsonAwardsOfUsers();
         }
 
         public bool SerializerJsonAwardsOfUsers()
         {
-            AllAwardsOfUsers awardsOfAllUsers = new AllAwardsOfUsers();
-            foreach (var item in awardsOfUsers)
+            if (!string.IsNullOrEmpty(MyDirectory.AwardsOfUsersFile) && !string.IsNullOrWhiteSpace(MyDirectory.AwardsOfUsersFile))
             {
-                awardsOfAllUsers.AwardsOfUsers.Add(item);
-            }
-            if (awardsOfAllUsers.AwardsOfUsers.Count == 0)
-                return false;
-            else
-            {
-                string awardsOfUsersSerialize = JsonConvert.SerializeObject(awardsOfAllUsers.AwardsOfUsers, Formatting.Indented);
-                Thread.Sleep(50);
-                File.WriteAllText(MyDirectory.AwardsOfUsersFile, awardsOfUsersSerialize, Encoding.Default);
+                var allAwardsOfUsers = from awardUser in awardsOfUsers
+                                select new
+                                {
+                                    awardUser.UserID,
+                                    awardUser.AwardID,
+                                };
+
+                var awardToJson = new { Awards = allAwardsOfUsers };
+
+                string awardJson = JsonConvert.SerializeObject(awardToJson, Formatting.Indented);
+
+                File.WriteAllText(MyDirectory.AwardsOfUsersFile, awardJson);
+
                 return true;
             }
+            return false;
         }
 
-        public bool DeSerializerJsonAwardsOfUsers()
+        public static bool DeSerializerJsonAwardsOfUsers()
         {
-            List<AwardsOfUsers> deserialize = JsonConvert.DeserializeObject<List<AwardsOfUsers>>(File.ReadAllText(MyDirectory.AwardsOfUsersFile));
-            if (deserialize == null)
-                return false;
-            foreach (var awards in deserialize)
+            if (!string.IsNullOrEmpty(MyDirectory.AwardsOfUsersFile) && File.Exists(MyDirectory.AwardsOfUsersFile))
             {
-                awardsOfUsers.Add(awards);
+                string data = File.ReadAllText(MyDirectory.AwardsOfUsersFile);
+
+                var awardsUsersList = new { AwardsUsers = new List<AwardsOfUsers>() };
+
+                awardsUsersList = JsonConvert.DeserializeAnonymousType(data, awardsUsersList);
+
+                if (awardsUsersList.AwardsUsers == null)
+                {
+                    return false;
+                }
+
+                foreach (AwardsOfUsers awardOfUsers in awardsUsersList.AwardsUsers)
+                {
+
+                    awardsOfUsers.Add(awardOfUsers);
+                }
+                return true;
             }
-            return true;
+            return false;
         }
 
         public bool SerializerJsonAwards()
         {
-            AllAwards awards = new AllAwards();
-            foreach (var item in dictionaryOfAwards.Values)
+            if (!string.IsNullOrEmpty(MyDirectory.AwardsFile) && !string.IsNullOrWhiteSpace(MyDirectory.AwardsFile))
             {
-                awards.Awards.Add(item);
-            }
-            if (awards.Awards.Count == 0)
-                return false;
-            else
-            {
-                string show = JsonConvert.SerializeObject(awards.Awards, Formatting.Indented);
-                Thread.Sleep(50);
-                File.WriteAllText(MyDirectory.AwardsFile, show, Encoding.Default);
+                var allAwards = from award in dictionaryOfAwards.Values
+                                select new
+                                {
+                                    award.ID,
+                                    award.Name,
+                                    award.Image,
+                                };
+
+                var awardToJson = new { Awards = allAwards };
+
+                string awardJson = JsonConvert.SerializeObject(awardToJson, Formatting.Indented);
+
+                File.WriteAllText(MyDirectory.AwardsFile, awardJson);
+
                 return true;
             }
+            return false;
         }
 
-        public bool DeSerializerJsonAwards()
+        public static bool DeSerializerJsonAwards()
         {
-
-            List<Award> awards = JsonConvert.DeserializeObject<List<Award>>(File.ReadAllText(MyDirectory.AwardsFile));
-            if (awards == null)
-                return false;
-            foreach (var award in awards)
+            if (!string.IsNullOrEmpty(MyDirectory.AwardsFile) && File.Exists(MyDirectory.AwardsFile))
             {
-                dictionaryOfAwards.Add(award.ID, award);
+                string data = File.ReadAllText(MyDirectory.AwardsFile);
+
+                var awardsList = new { Awards = new List<Award>() };
+
+                awardsList = JsonConvert.DeserializeAnonymousType(data, awardsList);
+
+                if (awardsList.Awards == null)
+                {
+                    return false;
+                }
+
+                foreach (Award award in awardsList.Awards)
+                {
+
+                    dictionaryOfAwards.Add(award.ID, award);
+                }
+                return true;
             }
-            return true;
+            return false;
         }
 
         public bool AddAward(Award award)
@@ -91,6 +127,8 @@ namespace UserAwardsApp.DAL.Files
             }
 
             dictionaryOfAwards.Add(award.ID, award);
+            SerializerJsonAwards();
+
             return true;
         }
 
@@ -110,6 +148,8 @@ namespace UserAwardsApp.DAL.Files
             if (awardsOfUsers.Any((user) => user.AwardID == awardID && user.UserID == userID))
                 return false;
             awardsOfUsers.Add(awardOfUser);
+            SerializerJsonAwardsOfUsers();
+
             Thread.Sleep(50);
             return true;
         }
@@ -130,6 +170,8 @@ namespace UserAwardsApp.DAL.Files
             if (dictionaryOfAwards.ContainsKey(ID))
             {
                 dictionaryOfAwards.Remove(ID);
+                SerializerJsonAwards();
+
                 return true;
             }
             else
@@ -155,6 +197,7 @@ namespace UserAwardsApp.DAL.Files
             foreach (var userOne in newAwardsOfUsers)
             {
                 awardsOfUsers.Add(userOne);
+                SerializerJsonAwardsOfUsers();
             }
             return true;
         }
@@ -164,6 +207,8 @@ namespace UserAwardsApp.DAL.Files
             if (dictionaryOfAwards.TryGetValue(ID, out Award awardToEdit))
             {
                 awardToEdit.Name = Name;
+                SerializerJsonAwards();
+
                 return true;
             }
             else

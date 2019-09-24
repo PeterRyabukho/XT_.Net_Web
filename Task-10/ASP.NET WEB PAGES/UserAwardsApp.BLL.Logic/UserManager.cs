@@ -48,13 +48,14 @@ namespace UserAwardsApp.BLL.Logic
                 return false;
         }
 
-        public bool DeSerializerJsonUsers()
-        {
-            if (userStorage.DeSerializerJsonUsers())
-                return true;
-            else
-                return false;
-        }
+        //public bool DeSerializerJsonUsers()
+        //{
+        //    if (userStorage.DeSerializerJsonUsers())
+        //        return true;
+        //    else
+        //        return false;
+        //}
+
         public User CreateUser(string name, DateTime dateOfBith)
         {
             var newUser = new User(name, dateOfBith) { DateOfBirth = dateOfBith, Name = name };

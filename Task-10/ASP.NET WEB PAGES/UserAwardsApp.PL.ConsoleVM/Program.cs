@@ -54,20 +54,20 @@ namespace UserAwardsApp.PL.ConsoleVM
 
         private static void DeSerializationFiles()
         {
-            if (!UserManager.DeSerializerJsonUsers())
-                Console.WriteLine(@"File ""User.txt"" is empty! DEserialization dont complite!");
-            else
-                Console.WriteLine("\nUSER DEserialization complite!");
-            if (!AwardManager.DeSerializerJsonAwards())
-                Console.WriteLine(@"File ""Awards.txt"" is empty! DEserialization dont complite!");
-            else
-                Console.WriteLine("AWARDS DEserialization complite!");
-            if (!AwardManager.DeSerializerJsonAwardsOfUsers())
-                Console.WriteLine(@"File ""Awards of Users.txt"" is empty! DEserialization dont complite!");
-            else
-                Console.WriteLine("AWARDS OF USERS DEserialization complite!\n");
-            Console.WriteLine("Press any button to continue...");
-            Console.ReadKey();
+            //if (!UserManager.DeSerializerJsonUsers())
+            //    Console.WriteLine(@"File ""User.txt"" is empty! DEserialization dont complite!");
+            //else
+            //    Console.WriteLine("\nUSER DEserialization complite!");
+            //if (!AwardManager.DeSerializerJsonAwards())
+            //    Console.WriteLine(@"File ""Awards.txt"" is empty! DEserialization dont complite!");
+            //else
+            //    Console.WriteLine("AWARDS DEserialization complite!");
+            //if (!AwardManager.DeSerializerJsonAwardsOfUsers())
+            //    Console.WriteLine(@"File ""Awards of Users.txt"" is empty! DEserialization dont complite!");
+            //else
+            //    Console.WriteLine("AWARDS OF USERS DEserialization complite!\n");
+            //Console.WriteLine("Press any button to continue...");
+            //Console.ReadKey();
         }
 
         private static void ChangeDALType()

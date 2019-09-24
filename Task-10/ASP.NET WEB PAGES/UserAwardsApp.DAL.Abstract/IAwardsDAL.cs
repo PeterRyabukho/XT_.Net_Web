@@ -17,9 +17,9 @@ namespace UserAwardsApp.DAL.Abstract
         bool RemoveAward(Guid ID);
         bool DeleteUserAwards(User user);
         bool SerializerJsonAwards();
-        bool DeSerializerJsonAwards();
+        //bool DeSerializerJsonAwards();
         bool SerializerJsonAwardsOfUsers();
-        bool DeSerializerJsonAwardsOfUsers();
+        //bool DeSerializerJsonAwardsOfUsers();
         bool EditAward(Guid ID, string Name);
     }
 }

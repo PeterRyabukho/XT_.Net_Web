@@ -97,6 +97,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="MyPages\MyStyles\loginStyle.css" />
+    <Content Include="MyPages\MyStyles\MainMenuStyles.css" />
     <Content Include="MyPages\MyStyles\NavBarStyles.css" />
     <Content Include="MyPages\MyStyles\RegistrationStyle.css" />
     <Content Include="Scripts\bootstrap.bundle.js" />

@@ -32,13 +32,13 @@ namespace UserAwardsApp.BLL.Logic
                 return false;
         }
 
-        public bool DeSerializerJsonAwards()
-        {
-            if (awardStorage.DeSerializerJsonAwards())
-                return true;
-            else
-                return false;
-        }
+        //public bool DeSerializerJsonAwards()
+        //{
+        //    if (awardStorage.DeSerializerJsonAwards())
+        //        return true;
+        //    else
+        //        return false;
+        //}
 
         public bool SerializerJsonAwardsOfUsers()
         {
@@ -48,13 +48,13 @@ namespace UserAwardsApp.BLL.Logic
                 return false;
         }
 
-        public bool DeSerializerJsonAwardsOfUsers()
-        {
-            if (awardStorage.DeSerializerJsonAwardsOfUsers())
-                return true;
-            else
-                return false;
-        }
+        //public bool DeSerializerJsonAwardsOfUsers()
+        //{
+        //    if (awardStorage.DeSerializerJsonAwardsOfUsers())
+        //        return true;
+        //    else
+        //        return false;
+        //}
 
         public Award AddAward(string name)
         {

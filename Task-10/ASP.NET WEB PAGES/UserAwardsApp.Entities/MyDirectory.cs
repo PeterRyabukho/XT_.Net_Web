@@ -25,25 +25,64 @@ namespace UserAwardsApp.Entities
             }
             if (!File.Exists(UsersFile))
             {
-                using (StreamWriter writer = new StreamWriter(UsersFile, true))
-                {
-                    
-                    writer.WriteLine("");
-                }
+                List<User> users = new List<User>();
+                User firsUser = new User("Iron Man", DateTime.Parse("1990-04-04T00:00:00"));
+                users.Add(firsUser);
+
+                var allUsers = from user in users
+                                  select new
+                                  {
+                                      user.ID,
+                                      user.Name,
+                                      user.DateOfBirth,
+                                      user.Age,
+                                      user.Image
+                                  };
+
+                var userToJson = new { Users = allUsers };
+
+                string userJson = JsonConvert.SerializeObject(userToJson, Formatting.Indented);
+
+                File.WriteAllText(MyDirectory.UsersFile, userJson);
             }
             if (!File.Exists(AwardsFile))
             {
-                using (StreamWriter writer = new StreamWriter(AwardsFile, true))
-                {
-                    writer.WriteLine("");
-                }
+                List<Award> awards = new List<Award>();
+                Award firsAward = new Award("Super Hero");
+                awards.Add(firsAward);
+
+                var allAwards = from award in awards
+                               select new
+                               {
+                                   award.ID,
+                                   award.Name,
+                                   award.Image,
+                               };
+
+                var awardToJson = new { Awards = allAwards };
+
+                string awardJson = JsonConvert.SerializeObject(awardToJson, Formatting.Indented);
+
+                File.WriteAllText(MyDirectory.AwardsFile, awardJson);
             }
             if (!File.Exists(AwardsOfUsersFile))
             {
-                using (StreamWriter writer = new StreamWriter(AwardsOfUsersFile, true))
-                {
-                    writer.WriteLine("");
-                }
+                List<AwardsOfUsers> awardsOfUsers = new List<AwardsOfUsers>();
+                AwardsOfUsers firstAwardOfUser = new AwardsOfUsers(Guid.Parse("a725ee6b-a48f-44f2-b80c-45ec383f6976"), Guid.Parse("55eca31b-8ae3-462a-8b0e-cc166a691c1d"));
+                awardsOfUsers.Add(firstAwardOfUser);
+
+                var allAwardsOfUsers = from awardUser in awardsOfUsers
+                                       select new
+                                       {
+                                           awardUser.UserID,
+                                           awardUser.AwardID,
+                                       };
+
+                var awardToJson = new { Awards = allAwardsOfUsers };
+
+                string awardJson = JsonConvert.SerializeObject(awardToJson, Formatting.Indented);
+
+                File.WriteAllText(MyDirectory.AwardsOfUsersFile, awardJson);
             }
             if (!File.Exists(ConfigFile))
             {
@@ -58,7 +97,7 @@ namespace UserAwardsApp.Entities
                 //using (StreamWriter writer = new StreamWriter(AccountsFile, true))
                 //{
                 List<Account> accounts = new List<Account>();
-                    Account firsAccount = new Account("Admin", "Admin", "Admin");
+                    Account firsAccount = new Account("Admin", "ACcanO9keaJuooas/fFpuyJ44W6O1R87frSPUVlu846044x7yxQHH+zdl/8E3cTfYA==", "Admin");
                 accounts.Add(firsAccount);
 
                     var allAccounts = from account in accounts

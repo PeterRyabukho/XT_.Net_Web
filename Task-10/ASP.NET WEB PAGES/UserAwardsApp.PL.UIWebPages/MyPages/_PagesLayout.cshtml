@@ -13,6 +13,7 @@
     <script src="~/Scripts/popper.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
     <script src="~/Scripts/bootstrap.js"></script>
+    <link href="~/MyPages/MyStyles/MainMenuStyles.css" rel="stylesheet" />
 </head>
 <body>
     <header>
@@ -34,6 +35,12 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="~/MyPages/AddAwardToUser.cshtml">Show Users Awards</a>
+                            </li>
+                        }
+                        if (User.IsInRole("Admin"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" href="~/MyPages/ChangeRoleUser.cshtml">Accounts Page</a>
                             </li>
                         }
                     }

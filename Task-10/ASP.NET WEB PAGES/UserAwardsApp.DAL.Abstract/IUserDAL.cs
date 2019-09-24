@@ -15,7 +15,7 @@ namespace UserAwardsApp.DAL.Abstract
         bool RemoveUser(Guid ID);
         IEnumerable<User> GetAllUsers();
         bool SerializerJsonUsers();
-        bool DeSerializerJsonUsers();
+        //bool DeSerializerJsonUsers();
         bool EditUser(Guid ID, string Name, DateTime dOB);
     }
 }

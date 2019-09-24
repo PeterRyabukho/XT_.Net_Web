@@ -1,8 +1,12 @@
 ﻿@using UserAwardsApp.PL.UIWebPages.HelpersBLL;
 @using UserAwardsApp.Entities;
+@using System.Threading;
 
 @{
     Layout = "_PagesLayout.cshtml";
+
+    string alertMesg = null;
+    bool flag = false;
 
     List<User> allUsers = Provaiders.userLogic.GetAllUsers().ToList();
 
@@ -26,19 +30,17 @@
 
             var allUserAwards = Provaiders.awardsLogic.GetUserAwards(userFind);
 
-            if(allUserAwards.Contains(awardFind))
+            //allUserAwards.Contains(awardFind);
+            
+            if(allUserAwards.Any(award => award.ID == awardFind.ID))
             {
-                Response.Redirect("~/MyPages/AddAwardToUser.cshtml");
-                //foreach (var userAwards in Provaiders.awardsLogic.GetUserAwards(userFind))
-                //{
-                //if(awardFind.Name == userAwards.Name)
-                //{
-                //    Response.Redirect("~/MyPages/AddAwardToUser.cshtml");
+                flag = true;
+                alertMesg = "This User already have this Award";
 
-                //}
-                //Provaiders.awardsLogic.AddAwardToUser(userID, awardID);
-                //Response.Redirect("~/MyPages/AddAwardToUser.cshtml");
-                //}
+                Thread.Sleep(1000);
+
+                Response.Redirect("~/MyPages/AddAwardToUser.cshtml");
+               
             }
             else
             {
@@ -134,11 +136,14 @@
                                 }
                             </tbody>
                         </table>
-
+                    }
+                    if (flag)
+                    {
+                        <div class="alert alert-danger">@alertMesg</div>
                     }
                 }
 
-            <h3 class="display-4">Users And Their Awards</h3>
+                <h3 class="display-4">Users And Their Awards</h3>
                 <table class="table table-bordered">
                     <thead class="thead-light">
                         <tr>
